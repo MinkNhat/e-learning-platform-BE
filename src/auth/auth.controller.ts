@@ -1,8 +1,9 @@
 import { Controller, Get, Post, Req, Res, UseGuards } from "@nestjs/common";
 import { AuthService } from "./auth.service";
-import { Public } from "src/decorator/customize";
+import { Public, User } from "src/decorator/customize";
 import { LocalAuthGuard } from "./local-auth.guard";
 import { Response } from "express";
+import { IUser } from "src/users/users.interface";
 
 @Controller("auth")
 export class AuthController {
@@ -18,8 +19,8 @@ export class AuthController {
         return this.authService.login(req.user, response);
     }
     
-    @Get('/profile')
-    getProfile(@Req() req) {
-        return req.user;
+    @Get('/account')
+    getProfile(@User() user: IUser) {
+        return user;
     }
 }
