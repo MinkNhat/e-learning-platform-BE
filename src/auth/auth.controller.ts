@@ -21,6 +21,6 @@ export class AuthController {
     
     @Get('/account')
     getProfile(@User() user: IUser) {
-        return user;
+        return { user };
     }
 }
