@@ -23,6 +23,10 @@ export class UsersService {
     return compareSync(password, hash);
   }
 
+  updateUserToken = async (refreshToken: string, _id: string) => {
+    return await this.userModel.updateOne({_id}, {refreshToken})
+  }
+
   async create(createUserDto: CreateUserDto, user: IUser) {
     createUserDto.password = this.getHashPassword(createUserDto.password);
     return await this.userModel.create({
