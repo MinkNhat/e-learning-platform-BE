@@ -83,6 +83,12 @@ export class UsersService {
     });
   }
 
+  findOneByRefreshToken(refreshToken: string) {
+    return this.userModel.findOne({
+      refreshToken: refreshToken
+    });
+  }
+
   async update(id: string, updateUserDto: UpdateUserDto, user: IUser) {
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return "user not found";

@@ -17,7 +17,7 @@ import { AuthController } from './auth.controller';
       imports: [ConfigService],
       useFactory: async (configService: ConfigService) => ({
         secret: configService.get<string>('JWT_ACCESS_TOKEN_SECRET'),
-        signOptions: { expiresIn: ms(configService.get<string>('JWT_ACCESS_EXPIRES') as any) as any / 1000 },
+        signOptions: { expiresIn: ms(configService.get<string>('JWT_ACCESS_TOKEN_EXPIRES') as any) as any / 1000 },
       }),
       inject: [ConfigService],
     })
