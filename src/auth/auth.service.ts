@@ -103,4 +103,10 @@ export class AuthService {
             throw new BadRequestException('Refresh token is invalid or expired');
         }
     }
+
+    logout = async (response: Response, user: IUser) => {
+        await this.userService.updateUserToken("", user._id);
+        response.clearCookie('refresh_token');
+        return 'Logout successful';
+    }
 }
