@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { Response } from 'express';
 import ms from 'ms';
+import { RegisterUserDto } from 'src/users/dto/create-user.dto';
 import { IUser } from 'src/users/users.interface';
 import { UsersService } from 'src/users/users.service';
 
@@ -14,7 +15,7 @@ export class AuthService {
         private configService: ConfigService
     ) {}
 
-    async validateUser(username: string, pass: string): Promise<any> {
+    validateUser = async (username: string, pass: string): Promise<any> => {
         const user = await this.userService.findOneByEmail(username);
         if (user && this.userService.isValidPassword(pass, user.password)) {
             return user;
@@ -22,7 +23,7 @@ export class AuthService {
         return null;
     }
 
-    async login (user: IUser, response: Response) {
+    login = async (user: IUser, response: Response) => {
         const { _id, name, email, role } = user;
         const payload = { 
             sub: "token login",
@@ -37,7 +38,7 @@ export class AuthService {
         await this.userService.updateUserToken(refreshToken, _id);
         response.cookie('refresh_token', refreshToken, {
             httpOnly: true,
-            maxAge: ms(this.configService.get<number>('JWT_REFRESH_TOKEN_EXPIRES_IN')) as any,
+            maxAge: ms(this.configService.get<number>('JWT_REFRESH_TOKEN_EXPIRES')) as any,
         });
         
         return {
@@ -51,10 +52,19 @@ export class AuthService {
         };
     }
 
+    register = async (user: RegisterUserDto) => {
+        const newUser = await this.userService.register(user);
+        return {
+            _id: newUser._id,
+            email: newUser.email,
+            createdAt: newUser.createdAt
+        }
+    }
+
     createRefreshToken = (payload) => {
         const refreshToken = this.jwtService.sign(payload, {
             secret: this.configService.get<string>('JWT_REFRESH_SECRET'),
-            expiresIn: ms(this.configService.get<string>('JWT_REFRESH_TOKEN_EXPIRES_IN') as any) as any / 1000,
+            expiresIn: ms(this.configService.get<number>('JWT_REFRESH_TOKEN_EXPIRES')) as any / 1000,
         });
         return refreshToken;
     }
@@ -83,7 +93,7 @@ export class AuthService {
                 response.clearCookie('refresh_token');
                 response.cookie('refresh_token', refreshToken, {
                     httpOnly: true,
-                    maxAge: ms(this.configService.get<number>('JWT_REFRESH_TOKEN_EXPIRES_IN')) as any,
+                    maxAge: ms(this.configService.get<number>('JWT_REFRESH_TOKEN_EXPIRES')) as any,
                 });
                 
                 return {

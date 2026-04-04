@@ -1,5 +1,5 @@
-import { Injectable } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
+import { BadRequestException, Injectable } from '@nestjs/common';
+import { CreateUserDto, RegisterUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectModel } from '@nestjs/mongoose';
 import mongoose from 'mongoose';
@@ -37,6 +37,16 @@ export class UsersService {
       }
     });
   } 
+
+  register = async (user: RegisterUserDto) => {
+    const isExist = await this.userModel.findOne({ email: user.email });
+    if (isExist) {
+      throw new BadRequestException('Email already exists');
+    }
+
+    user.password = this.getHashPassword(user.password);
+    return await this.userModel.create({...user});
+  }
 
   async findAll(currentPage: number, limit: number, qs: string) {
     const { filter, sort, projection, population } = aqp(qs);
