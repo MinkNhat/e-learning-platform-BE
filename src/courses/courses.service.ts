@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
 import { Course, CourseDocument } from './schemas/course.schema';
@@ -51,14 +51,14 @@ export class CoursesService {
     }
   }
 
-  findOne(id: string) {
-    if(!mongoose.Types.ObjectId.isValid(id)) return "course not found";
-    return this.courseModel.findOne({_id: id})
+  findOne = async (id: string) => {
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException("course not found");
+    return await this.courseModel.findOne({_id: id})
   }
 
   update = async (id: string, updateCourseDto: UpdateCourseDto, user: IUser) => {
-    if(!mongoose.Types.ObjectId.isValid(id)) return "course not found";
-    return this.courseModel.updateOne(
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException("course not found");
+    return await this.courseModel.updateOne(
       {_id: id}, 
       {
         ...updateCourseDto,
@@ -71,7 +71,7 @@ export class CoursesService {
   }
 
   remove = async (id: string, user: IUser) => {
-    if(!mongoose.Types.ObjectId.isValid(id)) return "course not found";
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException("course not found");
     await this.courseModel.updateOne(
       {_id: id}, {
       deletedBy: {
