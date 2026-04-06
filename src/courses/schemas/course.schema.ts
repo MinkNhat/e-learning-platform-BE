@@ -10,9 +10,15 @@ export class Course {
 
     @Prop()
     shortDescription: string;
-    
+
     @Prop()
     description: string;
+
+    @Prop()
+    objectives: string[];
+
+    @Prop()
+    requirement: string;
 
     @Prop()
     price: number;
@@ -37,6 +43,9 @@ export class Course {
 
     @Prop()
     languages: string[];
+
+    @Prop()
+    authors: string[];
 
     @Prop()
     isPublished: boolean;

@@ -1,9 +1,10 @@
-import { IsNotEmpty } from "class-validator";
+import { IsArray, IsNotEmpty, IsString } from "class-validator";
 
 export class CreateCourseDto {
     @IsNotEmpty()
     title: string;
 
+    @IsNotEmpty()
     shortDescription: string;
     
     @IsNotEmpty()
@@ -12,7 +13,23 @@ export class CreateCourseDto {
     @IsNotEmpty()
     price: number;
 
-    level: string;
-    processLimit: boolean;
+    @IsArray()
+    @IsString({ each: true })
+    objectives: string[];
+
+    @IsArray()
+    @IsString({ each: true })
     languages: string[];
+
+    @IsArray()
+    @IsString({ each: true })
+    authors: string[];
+
+    @IsNotEmpty()
+    thumbnail: string;
+
+    requirement: string;
+    level: string;
+    processLimit: boolean = false;
+    isPublished: boolean = true;
 }

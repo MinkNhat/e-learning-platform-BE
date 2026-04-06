@@ -13,6 +13,7 @@ export class CoursesService {
   constructor(@InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>) {}
 
   create = async (createCourseDto: CreateCourseDto, user: IUser) => {
+    createCourseDto.authors.unshift(user.name);
     return await this.courseModel.create({
       ...createCourseDto,
       createdBy: {
