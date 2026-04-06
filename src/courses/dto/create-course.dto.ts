@@ -30,6 +30,6 @@ export class CreateCourseDto {
 
     requirement: string;
     level: string;
-    processLimit: boolean = false;
-    isPublished: boolean = true;
+    isProcessLimit: boolean;
+    isPublished: boolean;
 }

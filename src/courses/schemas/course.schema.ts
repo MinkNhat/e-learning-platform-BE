@@ -38,8 +38,8 @@ export class Course {
     @Prop()
     enrollmentCount: number;
 
-    @Prop()
-    processLimit: boolean;
+    @Prop({default: false})
+    isProcessLimit: boolean;
 
     @Prop()
     languages: string[];
@@ -47,7 +47,7 @@ export class Course {
     @Prop()
     authors: string[];
 
-    @Prop()
+    @Prop({default: true})
     isPublished: boolean;
 
     @Prop({type: Object})
