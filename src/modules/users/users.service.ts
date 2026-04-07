@@ -9,7 +9,7 @@ import { SoftDeleteModel } from 'soft-delete-plugin-mongoose';
 import { IUser } from './users.interface';
 import aqp from 'api-query-params';
 import { Role, RoleDocument } from 'src/modules/roles/schemas/role.schema';
-import { USER_ROLE } from 'src/databases/sample';
+import { RoleName } from 'src/core/enums/roles.enum';
 
 @Injectable()
 export class UsersService {
@@ -49,7 +49,7 @@ export class UsersService {
       throw new BadRequestException('Email already exists');
     }
 
-    const userRole = await this.roleModel.findOne({ name: USER_ROLE });
+    const userRole = await this.roleModel.findOne({ name: RoleName.USER });
 
     return await this.userModel.create({
       ...user,

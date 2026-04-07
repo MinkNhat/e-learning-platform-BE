@@ -6,7 +6,8 @@ import { Permission, PermissionDocument } from 'src/modules/permissions/schemas/
 import { Role, RoleDocument } from 'src/modules/roles/schemas/role.schema';
 import { User, UserDocument } from 'src/modules/users/schemas/user.schema';
 import { UsersService } from 'src/modules/users/users.service';
-import { ADMIN_ROLE, INIT_PERMISSIONS, USER_ROLE } from './sample';
+import { INIT_PERMISSIONS } from './sample';
+import { RoleName } from 'src/core/enums/roles.enum';
 
 @Injectable()
 export class DatabasesService implements OnModuleInit {
@@ -39,13 +40,13 @@ export class DatabasesService implements OnModuleInit {
                 const permissions = await this.permissionModel.find({}).select("_id");
                 await this.roleModel.insertMany([
                     {
-                        name: ADMIN_ROLE,
+                        name: RoleName.ADMIN,
                         description: "Admin thì full quyền :v",
                         isActive: true,
                         permissions: permissions
                     },
                     {
-                        name: USER_ROLE,
+                        name: RoleName.USER,
                         description: "Người dùng/Ứng viên sử dụng hệ thống",
                         isActive: true,
                         permissions: [] //không set quyền, chỉ cần add ROLE
@@ -54,8 +55,8 @@ export class DatabasesService implements OnModuleInit {
             }
 
             if (countUser === 0) {
-                const adminRole = await this.roleModel.findOne({ name: ADMIN_ROLE });
-                const userRole = await this.roleModel.findOne({ name: USER_ROLE })
+                const adminRole = await this.roleModel.findOne({ name: RoleName.ADMIN });
+                const userRole = await this.roleModel.findOne({ name: RoleName.USER })
                 await this.userModel.insertMany([
                     {
                         name: "I'm admin",
