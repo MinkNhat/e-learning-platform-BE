@@ -18,13 +18,13 @@ export class UsersService {
     @InjectModel(Role.name) private roleModel: SoftDeleteModel<RoleDocument>,
   ) {}
 
-  getHashPassword=(password: string) => {
+  getHashPassword = (password: string) => {
     const salt = genSaltSync(10);
     password = hashSync(password, salt);
     return password;
   }
 
-  isValidPassword=(password: string, hash: string) => {
+  isValidPassword = (password: string, hash: string) => {
     return compareSync(password, hash);
   }
 
@@ -32,15 +32,34 @@ export class UsersService {
     return await this.userModel.updateOne({_id}, {refreshToken})
   }
 
-  async create(createUserDto: CreateUserDto, user: IUser) {
-    createUserDto.password = this.getHashPassword(createUserDto.password);
-    return await this.userModel.create({
+  create = async (createUserDto: CreateUserDto, user: IUser) => {
+    const isExist = await this.userModel.findOne({ email: createUserDto.email });
+    if (isExist) {
+      throw new BadRequestException('Email already exists');
+    }
+    
+    const userRole = await this.roleModel.findOne({ name: createUserDto.role });
+
+    const createdUser = await this.userModel.create({
       ...createUserDto,
+      password: this.getHashPassword(createUserDto.password),
+      role: userRole?._id,
       createdBy: {
         _id: user._id,
         email: user.email
       }
     });
+
+    return {
+      name: createdUser.name,
+      email: createdUser.email,
+      phone: createdUser?.phone,
+      role: {
+        _id: userRole._id,
+        name: userRole.name
+      },
+      createdAt: createdUser.createdAt
+    }
   } 
 
   register = async (user: RegisterUserDto) => {
@@ -58,7 +77,7 @@ export class UsersService {
     });
   }
 
-  async findAll(currentPage: number, limit: number, qs: string) {
+  findAll = async (currentPage: number, limit: number, qs: string) => {
     const { filter, sort, projection, population } = aqp(qs);
     delete filter.current;
     delete filter.pageSize;
@@ -73,7 +92,8 @@ export class UsersService {
       .skip(offset)
       .limit(defaultLimit)
       .sort(sort as any)
-      .populate(population)
+      .populate({ path: 'role', select: { _id: 1, name: 1 } })
+      .select(['-password', '-refreshToken', '-__v'])
       .exec();
 
     return {
@@ -87,20 +107,20 @@ export class UsersService {
     }
   }
 
-  findOne(id: string) {
+  findOne = async (id: string) => {
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      return "user not found";
+      throw new BadRequestException(`User with id '${id}' not found`);
     }
 
-    return this.userModel.findOne({
+    return await this.userModel.findOne({
       _id: id
     })
-    .select("-password")
+    .select(['-password', '-refreshToken', '-__v'])
     .populate({path: 'role', select: {_id: 1, name: 1}});
   }
 
-  findOneByEmail(email: string) {
-    return this.userModel.findOne({
+  findOneByEmail = async (email: string) => {
+    return await this.userModel.findOne({
       email: email
     }).populate({
       path: 'role',
@@ -108,8 +128,8 @@ export class UsersService {
     });
   }
 
-  findOneByRefreshToken(refreshToken: string) {
-    return this.userModel.findOne({
+  findOneByRefreshToken = async (refreshToken: string) => {
+    return await this.userModel.findOne({
       refreshToken: refreshToken
     }).populate({
       path: 'role',
@@ -117,26 +137,41 @@ export class UsersService {
     });
   }
 
-  async update(id: string, updateUserDto: UpdateUserDto, user: IUser) {
+  update = async (id: string, updateUserDto: UpdateUserDto, user: IUser) => {
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      return "user not found";
+      throw new BadRequestException(`User with id '${id}' not found`);
     }
 
-    return await this.userModel.updateOne(
+    const userRole = await this.roleModel.findOne({ name: updateUserDto.role });
+
+    const updatedUser = await this.userModel.findOneAndUpdate(
       {_id: id},
       {
         ...updateUserDto,
+        role: userRole?._id,
         updatedBy: {
           _id: user._id,
           email: user.email
         }
-      }
-    )
+      },
+      {new : true}
+    );
+
+    return {
+      name: updatedUser.name,
+      email: updatedUser.email,
+      phone: updatedUser?.phone,
+      role: {
+        _id: userRole._id,
+        name: userRole.name
+      },
+      updatedAt: updatedUser.updatedAt
+    }
   }
 
-  async remove(id: string, user: IUser) {
+  remove = async (id: string, user: IUser) => {
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      return "user not found";
+      throw new BadRequestException(`User with id '${id}' not found`);
     }
 
     const foundUser = await this.userModel.findById(id);
@@ -154,7 +189,7 @@ export class UsersService {
       }
     )
 
-    return this.userModel.softDelete({
+    return await this.userModel.softDelete({
       _id: id
     });
   }

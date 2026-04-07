@@ -12,11 +12,20 @@ export class User {
     @Prop({required: true}) 
     email: string;
 
+    @Prop()
+    phone: string;
+
     @Prop({required: true})
     password: string;
 
     @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'Role'})
     role: Role; 
+
+    @Prop()
+    avatar: string;
+
+    @Prop({default: true})
+    isActive: boolean;
 
     @Prop()
     refreshToken: string;
