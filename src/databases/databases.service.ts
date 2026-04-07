@@ -18,7 +18,7 @@ export class DatabasesService implements OnModuleInit {
         @InjectModel(Role.name) private roleModel: SoftDeleteModel<RoleDocument>,
         @InjectModel(Permission.name) private permissionModel: SoftDeleteModel<PermissionDocument>,
         private configService: ConfigService,
-        private userService: UsersService,
+        private usersService: UsersService,
     ) {}
 
     async onModuleInit() {
@@ -61,13 +61,13 @@ export class DatabasesService implements OnModuleInit {
                     {
                         name: "Super Admin",
                         email: "admin@gmail.com",
-                        password: this.userService.getHashPassword(this.configService.get<string>("INIT_PASSWORD")),
+                        password: this.usersService.getHashPassword(this.configService.get<string>("INIT_PASSWORD")),
                         role: adminRole?._id
                     },
                     {
                         name: "User Guest",
                         email: "user@gmail.com",
-                        password: this.userService.getHashPassword(this.configService.get<string>("INIT_PASSWORD")),
+                        password: this.usersService.getHashPassword(this.configService.get<string>("INIT_PASSWORD")),
                         role: userRole?._id
                     },
                 ])
