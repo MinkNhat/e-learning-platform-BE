@@ -11,24 +11,27 @@ import { UsersService } from 'src/modules/users/users.service';
 @Injectable()
 export class AuthService {
     constructor(
-        private userService: UsersService,
+        private usersService: UsersService,
         private jwtService: JwtService,
         private configService: ConfigService,
         private rolesService: RolesService 
     ) {}
 
     validateUser = async (username: string, pass: string): Promise<any> => {
-        const user = await this.userService.findOneByEmail(username);
-        if (user && this.userService.isValidPassword(pass, user.password)) {
-            const userRole = user.role as unknown as {_id: string, name: string};
-            const temp = await this.rolesService.findOne(userRole._id);
+        const user = await this.usersService.findOneByEmail(username);
+        if (user) {
+            const isValid = this.usersService.isValidPassword(pass, user.password);
+            if (isValid === true) {
+                const userRole = user.role as unknown as { _id: string; name: string }
+                const temp = await this.rolesService.findOne(userRole._id);
 
-            const objUser = {
-                ...user.toObject(),
-                permission: temp?.permissions ?? []
+                const objUser = {
+                    ...user.toObject(),
+                    permissions: temp?.permissions ?? []
+                }
+
+                return objUser;
             }
-
-            return objUser;
         }
         return null;
     }
@@ -41,12 +44,12 @@ export class AuthService {
             _id,
             name,
             email,
-            role,
-            permissions
+            role
         };
 
         const refreshToken = this.createRefreshToken(payload);
-        await this.userService.updateUserToken(refreshToken, _id);
+        await this.usersService.updateUserToken(refreshToken, _id);
+
         response.cookie('refresh_token', refreshToken, {
             httpOnly: true,
             maxAge: ms(this.configService.get<number>('JWT_REFRESH_TOKEN_EXPIRES')) as any,
@@ -58,13 +61,14 @@ export class AuthService {
                 _id,
                 name,
                 email,
-                role
+                role,
+                permissions
             }
         };
     }
 
     register = async (user: RegisterUserDto) => {
-        const newUser = await this.userService.register(user);
+        const newUser = await this.usersService.register(user);
         return {
             _id: newUser._id,
             email: newUser.email,
@@ -86,7 +90,7 @@ export class AuthService {
                 secret: this.configService.get<string>('JWT_REFRESH_SECRET'),
             });
 
-            const user = await this.userService.findOneByRefreshToken(refreshToken);
+            const user = await this.usersService.findOneByRefreshToken(refreshToken);
             if(user) {
                 const { _id, name, email, role } = user;
                 const payload = { 
@@ -99,7 +103,7 @@ export class AuthService {
                 };
 
                 const refreshToken = this.createRefreshToken(payload);
-                await this.userService.updateUserToken(refreshToken, _id.toString());
+                await this.usersService.updateUserToken(refreshToken, _id.toString());
 
                 const userRole = user.role as unknown as {_id: string, name: string};
                 const temp = await this.rolesService.findOne(userRole._id);
@@ -130,7 +134,7 @@ export class AuthService {
     }
 
     logout = async (response: Response, user: IUser) => {
-        await this.userService.updateUserToken("", user._id);
+        await this.usersService.updateUserToken("", user._id);
         response.clearCookie('refresh_token');
         return 'Logout successful';
     }

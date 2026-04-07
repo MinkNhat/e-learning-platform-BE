@@ -22,7 +22,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     const { _id, name, email, role } = payload;
 
     const userRole = role as unknown as {_id: string, name: string};
-    const temp = await this.roleService.findOne(userRole._id);
+    const temp = (await this.roleService.findOne(userRole._id)).toObject();
 
     return {
       _id,
