@@ -3,10 +3,10 @@ import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { Response } from 'express';
 import ms from 'ms';
-import { RolesService } from 'src/roles/roles.service';
-import { RegisterUserDto } from 'src/users/dto/create-user.dto';
-import { IUser } from 'src/users/users.interface';
-import { UsersService } from 'src/users/users.service';
+import { RolesService } from 'src/modules/roles/roles.service';
+import { RegisterUserDto } from 'src/modules/users/dto/create-user.dto';
+import { IUser } from 'src/modules/users/users.interface';
+import { UsersService } from 'src/modules/users/users.service';
 
 @Injectable()
 export class AuthService {

@@ -3,16 +3,16 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { UsersModule } from './users/users.module';
+import { UsersModule } from './modules/users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { softDeletePlugin } from 'soft-delete-plugin-mongoose';
-import { CoursesModule } from './courses/courses.module';
-import { FilesModule } from './files/files.module';
-import { EnrollmentsModule } from './enrollments/enrollments.module';
-import { PermissionsModule } from './permissions/permissions.module';
-import { RolesModule } from './roles/roles.module';
+import { CoursesModule } from './modules/courses/courses.module';
+import { FilesModule } from './modules/files/files.module';
+import { EnrollmentsModule } from './modules/enrollments/enrollments.module';
+import { PermissionsModule } from './modules/permissions/permissions.module';
+import { RolesModule } from './modules/roles/roles.module';
 import { DatabasesModule } from './databases/databases.module';
-import { MailModule } from './mail/mail.module';
+import { MailModule } from './modules/mail/mail.module';
 
 @Module({
   imports: [

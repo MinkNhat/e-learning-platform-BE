@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { MailService } from './mail.service';
-import { Public } from 'src/decorator/customize';
+import { Public } from 'src/core/decorators/customize';
 import { MailerService } from '@nestjs-modules/mailer';
 
 @Controller('mail')

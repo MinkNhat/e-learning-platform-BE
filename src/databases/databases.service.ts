@@ -2,10 +2,10 @@ import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { InjectModel } from '@nestjs/mongoose';
 import { SoftDeleteModel } from 'soft-delete-plugin-mongoose';
-import { Permission, PermissionDocument } from 'src/permissions/schemas/permission.schema';
-import { Role, RoleDocument } from 'src/roles/schemas/role.schema';
-import { User, UserDocument } from 'src/users/schemas/user.schema';
-import { UsersService } from 'src/users/users.service';
+import { Permission, PermissionDocument } from 'src/modules/permissions/schemas/permission.schema';
+import { Role, RoleDocument } from 'src/modules/roles/schemas/role.schema';
+import { User, UserDocument } from 'src/modules/users/schemas/user.schema';
+import { UsersService } from 'src/modules/users/users.service';
 import { ADMIN_ROLE, INIT_PERMISSIONS, USER_ROLE } from './sample';
 
 @Injectable()

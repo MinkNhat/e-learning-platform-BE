@@ -2,8 +2,8 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestj
 import { CoursesService } from './courses.service';
 import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
-import { IUser } from 'src/users/users.interface';
-import { Public, User } from 'src/decorator/customize';
+import { IUser } from 'src/modules/users/users.interface';
+import { Public, User } from 'src/core/decorators/customize';
 
 @Controller('courses')
 export class CoursesController {

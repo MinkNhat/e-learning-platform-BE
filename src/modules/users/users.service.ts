@@ -8,7 +8,7 @@ import { genSaltSync, hashSync, compareSync } from 'bcryptjs';
 import { SoftDeleteModel } from 'soft-delete-plugin-mongoose';
 import { IUser } from './users.interface';
 import aqp from 'api-query-params';
-import { Role, RoleDocument } from 'src/roles/schemas/role.schema';
+import { Role, RoleDocument } from 'src/modules/roles/schemas/role.schema';
 import { USER_ROLE } from 'src/databases/sample';
 
 @Injectable()

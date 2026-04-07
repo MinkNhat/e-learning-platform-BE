@@ -1,11 +1,11 @@
 import { Body, Controller, Get, Post, Req, Res, UseGuards } from "@nestjs/common";
 import { AuthService } from "./auth.service";
-import { Public, User } from "src/decorator/customize";
-import { LocalAuthGuard } from "./local-auth.guard";
+import { Public, User } from "src/core/decorators/customize";
+import { LocalAuthGuard } from "./guards/local-auth.guard";
 import { Request, Response } from "express";
-import { IUser } from "src/users/users.interface";
-import { RegisterUserDto } from "src/users/dto/create-user.dto";
-import { RolesService } from "src/roles/roles.service";
+import { IUser } from "src/modules/users/users.interface";
+import { RegisterUserDto } from "src/modules/users/dto/create-user.dto";
+import { RolesService } from "src/modules/roles/roles.service";
 
 @Controller("auth")
 export class AuthController {

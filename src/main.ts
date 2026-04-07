@@ -4,8 +4,8 @@ import { join } from 'path';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { ConfigService } from '@nestjs/config';
 import { ValidationPipe, VersioningType } from '@nestjs/common';
-import { JwtAuthGuard } from './auth/jwt-auth.guard';
-import { TransformInterceptor } from './core/transform.interceptor';
+import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
+import { TransformInterceptor } from './core/interceptors/transform.interceptor';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 
