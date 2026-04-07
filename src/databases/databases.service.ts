@@ -32,57 +32,42 @@ export class DatabasesService implements OnModuleInit {
             //create permissions
             if (countPermission === 0) {
                 await this.permissionModel.insertMany(INIT_PERMISSIONS);
-                //bulk create
             }
 
-            // create role
+            // create roles
             if (countRole === 0) {
                 const permissions = await this.permissionModel.find({}).select("_id");
                 await this.roleModel.insertMany([
                     {
                         name: RoleName.ADMIN,
-                        description: "Admin thì full quyền :v",
+                        description: "Admin with full permissions",
                         isActive: true,
                         permissions: permissions
                     },
                     {
                         name: RoleName.USER,
-                        description: "Người dùng/Ứng viên sử dụng hệ thống",
+                        description: "Normal user",
                         isActive: true,
-                        permissions: [] //không set quyền, chỉ cần add ROLE
+                        permissions: []
                     }
                 ]);
             }
 
+            // create users
             if (countUser === 0) {
                 const adminRole = await this.roleModel.findOne({ name: RoleName.ADMIN });
                 const userRole = await this.roleModel.findOne({ name: RoleName.USER })
                 await this.userModel.insertMany([
                     {
-                        name: "I'm admin",
+                        name: "Super Admin",
                         email: "admin@gmail.com",
                         password: this.userService.getHashPassword(this.configService.get<string>("INIT_PASSWORD")),
-                        age: 69,
-                        gender: "MALE",
-                        address: "VietNam",
                         role: adminRole?._id
                     },
                     {
-                        name: "I'm Hỏi Dân IT",
-                        email: "hoidanit@gmail.com",
-                        password: this.userService.getHashPassword(this.configService.get<string>("INIT_PASSWORD")),
-                        age: 96,
-                        gender: "MALE",
-                        address: "VietNam",
-                        role: adminRole?._id
-                    },
-                    {
-                        name: "I'm normal user",
+                        name: "User Guest",
                         email: "user@gmail.com",
                         password: this.userService.getHashPassword(this.configService.get<string>("INIT_PASSWORD")),
-                        age: 69,
-                        gender: "MALE",
-                        address: "VietNam",
                         role: userRole?._id
                     },
                 ])
