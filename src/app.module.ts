@@ -8,6 +8,11 @@ import { AuthModule } from './auth/auth.module';
 import { softDeletePlugin } from 'soft-delete-plugin-mongoose';
 import { CoursesModule } from './courses/courses.module';
 import { FilesModule } from './files/files.module';
+import { EnrollmentsModule } from './enrollments/enrollments.module';
+import { PermissionsModule } from './permissions/permissions.module';
+import { RolesModule } from './roles/roles.module';
+import { DatabasesModule } from './databases/databases.module';
+import { MailModule } from './mail/mail.module';
 
 @Module({
   imports: [
@@ -31,7 +36,12 @@ import { FilesModule } from './files/files.module';
     UsersModule,
     AuthModule,
     CoursesModule,
-    FilesModule
+    FilesModule,
+    EnrollmentsModule,
+    PermissionsModule,
+    RolesModule,
+    DatabasesModule,
+    MailModule
   ],
   controllers: [AppController],
   providers: [AppService],

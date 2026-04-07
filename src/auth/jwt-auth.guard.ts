@@ -1,6 +1,7 @@
-import { ExecutionContext, Injectable, UnauthorizedException } from "@nestjs/common";
+import { ExecutionContext, ForbiddenException, Injectable, UnauthorizedException } from "@nestjs/common";
 import { Reflector } from "@nestjs/core";
 import { AuthGuard } from "@nestjs/passport";
+import { Request } from "express";
 import { IS_PUBLIC_KEY } from "src/decorator/customize";
 
 @Injectable()
@@ -20,10 +21,26 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
         return super.canActivate(context);
     }
 
-    handleRequest(err, user, info) {
+    handleRequest(err, user, info, context: ExecutionContext) {
+        const request: Request = context.switchToHttp().getRequest();
+
         if (err || !user) {
             throw err || new UnauthorizedException("Token is invalid or expired");
         }
+
+        const targetMethod = request.method;
+        const targetEndpoint = request.route?.path as string;
+
+        const permissions = user?.permissions ?? [];
+        let isExist = permissions.find(permission => 
+            permission.method === targetMethod && permission.endpoint === targetEndpoint
+        );
+
+        if(targetEndpoint.startsWith("/api/v1/auth")) isExist = true;
+        if (!isExist) {
+            throw new ForbiddenException("You not have permission to access this endpoint");
+        }
+
         return user;
     }
 }
