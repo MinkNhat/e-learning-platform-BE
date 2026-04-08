@@ -42,6 +42,7 @@ export class CoursesService {
       .limit(defaultLimit)
       .sort(sort as any)
       .populate(population)
+      .select(projection)
       .exec();
 
     return {
