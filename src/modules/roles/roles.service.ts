@@ -17,15 +17,14 @@ export class RolesService {
   ) { }
 
   async create(createRoleDto: CreateRoleDto, user: IUser) {
-    const { name, description, isActive, permissions } = createRoleDto;
-
+    const { name } = createRoleDto;
     const isExist = await this.roleModel.findOne({ name });
     if (isExist) {
-      throw new BadRequestException(`Role với name="${name}" đã tồn tại!`)
+      throw new BadRequestException(`Role with name='${name}' already exists`)
     }
 
     const newRole = await this.roleModel.create({
-      name, description, isActive, permissions,
+      ...createRoleDto,
       createdBy: {
         _id: user._id,
         email: user.email
@@ -60,56 +59,45 @@ export class RolesService {
 
     return {
       meta: {
-        current: currentPage, //trang hiện tại
-        pageSize: limit, //số lượng bản ghi đã lấy
-        pages: totalPages,  //tổng số trang với điều kiện query
-        total: totalItems // tổng số phần tử (số bản ghi)
+        current: currentPage, 
+        pageSize: limit, 
+        pages: totalPages,  
+        total: totalItems 
       },
-      result //kết quả query
+      result 
     }
   }
 
   async findOne(id: string) {
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-      throw new BadRequestException("not found role")
-    }
-
+    if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Role with id='${id}' not found`);
     return (await this.roleModel.findById(id)).populate({
       path: "permissions",
       select: { _id: 1, apiPath: 1, name: 1, method: 1, module: 1 }
     });
   }
 
-  async update(_id: string, updateRoleDto: UpdateRoleDto, user: IUser) {
-    if (!mongoose.Types.ObjectId.isValid(_id)) {
-      throw new BadRequestException("not found role")
-    }
+  async update(id: string, updateRoleDto: UpdateRoleDto, user: IUser) {
+    if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Role with id='${id}' not found`);
 
-    const { name, description, isActive, permissions } = updateRoleDto;
-
-    // const isExist = await this.roleModel.findOne({ name });
-    // if (isExist) {
-    //   throw new BadRequestException(`Role với name=${name} đã tồn tại!`)
-    // }
-
-    const updated = await this.roleModel.updateOne(
-      { _id },
+    return await this.roleModel.updateOne(
+      { _id: id },
       {
-        name, description, isActive, permissions,
+        ...updateRoleDto,
         updatedBy: {
           _id: user._id,
           email: user.email
         }
       });
-
-    return updated;
   }
 
   async remove(id: string, user: IUser) {
+    if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Role with id='${id}' not found`);
+
     const foundRole = await this.roleModel.findById(id);
     if (foundRole.name === RoleName.ADMIN) {
-      throw new BadRequestException("Không thể xóa role ADMIN");
+      throw new BadRequestException("Cannot delete ADMIN role");
     }
+
     await this.roleModel.updateOne(
       { _id: id },
       {

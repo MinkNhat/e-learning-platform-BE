@@ -20,7 +20,7 @@ export class PermissionsService {
 
     const isExist = await this.permissionModel.findOne({ apiPath, method });
     if (isExist) {
-      throw new BadRequestException(`Permission với apiPath=${apiPath} , method=${method} đã tồn tại!`)
+      throw new BadRequestException(`Permission with apiPath=${apiPath} and method=${method} already exists`)
     }
 
     const newPermission = await this.permissionModel.create({
@@ -33,6 +33,8 @@ export class PermissionsService {
 
     return {
       _id: newPermission?._id,
+      apiPath: newPermission?.apiPath,
+      method: newPermission?.method,
       createdAt: newPermission?.createdAt
     };
   }
@@ -59,42 +61,37 @@ export class PermissionsService {
 
     return {
       meta: {
-        current: currentPage, //trang hiện tại
-        pageSize: limit, //số lượng bản ghi đã lấy
-        pages: totalPages,  //tổng số trang với điều kiện query
-        total: totalItems // tổng số phần tử (số bản ghi)
+        current: currentPage, 
+        pageSize: limit, 
+        pages: totalPages,  
+        total: totalItems 
       },
-      result //kết quả query
+      result 
     }
   }
 
   async findOne(id: string) {
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-      throw new BadRequestException("not found permission")
-    }
-
+    if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Permission with id='${id}' not found`);
     return await this.permissionModel.findById(id);
   }
 
   async update(_id: string, updatePermissionDto: UpdatePermissionDto, user: IUser) {
-    if (!mongoose.Types.ObjectId.isValid(_id)) {
-      throw new BadRequestException("not found permission")
-    }
-    const { module, method, apiPath, name } = updatePermissionDto;
-
-    const updated = await this.permissionModel.updateOne(
+    if (!mongoose.Types.ObjectId.isValid(_id)) throw new BadRequestException(`Permission with id='${_id}' not found`);
+    
+    return await this.permissionModel.updateOne(
       { _id },
       {
-        module, method, apiPath, name,
+        ...updatePermissionDto,
         updatedBy: {
           _id: user._id,
           email: user.email
         }
       });
-    return updated;
   }
 
   async remove(id: string, user: IUser) {
+    if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Permission with id='${id}' not found`);
+    
     await this.permissionModel.updateOne(
       { _id: id },
       {

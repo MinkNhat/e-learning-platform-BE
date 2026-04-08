@@ -12,21 +12,27 @@ import mongoose from 'mongoose';
 export class CoursesService {
   constructor(@InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>) {}
 
-  create = async (createCourseDto: CreateCourseDto, user: IUser) => {
+  async create(createCourseDto: CreateCourseDto, user: IUser) {
     if (!createCourseDto.authors.includes(user.name)) {
       createCourseDto.authors.unshift(user.name);
     }
 
-    return await this.courseModel.create({
+    const newCourse = await this.courseModel.create({
       ...createCourseDto,
       createdBy: {
         _id: user._id,
         email: user.email
       }
     })
+
+    return {
+      _id: newCourse?._id,
+      name: newCourse?.title,
+      createdAt: newCourse?.createdAt
+    };
   }
 
-  findAll = async (currentPage: number, limit: number, qs: string) => {
+  async findAll(currentPage: number, limit: number, qs: string) {
     const { filter, sort, projection, population } = aqp(qs);
     delete filter.current;
     delete filter.pageSize;
@@ -56,15 +62,15 @@ export class CoursesService {
     }
   }
 
-  findOne = async (id: string) => {
-    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id ${id} not found`);
+  async findOne(id: string) {
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
     return await this.courseModel.findOne({_id: id})
   }
 
-  update = async (id: string, updateCourseDto: UpdateCourseDto, user: IUser) => {
-    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id ${id} not found`);
+  async update(id: string, updateCourseDto: UpdateCourseDto, user: IUser) {
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
 
-    return await this.courseModel.findOneAndUpdate(
+    return await this.courseModel.updateOne(
       {_id: id}, 
       {
         ...updateCourseDto,
@@ -72,13 +78,12 @@ export class CoursesService {
           _id: user._id,
           email: user.email
         }
-      },
-      { new: true }
+      }
     );
   }
 
-  remove = async (id: string, user: IUser) => {
-    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id ${id} not found`);
+  async remove(id: string, user: IUser) {
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
 
     await this.courseModel.updateOne(
       {_id: id}, {

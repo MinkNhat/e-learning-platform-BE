@@ -53,7 +53,6 @@ export class UsersService {
     return {
       name: createdUser.name,
       email: createdUser.email,
-      phone: createdUser?.phone,
       role: {
         _id: userRole._id,
         name: userRole.name
@@ -109,7 +108,7 @@ export class UsersService {
 
   findOne = async (id: string) => {
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      throw new BadRequestException(`User with id '${id}' not found`);
+      throw new BadRequestException(`User with id='${id}' not found`);
     }
 
     return await this.userModel.findOne({
@@ -139,12 +138,11 @@ export class UsersService {
 
   update = async (id: string, updateUserDto: UpdateUserDto, user: IUser) => {
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      throw new BadRequestException(`User with id '${id}' not found`);
+      throw new BadRequestException(`User with id='${id}' not found`);
     }
 
     const userRole = await this.roleModel.findOne({ name: updateUserDto.role });
-
-    const updatedUser = await this.userModel.findOneAndUpdate(
+    return await this.userModel.updateOne(
       {_id: id},
       {
         ...updateUserDto,
@@ -153,25 +151,13 @@ export class UsersService {
           _id: user._id,
           email: user.email
         }
-      },
-      {new : true}
+      }
     );
-
-    return {
-      name: updatedUser.name,
-      email: updatedUser.email,
-      phone: updatedUser?.phone,
-      role: {
-        _id: userRole._id,
-        name: userRole.name
-      },
-      updatedAt: updatedUser.updatedAt
-    }
   }
 
   remove = async (id: string, user: IUser) => {
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      throw new BadRequestException(`User with id '${id}' not found`);
+      throw new BadRequestException(`User with id='${id}' not found`);
     }
 
     const foundUser = await this.userModel.findById(id);
