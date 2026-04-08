@@ -13,7 +13,10 @@ export class CoursesService {
   constructor(@InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>) {}
 
   create = async (createCourseDto: CreateCourseDto, user: IUser) => {
-    createCourseDto.authors.unshift(user.name);
+    if (!createCourseDto.authors.includes(user.name)) {
+      createCourseDto.authors.unshift(user.name);
+    }
+
     return await this.courseModel.create({
       ...createCourseDto,
       createdBy: {
@@ -53,13 +56,14 @@ export class CoursesService {
   }
 
   findOne = async (id: string) => {
-    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException("course not found");
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id ${id} not found`);
     return await this.courseModel.findOne({_id: id})
   }
 
   update = async (id: string, updateCourseDto: UpdateCourseDto, user: IUser) => {
-    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException("course not found");
-    return await this.courseModel.updateOne(
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id ${id} not found`);
+
+    return await this.courseModel.findOneAndUpdate(
       {_id: id}, 
       {
         ...updateCourseDto,
@@ -67,12 +71,14 @@ export class CoursesService {
           _id: user._id,
           email: user.email
         }
-      }
+      },
+      { new: true }
     );
   }
 
   remove = async (id: string, user: IUser) => {
-    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException("course not found");
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id ${id} not found`);
+
     await this.courseModel.updateOne(
       {_id: id}, {
       deletedBy: {

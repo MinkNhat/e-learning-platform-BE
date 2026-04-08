@@ -1,4 +1,5 @@
-import { IsArray, IsNotEmpty, IsString } from "class-validator";
+import { IsArray, IsEnum, IsNotEmpty, IsString } from "class-validator";
+import { CourseLevel } from "src/core/enums/course-level.enum";
 
 export class CreateCourseDto {
     @IsNotEmpty()
@@ -29,7 +30,10 @@ export class CreateCourseDto {
     thumbnail: string;
 
     requirement: string;
-    level: string;
+
+    @IsEnum(CourseLevel)
+    level: CourseLevel;
+
     isProcessLimit: boolean;
     isPublished: boolean;
 }

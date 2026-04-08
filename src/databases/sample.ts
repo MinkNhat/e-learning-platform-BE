@@ -1,18 +1,19 @@
 export const INIT_PERMISSIONS = [
     {
+        // USERS
         "_id": "648ab6d3fa16b294212e4033",
         "name": "Create User",
         "apiPath": "/api/v1/users",
         "method": "POST",
         "module": "USERS",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T06:59:31.898Z",
-        "updatedAt": "2023-06-15T06:59:31.898Z",
+        "createdAt": "2025-06-15T06:59:31.898Z",
+        "updatedAt": "2025-06-15T06:59:31.898Z",
         "__v": 0
     },
     {
@@ -22,13 +23,13 @@ export const INIT_PERMISSIONS = [
         "method": "GET",
         "module": "USERS",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T06:59:51.041Z",
-        "updatedAt": "2023-06-15T06:59:51.041Z",
+        "createdAt": "2025-06-15T06:59:51.041Z",
+        "updatedAt": "2025-06-15T06:59:51.041Z",
         "__v": 0
     },
     {
@@ -38,13 +39,13 @@ export const INIT_PERMISSIONS = [
         "method": "GET",
         "module": "USERS",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T07:00:13.364Z",
-        "updatedAt": "2023-06-15T07:00:13.364Z",
+        "createdAt": "2025-06-15T07:00:13.364Z",
+        "updatedAt": "2025-06-15T07:00:13.364Z",
         "__v": 0
     },
     {
@@ -54,13 +55,13 @@ export const INIT_PERMISSIONS = [
         "method": "PATCH",
         "module": "USERS",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T07:00:41.934Z",
-        "updatedAt": "2023-06-15T07:00:41.934Z",
+        "createdAt": "2025-06-15T07:00:41.934Z",
+        "updatedAt": "2025-06-15T07:00:41.934Z",
         "__v": 0
     },
     {
@@ -70,15 +71,17 @@ export const INIT_PERMISSIONS = [
         "method": "DELETE",
         "module": "USERS",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T07:00:56.274Z",
-        "updatedAt": "2023-06-15T07:00:56.274Z",
+        "createdAt": "2025-06-15T07:00:56.274Z",
+        "updatedAt": "2025-06-15T07:00:56.274Z",
         "__v": 0
     },
+
+    // FILES
     {
         "_id": "648ab750fa16b294212e404c",
         "name": "Upload Single File",
@@ -86,15 +89,17 @@ export const INIT_PERMISSIONS = [
         "method": "POST",
         "module": "FILES",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T07:01:36.923Z",
-        "updatedAt": "2023-06-15T07:01:36.923Z",
+        "createdAt": "2025-06-15T07:01:36.923Z",
+        "updatedAt": "2025-06-15T07:01:36.923Z",
         "__v": 0
     },
+
+    // PERMISSIONS
     {
         "_id": "648ad59adafdb9754f40b881",
         "name": "Create a permission",
@@ -102,13 +107,13 @@ export const INIT_PERMISSIONS = [
         "method": "POST",
         "module": "PERMISSIONS",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T09:10:50.946Z",
-        "updatedAt": "2023-06-15T09:10:50.946Z",
+        "createdAt": "2025-06-15T09:10:50.946Z",
+        "updatedAt": "2025-06-15T09:10:50.946Z",
         "__v": 0
     },
     {
@@ -118,13 +123,13 @@ export const INIT_PERMISSIONS = [
         "method": "GET",
         "module": "PERMISSIONS",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T09:11:10.914Z",
-        "updatedAt": "2023-06-15T09:11:10.914Z",
+        "createdAt": "2025-06-15T09:11:10.914Z",
+        "updatedAt": "2025-06-15T09:11:10.914Z",
         "__v": 0
     },
     {
@@ -134,13 +139,13 @@ export const INIT_PERMISSIONS = [
         "method": "GET",
         "module": "PERMISSIONS",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T09:11:33.234Z",
-        "updatedAt": "2023-06-15T09:11:33.234Z",
+        "createdAt": "2025-06-15T09:11:33.234Z",
+        "updatedAt": "2025-06-15T09:11:33.234Z",
         "__v": 0
     },
     {
@@ -150,13 +155,13 @@ export const INIT_PERMISSIONS = [
         "method": "PATCH",
         "module": "PERMISSIONS",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T09:11:48.081Z",
-        "updatedAt": "2023-06-15T09:11:48.081Z",
+        "createdAt": "2025-06-15T09:11:48.081Z",
+        "updatedAt": "2025-06-15T09:11:48.081Z",
         "__v": 0
     },
     {
@@ -166,15 +171,17 @@ export const INIT_PERMISSIONS = [
         "method": "DELETE",
         "module": "PERMISSIONS",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T09:12:11.323Z",
-        "updatedAt": "2023-06-15T09:12:11.323Z",
+        "createdAt": "2025-06-15T09:12:11.323Z",
+        "updatedAt": "2025-06-15T09:12:11.323Z",
         "__v": 0
     },
+
+    // ROLES
     {
         "_id": "648ad613dafdb9754f40b89a",
         "name": "Create Role",
@@ -182,13 +189,13 @@ export const INIT_PERMISSIONS = [
         "method": "POST",
         "module": "ROLES",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T09:12:51.974Z",
-        "updatedAt": "2023-06-15T09:12:51.974Z",
+        "createdAt": "2025-06-15T09:12:51.974Z",
+        "updatedAt": "2025-06-15T09:12:51.974Z",
         "__v": 0
     },
     {
@@ -198,13 +205,13 @@ export const INIT_PERMISSIONS = [
         "method": "GET",
         "module": "ROLES",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T09:13:06.618Z",
-        "updatedAt": "2023-06-15T09:13:06.618Z",
+        "createdAt": "2025-06-15T09:13:06.618Z",
+        "updatedAt": "2025-06-15T09:13:06.618Z",
         "__v": 0
     },
     {
@@ -214,13 +221,13 @@ export const INIT_PERMISSIONS = [
         "method": "GET",
         "module": "ROLES",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T09:13:20.853Z",
-        "updatedAt": "2023-06-15T09:13:20.853Z",
+        "createdAt": "2025-06-15T09:13:20.853Z",
+        "updatedAt": "2025-06-15T09:13:20.853Z",
         "__v": 0
     },
     {
@@ -230,13 +237,13 @@ export const INIT_PERMISSIONS = [
         "method": "PATCH",
         "module": "ROLES",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T09:13:36.836Z",
-        "updatedAt": "2023-06-15T09:13:36.836Z",
+        "createdAt": "2025-06-15T09:13:36.836Z",
+        "updatedAt": "2025-06-15T09:13:36.836Z",
         "__v": 0
     },
     {
@@ -246,13 +253,95 @@ export const INIT_PERMISSIONS = [
         "method": "DELETE",
         "module": "ROLES",
         "createdBy": {
-            "_id": "647b5108a8a243e8191855b5",
-            "email": "hoidanit@gmail.com"
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
         },
         "isDeleted": false,
         "deletedAt": null,
-        "createdAt": "2023-06-15T09:13:52.798Z",
-        "updatedAt": "2023-06-15T09:13:52.798Z",
+        "createdAt": "2025-06-15T09:13:52.798Z",
+        "updatedAt": "2025-06-15T09:13:52.798Z",
+        "__v": 0
+    },
+
+    // COURSES
+    {
+        "_id": "69d5f7e5404e5dda67f1b1dd",
+        "name": "Create course",
+        "apiPath": "/api/v1/courses",
+        "method": "POST",
+        "module": "COURSES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-08T06:38:29.229Z",
+        "updatedAt": "2026-04-08T06:38:29.229Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d5f80a404e5dda67f1b1e6",
+        "name": "Update course",
+        "apiPath": "/api/v1/courses/:id",
+        "method": "PATCH",
+        "module": "COURSES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-08T06:39:06.035Z",
+        "updatedAt": "2026-04-08T06:39:06.035Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d5f827404e5dda67f1b1ef",
+        "name": "Fetch course by id",
+        "apiPath": "/api/v1/courses/:id",
+        "method": "GET",
+        "module": "COURSES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-08T06:39:35.258Z",
+        "updatedAt": "2026-04-08T06:39:35.258Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d5f83e404e5dda67f1b1f8",
+        "name": "Fetch course with paginate",
+        "apiPath": "/api/v1/courses",
+        "method": "GET",
+        "module": "COURSES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-08T06:39:58.951Z",
+        "updatedAt": "2026-04-08T06:39:58.951Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d5f84f404e5dda67f1b201",
+        "name": "Delete course",
+        "apiPath": "/api/v1/courses/:id",
+        "method": "DELETE",
+        "module": "COURSES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-08T06:40:15.778Z",
+        "updatedAt": "2026-04-08T06:40:15.778Z",
         "__v": 0
     }
 ]
