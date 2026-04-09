@@ -21,10 +21,10 @@ export class Lesson {
     @Prop()
     order: number;
 
-    @Prop({ enum: LessonType })
-    type: LessonType;
-
     @Prop()
+    type: string;
+
+    @Prop({ type: Object })
     metadata: {
         duration?: number;
         videoUrl?: string;
