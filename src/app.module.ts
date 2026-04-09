@@ -14,6 +14,8 @@ import { RolesModule } from './modules/roles/roles.module';
 import { DatabasesModule } from './databases/databases.module';
 import { MailModule } from './modules/mail/mail.module';
 import { CategoriesModule } from './modules/categories/categories.module';
+import { ModulesModule } from './modules/modules/modules.module';
+import { LessonsModule } from './modules/lessons/lessons.module';
 
 @Module({
   imports: [
@@ -43,7 +45,9 @@ import { CategoriesModule } from './modules/categories/categories.module';
     RolesModule,
     DatabasesModule,
     MailModule,
-    CategoriesModule
+    CategoriesModule,
+    ModulesModule,
+    LessonsModule
   ],
   controllers: [AppController],
   providers: [AppService],
