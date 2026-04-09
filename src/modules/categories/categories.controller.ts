@@ -24,6 +24,18 @@ export class CategoriesController {
     return this.categoriesService.findAll(+currentPage, +limit, qs);
   }
 
+  @Get('root')
+  @Public()
+  findRootCategories() {
+    return this.categoriesService.findRootCategories();
+  }
+
+  @Get(':id/children')
+  @Public()
+  findChildCategories(@Param('id') id: string) {
+    return this.categoriesService.findChildCategories(id);
+  }
+
   @Get(':id')
   @Public()
   findOne(@Param('id') id: string) {

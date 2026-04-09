@@ -343,5 +343,307 @@ export const INIT_PERMISSIONS = [
         "createdAt": "2026-04-08T06:40:15.778Z",
         "updatedAt": "2026-04-08T06:40:15.778Z",
         "__v": 0
+    },
+
+    // CATEGORIES
+    {
+        "_id": "69d74a253d88d336bc01ce34",
+        "name": "Create a category",
+        "apiPath": "/api/v1/categories",
+        "method": "POST",
+        "module": "CATEGORIES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:41:41.802Z",
+        "updatedAt": "2026-04-09T06:44:36.503Z",
+        "__v": 0,
+        "updatedBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        }
+    },
+    {
+        "_id": "69d74a413d88d336bc01ce3d",
+        "name": "Update a category",
+        "apiPath": "/api/v1/categories/:id",
+        "method": "PATCH",
+        "module": "CATEGORIES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:42:09.233Z",
+        "updatedAt": "2026-04-09T06:45:02.682Z",
+        "__v": 0,
+        "updatedBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        }
+    },
+    {
+        "_id": "69d74a5e3d88d336bc01ce46",
+        "name": "Fetch category by id",
+        "apiPath": "/api/v1/categories:/id",
+        "method": "GET",
+        "module": "CATEGORIES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:42:38.528Z",
+        "updatedAt": "2026-04-09T06:44:42.349Z",
+        "__v": 0,
+        "updatedBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        }
+    },
+    {
+        "_id": "69d74a7b3d88d336bc01ce5b",
+        "name": "Fetch categories with paginate",
+        "apiPath": "/api/v1/categories",
+        "method": "GET",
+        "module": "CATEGORIES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:43:07.716Z",
+        "updatedAt": "2026-04-09T06:44:55.746Z",
+        "__v": 0,
+        "updatedBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        }
+    },
+    {
+        "_id": "69d74a963d88d336bc01ce64",
+        "name": "Delete a category",
+        "apiPath": "/api/v1/categories/:id",
+        "method": "DELETE",
+        "module": "CATEGORIES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:43:34.593Z",
+        "updatedAt": "2026-04-09T06:44:24.821Z",
+        "__v": 0,
+        "updatedBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        }
+    },
+    {
+        "_id": "69d74f576167d051fd0b88c1",
+        "name": "Get root categories",
+        "apiPath": "/api/v1/categories/root",
+        "method": "GET",
+        "module": "CATEGORIES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T07:03:51.690Z",
+        "updatedAt": "2026-04-09T07:03:51.690Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d74f8e6167d051fd0b88ca",
+        "name": "Get categories by parent",
+        "apiPath": "/api/v1/categories/:id/children",
+        "method": "GET",
+        "module": "CATEGORIES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T07:04:46.827Z",
+        "updatedAt": "2026-04-09T07:04:46.827Z",
+        "__v": 0
+    },
+
+    // MODULES
+    {
+        "_id": "69d74ac23d88d336bc01ce6d",
+        "name": "Create a module",
+        "apiPath": "/api/v1/modules",
+        "method": "POST",
+        "module": "MODULES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:44:18.233Z",
+        "updatedAt": "2026-04-09T06:45:27.153Z",
+        "__v": 0,
+        "updatedBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        }
+    },
+    {
+        "_id": "69d74b213d88d336bc01cea7",
+        "name": "Update a module",
+        "apiPath": "/api/v1/modules/:id",
+        "method": "PATCH",
+        "module": "MODULES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:45:53.976Z",
+        "updatedAt": "2026-04-09T06:45:53.976Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d74b373d88d336bc01ceb0",
+        "name": "Fetch module by id",
+        "apiPath": "/api/v1/modules/:id",
+        "method": "GET",
+        "module": "MODULES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:46:15.088Z",
+        "updatedAt": "2026-04-09T06:46:15.088Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d74b473d88d336bc01ceb9",
+        "name": "Fetch modules with paginate",
+        "apiPath": "/api/v1/modules",
+        "method": "GET",
+        "module": "MODULES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:46:31.536Z",
+        "updatedAt": "2026-04-09T06:46:31.536Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d74b583d88d336bc01cec2",
+        "name": "Delete a module",
+        "apiPath": "/api/v1/modules/:id",
+        "method": "DELETE",
+        "module": "MODULES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:46:48.279Z",
+        "updatedAt": "2026-04-09T06:46:48.279Z",
+        "__v": 0
+    },
+
+    // LESSONS
+    {
+        "_id": "69d74b6c3d88d336bc01cecb",
+        "name": "Create a lesson",
+        "apiPath": "/api/v1/lessons",
+        "method": "POST",
+        "module": "LESSONS",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:47:08.580Z",
+        "updatedAt": "2026-04-09T06:47:08.580Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d74b7c3d88d336bc01ced4",
+        "name": "Fetch a lesson by id",
+        "apiPath": "/api/v1/lessons/:id",
+        "method": "GET",
+        "module": "LESSONS",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:47:24.915Z",
+        "updatedAt": "2026-04-09T06:47:24.915Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d74b8f3d88d336bc01cedd",
+        "name": "Fetch lessons with paginate",
+        "apiPath": "/api/v1/lessons",
+        "method": "GET",
+        "module": "LESSONS",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:47:43.707Z",
+        "updatedAt": "2026-04-09T06:47:43.707Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d74ba13d88d336bc01cee6",
+        "name": "Update a lesson",
+        "apiPath": "/api/v1/lessons/:id",
+        "method": "PATCH",
+        "module": "LESSONS",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:48:01.419Z",
+        "updatedAt": "2026-04-09T06:48:01.419Z",
+        "__v": 0
+    },
+    {
+        "_id": "69d74bb03d88d336bc01ceef",
+        "name": "Delete a lesson",
+        "apiPath": "/api/v1/lessons/:id",
+        "method": "DELETE",
+        "module": "LESSONS",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-04-09T06:48:16.598Z",
+        "updatedAt": "2026-04-09T06:48:16.598Z",
+        "__v": 0
     }
 ]

@@ -15,6 +15,14 @@ export class CategoriesService {
     private categoryModel: SoftDeleteModel<CategoryDocument>
   ) { }
 
+  async findRootCategories() {
+    return await this.categoryModel.find({ parent: null }).select({ _id: 1, name: 1, slug: 1, level: 1 });
+  }
+
+  async findChildCategories(id: string) {
+    return await this.categoryModel.find({ parent: id }).select({ _id: 1, name: 1, slug: 1, level: 1 });
+  }
+
   async create(createCategoryDto: CreateCategoryDto, user: IUser) {
     const { name, parent } = createCategoryDto;
     const isExist = await this.categoryModel.findOne({ name });
