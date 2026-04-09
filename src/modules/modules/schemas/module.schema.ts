@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { HydratedDocument } from 'mongoose';
+import { Course } from 'src/modules/courses/schemas/course.schema';
 import { Lesson } from 'src/modules/lessons/schemas/lesson.schema';
 
 export type ModuleDocument = HydratedDocument<Module>;
@@ -18,8 +19,8 @@ export class Module {
     @Prop()
     order: number;
 
-    @Prop({ type: [mongoose.Schema.Types.ObjectId], ref: Lesson.name })
-    lessons: Lesson[];
+    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: Course.name })
+    course: Course;
 
     @Prop({ type: Object })
     createdBy: {

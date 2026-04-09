@@ -1,11 +1,12 @@
-import { IsBoolean, IsNotEmpty, IsNumber, IsEnum, IsOptional, IsObject } from 'class-validator';
+import { IsBoolean, IsNotEmpty, IsNumber, IsEnum, IsOptional, IsObject, IsMongoId } from 'class-validator';
+import mongoose from 'mongoose';
 import { LessonType } from 'src/core/enums/lesson-type.enum';
 
 export class CreateLessonDto {
   @IsNotEmpty()
   name: string;
 
-  detail: string;
+  content: string;
   isActive: boolean;
   isFree: boolean;
 
@@ -17,11 +18,14 @@ export class CreateLessonDto {
   @IsEnum(LessonType)
   type: LessonType;
 
+  @IsNotEmpty()
+  @IsMongoId()
+  module: mongoose.Schema.Types.ObjectId;
+
   @IsOptional()
   @IsObject()
   metadata?: {
     duration?: number;
     videoUrl?: string;
-    content?: string;
   };
 }

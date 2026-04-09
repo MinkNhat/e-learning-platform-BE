@@ -7,10 +7,16 @@ import { InjectModel } from '@nestjs/mongoose';
 import { IUser } from 'src/modules/users/users.interface';
 import aqp from 'api-query-params';
 import mongoose from 'mongoose';
+import { Module, ModuleDocument } from '../modules/schemas/module.schema';
+import { Lesson, LessonDocument } from '../lessons/schemas/lesson.schema';
 
 @Injectable()
 export class CoursesService {
-  constructor(@InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>) {}
+  constructor(
+    @InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>,
+    @InjectModel(Module.name) private moduleModel: SoftDeleteModel<ModuleDocument>,
+    @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>
+  ) {}
 
   async create(createCourseDto: CreateCourseDto, user: IUser) {
     if (!createCourseDto.authors.includes(user.name)) {
@@ -63,12 +69,41 @@ export class CoursesService {
   }
 
   async findOne(id: string) {
-    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
-    return await this.courseModel.findOne({_id: id})
-  }
+    const course = await this.courseModel.findById(id).lean();
+    if (!mongoose.Types.ObjectId.isValid(id) || !course) throw new BadRequestException(`course with id=${id} not found`);
+
+    const modules = await this.moduleModel.find({ course: id }).select({ _id: 1, name: 1, order: 1 }).sort({ order: 1 });
+    const moduleIds = modules.map((m) => m._id);
+
+    // Group lessons by module
+    const lessons = await this.lessonModel.find({ module: { $in: moduleIds } }).select({ _id: 1, name: 1, type: 1, module: 1, order: 1 }).sort({ order: 1 });
+    const lessonsMap = new Map<string, any[]>();
+    for (const lesson of lessons) {
+      const key = lesson.module.toString();
+      if (!lessonsMap.has(key)) { lessonsMap.set(key, []) }
+
+      lessonsMap.get(key)!.push({
+        _id: lesson._id,
+        name: lesson.name,
+        type: lesson.type,
+        order: lesson.order,
+      });
+    }
+
+    return {
+      ...course,
+      modules: modules.map((m) => ({
+        _id: m._id,
+        name: m.name,
+        order: m.order,
+        lessons: lessonsMap.get(m._id.toString()) || [],
+      }))
+    };
+}
 
   async update(id: string, updateCourseDto: UpdateCourseDto, user: IUser) {
-    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
+    const course = await this.courseModel.findById(id);
+    if(!mongoose.Types.ObjectId.isValid(id) || !course) throw new BadRequestException(`course with id=${id} not found`);
 
     return await this.courseModel.updateOne(
       {_id: id}, 
@@ -83,7 +118,8 @@ export class CoursesService {
   }
 
   async remove(id: string, user: IUser) {
-    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
+    const course = await this.courseModel.findById(id);
+    if(!mongoose.Types.ObjectId.isValid(id) || !course) throw new BadRequestException(`course with id=${id} not found`);
 
     await this.courseModel.updateOne(
       {_id: id}, {

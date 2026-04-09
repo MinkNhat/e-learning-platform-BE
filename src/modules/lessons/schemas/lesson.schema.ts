@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { HydratedDocument } from 'mongoose';
-import { LessonType } from 'src/core/enums/lesson-type.enum';
+import { Module } from 'src/modules/modules/schemas/module.schema';
 
 export type LessonDocument = HydratedDocument<Lesson>;
 
@@ -10,7 +10,7 @@ export class Lesson {
     name: string;
 
     @Prop()
-    detail: string;
+    content: string;
 
     @Prop({default: true})
     isActive: boolean;
@@ -24,11 +24,13 @@ export class Lesson {
     @Prop()
     type: string;
 
+    @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'Module'})
+    module: Module;
+
     @Prop({ type: Object })
     metadata: {
         duration?: number;
         videoUrl?: string;
-        content?: string;
     };
 
     @Prop({ type: Object })

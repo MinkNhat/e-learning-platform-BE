@@ -12,8 +12,7 @@ export class CreateModuleDto {
   @IsNumber()
   order: number;
 
-  @IsOptional()
-  @IsArray()
-  @IsMongoId({ each: true, message: 'each lesson must be a mongo object id' })
-  lessons?: mongoose.Schema.Types.ObjectId[];
+  @IsNotEmpty()
+  @IsMongoId()
+  course: mongoose.Schema.Types.ObjectId;
 }

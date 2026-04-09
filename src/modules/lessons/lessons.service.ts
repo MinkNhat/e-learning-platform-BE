@@ -7,17 +7,22 @@ import { SoftDeleteModel } from 'soft-delete-plugin-mongoose';
 import { IUser } from 'src/modules/users/users.interface';
 import aqp from 'api-query-params';
 import mongoose from 'mongoose';
+import { Module, ModuleDocument } from '../modules/schemas/module.schema';
 
 @Injectable()
 export class LessonsService {
   constructor(
-    @InjectModel(Lesson.name)
-    private lessonModel: SoftDeleteModel<LessonDocument>
+    @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>,
+    @InjectModel(Module.name) private moduleModel: SoftDeleteModel<ModuleDocument>,
   ) {}
 
   async create(createLessonDto: CreateLessonDto, user: IUser) {
+    const module = await this.moduleModel.findOne({ _id: createLessonDto.module });
+    if (!module) throw new BadRequestException(`Module with id='${createLessonDto.module}' not found`);
+
     const newLesson = await this.lessonModel.create({
       ...createLessonDto,
+      module: module._id,
       createdBy: {
         _id: user._id,
         email: user.email
