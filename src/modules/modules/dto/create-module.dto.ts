@@ -9,7 +9,6 @@ export class CreateModuleDto {
   isActive: boolean;
 
   @IsNotEmpty()
-  @IsNumber()
   order: number;
 
   @IsNotEmpty()

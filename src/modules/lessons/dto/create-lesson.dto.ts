@@ -11,7 +11,6 @@ export class CreateLessonDto {
   isFree: boolean;
 
   @IsNotEmpty()
-  @IsNumber()
   order: number;
 
   @IsNotEmpty()
