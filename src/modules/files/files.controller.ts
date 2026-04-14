@@ -1,6 +1,6 @@
 import { Controller, Post, UseInterceptors, UploadedFile } from '@nestjs/common';
 import { FilesService } from './files.service';
-import { createUploadInterceptor } from 'src/core/config/multer.config';
+import { createUploadInterceptor } from 'src/config/multer.config';
 import { Public } from 'src/core/decorators/customize';
 
 @Controller('files')
