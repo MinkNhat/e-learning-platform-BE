@@ -4,7 +4,7 @@ import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
 import { IUser } from 'src/modules/users/users.interface';
 import { Public, User } from 'src/core/decorators/customize';
-import { createUploadInterceptor } from 'src/core/config/multer.config';
+import { createUploadInterceptor } from 'src/config/multer.config';
 import { IsRequiredFilePipe } from 'src/core/pipes/is-required-file.pipe';
 
 @Controller('courses')

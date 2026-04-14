@@ -7,12 +7,13 @@ import { SoftDeleteModel } from 'soft-delete-plugin-mongoose';
 import { IUser } from 'src/modules/users/users.interface';
 import aqp from 'api-query-params';
 import mongoose from 'mongoose';
+import { SlugService } from 'src/utils/slug.service';
 
 @Injectable()
 export class CategoriesService {
   constructor(
-    @InjectModel(Category.name)
-    private categoryModel: SoftDeleteModel<CategoryDocument>
+    @InjectModel(Category.name) private categoryModel: SoftDeleteModel<CategoryDocument>,
+    private slugService: SlugService,
   ) { }
 
   async findRootCategories() {
@@ -27,7 +28,7 @@ export class CategoriesService {
     const { name, parent } = createCategoryDto;
     const isExist = await this.categoryModel.findOne({ name });
     if (isExist) {
-      throw new BadRequestException(`Category với name='${name}' đã tồn tại!`)
+      throw new BadRequestException(`Category with name='${name}' already exists!`)
     }
 
     const parentCate = await this.categoryModel.findById(parent);
@@ -36,8 +37,11 @@ export class CategoriesService {
     }
 
     const level = parentCate ? parentCate.level + 1 : 0;
+    const slug = await this.slugService.generate(this.categoryModel, name);
+
     const newCate = await this.categoryModel.create({
       ...createCategoryDto,
+      slug,
       level,
       parent: parent ? parent : null,
       createdBy: {

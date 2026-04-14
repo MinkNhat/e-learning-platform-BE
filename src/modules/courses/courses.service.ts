@@ -9,13 +9,15 @@ import aqp from 'api-query-params';
 import mongoose from 'mongoose';
 import { Module, ModuleDocument } from '../modules/schemas/module.schema';
 import { Lesson, LessonDocument } from '../lessons/schemas/lesson.schema';
+import { SlugService } from 'src/utils/slug.service';
 
 @Injectable()
 export class CoursesService {
   constructor(
     @InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>,
     @InjectModel(Module.name) private moduleModel: SoftDeleteModel<ModuleDocument>,
-    @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>
+    @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>,
+    private slugService: SlugService,
   ) {}
 
   async create(createCourseDto: CreateCourseDto, user: IUser) {
@@ -23,8 +25,11 @@ export class CoursesService {
       createCourseDto.authors.unshift(user.name);
     }
 
+    const slug = await this.slugService.generate(this.courseModel, createCourseDto.title);
+
     const newCourse = await this.courseModel.create({
       ...createCourseDto,
+      slug,
       createdBy: {
         _id: user._id,
         email: user.email

@@ -6,6 +6,7 @@ import { Course, CourseSchema } from './schemas/course.schema';
 import { ModuleSchema } from '../modules/schemas/module.schema';
 import { Module as ModuleModel } from '../modules/schemas/module.schema';
 import { Lesson, LessonSchema } from '../lessons/schemas/lesson.schema';
+import { SlugService } from 'src/utils/slug.service';
 
 @Module({
   imports: [
@@ -16,7 +17,10 @@ import { Lesson, LessonSchema } from '../lessons/schemas/lesson.schema';
     ]),
 ],
   controllers: [CoursesController],
-  providers: [CoursesService],
+  providers: [
+    CoursesService,
+    SlugService,
+  ],
   exports: [CoursesService]
 })
 export class CoursesModule {}
