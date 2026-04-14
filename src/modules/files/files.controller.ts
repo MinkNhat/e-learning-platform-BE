@@ -1,6 +1,6 @@
 import { Controller, Post, UseInterceptors, UploadedFile } from '@nestjs/common';
 import { FilesService } from './files.service';
-import { FileInterceptor } from '@nestjs/platform-express';
+import { createUploadInterceptor } from 'src/core/config/multer.config';
 import { Public } from 'src/core/decorators/customize';
 
 @Controller('files')
@@ -9,7 +9,7 @@ export class FilesController {
 
   @Public()
   @Post('upload')
-  @UseInterceptors(FileInterceptor('fileUpload'))
+  @UseInterceptors(createUploadInterceptor('fileUpload'))
   uploadFile(@UploadedFile() file: Express.Multer.File) {
     return {
       fileName: file.filename
