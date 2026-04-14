@@ -121,6 +121,12 @@ export class CoursesService {
     const course = await this.courseModel.findById(id);
     if(!mongoose.Types.ObjectId.isValid(id) || !course) throw new BadRequestException(`course with id=${id} not found`);
 
+    // delete modules and lessons of course
+    const modules = await this.moduleModel.find({ course: id }).select({ _id: 1 });
+    const moduleIds = modules.map((m) => m._id);
+    await this.lessonModel.deleteMany({ module: { $in: moduleIds } });
+    await this.moduleModel.deleteMany({ course: id });
+
     await this.courseModel.updateOne(
       {_id: id}, {
       deletedBy: {
