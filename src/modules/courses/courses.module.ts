@@ -8,11 +8,13 @@ import { Module as ModuleModel } from '../modules/schemas/module.schema';
 import { Lesson, LessonSchema } from '../lessons/schemas/lesson.schema';
 
 @Module({
-  imports: [MongooseModule.forFeature([
-    { name: Course.name, schema: CourseSchema },
-    { name: ModuleModel.name, schema: ModuleSchema },
-    { name: Lesson.name, schema: LessonSchema },
-  ])],
+  imports: [
+    MongooseModule.forFeature([
+      { name: Course.name, schema: CourseSchema },
+      { name: ModuleModel.name, schema: ModuleSchema },
+      { name: Lesson.name, schema: LessonSchema },
+    ]),
+],
   controllers: [CoursesController],
   providers: [CoursesService],
   exports: [CoursesService]

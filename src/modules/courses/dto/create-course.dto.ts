@@ -26,7 +26,7 @@ export class CreateCourseDto {
     @IsString({ each: true })
     authors: string[];
 
-    @IsNotEmpty()
+    // @IsNotEmpty()
     thumbnail: string;
 
     requirement: string;
