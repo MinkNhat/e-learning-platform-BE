@@ -17,7 +17,7 @@ export class CoursesController {
       allowedMimeTypes: ['image/jpeg', 'image/png'],
       allowedExtensions: ['jpg', 'jpeg', 'png'],
       maxFileSize: 2 * 1024 * 1024,
-      folder: 'courses'
+      folder: 'thumbnails'
     }),
   )
   create(
@@ -48,11 +48,23 @@ export class CoursesController {
   }
 
   @Patch(':id')
+  @UseInterceptors(
+    createUploadInterceptor('thumbnail', {
+      allowedMimeTypes: ['image/jpeg', 'image/png'],
+      allowedExtensions: ['jpg', 'jpeg', 'png'],
+      maxFileSize: 2 * 1024 * 1024,
+      folder: 'thumbnails'
+    }),
+  )
   update(
     @Param('id') id: string, 
     @Body() updateCourseDto: UpdateCourseDto,
-    @User() user: IUser
+    @User() user: IUser,
+    @UploadedFile() thumbnail: Express.Multer.File
   ) {
+    if(thumbnail) {
+      updateCourseDto.thumbnail = thumbnail.filename;
+    }
     return this.coursesService.update(id, updateCourseDto, user);
   }
 
