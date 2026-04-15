@@ -647,3 +647,151 @@ export const INIT_PERMISSIONS = [
         "__v": 0
     }
 ]
+
+export const INIT_COURSES = [
+  {
+    "_id": "69df45e7e53f24ac3fd05c2d",
+    "title": "Mastering NestJS APIs",
+    "shortDescription": "Build scalable REST APIs with NestJS",
+    "description": "Learn how to design and build scalable RESTful APIs using NestJS, including validation, authentication, and best practices.",
+    "objectives": [
+      "Design RESTful APIs",
+      "Use DTO and validation",
+      "Apply best practices in backend"
+    ],
+    "requirement": "Basic JavaScript and Node.js",
+    "price": 249000,
+    "slug": "mastering-nestjs-apis",
+    "thumbnail": "become_a_student_inline-1776240103484.jpg",
+    "level": "intermediate",
+    "isProcessLimit": false,
+    "languages": [
+      "English"
+    ],
+    "authors": [
+      "Super Admin",
+      "John Doe"
+    ],
+    "isPublished": true,
+    "createdBy": {
+      "_id": "69d514eb23fb41760ae187e9",
+      "email": "admin@gmail.com"
+    },
+    "deletedAt": null,
+    "isDeleted": false,
+    "createdAt": "2026-04-15T08:01:43.568Z",
+    "updatedAt": "2026-04-15T08:01:43.568Z",
+    "__v": 0
+  },
+  {
+    "_id": "69df4655e53f24ac3fd05c32",
+    "title": "NestJS Microservices Architecture",
+    "shortDescription": "Build distributed systems with NestJS",
+    "description": "Understand how to create microservices using NestJS with message brokers like RabbitMQ and Kafka.",
+    "objectives": [
+      "Understand microservices concepts",
+      "Use message brokers",
+      "Handle inter-service communication"
+    ],
+    "requirement": "Intermediate NestJS knowledge",
+    "price": 349000,
+    "slug": "nestjs-microservices-architecture",
+    "thumbnail": "LD-How-Much-Can-You-Make-Selling-Courses-with-LearnDash_-65956-1-1776240213780.png",
+    "level": "advanced",
+    "isProcessLimit": false,
+    "languages": [
+      "English",
+      "Vietnamese"
+    ],
+    "authors": [
+      "Super Admin",
+      "Jane Smith"
+    ],
+    "isPublished": true,
+    "createdBy": {
+      "_id": "69d514eb23fb41760ae187e9",
+      "email": "admin@gmail.com"
+    },
+    "deletedAt": null,
+    "isDeleted": false,
+    "createdAt": "2026-04-15T08:03:33.878Z",
+    "updatedAt": "2026-04-15T08:03:33.878Z",
+    "__v": 0
+  },
+  {
+    "_id": "69df4674e53f24ac3fd05c37",
+    "title": "NestJS Authentication Guide",
+    "shortDescription": "Secure your app with JWT and OAuth",
+    "description": "Learn authentication and authorization in NestJS using JWT, Passport, and OAuth strategies.",
+    "objectives": [
+      "Implement JWT authentication",
+      "Use Passport strategies",
+      "Secure APIs"
+    ],
+    "requirement": "Basic NestJS knowledge",
+    "price": 199000,
+    "slug": "nestjs-authentication-guide",
+    "thumbnail": "2022_08_MicrosoftTeams-image-13-2-1-1776240244794.jpg",
+    "level": "intermediate",
+    "isProcessLimit": false,
+    "languages": [
+      "English"
+    ],
+    "authors": [
+      "Super Admin",
+      "Alex Nguyen"
+    ],
+    "isPublished": true,
+    "createdBy": {
+      "_id": "69d514eb23fb41760ae187e9",
+      "email": "admin@gmail.com"
+    },
+    "deletedAt": null,
+    "isDeleted": false,
+    "createdAt": "2026-04-15T08:04:04.888Z",
+    "updatedAt": "2026-04-15T08:04:04.888Z",
+    "__v": 0
+  },
+  {
+    "_id": "69df4690e53f24ac3fd05c3c",
+    "title": "Fullstack with NestJS and React",
+    "shortDescription": "Build fullstack apps with NestJS backend",
+    "description": "Combine NestJS backend with React frontend to build modern fullstack applications.",
+    "objectives": [
+      "Connect frontend and backend",
+      "Manage state and APIs",
+      "Deploy fullstack app"
+    ],
+    "requirement": "Basic React and Node.js",
+    "price": 399000,
+    "slug": "fullstack-with-nestjs-and-react",
+    "thumbnail": "Access-World-Leading-Research-e1560124451195-1776240271911.jpg",
+    "level": "intermediate",
+    "isProcessLimit": false,
+    "languages": [
+      "English"
+    ],
+    "authors": [
+      "Super Admin",
+      "Minh Tran"
+    ],
+    "isPublished": true,
+    "createdBy": {
+      "_id": "69d514eb23fb41760ae187e9",
+      "email": "admin@gmail.com"
+    },
+    "deletedAt": null,
+    "isDeleted": false,
+    "createdAt": "2026-04-15T08:04:32.009Z",
+    "updatedAt": "2026-04-15T08:04:32.009Z",
+    "__v": 0
+  }
+]
+
+export const INIT_MODULES = [
+
+]
+
+export const INIT_LESSONS = [
+    
+]

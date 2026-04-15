@@ -6,6 +6,7 @@ import { User, UserSchema } from 'src/modules/users/schemas/user.schema';
 import { Role, RoleSchema } from 'src/modules/roles/schemas/role.schema';
 import { Permission, PermissionSchema } from 'src/modules/permissions/schemas/permission.schema';
 import { UsersService } from 'src/modules/users/users.service';
+import { Course, CourseSchema } from 'src/modules/courses/schemas/course.schema';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { UsersService } from 'src/modules/users/users.service';
       {name: User.name, schema: UserSchema},
       {name: Role.name, schema: RoleSchema},
       {name: Permission.name, schema: PermissionSchema},
+      {name: Course.name, schema: CourseSchema},
     ])
   ],
   controllers: [DatabasesController],

@@ -6,8 +6,9 @@ import { Permission, PermissionDocument } from 'src/modules/permissions/schemas/
 import { Role, RoleDocument } from 'src/modules/roles/schemas/role.schema';
 import { User, UserDocument } from 'src/modules/users/schemas/user.schema';
 import { UsersService } from 'src/modules/users/users.service';
-import { INIT_PERMISSIONS } from './sample';
+import { INIT_COURSES, INIT_PERMISSIONS } from './sample';
 import { RoleName } from 'src/core/enums/roles.enum';
+import { Course, CourseDocument } from 'src/modules/courses/schemas/course.schema';
 
 @Injectable()
 export class DatabasesService implements OnModuleInit {
@@ -17,6 +18,7 @@ export class DatabasesService implements OnModuleInit {
         @InjectModel(User.name) private userModel: SoftDeleteModel<UserDocument>,
         @InjectModel(Role.name) private roleModel: SoftDeleteModel<RoleDocument>,
         @InjectModel(Permission.name) private permissionModel: SoftDeleteModel<PermissionDocument>,
+        @InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>,
         private configService: ConfigService,
         private usersService: UsersService,
     ) {}
@@ -28,6 +30,7 @@ export class DatabasesService implements OnModuleInit {
             const countUser = await this.userModel.count({});
             const countPermission = await this.permissionModel.count({});
             const countRole = await this.roleModel.count({});
+            const countCourse = await this.courseModel.count({});
 
             //create permissions
             if (countPermission === 0) {
@@ -71,6 +74,11 @@ export class DatabasesService implements OnModuleInit {
                         role: userRole?._id
                     },
                 ])
+            }
+
+            // create courses
+            if (countCourse === 0) {
+                await this.courseModel.insertMany(INIT_COURSES);
             }
 
             if (countUser > 0 && countRole > 0 && countPermission > 0) {
