@@ -16,6 +16,8 @@ import { MailModule } from './modules/mail/mail.module';
 import { CategoriesModule } from './modules/categories/categories.module';
 import { ModulesModule } from './modules/modules/modules.module';
 import { LessonsModule } from './modules/lessons/lessons.module';
+import { PaymentsModule } from './modules/payments/payments.module';
+import { OrdersModule } from './modules/orders/orders.module';
 
 @Module({
   imports: [
@@ -47,7 +49,9 @@ import { LessonsModule } from './modules/lessons/lessons.module';
     MailModule,
     CategoriesModule,
     ModulesModule,
-    LessonsModule
+    LessonsModule,
+    PaymentsModule,
+    OrdersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
