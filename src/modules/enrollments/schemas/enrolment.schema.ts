@@ -1,6 +1,7 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose, { HydratedDocument } from "mongoose";
 import { Course } from "src/modules/courses/schemas/course.schema";
+import { Order } from "src/modules/orders/schemas/order.schema";
 import { User } from "src/modules/users/schemas/user.schema";
 
 export type EnrolmentDocument = HydratedDocument<Enrolment>;
@@ -12,6 +13,9 @@ export class Enrolment {
 
     @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'User'})
     user: User;
+
+    @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'Order'})
+    order: Order;
 
     @Prop()
     enrolDate: Date;

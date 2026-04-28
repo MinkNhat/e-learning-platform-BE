@@ -1,26 +1,29 @@
-import { Injectable } from '@nestjs/common';
-import { CreateEnrolmentDto } from './dto/create-enrolment.dto';
-import { UpdateEnrolmentDto } from './dto/update-enrolment.dto';
+import { BadRequestException, Injectable } from '@nestjs/common';
+import { Enrolment } from './schemas/enrolment.schema';
+import { InjectModel } from '@nestjs/mongoose';
+import mongoose, { Model, Mongoose } from 'mongoose';
 
 @Injectable()
 export class EnrollmentsService {
-  create(createEnrolmentDto: CreateEnrolmentDto) {
-    return 'This action adds a new enrolment';
+  constructor(@InjectModel(Enrolment.name) private enrolmentModel: Model<Enrolment>) {}
+
+  async isEnrolled(userId: string, courseId: string) {
+    if(!mongoose.Types.ObjectId.isValid(userId) || !mongoose.Types.ObjectId.isValid(courseId)) {
+      throw new BadRequestException('Invalid user or course ID');
+    }
+
+    const existed = await this.enrolmentModel.exists({ user: userId, course: courseId });
+    return {
+      isEnrolled: !!existed
+    };
   }
 
-  findAll() {
-    return `This action returns all enrollments`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} enrolment`;
-  }
-
-  update(id: number, updateEnrolmentDto: UpdateEnrolmentDto) {
-    return `This action updates a #${id} enrolment`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} enrolment`;
+  async enroll(userId: string, courseId: string, orderId: string) {
+    return this.enrolmentModel.create({
+      order: orderId,
+      user: userId,
+      course: courseId,
+      enrolDate: new Date(),
+    });
   }
 }
