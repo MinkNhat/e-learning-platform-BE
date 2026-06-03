@@ -8,12 +8,14 @@ import { IUser } from 'src/modules/users/users.interface';
 import aqp from 'api-query-params';
 import mongoose from 'mongoose';
 import { Course, CourseDocument } from '../courses/schemas/course.schema';
+import { Lesson, LessonDocument } from '../lessons/schemas/lesson.schema';
 
 @Injectable()
 export class ModulesService {
   constructor(
     @InjectModel(Module.name) private moduleModel: SoftDeleteModel<ModuleDocument>,
-    @InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>
+    @InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>,
+    @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>,
   ) {}
 
   async create(createModuleDto: CreateModuleDto, user: IUser) {
@@ -72,6 +74,17 @@ export class ModulesService {
       path: 'lessons',
       select: { _id: 1, name: 1, type: 1 }
     });
+  }
+
+  async findLessonsByModule(id: string) {
+    if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Module with id='${id}' not found`);
+
+    const lessons = await this.lessonModel.find({ module: id }).select({ _id: 1, name: 1, type: 1 }).sort({ order: 1 });
+    return lessons.map((l) => ({
+      _id: l._id,
+      name: l.name,
+      type: l.type
+    }));
   }
 
   async update(id: string, updateModuleDto: UpdateModuleDto, user: IUser) {
