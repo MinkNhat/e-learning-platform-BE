@@ -48,7 +48,6 @@ export class CoursesController {
   }
 
   @Get(':id/modules')
-  @Public()
   findModulesByCourse(@Param('id') id: string) {
     return this.coursesService.findModulesByCourse(id);
   }

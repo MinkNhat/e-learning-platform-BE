@@ -32,7 +32,6 @@ export class ModulesController {
   }
 
   @Get(':id/lessons')
-  @Public()
   @ResponseMessage('Fetch lessons of a module')
   findLessons(@Param('id') id: string) {
     return this.modulesService.findLessonsByModule(id);

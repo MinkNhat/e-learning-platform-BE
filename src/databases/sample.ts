@@ -329,6 +329,22 @@ export const INIT_PERMISSIONS = [
         "__v": 0
     },
     {
+        "_id": "6a1fe21d9838e64e17af4910",
+        "name": "Fetch modules by course id",
+        "apiPath": "/api/v1/courses/:id/modules",
+        "method": "GET",
+        "module": "COURSES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-06-03T08:13:17.000Z",
+        "updatedAt": "2026-06-03T08:13:17.000Z",
+        "__v": 0
+    },
+    {
         "_id": "69d5f84f404e5dda67f1b201",
         "name": "Delete course",
         "apiPath": "/api/v1/courses/:id",
@@ -546,6 +562,22 @@ export const INIT_PERMISSIONS = [
         "deletedAt": null,
         "createdAt": "2026-04-09T06:46:31.536Z",
         "updatedAt": "2026-04-09T06:46:31.536Z",
+        "__v": 0
+    },
+    {
+        "_id": "6a1fe1ea9838e64e17af4903",
+        "name": "Fetch lessons by module id",
+        "apiPath": "/api/v1/modules/:id/lessons",
+        "method": "GET",
+        "module": "MODULES",
+        "createdBy": {
+            "_id": "69d514eb23fb41760ae187e9",
+            "email": "admin@gmail.com"
+        },
+        "isDeleted": false,
+        "deletedAt": null,
+        "createdAt": "2026-06-03T08:12:26.251Z",
+        "updatedAt": "2026-06-03T08:12:26.251Z",
         "__v": 0
     },
     {
