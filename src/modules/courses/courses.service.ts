@@ -43,6 +43,17 @@ export class CoursesService {
     };
   }
 
+  async findModulesByCourse(id: string) {
+    if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
+
+    const modules = await this.moduleModel.find({ course: id }).select({ _id: 1, name: 1, order: 1 }).sort({ order: 1 });
+    return modules.map((m) => ({
+      _id: m._id,
+      name: m.name,
+      order: m.order
+    }));
+  }
+
   async findAll(currentPage: number, limit: number, qs: string) {
     const { filter, sort, projection, population } = aqp(qs);
     delete filter.current;

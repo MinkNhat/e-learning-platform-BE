@@ -47,6 +47,12 @@ export class CoursesController {
     return this.coursesService.findOne(id);
   }
 
+  @Get(':id/modules')
+  @Public()
+  findModulesByCourse(@Param('id') id: string) {
+    return this.coursesService.findModulesByCourse(id);
+  }
+
   @Patch(':id')
   @UseInterceptors(
     createUploadInterceptor('thumbnail', {
