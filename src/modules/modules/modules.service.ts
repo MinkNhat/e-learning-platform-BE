@@ -103,6 +103,7 @@ export class ModulesService {
 
   async remove(id: string, user: IUser) {
     if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Module with id='${id}' not found`);
+    this.lessonModel.deleteMany({ module: id });
 
     await this.moduleModel.updateOne(
       { _id: id },
