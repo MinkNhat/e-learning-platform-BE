@@ -84,6 +84,13 @@ export class LessonsService {
   async update(id: string, updateLessonDto: UpdateLessonDto, user: IUser) {
     if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Lesson with id='${id}' not found`);
 
+    if (updateLessonDto.type === LessonType.VIDEO) {
+      const videoInfo = await this.ytbService.getVideoInfo(updateLessonDto.metadata.videoUrl);
+
+      updateLessonDto.metadata.duration = videoInfo.duration
+      updateLessonDto.metadata.ytbId = videoInfo.videoId;
+    }
+
     return await this.lessonModel.updateOne(
       { _id: id },
       {
