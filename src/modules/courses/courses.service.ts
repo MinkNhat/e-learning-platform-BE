@@ -92,7 +92,7 @@ export class CoursesService {
     const moduleIds = modules.map((m) => m._id);
 
     // Group lessons by module
-    const lessons = await this.lessonModel.find({ module: { $in: moduleIds } }).select({ _id: 1, name: 1, type: 1, module: 1, order: 1 }).sort({ order: 1 });
+    const lessons = await this.lessonModel.find({ module: { $in: moduleIds } }).sort({ order: 1 });
     const lessonsMap = new Map<string, any[]>();
     for (const lesson of lessons) {
       const key = lesson.module.toString();
@@ -103,6 +103,10 @@ export class CoursesService {
         name: lesson.name,
         type: lesson.type,
         order: lesson.order,
+        content: lesson.content,
+        isActive: lesson.isActive,
+        isFree: lesson.isFree,
+        metadata: lesson.metadata
       });
     }
 
