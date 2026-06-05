@@ -796,7 +796,7 @@ export const INIT_COURSES = [
 
 export const INIT_MODULES = [
   {
-    "id": "6a205a24821e84b5f6c317cb",
+    "_id": "6a205a24821e84b5f6c317cb",
     "name": "Introduction",
     "isActive": true,
     "order": 1,
@@ -812,7 +812,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a205a34821e84b5f6c317d3",
+    "_id": "6a205a34821e84b5f6c317d3",
     "name": "Nest JS Fundamentals",
     "isActive": true,
     "order": 2,
@@ -828,7 +828,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a205a4b821e84b5f6c317db",
+    "_id": "6a205a4b821e84b5f6c317db",
     "name": "Working with pipes",
     "isActive": true,
     "order": 3,
@@ -844,7 +844,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a205a5e821e84b5f6c317e3",
+    "_id": "6a205a5e821e84b5f6c317e3",
     "name": "NestS Middleware",
     "isActive": true,
     "order": 4,
@@ -860,7 +860,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a205a68821e84b5f6c317eb",
+    "_id": "6a205a68821e84b5f6c317eb",
     "name": "NestJS Guards",
     "isActive": true,
     "order": 5,
@@ -876,7 +876,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a205aa4821e84b5f6c317f3",
+    "_id": "6a205aa4821e84b5f6c317f3",
     "name": "NestS Interceptors",
     "isActive": true,
     "order": 6,
@@ -892,7 +892,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a205aac821e84b5f6c317fb",
+    "_id": "6a205aac821e84b5f6c317fb",
     "name": "NestJS With MySQL",
     "isActive": true,
     "order": 7,
@@ -908,7 +908,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a205ab7821e84b5f6c31803",
+    "_id": "6a205ab7821e84b5f6c31803",
     "name": "Practical Application - Creating a MyStore App",
     "isActive": true,
     "order": 8,
@@ -924,7 +924,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a205ac0821e84b5f6c3180b",
+    "_id": "6a205ac0821e84b5f6c3180b",
     "name": "Attaching Templates to MySQL",
     "isActive": true,
     "order": 9,
@@ -940,7 +940,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a205ac9821e84b5f6c31813",
+    "_id": "6a205ac9821e84b5f6c31813",
     "name": "MyStore - Authentication/Session Cookie",
     "isActive": true,
     "order": 10,
@@ -956,7 +956,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a205ad2821e84b5f6c3181b",
+    "_id": "6a205ad2821e84b5f6c3181b",
     "name": "NestJS With MongoDB & Mongoose",
     "isActive": true,
     "order": 11,
@@ -972,7 +972,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a20617d821e84b5f6c31a5e",
+    "_id": "6a20617d821e84b5f6c31a5e",
     "name": "Mở đầu nhập môn",
     "isActive": true,
     "order": 1,
@@ -988,7 +988,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a206188821e84b5f6c31a66",
+    "_id": "6a206188821e84b5f6c31a66",
     "name": "Nền tảng - căn bản",
     "isActive": true,
     "order": 2,
@@ -1004,7 +1004,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a206191821e84b5f6c31a6e",
+    "_id": "6a206191821e84b5f6c31a6e",
     "name": "Công cụ Overlay",
     "isActive": true,
     "order": 3,
@@ -1020,7 +1020,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a206198821e84b5f6c31a76",
+    "_id": "6a206198821e84b5f6c31a76",
     "name": "Scrolling",
     "isActive": true,
     "order": 4,
@@ -1036,7 +1036,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a2061a9821e84b5f6c31a7e",
+    "_id": "6a2061a9821e84b5f6c31a7e",
     "name": "Interactive component",
     "isActive": true,
     "order": 5,
@@ -1052,7 +1052,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a2061bb821e84b5f6c31a86",
+    "_id": "6a2061bb821e84b5f6c31a86",
     "name": "Animation trong Figma prototype",
     "isActive": true,
     "order": 6,
@@ -1068,7 +1068,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a2061c9821e84b5f6c31a8e",
+    "_id": "6a2061c9821e84b5f6c31a8e",
     "name": "Prototype nâng cao",
     "isActive": true,
     "order": 7,
@@ -1084,7 +1084,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a2061d0821e84b5f6c31a96",
+    "_id": "6a2061d0821e84b5f6c31a96",
     "name": "Các ứng dụng khác",
     "isActive": true,
     "order": 8,
@@ -1100,7 +1100,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a2061d6821e84b5f6c31a9e",
+    "_id": "6a2061d6821e84b5f6c31a9e",
     "name": "Tổng kết",
     "isActive": true,
     "order": 9,
@@ -1116,7 +1116,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a206654821e84b5f6c31bd3",
+    "_id": "6a206654821e84b5f6c31bd3",
     "name": "Hiểu đúng Excel trong nghề nghiệp",
     "isActive": true,
     "order": 1,
@@ -1132,7 +1132,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a20665f821e84b5f6c31bdb",
+    "_id": "6a20665f821e84b5f6c31bdb",
     "name": "Hiểu đúng về data",
     "isActive": true,
     "order": 2,
@@ -1148,7 +1148,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a206670821e84b5f6c31be3",
+    "_id": "6a206670821e84b5f6c31be3",
     "name": "Kỹ thuật Excel nền tảng bắt buộc biết",
     "isActive": true,
     "order": 3,
@@ -1164,7 +1164,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a20667c821e84b5f6c31beb",
+    "_id": "6a20667c821e84b5f6c31beb",
     "name": "Các Hàm nâng cao",
     "isActive": true,
     "order": 4,
@@ -1180,7 +1180,7 @@ export const INIT_MODULES = [
     "__v": 0
   },
   {
-    "id": "6a206689821e84b5f6c31bf3",
+    "_id": "6a206689821e84b5f6c31bf3",
     "name": "Pivot table cơ bản",
     "isActive": true,
     "order": 5,
@@ -1199,7 +1199,7 @@ export const INIT_MODULES = [
 
 export const INIT_LESSONS = [
   {
-    "id": "6a205aea821e84b5f6c31823",
+    "_id": "6a205aea821e84b5f6c31823",
     "name": "Introduction to NEST JS",
     "isActive": true,
     "isFree": false,
@@ -1217,7 +1217,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205af5821e84b5f6c3182b",
+    "_id": "6a205af5821e84b5f6c3182b",
     "name": "Setting up the project",
     "isActive": true,
     "isFree": false,
@@ -1235,7 +1235,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205b11821e84b5f6c31843",
+    "_id": "6a205b11821e84b5f6c31843",
     "name": "Understanding Project Structure",
     "isActive": true,
     "isFree": false,
@@ -1253,7 +1253,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205b64821e84b5f6c3184b",
+    "_id": "6a205b64821e84b5f6c3184b",
     "name": "Understanding Controllers",
     "isActive": true,
     "isFree": false,
@@ -1271,7 +1271,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205b74821e84b5f6c31853",
+    "_id": "6a205b74821e84b5f6c31853",
     "name": "Controller Fundamentals (@Get Handler)",
     "isActive": true,
     "isFree": false,
@@ -1289,7 +1289,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205be9821e84b5f6c3185b",
+    "_id": "6a205be9821e84b5f6c3185b",
     "name": "Controller Fundamentals(Headers)",
     "isActive": true,
     "isFree": false,
@@ -1307,7 +1307,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205bf2821e84b5f6c31863",
+    "_id": "6a205bf2821e84b5f6c31863",
     "name": "Controller Fundamentals (@Post Handler)",
     "isActive": true,
     "isFree": false,
@@ -1325,7 +1325,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205bfe821e84b5f6c3186b",
+    "_id": "6a205bfe821e84b5f6c3186b",
     "name": "Controller Fundamentals (@Post Handler) - Pt 2 with Modules",
     "isActive": true,
     "isFree": false,
@@ -1343,7 +1343,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205c09821e84b5f6c31873",
+    "_id": "6a205c09821e84b5f6c31873",
     "name": "Controller Fundamentals (Fetching Params)",
     "isActive": true,
     "isFree": false,
@@ -1361,7 +1361,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205c11821e84b5f6c3187b",
+    "_id": "6a205c11821e84b5f6c3187b",
     "name": "Controller Fundamentals (@Put Handler)",
     "isActive": true,
     "isFree": false,
@@ -1379,7 +1379,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205c18821e84b5f6c31883",
+    "_id": "6a205c18821e84b5f6c31883",
     "name": "Controller Fundamentals (@Patch Handler)",
     "isActive": true,
     "isFree": false,
@@ -1397,7 +1397,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205c27821e84b5f6c3188b",
+    "_id": "6a205c27821e84b5f6c3188b",
     "name": "Controller Fundamentals (@Delete Handler)",
     "isActive": true,
     "isFree": false,
@@ -1415,7 +1415,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205c31821e84b5f6c31893",
+    "_id": "6a205c31821e84b5f6c31893",
     "name": "@HttpCode Vs. @Res Decorator",
     "isActive": true,
     "isFree": false,
@@ -1433,7 +1433,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205c3b821e84b5f6c3189b",
+    "_id": "6a205c3b821e84b5f6c3189b",
     "name": "HTTP Response Status",
     "isActive": true,
     "isFree": false,
@@ -1451,7 +1451,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205ca6821e84b5f6c318a3",
+    "_id": "6a205ca6821e84b5f6c318a3",
     "name": "Introduction To Pipes",
     "isActive": true,
     "isFree": false,
@@ -1469,7 +1469,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205cb2821e84b5f6c318ab",
+    "_id": "6a205cb2821e84b5f6c318ab",
     "name": "Built-in Pipes",
     "isActive": true,
     "isFree": false,
@@ -1487,7 +1487,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205cbc821e84b5f6c318b3",
+    "_id": "6a205cbc821e84b5f6c318b3",
     "name": "Validating empty fields",
     "isActive": true,
     "isFree": false,
@@ -1505,7 +1505,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205cc4821e84b5f6c318bb",
+    "_id": "6a205cc4821e84b5f6c318bb",
     "name": "Custom Validation Messages",
     "isActive": true,
     "isFree": false,
@@ -1523,7 +1523,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205ccc821e84b5f6c318c3",
+    "_id": "6a205ccc821e84b5f6c318c3",
     "name": "Creating A Custom Pipe",
     "isActive": true,
     "isFree": false,
@@ -1541,7 +1541,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205cd3821e84b5f6c318cb",
+    "_id": "6a205cd3821e84b5f6c318cb",
     "name": "Assignment - Custom Pipe (Handling different 'type\" arguments)",
     "isActive": true,
     "isFree": false,
@@ -1559,7 +1559,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205cdc821e84b5f6c318d3",
+    "_id": "6a205cdc821e84b5f6c318d3",
     "name": "Implementing Global Pipes",
     "isActive": true,
     "isFree": false,
@@ -1577,7 +1577,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d19821e84b5f6c318db",
+    "_id": "6a205d19821e84b5f6c318db",
     "name": "Introduction to Nest Middlewares",
     "isActive": true,
     "isFree": false,
@@ -1595,7 +1595,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d23821e84b5f6c318e3",
+    "_id": "6a205d23821e84b5f6c318e3",
     "name": "Implementing Middleware",
     "isActive": true,
     "isFree": false,
@@ -1613,7 +1613,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d2a821e84b5f6c318eb",
+    "_id": "6a205d2a821e84b5f6c318eb",
     "name": "Assignment - Checking Content-type With Middleware",
     "isActive": true,
     "isFree": false,
@@ -1631,7 +1631,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d31821e84b5f6c318f3",
+    "_id": "6a205d31821e84b5f6c318f3",
     "name": "Middleware For Specific Route Handlers",
     "isActive": true,
     "isFree": false,
@@ -1649,7 +1649,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d3c821e84b5f6c318fb",
+    "_id": "6a205d3c821e84b5f6c318fb",
     "name": "Controller-Driven Route Middleware",
     "isActive": true,
     "isFree": false,
@@ -1667,7 +1667,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d44821e84b5f6c31903",
+    "_id": "6a205d44821e84b5f6c31903",
     "name": "Understanding Functional Middleware",
     "isActive": true,
     "isFree": false,
@@ -1685,7 +1685,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d4c821e84b5f6c3190b",
+    "_id": "6a205d4c821e84b5f6c3190b",
     "name": "Assignment - Password Encryption Middleware",
     "isActive": true,
     "isFree": false,
@@ -1703,7 +1703,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d78821e84b5f6c31913",
+    "_id": "6a205d78821e84b5f6c31913",
     "name": "Introduction To Guards",
     "isActive": true,
     "isFree": false,
@@ -1721,7 +1721,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d7e821e84b5f6c3191b",
+    "_id": "6a205d7e821e84b5f6c3191b",
     "name": "Accessing Arguments With getArgs()",
     "isActive": true,
     "isFree": false,
@@ -1739,7 +1739,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d84821e84b5f6c31923",
+    "_id": "6a205d84821e84b5f6c31923",
     "name": "Understanding switch ToHttp() method",
     "isActive": true,
     "isFree": false,
@@ -1757,7 +1757,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d89821e84b5f6c3192b",
+    "_id": "6a205d89821e84b5f6c3192b",
     "name": "Defining Custom Metadata",
     "isActive": true,
     "isFree": false,
@@ -1775,7 +1775,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d8f821e84b5f6c31933",
+    "_id": "6a205d8f821e84b5f6c31933",
     "name": "Setting Custom Metadata - A Better Way",
     "isActive": true,
     "isFree": false,
@@ -1793,7 +1793,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205d9b821e84b5f6c3193b",
+    "_id": "6a205d9b821e84b5f6c3193b",
     "name": "Applying Multiple Roles",
     "isActive": true,
     "isFree": false,
@@ -1811,7 +1811,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205da6821e84b5f6c31943",
+    "_id": "6a205da6821e84b5f6c31943",
     "name": "Applying Global Guards",
     "isActive": true,
     "isFree": false,
@@ -1829,7 +1829,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205dc5821e84b5f6c3194b",
+    "_id": "6a205dc5821e84b5f6c3194b",
     "name": "Introduction To Interceptors",
     "isActive": true,
     "isFree": false,
@@ -1847,7 +1847,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205dcd821e84b5f6c31953",
+    "_id": "6a205dcd821e84b5f6c31953",
     "name": "Exception Mapping",
     "isActive": true,
     "isFree": false,
@@ -1865,7 +1865,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205dd3821e84b5f6c3195b",
+    "_id": "6a205dd3821e84b5f6c3195b",
     "name": "Authentication and Authorization",
     "isActive": true,
     "isFree": false,
@@ -1883,7 +1883,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205ddb821e84b5f6c31963",
+    "_id": "6a205ddb821e84b5f6c31963",
     "name": "Applying Global Interceptors",
     "isActive": true,
     "isFree": false,
@@ -1901,7 +1901,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e0b821e84b5f6c3196b",
+    "_id": "6a205e0b821e84b5f6c3196b",
     "name": "Connecting To MySQL Database Using TypeORM",
     "isActive": true,
     "isFree": false,
@@ -1919,7 +1919,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e10821e84b5f6c31973",
+    "_id": "6a205e10821e84b5f6c31973",
     "name": "Fetching the Product Data(CRUD)",
     "isActive": true,
     "isFree": false,
@@ -1937,7 +1937,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e17821e84b5f6c3197b",
+    "_id": "6a205e17821e84b5f6c3197b",
     "name": "Deleting Product Record (CRUD)",
     "isActive": true,
     "isFree": false,
@@ -1955,7 +1955,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e38821e84b5f6c31983",
+    "_id": "6a205e38821e84b5f6c31983",
     "name": "Introduction to MyStore Application",
     "isActive": true,
     "isFree": false,
@@ -1973,7 +1973,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e3e821e84b5f6c3198b",
+    "_id": "6a205e3e821e84b5f6c3198b",
     "name": "Rendering Template On Server",
     "isActive": true,
     "isFree": false,
@@ -1991,7 +1991,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e43821e84b5f6c31993",
+    "_id": "6a205e43821e84b5f6c31993",
     "name": "Conditional Rendering - No Product Found",
     "isActive": true,
     "isFree": false,
@@ -2009,7 +2009,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e4a821e84b5f6c3199b",
+    "_id": "6a205e4a821e84b5f6c3199b",
     "name": "Configuring Edit Product Route",
     "isActive": true,
     "isFree": false,
@@ -2027,7 +2027,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e54821e84b5f6c319a3",
+    "_id": "6a205e54821e84b5f6c319a3",
     "name": "Interface & Functionality - Edit Product",
     "isActive": true,
     "isFree": false,
@@ -2045,7 +2045,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e72821e84b5f6c319ab",
+    "_id": "6a205e72821e84b5f6c319ab",
     "name": "Fetching The Products",
     "isActive": true,
     "isFree": false,
@@ -2063,7 +2063,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e78821e84b5f6c319b3",
+    "_id": "6a205e78821e84b5f6c319b3",
     "name": "Adding Product To Database",
     "isActive": true,
     "isFree": false,
@@ -2081,7 +2081,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e80821e84b5f6c319bb",
+    "_id": "6a205e80821e84b5f6c319bb",
     "name": "Updating The Product",
     "isActive": true,
     "isFree": false,
@@ -2099,7 +2099,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205e86821e84b5f6c319c3",
+    "_id": "6a205e86821e84b5f6c319c3",
     "name": "Deleting The Product",
     "isActive": true,
     "isFree": false,
@@ -2117,7 +2117,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205ebc821e84b5f6c319cb",
+    "_id": "6a205ebc821e84b5f6c319cb",
     "name": "Section Introduction",
     "isActive": true,
     "isFree": false,
@@ -2135,7 +2135,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205ec1821e84b5f6c319d3",
+    "_id": "6a205ec1821e84b5f6c319d3",
     "name": "Setting Up The Sign-up Route",
     "isActive": true,
     "isFree": false,
@@ -2153,7 +2153,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205ec6821e84b5f6c319db",
+    "_id": "6a205ec6821e84b5f6c319db",
     "name": "Implementing Show/Hide Password Functionality",
     "isActive": true,
     "isFree": false,
@@ -2171,7 +2171,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205ecc821e84b5f6c319e3",
+    "_id": "6a205ecc821e84b5f6c319e3",
     "name": "Configuring Login Page",
     "isActive": true,
     "isFree": false,
@@ -2189,7 +2189,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205ed3821e84b5f6c319eb",
+    "_id": "6a205ed3821e84b5f6c319eb",
     "name": "Rendering DOM Based On Login Status",
     "isActive": true,
     "isFree": false,
@@ -2207,7 +2207,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205edd821e84b5f6c319f3",
+    "_id": "6a205edd821e84b5f6c319f3",
     "name": "Configuring Express-Session",
     "isActive": true,
     "isFree": false,
@@ -2225,7 +2225,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205eea821e84b5f6c319fb",
+    "_id": "6a205eea821e84b5f6c319fb",
     "name": "Optimizing Session Storage",
     "isActive": true,
     "isFree": false,
@@ -2243,7 +2243,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205f19821e84b5f6c31a03",
+    "_id": "6a205f19821e84b5f6c31a03",
     "name": "Fetching Documents From MongoDB",
     "isActive": true,
     "isFree": false,
@@ -2261,7 +2261,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205f1e821e84b5f6c31a0b",
+    "_id": "6a205f1e821e84b5f6c31a0b",
     "name": "Connecting To MongoDB Database",
     "isActive": true,
     "isFree": false,
@@ -2279,7 +2279,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a205f23821e84b5f6c31a13",
+    "_id": "6a205f23821e84b5f6c31a13",
     "name": "Creating A Schema",
     "isActive": true,
     "isFree": false,
@@ -2297,7 +2297,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2061e9821e84b5f6c31aa6",
+    "_id": "6a2061e9821e84b5f6c31aa6",
     "name": "Định nghĩa Prototype",
     "isActive": true,
     "isFree": false,
@@ -2315,7 +2315,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2061f5821e84b5f6c31aae",
+    "_id": "6a2061f5821e84b5f6c31aae",
     "name": "Tầm quan trọng và tiêu chuẩn",
     "isActive": true,
     "isFree": false,
@@ -2333,7 +2333,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2061ff821e84b5f6c31ab6",
+    "_id": "6a2061ff821e84b5f6c31ab6",
     "name": "Tính ứng dụng",
     "isActive": true,
     "isFree": false,
@@ -2351,7 +2351,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20620f821e84b5f6c31abe",
+    "_id": "6a20620f821e84b5f6c31abe",
     "name": "Giao diện Prototype",
     "isActive": true,
     "isFree": false,
@@ -2369,7 +2369,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20621e821e84b5f6c31ac6",
+    "_id": "6a20621e821e84b5f6c31ac6",
     "name": "Đơn vị nền tảng - Interaction",
     "isActive": true,
     "isFree": false,
@@ -2387,7 +2387,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20622b821e84b5f6c31ace",
+    "_id": "6a20622b821e84b5f6c31ace",
     "name": "Các loại tác động (User event)",
     "isActive": true,
     "isFree": false,
@@ -2405,7 +2405,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206239821e84b5f6c31ad6",
+    "_id": "6a206239821e84b5f6c31ad6",
     "name": "Các diễn biến (Element react)",
     "isActive": true,
     "isFree": false,
@@ -2423,7 +2423,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206244821e84b5f6c31ade",
+    "_id": "6a206244821e84b5f6c31ade",
     "name": "Các cách present",
     "isActive": true,
     "isFree": false,
@@ -2441,7 +2441,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206256821e84b5f6c31ae6",
+    "_id": "6a206256821e84b5f6c31ae6",
     "name": "Các loại diễn biến Overlay",
     "isActive": true,
     "isFree": false,
@@ -2459,7 +2459,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206262821e84b5f6c31aee",
+    "_id": "6a206262821e84b5f6c31aee",
     "name": "Nguyên lý hoạt động của Overlay",
     "isActive": true,
     "isFree": false,
@@ -2477,7 +2477,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20627e821e84b5f6c31af6",
+    "_id": "6a20627e821e84b5f6c31af6",
     "name": "Các ứng dụng của Overlay: Bàn phím (hoặc device element)",
     "isActive": true,
     "isFree": false,
@@ -2495,7 +2495,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206292821e84b5f6c31afe",
+    "_id": "6a206292821e84b5f6c31afe",
     "name": "Các ứng dụng của Overlay: Các loại hình popup",
     "isActive": true,
     "isFree": false,
@@ -2513,7 +2513,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2062a5821e84b5f6c31b06",
+    "_id": "6a2062a5821e84b5f6c31b06",
     "name": "Các ứng dụng của Overlay: Tooltip hoặc dropdown",
     "isActive": true,
     "isFree": false,
@@ -2531,7 +2531,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2062b6821e84b5f6c31b0e",
+    "_id": "6a2062b6821e84b5f6c31b0e",
     "name": "Nguyên lý scrolling",
     "isActive": true,
     "isFree": false,
@@ -2549,7 +2549,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2062c5821e84b5f6c31b16",
+    "_id": "6a2062c5821e84b5f6c31b16",
     "name": "Normal scrolling trong Figma",
     "isActive": true,
     "isFree": false,
@@ -2567,7 +2567,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2062d9821e84b5f6c31b1e",
+    "_id": "6a2062d9821e84b5f6c31b1e",
     "name": "Scroll Behavior: fixed",
     "isActive": true,
     "isFree": false,
@@ -2585,7 +2585,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2062ee821e84b5f6c31b26",
+    "_id": "6a2062ee821e84b5f6c31b26",
     "name": "Scroll Behavior: sticky",
     "isActive": true,
     "isFree": false,
@@ -2603,7 +2603,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206318821e84b5f6c31b2e",
+    "_id": "6a206318821e84b5f6c31b2e",
     "name": "Overflow scrolling: Ngang, dọc và hai chiều",
     "isActive": true,
     "isFree": false,
@@ -2621,7 +2621,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206343821e84b5f6c31b36",
+    "_id": "6a206343821e84b5f6c31b36",
     "name": "Nguyên lý của Interactive component",
     "isActive": true,
     "isFree": false,
@@ -2639,7 +2639,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206351821e84b5f6c31b3e",
+    "_id": "6a206351821e84b5f6c31b3e",
     "name": "Ứng dụng: Card thay đổi trạng thái",
     "isActive": true,
     "isFree": false,
@@ -2657,7 +2657,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20636a821e84b5f6c31b46",
+    "_id": "6a20636a821e84b5f6c31b46",
     "name": "Các loại hình animation căn bản",
     "isActive": true,
     "isFree": false,
@@ -2675,7 +2675,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206375821e84b5f6c31b4e",
+    "_id": "6a206375821e84b5f6c31b4e",
     "name": "Vận dụng animation căn bản",
     "isActive": true,
     "isFree": false,
@@ -2693,7 +2693,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206383821e84b5f6c31b56",
+    "_id": "6a206383821e84b5f6c31b56",
     "name": "Smart Animation và nguyên lý",
     "isActive": true,
     "isFree": false,
@@ -2711,7 +2711,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206395821e84b5f6c31b5e",
+    "_id": "6a206395821e84b5f6c31b5e",
     "name": "Timing và custom animation",
     "isActive": true,
     "isFree": false,
@@ -2729,7 +2729,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2063a9821e84b5f6c31b66",
+    "_id": "6a2063a9821e84b5f6c31b66",
     "name": "Giới thiệu Variable",
     "isActive": true,
     "isFree": false,
@@ -2747,7 +2747,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2063cf821e84b5f6c31b6e",
+    "_id": "6a2063cf821e84b5f6c31b6e",
     "name": "Giới thiệu điều kiện (conditional)",
     "isActive": true,
     "isFree": false,
@@ -2765,7 +2765,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2063e7821e84b5f6c31b76",
+    "_id": "6a2063e7821e84b5f6c31b76",
     "name": "Làm slide với Figma",
     "isActive": true,
     "isFree": false,
@@ -2783,7 +2783,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2063fa821e84b5f6c31b7e",
+    "_id": "6a2063fa821e84b5f6c31b7e",
     "name": "Micro Interaction",
     "isActive": true,
     "isFree": false,
@@ -2801,7 +2801,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206409821e84b5f6c31b86",
+    "_id": "6a206409821e84b5f6c31b86",
     "name": "Social Content Animation",
     "isActive": true,
     "isFree": false,
@@ -2819,7 +2819,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20640e821e84b5f6c31b8e",
+    "_id": "6a20640e821e84b5f6c31b8e",
     "name": "Game",
     "isActive": true,
     "isFree": false,
@@ -2837,7 +2837,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20641f821e84b5f6c31b96",
+    "_id": "6a20641f821e84b5f6c31b96",
     "name": "Tổng kết khoá học",
     "isActive": true,
     "isFree": false,
@@ -2855,7 +2855,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20642b821e84b5f6c31b9e",
+    "_id": "6a20642b821e84b5f6c31b9e",
     "name": "Con đường UI/UX Design",
     "isActive": true,
     "isFree": false,
@@ -2873,7 +2873,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206441821e84b5f6c31ba6",
+    "_id": "6a206441821e84b5f6c31ba6",
     "name": "Lộ trình học để trở thành UI/UX Designer",
     "isActive": true,
     "isFree": false,
@@ -2891,7 +2891,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2066a2821e84b5f6c31bfb",
+    "_id": "6a2066a2821e84b5f6c31bfb",
     "name": "Làm sao để công việc của mình thăng tiến?",
     "isActive": true,
     "isFree": false,
@@ -2909,7 +2909,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2066ba821e84b5f6c31c03",
+    "_id": "6a2066ba821e84b5f6c31c03",
     "name": "Những sai lầm phổ biến trong excel khi làm kế toán",
     "isActive": true,
     "isFree": false,
@@ -2927,7 +2927,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2066cb821e84b5f6c31c0b",
+    "_id": "6a2066cb821e84b5f6c31c0b",
     "name": "Một số dạng toán phổ biến trong kế toán",
     "isActive": true,
     "isFree": false,
@@ -2945,7 +2945,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2066d9821e84b5f6c31c13",
+    "_id": "6a2066d9821e84b5f6c31c13",
     "name": "Các hàm thường dùng trong kế toán",
     "isActive": true,
     "isFree": false,
@@ -2963,7 +2963,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2066f1821e84b5f6c31c1b",
+    "_id": "6a2066f1821e84b5f6c31c1b",
     "name": "Lý thuyết về data",
     "isActive": true,
     "isFree": false,
@@ -2981,7 +2981,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20670a821e84b5f6c31c23",
+    "_id": "6a20670a821e84b5f6c31c23",
     "name": "Tư duy thiết kế data | Hạn chế tư duy theo Hàm",
     "isActive": true,
     "isFree": false,
@@ -2999,7 +2999,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206723821e84b5f6c31c2b",
+    "_id": "6a206723821e84b5f6c31c2b",
     "name": "Tư duy thiết kế data | Dữ liệu nên thiết kế như thế nào?",
     "isActive": true,
     "isFree": false,
@@ -3017,7 +3017,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206731821e84b5f6c31c33",
+    "_id": "6a206731821e84b5f6c31c33",
     "name": "Hướng dẫn cài đặt",
     "isActive": true,
     "isFree": false,
@@ -3035,7 +3035,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206742821e84b5f6c31c3b",
+    "_id": "6a206742821e84b5f6c31c3b",
     "name": "Làm sạch dữ liệu | Data clearning",
     "isActive": true,
     "isFree": false,
@@ -3053,7 +3053,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20675c821e84b5f6c31c43",
+    "_id": "6a20675c821e84b5f6c31c43",
     "name": "Kỹ năng xử lý dữ liệu nâng cao | Advance clearning data",
     "isActive": true,
     "isFree": false,
@@ -3071,7 +3071,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20676b821e84b5f6c31c4b",
+    "_id": "6a20676b821e84b5f6c31c4b",
     "name": "Hàm thời gian | Date and time",
     "isActive": true,
     "isFree": false,
@@ -3089,7 +3089,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206780821e84b5f6c31c53",
+    "_id": "6a206780821e84b5f6c31c53",
     "name": "Định dạng màu có điều kiện | Conditional Formating",
     "isActive": true,
     "isFree": false,
@@ -3107,7 +3107,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206795821e84b5f6c31c5b",
+    "_id": "6a206795821e84b5f6c31c5b",
     "name": "Sổ danh sách có điều kiện | Validation list",
     "isActive": true,
     "isFree": false,
@@ -3125,7 +3125,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2067d5821e84b5f6c31c63",
+    "_id": "6a2067d5821e84b5f6c31c63",
     "name": "Đếm số lần xuất hiện | Distinct Count",
     "isActive": true,
     "isFree": false,
@@ -3143,7 +3143,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2067e9821e84b5f6c31c6b",
+    "_id": "6a2067e9821e84b5f6c31c6b",
     "name": "Tính tổng của tích | Lookup Sumproduct",
     "isActive": true,
     "isFree": false,
@@ -3161,7 +3161,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a2067fc821e84b5f6c31c73",
+    "_id": "6a2067fc821e84b5f6c31c73",
     "name": "Tìm kiếm phức tạp | Index Min Max",
     "isActive": true,
     "isFree": false,
@@ -3179,7 +3179,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20680c821e84b5f6c31c7b",
+    "_id": "6a20680c821e84b5f6c31c7b",
     "name": "Lọc dữ liệu thông minh | Filter",
     "isActive": true,
     "isFree": false,
@@ -3197,7 +3197,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a20681f821e84b5f6c31c83",
+    "_id": "6a20681f821e84b5f6c31c83",
     "name": "Pivot table là gì?",
     "isActive": true,
     "isFree": false,
@@ -3215,7 +3215,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206833821e84b5f6c31c8b",
+    "_id": "6a206833821e84b5f6c31c8b",
     "name": "Báo cáo hợp nhất | Consolidation",
     "isActive": true,
     "isFree": false,
@@ -3233,7 +3233,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206843821e84b5f6c31c93",
+    "_id": "6a206843821e84b5f6c31c93",
     "name": "Kết nối 2 bảng | Connect Data table",
     "isActive": true,
     "isFree": false,
@@ -3251,7 +3251,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206853821e84b5f6c31c9b",
+    "_id": "6a206853821e84b5f6c31c9b",
     "name": "Phân tích phân phối | Histogram",
     "isActive": true,
     "isFree": false,
@@ -3269,7 +3269,7 @@ export const INIT_LESSONS = [
     "__v": 0
   },
   {
-    "id": "6a206864821e84b5f6c31ca3",
+    "_id": "6a206864821e84b5f6c31ca3",
     "name": "Hiệu quả kinh doanh | Pareto",
     "isActive": true,
     "isFree": false,
