@@ -42,6 +42,7 @@
     "cookie-parser": "1.4.7",
     "crypto": "^1.0.1",
     "ejs": "3.1.9",
+    "googleapis": "^173.0.0",
     "handlebars": "4.7.7",
     "helmet": "^8.1.0",
     "moment": "^2.30.1",

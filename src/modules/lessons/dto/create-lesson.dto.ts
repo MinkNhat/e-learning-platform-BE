@@ -24,7 +24,8 @@ export class CreateLessonDto {
   @IsOptional()
   @IsObject()
   metadata?: {
-    duration?: number;
+    duration?: string;
     videoUrl?: string;
+    ytbId?: string;
   };
 }

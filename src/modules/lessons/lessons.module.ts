@@ -5,6 +5,7 @@ import { LessonsController } from './lessons.controller';
 import { Lesson, LessonSchema } from './schemas/lesson.schema';
 import { ModuleSchema } from '../modules/schemas/module.schema';
 import { Module as ModuleModel } from '../modules/schemas/module.schema';
+import { YtbService } from 'src/utils/ytb.service';
 
 @Module({
   imports: [MongooseModule.forFeature([
@@ -12,7 +13,10 @@ import { Module as ModuleModel } from '../modules/schemas/module.schema';
     { name: ModuleModel.name, schema: ModuleSchema }
   ])],
   controllers: [LessonsController],
-  providers: [LessonsService],
+  providers: [
+    LessonsService,
+    YtbService,
+  ],
   exports: [LessonsService]
 })
 export class LessonsModule {}

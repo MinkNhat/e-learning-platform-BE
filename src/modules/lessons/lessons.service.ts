@@ -8,17 +8,27 @@ import { IUser } from 'src/modules/users/users.interface';
 import aqp from 'api-query-params';
 import mongoose from 'mongoose';
 import { Module, ModuleDocument } from '../modules/schemas/module.schema';
+import { YtbService } from 'src/utils/ytb.service';
+import { LessonType } from 'src/core/enums/lesson-type.enum';
 
 @Injectable()
 export class LessonsService {
   constructor(
     @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>,
     @InjectModel(Module.name) private moduleModel: SoftDeleteModel<ModuleDocument>,
+    private ytbService: YtbService,
   ) {}
 
   async create(createLessonDto: CreateLessonDto, user: IUser) {
     const module = await this.moduleModel.findOne({ _id: createLessonDto.module });
     if (!module) throw new BadRequestException(`Module with id='${createLessonDto.module}' not found`);
+
+    if (createLessonDto.type === LessonType.VIDEO) {
+      const videoInfo = await this.ytbService.getVideoInfo(createLessonDto.metadata.videoUrl);
+
+      createLessonDto.metadata.duration = videoInfo.duration
+      createLessonDto.metadata.ytbId = videoInfo.videoId;
+    }
 
     const newLesson = await this.lessonModel.create({
       ...createLessonDto,
