@@ -29,8 +29,10 @@ export class Lesson {
 
     @Prop({ type: Object })
     metadata: {
-        duration?: string;
+        duration?: number;
+        durationString?: string;
         videoUrl?: string;
+        ytbId?: string;
     };
 
     @Prop({ type: Object })

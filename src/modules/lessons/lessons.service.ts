@@ -28,10 +28,12 @@ export class LessonsService {
       const videoInfo = await this.ytbService.getVideoInfo(createLessonDto.metadata.videoUrl);
 
       createLessonDto.metadata.duration = videoInfo.duration
+      createLessonDto.metadata.durationString = videoInfo.durationString
       createLessonDto.metadata.ytbId = videoInfo.videoId;
     } else {
       const readingMinutes = estimateReadingMinutes(createLessonDto.content);
-      createLessonDto.metadata.duration = "~" + readingMinutes + " phút đọc";
+      createLessonDto.metadata.durationString = "~" + readingMinutes + " phút đọc";
+      createLessonDto.metadata.duration = readingMinutes * 60;
     }
 
     const newLesson = await this.lessonModel.create({
@@ -92,10 +94,12 @@ export class LessonsService {
       const videoInfo = await this.ytbService.getVideoInfo(updateLessonDto.metadata.videoUrl);
 
       updateLessonDto.metadata.duration = videoInfo.duration
+      updateLessonDto.metadata.durationString = videoInfo.durationString
       updateLessonDto.metadata.ytbId = videoInfo.videoId;
     } else {
       const readingMinutes = estimateReadingMinutes(updateLessonDto.content);
-      updateLessonDto.metadata.duration = "~" + readingMinutes + " phút đọc";
+      updateLessonDto.metadata.durationString = "~" + readingMinutes + " phút đọc";
+      updateLessonDto.metadata.duration = readingMinutes * 60;
     }
 
     return await this.lessonModel.updateOne(

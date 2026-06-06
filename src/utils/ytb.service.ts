@@ -29,12 +29,9 @@ export class YtbService {
     return {
       videoId,
       title: video.snippet?.title,
-      thumbnail:
-        video.snippet?.thumbnails?.high?.url ||
-        video.snippet?.thumbnails?.default?.url,
-      duration: this.formatDuration(
-        video.contentDetails?.duration || '',
-      ),
+      thumbnail: video.snippet?.thumbnails?.high?.url || video.snippet?.thumbnails?.default?.url,
+      durationString: this.formatDuration(video.contentDetails?.duration || ''),
+      duration: this.durationToSeconds(video.contentDetails?.duration || ''),
     };
   }
 
@@ -46,17 +43,29 @@ export class YtbService {
     return match ? match[1] : null;
   }
 
-  private formatDuration(duration: string): string {
+  private parseDuration(duration: string) {
     const match = duration.match(
       /PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/,
     );
 
-    const hours = Number(match?.[1] || 0);
-    const minutes = Number(match?.[2] || 0);
-    const seconds = Number(match?.[3] || 0);
+    return {
+      hours: Number(match?.[1] || 0),
+      minutes: Number(match?.[2] || 0),
+      seconds: Number(match?.[3] || 0),
+    };
+  }
+
+  private formatDuration(duration: string): string {
+    const { hours, minutes, seconds } = this.parseDuration(duration);
 
     return [hours, minutes, seconds]
       .map((v) => v.toString().padStart(2, '0'))
       .join(':');
+  }
+
+  private durationToSeconds(duration: string): number {
+    const { hours, minutes, seconds } = this.parseDuration(duration);
+
+    return hours * 3600 + minutes * 60 + seconds;
   }
 }

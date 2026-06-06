@@ -47,11 +47,48 @@ export class CoursesService {
     if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
 
     const modules = await this.moduleModel.find({ course: id }).select({ _id: 1, name: 1, order: 1 }).sort({ order: 1 });
-    return modules.map((m) => ({
-      _id: m._id,
-      name: m.name,
-      order: m.order
-    }));
+    const moduleIds = modules.map((m) => m._id);
+
+    // stats total lessons and total duration length
+    const stats = await this.lessonModel.aggregate([
+      {
+        $match: {
+          module: { $in: moduleIds },
+        },
+      },
+      {
+        $group: {
+          _id: '$module',
+          totalLessons: { $sum: 1 },
+          totalLength: {
+            $sum: {
+              $ifNull: ['$metadata.duration', 0],
+            },
+          },
+        },
+      },
+    ]);
+
+    const statsMap = new Map(stats.map((s) => [
+        s._id.toString(),
+        {
+          totalLessons: s.totalLessons,
+          totalLength: s.totalLength,
+        },
+      ]),
+    );
+
+    return modules.map((module) => {
+      const stat = statsMap.get(module._id.toString());
+
+      return {
+        _id: module._id,
+        name: module.name,
+        order: module.order,
+        totalLessons: stat?.totalLessons ?? 0,
+        totalLength: stat?.totalLength ?? 0,
+      };
+    });
   }
 
   async findAll(currentPage: number, limit: number, qs: string) {
