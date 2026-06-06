@@ -10,6 +10,7 @@ import mongoose from 'mongoose';
 import { Module, ModuleDocument } from '../modules/schemas/module.schema';
 import { YtbService } from 'src/utils/ytb.service';
 import { LessonType } from 'src/core/enums/lesson-type.enum';
+import { estimateReadingMinutes } from 'src/utils/utils';
 
 @Injectable()
 export class LessonsService {
@@ -28,6 +29,9 @@ export class LessonsService {
 
       createLessonDto.metadata.duration = videoInfo.duration
       createLessonDto.metadata.ytbId = videoInfo.videoId;
+    } else {
+      const readingMinutes = estimateReadingMinutes(createLessonDto.content);
+      createLessonDto.metadata.duration = "~" + readingMinutes + " phút đọc";
     }
 
     const newLesson = await this.lessonModel.create({
@@ -89,6 +93,9 @@ export class LessonsService {
 
       updateLessonDto.metadata.duration = videoInfo.duration
       updateLessonDto.metadata.ytbId = videoInfo.videoId;
+    } else {
+      const readingMinutes = estimateReadingMinutes(updateLessonDto.content);
+      updateLessonDto.metadata.duration = "~" + readingMinutes + " phút đọc";
     }
 
     return await this.lessonModel.updateOne(

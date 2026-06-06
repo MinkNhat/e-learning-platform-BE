@@ -79,11 +79,12 @@ export class ModulesService {
   async findLessonsByModule(id: string) {
     if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Module with id='${id}' not found`);
 
-    const lessons = await this.lessonModel.find({ module: id }).select({ _id: 1, name: 1, type: 1 }).sort({ order: 1 });
+    const lessons = await this.lessonModel.find({ module: id }).select({ _id: 1, name: 1, type: 1, metadata: 1 }).sort({ order: 1 });
     return lessons.map((l) => ({
       _id: l._id,
       name: l.name,
-      type: l.type
+      type: l.type,
+      metadata: l.metadata
     }));
   }
 
