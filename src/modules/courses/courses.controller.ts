@@ -43,7 +43,7 @@ export class CoursesController {
 
   @Get(':id')
   @Public()
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: string): Promise<any> {
     return this.coursesService.findOne(id);
   }
 
