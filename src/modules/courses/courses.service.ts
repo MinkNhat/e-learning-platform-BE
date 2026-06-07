@@ -122,7 +122,7 @@ export class CoursesService {
   }
 
   async findOne(id: string) {
-    const course = await this.courseModel.findById(id).lean();
+    const course = await this.courseModel.findById(id);
     if (!mongoose.Types.ObjectId.isValid(id) || !course) throw new BadRequestException(`course with id=${id} not found`);
 
     const modules = await this.moduleModel.find({ course: id }).select({ _id: 1, name: 1, order: 1 }).sort({ order: 1 });
