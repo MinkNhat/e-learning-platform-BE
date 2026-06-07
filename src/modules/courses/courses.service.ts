@@ -121,7 +121,7 @@ export class CoursesService {
     }
   }
 
-  async findOne(id: string) {
+  async findOne(id: string): Promise<any> {
     const course = await this.courseModel.findById(id);
     if (!mongoose.Types.ObjectId.isValid(id) || !course) throw new BadRequestException(`course with id=${id} not found`);
 
