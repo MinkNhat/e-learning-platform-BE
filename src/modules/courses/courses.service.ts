@@ -20,6 +20,14 @@ export class CoursesService {
     private slugService: SlugService,
   ) {}
 
+  private getCourseLookupQuery(courseIdOrSlug: string) {
+    if (mongoose.Types.ObjectId.isValid(courseIdOrSlug)) {
+      return { $or: [{ _id: courseIdOrSlug }, { slug: courseIdOrSlug }] };
+    }
+
+    return { slug: courseIdOrSlug };
+  }
+
   async create(createCourseDto: CreateCourseDto, user: IUser) {
     if (!createCourseDto.authors.includes(user.name)) {
       createCourseDto.authors.unshift(user.name);
@@ -43,10 +51,12 @@ export class CoursesService {
     };
   }
 
-  async findModulesByCourse(id: string) {
-    if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
+  async findModulesByCourse(courseIdOrSlug: string) {
+    const course = await this.courseModel.findOne(this.getCourseLookupQuery(courseIdOrSlug)).select({ _id: 1 });
 
-    return this.moduleModel.find({ course: id })
+    if (!course) throw new BadRequestException(`course with id or slug=${courseIdOrSlug} not found`);
+
+    return this.moduleModel.find({ course: course._id })
       .select({ _id: 1, name: 1, order: 1, totalLessons: 1, totalLength: 1 })
       .sort({ order: 1 });
   }
@@ -81,11 +91,11 @@ export class CoursesService {
     }
   }
 
-  async findOne(id: string): Promise<any> {
-    const course = await this.courseModel.findById(id).lean();
-    if (!mongoose.Types.ObjectId.isValid(id) || !course) throw new BadRequestException(`course with id=${id} not found`);
+  async findOne(courseIdOrSlug: string): Promise<any> {
+    const course = await this.courseModel.findOne(this.getCourseLookupQuery(courseIdOrSlug)).lean();
+    if (!course) throw new BadRequestException(`course with id or slug=${courseIdOrSlug} not found`);
 
-    const modules = await this.moduleModel.find({ course: id }).select({ _id: 1, name: 1, order: 1 }).sort({ order: 1 });
+    const modules = await this.moduleModel.find({ course: course._id }).select({ _id: 1, name: 1, order: 1 }).sort({ order: 1 });
     const moduleIds = modules.map((m) => m._id);
 
     // Group lessons by module

@@ -16,12 +16,23 @@ export class CategoriesService {
     private slugService: SlugService,
   ) { }
 
+  private getCategoryLookupQuery(categoryIdOrSlug: string) {
+    if (mongoose.Types.ObjectId.isValid(categoryIdOrSlug)) {
+      return { $or: [{ _id: categoryIdOrSlug }, { slug: categoryIdOrSlug }] };
+    }
+
+    return { slug: categoryIdOrSlug };
+  }
+
   async findRootCategories() {
     return await this.categoryModel.find({ parent: null }).select({ _id: 1, name: 1, slug: 1, level: 1 });
   }
 
-  async findChildCategories(id: string) {
-    return await this.categoryModel.find({ parent: id }).select({ _id: 1, name: 1, slug: 1, level: 1 });
+  async findChildCategories(categoryIdOrSlug: string) {
+    const category = await this.categoryModel.findOne(this.getCategoryLookupQuery(categoryIdOrSlug)).select({ _id: 1 });
+    if (!category) throw new BadRequestException(`category with id or slug=${categoryIdOrSlug} not found`)
+
+    return await this.categoryModel.find({ parent: category._id }).select({ _id: 1, name: 1, slug: 1, level: 1 });
   }
 
   async create(createCategoryDto: CreateCategoryDto, user: IUser) {
@@ -88,9 +99,11 @@ export class CategoriesService {
     }
   }
 
-  async findOne(id: string) {
-    if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`category with id=${id} not found`)
-    return await this.categoryModel.findById(id);
+  async findOne(categoryIdOrSlug: string) {
+    const category = await this.categoryModel.findOne(this.getCategoryLookupQuery(categoryIdOrSlug));
+    if (!category) throw new BadRequestException(`category with id or slug=${categoryIdOrSlug} not found`)
+
+    return category;
   }
 
   async update(id: string, updateCategoryDto: UpdateCategoryDto, user: IUser) {
