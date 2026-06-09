@@ -1,5 +1,6 @@
 import { Schema, Prop, SchemaFactory } from "@nestjs/mongoose";
 import mongoose, { HydratedDocument } from "mongoose";
+import { Category } from "src/modules/categories/schemas/category.schema";
 
 export type CourseDocument = HydratedDocument<Course>;
 
@@ -52,6 +53,9 @@ export class Course {
 
     @Prop()
     authors: string[];
+
+    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: Category.name, required: true })
+    category: Category;
 
     @Prop({default: true})
     isPublished: boolean;

@@ -1,5 +1,6 @@
 import { Optional } from "@nestjs/common";
-import { IsArray, IsEnum, IsNotEmpty, IsString } from "class-validator";
+import { IsArray, IsEnum, IsMongoId, IsNotEmpty, IsString } from "class-validator";
+import mongoose from "mongoose";
 import { CourseLevel } from "src/core/enums/course-level.enum";
 
 export class CreateCourseDto {
@@ -29,6 +30,10 @@ export class CreateCourseDto {
     @IsString({ each: true })
     @Optional()
     authors: string[];
+
+    @IsNotEmpty()
+    @IsMongoId()
+    category: mongoose.Schema.Types.ObjectId;
 
     // @IsNotEmpty()
     thumbnail: string;

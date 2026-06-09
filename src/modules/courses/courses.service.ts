@@ -10,6 +10,7 @@ import mongoose from 'mongoose';
 import { Module, ModuleDocument } from '../modules/schemas/module.schema';
 import { Lesson, LessonDocument } from '../lessons/schemas/lesson.schema';
 import { SlugService } from 'src/utils/slug.service';
+import { Category, CategoryDocument } from '../categories/schemas/category.schema';
 
 @Injectable()
 export class CoursesService {
@@ -17,6 +18,7 @@ export class CoursesService {
     @InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>,
     @InjectModel(Module.name) private moduleModel: SoftDeleteModel<ModuleDocument>,
     @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>,
+    @InjectModel(Category.name) private categoryModel: SoftDeleteModel<CategoryDocument>,
     private slugService: SlugService,
   ) {}
 
@@ -29,14 +31,19 @@ export class CoursesService {
   }
 
   async create(createCourseDto: CreateCourseDto, user: IUser) {
-    if (!createCourseDto.authors.includes(user.name)) {
-      createCourseDto.authors.unshift(user.name);
+    const category = await this.categoryModel.findById(createCourseDto.category);
+    if (!category) throw new BadRequestException(`category with id=${createCourseDto.category} not found`);
+
+    const authors = createCourseDto.authors ?? [];
+    if (!authors.includes(user.name)) {
+      authors.unshift(user.name);
     }
 
     const slug = await this.slugService.generate(this.courseModel, createCourseDto.title);
 
     const newCourse = await this.courseModel.create({
       ...createCourseDto,
+      authors,
       slug,
       createdBy: {
         _id: user._id,
@@ -72,11 +79,16 @@ export class CoursesService {
     const totalItems = (await this.courseModel.find(filter)).length;
     const totalPages = Math.ceil(totalItems / defaultLimit);
 
+    let finalPopulation = population || [];
+    if (!finalPopulation.some(p => p.path === 'category')) {
+      finalPopulation.push({ path: 'category', select: 'name slug' });
+    }
+
     const result = await this.courseModel.find(filter)
       .skip(offset)
       .limit(defaultLimit)
       .sort(sort as any)
-      .populate(population)
+      .populate(finalPopulation)
       .select(projection)
       .exec();
 
@@ -94,6 +106,9 @@ export class CoursesService {
   async findOne(courseIdOrSlug: string): Promise<any> {
     const course = await this.courseModel.findOne(this.getCourseLookupQuery(courseIdOrSlug)).lean();
     if (!course) throw new BadRequestException(`course with id or slug=${courseIdOrSlug} not found`);
+
+    const cate = await this.categoryModel.findById(course.category).select({ _id: 1, name: 1, slug: 1 });
+    course.category = cate;
 
     const modules = await this.moduleModel.find({ course: course._id }).select({ _id: 1, name: 1, order: 1 }).sort({ order: 1 });
     const moduleIds = modules.map((m) => m._id);
@@ -131,6 +146,9 @@ export class CoursesService {
   async update(id: string, updateCourseDto: UpdateCourseDto, user: IUser) {
     const course = await this.courseModel.findById(id);
     if(!mongoose.Types.ObjectId.isValid(id) || !course) throw new BadRequestException(`course with id=${id} not found`);
+
+    const category = await this.categoryModel.findById(updateCourseDto.category);
+    if (!category) throw new BadRequestException(`category with id=${updateCourseDto.category} not found`);
 
     return await this.courseModel.updateOne(
       {_id: id}, 
