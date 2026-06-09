@@ -716,7 +716,9 @@ export const INIT_COURSES = [
         "updatedBy": {
             "_id": "69d514eb23fb41760ae187e9",
             "email": "admin@gmail.com"
-        }
+        },
+        "enrollmentCount": 49,
+        "rating": 4.5
     },
     {
         "_id": "6a206144821e84b5f6c31a51",
@@ -753,7 +755,9 @@ export const INIT_COURSES = [
         "isDeleted": false,
         "createdAt": "2026-06-03T17:15:48.178Z",
         "updatedAt": "2026-06-03T17:15:48.178Z",
-        "__v": 0
+        "__v": 0,
+        "enrollmentCount": 328,
+        "rating": 4.2
     },
     {
         "_id": "6a20660e821e84b5f6c31bc6",
@@ -790,7 +794,9 @@ export const INIT_COURSES = [
         "isDeleted": false,
         "createdAt": "2026-06-03T17:36:14.251Z",
         "updatedAt": "2026-06-03T17:36:14.251Z",
-        "__v": 0
+        "__v": 0,
+        "enrollmentCount": 120,
+        "rating": 3.8
     }
 ]
 
@@ -1202,7 +1208,7 @@ export const INIT_LESSONS = [
     "_id": "6a205aea821e84b5f6c31823",
     "name": "Introduction to NEST JS",
     "isActive": true,
-    "isFree": false,
+    "isFree": true,
     "order": 1,
     "type": "video",
     "module": "6a205a24821e84b5f6c317cb",
@@ -1214,15 +1220,22 @@ export const INIT_LESSONS = [
     "deletedAt": null,
     "createdAt": "2026-06-03T16:48:42.373Z",
     "updatedAt": "2026-06-03T16:48:42.373Z",
-    "__v": 0
+    "__v": 0,
+    "content": "<h3>Về khoá học AWS Cloud for beginner - Tiếng Việt&nbsp;</h3><p>Bạn đang là IT, Software Engineer hoặc sinh viên đang muốn bắt đầu hành trình trên Cloud của mình, hoặc bạn muốn học thêm những kiến thức liên quan AWS nói riêng phục vụ cho công việc hằng ngày cũng như tìm kiếm cơ hội mới. Khoá học này chính xác dành cho bạn! Khoá học này tập trung vào những kiến thưc cơ bản liên quan tới Cloud Computing và AWS, lịch sử hình thành và phát triển của AWS, các dịch vụ cơ bản trên AWS, đặc trưng và usecase áp dụng các dịch vụ trong thực tế. Khoá học thiết kế đan xen giữa lý thuyết và thực hành, giúp các bạn không chỉ nắm rõ các dịch vụ của AWS mà còn tự tin thao tác, có thể vận dụng trong dự án thực tế cũng như phát triển sản phẩm của riêng bạn.</p>",
+    "metadata": {
+      "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+      "ytbId": "wjCJv4W4kvw",
+      "duration": 256,
+      "durationText": "00:04:16"
+    }
   },
   {
     "_id": "6a205af5821e84b5f6c3182b",
     "name": "Setting up the project",
     "isActive": true,
-    "isFree": false,
+    "isFree": true,
     "order": 2,
-    "type": "video",
+    "type": "article",
     "module": "6a205a24821e84b5f6c317cb",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
@@ -1232,7 +1245,12 @@ export const INIT_LESSONS = [
     "deletedAt": null,
     "createdAt": "2026-06-03T16:48:53.528Z",
     "updatedAt": "2026-06-03T16:48:53.528Z",
-    "__v": 0
+    "__v": 0,
+    "content": '<h1>Giới thiệu về NestJS</h1><p>NestJS là một framework mã nguồn mở được xây dựng trên nền tảng Node.js, sử dụng TypeScript làm ngôn ngữ chính. Framework này giúp lập trình viên xây dựng các ứng dụng phía máy chủ (backend) theo kiến trúc rõ ràng, dễ bảo trì và dễ mở rộng.</p><p>NestJS kết hợp nhiều ý tưởng từ Angular như Module, Controller, Service và Dependency Injection, đồng thời tận dụng sức mạnh của Express hoặc Fastify để xử lý các yêu cầu HTTP.</p><h2>Tại sao nên sử dụng NestJS?</h2><ul><li data-list-item-id="e797cf35b94d1497f5d5052f57cbeea28">Cấu trúc dự án rõ ràng, phù hợp cho cả dự án nhỏ và lớn.</li><li data-list-item-id="ea188b5a8031a57aac404435018af2bdf">Hỗ trợ TypeScript mặc định, giúp giảm lỗi trong quá trình phát triển.</li><li data-list-item-id="e520e66db3b995a64a94bdb623c243da5">Tích hợp sẵn Dependency Injection.</li><li data-list-item-id="e61aa57c1186283f24a123e706827addf">Dễ dàng xây dựng REST API, GraphQL, WebSocket và Microservices.</li><li data-list-item-id="e9be43a63b6da292e4bf6f4f6c3b93739">Có hệ sinh thái phong phú và tài liệu chi tiết.</li></ul><h2>Kiến trúc cơ bản</h2><p>Một ứng dụng NestJS thường được chia thành các thành phần chính:</p><ul><li data-list-item-id="efcada466a6984c097fbc8aa364bdebbc"><strong>Module:</strong> Tổ chức và quản lý các thành phần liên quan.</li><li data-list-item-id="e80c6188f4c7247dc278fab0cc46ece7b"><strong>Controller:</strong> Tiếp nhận và xử lý các yêu cầu từ client.</li><li data-list-item-id="e4cb822453b0ab03d9ae9c1d20850b51b"><strong>Service:</strong> Chứa logic nghiệp vụ của ứng dụng.</li><li data-list-item-id="e69382b1b83102aec67a2d62186b1b15d"><strong>Entity/DTO:</strong> Định nghĩa cấu trúc dữ liệu.</li></ul><h2>Quy trình xử lý request</h2><ol><li data-list-item-id="e808d4ec14c317fbaca3066286b4adba4">Client gửi HTTP Request.</li><li data-list-item-id="edd5a610ce093b26577a129c76a5778c4">Controller nhận request.</li><li data-list-item-id="ecb32c634897288a4ad9d5eb2ecf8af87">Controller gọi Service để xử lý nghiệp vụ.</li><li data-list-item-id="e8046c61457f28a45e452df35f7611af6">Service truy xuất dữ liệu từ Database nếu cần.</li><li data-list-item-id="ee41d0d36658ae1b44dc581ea347e6125">Kết quả được trả về cho Client.</li></ol><h2>Một số package thường dùng</h2><figure class="table"><table><thead><tr><th style="padding:8px;">Package</th><th style="padding:8px;">Mục đích</th></tr></thead><tbody><tr><td style="padding:8px;">@nestjs/typeorm</td><td style="padding:8px;">Kết nối cơ sở dữ liệu bằng TypeORM</td></tr><tr><td style="padding:8px;">@nestjs/jwt</td><td style="padding:8px;">Xác thực JWT</td></tr><tr><td style="padding:8px;">@nestjs/swagger</td><td style="padding:8px;">Tạo tài liệu API Swagger</td></tr><tr><td style="padding:8px;">class-validator</td><td style="padding:8px;">Kiểm tra dữ liệu đầu vào</td></tr></tbody></table></figure>',
+    "metadata": {
+      "duration": 120,
+      "durationText": "~2 phút đọc"
+    }
   },
   {
     "_id": "6a205b11821e84b5f6c31843",
@@ -1250,7 +1268,14 @@ export const INIT_LESSONS = [
     "deletedAt": null,
     "createdAt": "2026-06-03T16:49:21.582Z",
     "updatedAt": "2026-06-03T16:49:21.582Z",
-    "__v": 0
+    "__v": 0,
+    "content": "<h2>Understanding Project Structure</h2><p><strong>Project Structure</strong> (Cấu trúc dự án) là cách tổ chức, sắp xếp các tệp tin và thư mục trong một ứng dụng. Một cấu trúc rõ ràng và chuẩn chỉnh giống như bản thiết kế của một ngôi nhà, giúp lập trình viên dễ dàng định vị mã nguồn, quản lý tài nguyên và mở rộng hệ thống. Việc tuân thủ một cấu trúc tiêu chuẩn mang lại nhiều lợi ích lớn như: <strong>tăng tính bảo trì</strong> (giúp người mới dễ tiếp cận), <strong>phân tách trách nhiệm</strong> (mỗi thư mục một vai trò riêng biệt), và <strong>tối ưu hóa làm việc nhóm</strong> (hạn chế xung đột code). <em>Tóm lại, hiểu và thiết kế tốt cấu trúc dự án ngay từ đầu là bước đệm quyết định cho sự thành công và tính bền vững của bất kỳ sản phẩm phần mềm nào.</em></p>",
+    "metadata": {
+      "videoUrl": "https://www.youtube.com/watch?v=HkPPnHU7UC8&list=RDHkPPnHU7UC8&start_radio=1",
+      "ytbId": "HkPPnHU7UC8",
+      "duration": 2712,
+      "durationText": "00:45:12"
+    }
   },
   {
     "_id": "6a205b64821e84b5f6c3184b",

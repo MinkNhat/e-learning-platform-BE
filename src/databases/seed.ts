@@ -7,6 +7,7 @@ import { Course } from 'src/modules/courses/schemas/course.schema';
 import { Lesson } from 'src/modules/lessons/schemas/lesson.schema';
 import { Module as CourseModule } from 'src/modules/modules/schemas/module.schema';
 import { INIT_COURSES, INIT_LESSONS, INIT_MODULES } from './sample';
+import { recalculateCourseStats } from './migrations/recalculate-course-stats.migration';
 
 const logger = new Logger('Seed');
 
@@ -32,6 +33,7 @@ async function bootstrap() {
         await seedCollection(courseModel, INIT_COURSES as any, 'courses');
         await seedCollection(moduleModel, INIT_MODULES as any, 'modules');
         await seedCollection(lessonModel, INIT_LESSONS as any, 'lessons');
+        await recalculateCourseStats(courseModel, moduleModel, lessonModel);
     } catch (error) {
         logger.error('Seed failed.', error as Error);
         process.exitCode = 1;

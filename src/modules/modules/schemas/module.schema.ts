@@ -19,6 +19,12 @@ export class Module {
     @Prop()
     order: number;
 
+    @Prop({default: 0})
+    totalLessons: number;
+
+    @Prop({default: 0})
+    totalLength: number;
+
     @Prop({ type: mongoose.Schema.Types.ObjectId, ref: Course.name })
     course: Course;
 

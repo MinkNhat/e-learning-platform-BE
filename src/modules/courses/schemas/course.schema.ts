@@ -38,6 +38,12 @@ export class Course {
     @Prop()
     enrollmentCount: number;
 
+    @Prop({default: 0})
+    totalLessons: number;
+
+    @Prop({default: 0})
+    totalLength: number;
+
     @Prop({default: false})
     isProcessLimit: boolean;
 

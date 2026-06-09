@@ -1,4 +1,5 @@
 export function estimateReadingMinutes(html: string): number {
+  if (!html) return 0;
   const text = html.replace(/<[^>]*>/g, ' ');
 
   const words = text

@@ -11,18 +11,22 @@ import { Module, ModuleDocument } from '../modules/schemas/module.schema';
 import { YtbService } from 'src/utils/ytb.service';
 import { LessonType } from 'src/core/enums/lesson-type.enum';
 import { estimateReadingMinutes } from 'src/utils/utils';
+import { Course, CourseDocument } from '../courses/schemas/course.schema';
 
 @Injectable()
 export class LessonsService {
   constructor(
     @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>,
     @InjectModel(Module.name) private moduleModel: SoftDeleteModel<ModuleDocument>,
+    @InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>,
     private ytbService: YtbService,
   ) {}
 
   async create(createLessonDto: CreateLessonDto, user: IUser) {
     const module = await this.moduleModel.findOne({ _id: createLessonDto.module });
     if (!module) throw new BadRequestException(`Module with id='${createLessonDto.module}' not found`);
+
+    createLessonDto.metadata = createLessonDto.metadata ?? {};
 
     if (createLessonDto.type === LessonType.VIDEO) {
       const videoInfo = await this.ytbService.getVideoInfo(createLessonDto.metadata.videoUrl);
@@ -44,6 +48,8 @@ export class LessonsService {
         email: user.email
       }
     });
+
+    await this.recalculateModuleStats(module._id);
 
     return {
       _id: newLesson?._id,
@@ -90,27 +96,44 @@ export class LessonsService {
   async update(id: string, updateLessonDto: UpdateLessonDto, user: IUser) {
     if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Lesson with id='${id}' not found`);
 
-    if (updateLessonDto.type === LessonType.VIDEO) {
-      const videoInfo = await this.ytbService.getVideoInfo(updateLessonDto.metadata.videoUrl);
+    const lesson = await this.lessonModel.findById(id);
+    if (!lesson) throw new BadRequestException(`Lesson with id='${id}' not found`);
 
-      updateLessonDto.metadata.duration = videoInfo.duration
-      updateLessonDto.metadata.durationString = videoInfo.durationString
-      updateLessonDto.metadata.ytbId = videoInfo.videoId;
+    const currentModuleId = lesson.module as any;
+    const updatePayload = { ...updateLessonDto };
+    delete updatePayload.module;
+
+    const metadata = {
+      ...(lesson.metadata ?? {}),
+      ...(updatePayload.metadata ?? {}),
+    };
+
+    if (updatePayload.type ?? lesson.type === LessonType.VIDEO) {
+      const videoInfo = await this.ytbService.getVideoInfo(metadata.videoUrl);
+
+      metadata.duration = videoInfo.duration
+      metadata.durationString = videoInfo.durationString
+      metadata.ytbId = videoInfo.videoId;
     } else {
-      const readingMinutes = estimateReadingMinutes(updateLessonDto.content);
-      updateLessonDto.metadata.durationString = "~" + readingMinutes + " phút đọc";
-      updateLessonDto.metadata.duration = readingMinutes * 60;
+      const readingMinutes = estimateReadingMinutes(updatePayload.content ?? lesson.content);
+      metadata.durationString = "~" + readingMinutes + " phút đọc";
+      metadata.duration = readingMinutes * 60;
     }
 
-    return await this.lessonModel.updateOne(
+    const result = await this.lessonModel.updateOne(
       { _id: id },
       {
-        ...updateLessonDto,
+        ...updatePayload,
+        metadata,
         updatedBy: {
           _id: user._id,
           email: user.email
         }
       });
+
+    await this.recalculateModuleStats(currentModuleId);
+
+    return result;
   }
 
   async remove(id: string, user: IUser) {
@@ -124,8 +147,72 @@ export class LessonsService {
           email: user.email
         }
       });
-    return this.lessonModel.softDelete({
-      _id: id
-    });
+      
+    const lesson = await this.lessonModel.findById(id);
+    const result = await this.lessonModel.softDelete({_id: id});
+    if (lesson) {
+      await this.recalculateModuleStats(lesson.module as any);
+    }
+
+    return result;
+  }
+
+  private async recalculateModuleStats(moduleId: mongoose.Types.ObjectId | string) {
+    const moduleObjectId = new mongoose.Types.ObjectId(moduleId.toString());
+    const module = await this.moduleModel.findById(moduleObjectId).select({ _id: 1, course: 1 });
+    if (!module) return;
+
+    const [moduleStats] = await this.lessonModel.aggregate([
+      {
+        $match: {
+          module: moduleObjectId,
+          isDeleted: { $ne: true },
+        },
+      },
+      {
+        $group: {
+          _id: '$module',
+          totalLessons: { $sum: 1 },
+          totalLength: { $sum: { $ifNull: ['$metadata.duration', 0] } },
+        },
+      },
+    ]);
+
+    await this.moduleModel.updateOne(
+      { _id: moduleObjectId },
+      {
+        totalLessons: moduleStats?.totalLessons ?? 0,
+        totalLength: moduleStats?.totalLength ?? 0,
+      },
+    );
+
+    await this.recalculateCourseStats(module.course as any);
+  }
+
+  private async recalculateCourseStats(courseId: mongoose.Types.ObjectId | string) {
+    const courseObjectId = new mongoose.Types.ObjectId(courseId.toString());
+    const [courseStats] = await this.moduleModel.aggregate([
+      {
+        $match: {
+          course: courseObjectId,
+          isDeleted: { $ne: true },
+        },
+      },
+      {
+        $group: {
+          _id: '$course',
+          totalLessons: { $sum: { $ifNull: ['$totalLessons', 0] } },
+          totalLength: { $sum: { $ifNull: ['$totalLength', 0] } },
+        },
+      },
+    ]);
+
+    await this.courseModel.updateOne(
+      { _id: courseObjectId },
+      {
+        totalLessons: courseStats?.totalLessons ?? 0,
+        totalLength: courseStats?.totalLength ?? 0,
+      },
+    );
   }
 }
