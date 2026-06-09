@@ -742,7 +742,6 @@ export const INIT_COURSES = [
             "Vietnamese"
         ],
         "authors": [
-            "Super Admin",
             "TELOS Academy",
             "Lưu Trọng Nhân"
         ],
@@ -782,7 +781,6 @@ export const INIT_COURSES = [
             "English"
         ],
         "authors": [
-            "Super Admin",
             "Truong The Vinh"
         ],
         "isPublished": true,
