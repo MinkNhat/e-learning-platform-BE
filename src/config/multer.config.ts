@@ -82,7 +82,7 @@ export function createUploadInterceptor(
         storage: diskStorage({
             destination: (req: Request, file: Express.Multer.File, cb) => {
                 const folderName = typeof folder === 'function' ? folder(req) : folder;
-                const targetDir = join(getRootPath(), `public/images/${folderName}`);
+                const targetDir = join(getRootPath(), '..', 'upload', folderName);
                 ensureExists(targetDir);
                 cb(null, targetDir);
             },
