@@ -701,7 +701,7 @@ export const INIT_COURSES = [
             "English"
         ],
         "authors": [
-            "John Doe"
+          "69d514eb23fb41760ae187e9"
         ],
         "isPublished": true,
         "createdBy": {
@@ -742,8 +742,8 @@ export const INIT_COURSES = [
             "Vietnamese"
         ],
         "authors": [
-            "TELOS Academy",
-            "Lưu Trọng Nhân"
+            "69d514eb23fb41760ae187e9",
+            "69d514eb23fb41760ae187ea"
         ],
         "isPublished": true,
         "createdBy": {
@@ -781,7 +781,7 @@ export const INIT_COURSES = [
             "English"
         ],
         "authors": [
-            "Truong The Vinh"
+            "69d514eb23fb41760ae187e9"
         ],
         "isPublished": true,
         "createdBy": {

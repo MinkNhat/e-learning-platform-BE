@@ -1,6 +1,7 @@
 import { Schema, Prop, SchemaFactory } from "@nestjs/mongoose";
 import mongoose, { HydratedDocument } from "mongoose";
 import { Category } from "src/modules/categories/schemas/category.schema";
+import { User } from "src/modules/users/schemas/user.schema";
 
 export type CourseDocument = HydratedDocument<Course>;
 
@@ -51,8 +52,8 @@ export class Course {
     @Prop()
     languages: string[];
 
-    @Prop()
-    authors: string[];
+    @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: User.name }], default: [] })
+    authors: User[];
 
     @Prop({ type: mongoose.Schema.Types.ObjectId, ref: Category.name, required: true })
     category: Category;

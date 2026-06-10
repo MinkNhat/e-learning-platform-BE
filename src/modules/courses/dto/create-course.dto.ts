@@ -1,5 +1,5 @@
 import { Optional } from "@nestjs/common";
-import { IsArray, IsEnum, IsMongoId, IsNotEmpty, IsString } from "class-validator";
+import { IsArray, IsEnum, IsMongoId, IsNotEmpty, IsOptional, IsString } from "class-validator";
 import mongoose from "mongoose";
 import { CourseLevel } from "src/core/enums/course-level.enum";
 
@@ -16,19 +16,18 @@ export class CreateCourseDto {
     @IsNotEmpty()
     price: number;
 
+    @IsOptional()
     @IsArray()
     @IsString({ each: true })
-    @Optional()
-    objectives: string[];
+    objectives?: string[];
+
+    @IsOptional()
+    @IsArray()
+    @IsString({ each: true })
+    languages?: string[];
 
     @IsArray()
-    @IsString({ each: true })
-    @Optional()
-    languages: string[];
-
-    @IsArray()
-    @IsString({ each: true })
-    @Optional()
+    @IsMongoId({ each: true })
     authors: string[];
 
     @IsNotEmpty()

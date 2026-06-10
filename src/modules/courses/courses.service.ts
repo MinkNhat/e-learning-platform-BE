@@ -34,10 +34,7 @@ export class CoursesService {
     const category = await this.categoryModel.findById(createCourseDto.category);
     if (!category) throw new BadRequestException(`category with id=${createCourseDto.category} not found`);
 
-    const authors = createCourseDto.authors ?? [];
-    if (!authors.includes(user.name)) {
-      authors.unshift(user.name);
-    }
+    const authors = createCourseDto.authors?.length ? createCourseDto.authors : [user._id];
 
     const slug = await this.slugService.generate(this.courseModel, createCourseDto.title);
 
@@ -83,6 +80,9 @@ export class CoursesService {
     if (!finalPopulation.some(p => p.path === 'category')) {
       finalPopulation.push({ path: 'category', select: 'name slug' });
     }
+    if (!finalPopulation.some(p => p.path === 'authors')) {
+      finalPopulation.push({ path: 'authors', select: '_id name avatar' });
+    }
 
     const result = await this.courseModel.find(filter)
       .skip(offset)
@@ -104,11 +104,13 @@ export class CoursesService {
   }
 
   async findOne(courseIdOrSlug: string): Promise<any> {
-    const course = await this.courseModel.findOne(this.getCourseLookupQuery(courseIdOrSlug)).lean();
+    const course = await this.courseModel.findOne(this.getCourseLookupQuery(courseIdOrSlug))
+      .populate([
+        { path: 'category', select: '_id name slug' }, 
+        { path: 'authors', select: '_id name avatar' },
+      ])
+      .lean();
     if (!course) throw new BadRequestException(`course with id or slug=${courseIdOrSlug} not found`);
-
-    const cate = await this.categoryModel.findById(course.category).select({ _id: 1, name: 1, slug: 1 });
-    course.category = cate;
 
     const modules = await this.moduleModel.find({ course: course._id }).select({ _id: 1, name: 1, order: 1 }).sort({ order: 1 });
     const moduleIds = modules.map((m) => m._id);
