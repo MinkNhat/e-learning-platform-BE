@@ -1,0 +1,1007 @@
+{
+  "courses": [
+    {
+      "_id": "78d783ea60aa4b70994a363b",
+      "title": "Kế Toán Dành Cho Nhà Quản Lý và Người Không Chuyên",
+      "shortDescription": "Cải thiện kỹ năng quản lý tài chính và ra quyết định với kiến thức kế toán căn bản!",
+      "description": "Cải thiện kỹ năng quản lý tài chính và ra quyết định với kiến thức kế toán căn bản!",
+      "objectives": [
+        "1.\tKiến thức cơ bản về kế toán: Nắm vững nguyên tắc và thuật ngữ kế toán thiết yếu.",
+        "2.\tPhân tích báo cáo tài chính: Hiểu và phân tích bảng cân đối kế toán và báo cáo kết quả hoạt động kinh doanh.",
+        "4.\tNhận diện sai lầm kế toán: Nhận biết và phòng ngừa các sai lầm phổ biến trong kế toán.",
+        "3.\tQuản lý ngân sách hiệu quả: Hỗ trợ kiến thức kế toán để phục vụ tối ưu công việc lập kế hoạch, theo dõi và kiểm soát ngân sách để tối ưu hóa tài chính."
+      ],
+      "requirement": "Không cần kinh nghiệm và kiến thức về kế toán",
+      "price": 249000,
+      "slug": "ke-toan-danh-cho-nha-quan-ly-va-nguoi-khong-chuyen",
+      "thumbnail": "temporary-thumbnail.jpg",
+      "category": "6a1feed2821e84b5f6c3162b",
+      "level": "intermediate",
+      "isProcessLimit": false,
+      "languages": [
+        "Vietnamese"
+      ],
+      "authors": [
+        "69d514eb23fb41760ae187e9"
+      ],
+      "isPublished": true,
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "createdAt": "2026-06-10T06:31:32.230263Z",
+      "updatedAt": "2026-06-10T06:31:32.230263Z",
+      "deletedAt": null,
+      "isDeleted": false,
+      "__v": 0,
+      "updatedBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "enrollmentCount": 1253,
+      "rating": 4.5
+    }
+  ],
+  "modules": [
+    {
+      "_id": "e0414f9abb1c4584b335918e",
+      "name": "Giới thiệu khóa học",
+      "isActive": true,
+      "order": 1,
+      "course": "78d783ea60aa4b70994a363b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0
+    },
+    {
+      "_id": "4085b6f3b224449884a13d32",
+      "name": "Tổng quan về Kế Toán Tài Chính",
+      "isActive": true,
+      "order": 2,
+      "course": "78d783ea60aa4b70994a363b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0
+    },
+    {
+      "_id": "163389e3de0147eebf505dd6",
+      "name": "Giới thiệu kế toán",
+      "isActive": true,
+      "order": 3,
+      "course": "78d783ea60aa4b70994a363b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0
+    },
+    {
+      "_id": "fdb7659dff424a05b503e25b",
+      "name": "Báo cáo Tài chính",
+      "isActive": true,
+      "order": 4,
+      "course": "78d783ea60aa4b70994a363b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0
+    },
+    {
+      "_id": "67852eeaf2a048bea02ad884",
+      "name": "Doanh thu - Chi phí - Lợi nhuận",
+      "isActive": true,
+      "order": 5,
+      "course": "78d783ea60aa4b70994a363b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0
+    },
+    {
+      "_id": "cc89684bcdd9472c83a48cde",
+      "name": "Hệ thống Báo cáo Tài chính",
+      "isActive": true,
+      "order": 6,
+      "course": "78d783ea60aa4b70994a363b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0
+    },
+    {
+      "_id": "0676e6f8bebd468a84d3ac31",
+      "name": "Tổng kết",
+      "isActive": true,
+      "order": 7,
+      "course": "78d783ea60aa4b70994a363b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0
+    }
+  ],
+  "lessons": [
+    {
+      "_id": "cba5677ab3ce45fab7b543e5",
+      "name": "Giới thiệu",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "e0414f9abb1c4584b335918e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 166,
+        "durationText": "00:02:46"
+      }
+    },
+    {
+      "_id": "9535fef4a03048fa95dcf1b7",
+      "name": "Tài liệu bài giảng",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "article",
+      "module": "e0414f9abb1c4584b335918e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "<h3>Tài liệu bài giảng</h3><p>Nội dung bài học sẽ được cập nhật sau.</p>",
+      "metadata": {
+        "duration": 3,
+        "durationText": "~1 phút đọc"
+      }
+    },
+    {
+      "_id": "c027d33904cb427bb840f6ea",
+      "name": "Hướng dẫn cách sử dụng hệ thống học tập online Udemy",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "article",
+      "module": "e0414f9abb1c4584b335918e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "<h3>Hướng dẫn cách sử dụng hệ thống học tập online Udemy</h3><p>Nội dung bài học sẽ được cập nhật sau.</p>",
+      "metadata": {
+        "duration": 4,
+        "durationText": "~1 phút đọc"
+      }
+    },
+    {
+      "_id": "9e03a2e4f25a40d79cc72dd3",
+      "name": "Bài 1: Mục tiêu hướng đến",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "4085b6f3b224449884a13d32",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 759,
+        "durationText": "00:12:39"
+      }
+    },
+    {
+      "_id": "59dba9697a2e4534b64d27ec",
+      "name": "Bài 2: Tổng quan về Kế toán Tài Chính - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "4085b6f3b224449884a13d32",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1205,
+        "durationText": "00:20:05"
+      }
+    },
+    {
+      "_id": "699f6c2369cd45e1acff87a6",
+      "name": "Bài 3: Tổng quan về Kế toán Tài Chính - Phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "4085b6f3b224449884a13d32",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1156,
+        "durationText": "00:19:16"
+      }
+    },
+    {
+      "_id": "c8251d07b7524199a6d3ff2d",
+      "name": "Bài 4: Giới thiệu kế toán",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "163389e3de0147eebf505dd6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 364,
+        "durationText": "00:06:04"
+      }
+    },
+    {
+      "_id": "0db0862f022d4edaa2c947e4",
+      "name": "Bài 5: Môi trường pháp lý",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "163389e3de0147eebf505dd6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 101,
+        "durationText": "00:01:41"
+      }
+    },
+    {
+      "_id": "81720437abde4131ba0c2201",
+      "name": "Bài 6: Các khái niệm cơ bản",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "163389e3de0147eebf505dd6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1545,
+        "durationText": "00:25:45"
+      }
+    },
+    {
+      "_id": "dc480b404a63443a9da2441d",
+      "name": "Bài 7: Các mô hình định giá",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "163389e3de0147eebf505dd6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 656,
+        "durationText": "00:10:56"
+      }
+    },
+    {
+      "_id": "f6cf68af5d534d90bdbd24fe",
+      "name": "Bài 8: Các nguyên tắc cơ bản",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "163389e3de0147eebf505dd6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 777,
+        "durationText": "00:12:57"
+      }
+    },
+    {
+      "_id": "8bb8e935e0fb46bcbf587d72",
+      "name": "Bài 9: Báo cáo tài chính - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1335,
+        "durationText": "00:22:15"
+      }
+    },
+    {
+      "_id": "8d793d68f2ba44c582867003",
+      "name": "Bài 10: Báo cáo tài chính - Phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 859,
+        "durationText": "00:14:19"
+      }
+    },
+    {
+      "_id": "6e0930e716354d11bd627c84",
+      "name": "Bài 11: Báo cáo tài chính - Phần 3",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 752,
+        "durationText": "00:12:32"
+      }
+    },
+    {
+      "_id": "45269bee602b4bad93afbe20",
+      "name": "Bài 12: Đạo đức người làm nghề kế toán",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 237,
+        "durationText": "00:03:57"
+      }
+    },
+    {
+      "_id": "b11b4bbddc4e499888d529bc",
+      "name": "Bài 13: Sổ kế toán",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 787,
+        "durationText": "00:13:07"
+      }
+    },
+    {
+      "_id": "c7a4bae04a064eacb8a05990",
+      "name": "Bài 14: Kế toán tiền và các khoản phải thu - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 4254,
+        "durationText": "01:10:54"
+      }
+    },
+    {
+      "_id": "e1efbaa258004d2a84aa133d",
+      "name": "Bài 15: Kế toán tiền và các khoản phải thu - Phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 264,
+        "durationText": "00:04:24"
+      }
+    },
+    {
+      "_id": "bf7ccce8c17b4ad4a1555f22",
+      "name": "Bài 16: Kế toán tiền và các khoản phải thu - Phần 3",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 313,
+        "durationText": "00:05:13"
+      }
+    },
+    {
+      "_id": "627bb712cf754718b3bfdc95",
+      "name": "Bài 17: Kế toán tiền và các khoản phải thu - Phần 4",
+      "isActive": true,
+      "isFree": false,
+      "order": 9,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 742,
+        "durationText": "00:12:22"
+      }
+    },
+    {
+      "_id": "edc9ddd00077432aa36d89b1",
+      "name": "Bài 18: Kế toán hàng tồn kho",
+      "isActive": true,
+      "isFree": false,
+      "order": 10,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1130,
+        "durationText": "00:18:50"
+      }
+    },
+    {
+      "_id": "8a2550aafcd44c7586acf4b3",
+      "name": "Bài 19: Kế toán chi phí nguyên vật liệu",
+      "isActive": true,
+      "isFree": false,
+      "order": 11,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 282,
+        "durationText": "00:04:42"
+      }
+    },
+    {
+      "_id": "d889e7a0079a475b9c7be4da",
+      "name": "Bài 20: Kế toán chi phí sản xuất chung",
+      "isActive": true,
+      "isFree": false,
+      "order": 12,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 136,
+        "durationText": "00:02:16"
+      }
+    },
+    {
+      "_id": "582cfa29f06244acbbd908a8",
+      "name": "Bài 21: Dự phòng giảm giá hàng tồn kho",
+      "isActive": true,
+      "isFree": false,
+      "order": 13,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 129,
+        "durationText": "00:02:09"
+      }
+    },
+    {
+      "_id": "c379f4cb464a471ba7c8007a",
+      "name": "Bài 22: Tóm tắt",
+      "isActive": true,
+      "isFree": false,
+      "order": 14,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 169,
+        "durationText": "00:02:49"
+      }
+    },
+    {
+      "_id": "9341288e7dea4d2aa1986e84",
+      "name": "Bài 23: Kế toán tài sản cố định",
+      "isActive": true,
+      "isFree": false,
+      "order": 15,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1476,
+        "durationText": "00:24:36"
+      }
+    },
+    {
+      "_id": "49613f42958642f4a6e1f5f5",
+      "name": "Bài 24: Kế toán các khoản đầu tư",
+      "isActive": true,
+      "isFree": false,
+      "order": 16,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1720,
+        "durationText": "00:28:40"
+      }
+    },
+    {
+      "_id": "e30679bba5994bcd9211de3b",
+      "name": "Bài 25: Kế toán nợ phải trả",
+      "isActive": true,
+      "isFree": false,
+      "order": 17,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 2087,
+        "durationText": "00:34:47"
+      }
+    },
+    {
+      "_id": "5a5096ed1b8b41ddbfdeb63f",
+      "name": "Bài 26: Kế toán vốn chủ sở hữu",
+      "isActive": true,
+      "isFree": false,
+      "order": 18,
+      "type": "video",
+      "module": "fdb7659dff424a05b503e25b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1830,
+        "durationText": "00:30:30"
+      }
+    },
+    {
+      "_id": "b1cdb49f8ec24c63badddd9a",
+      "name": "Bài 27: Doanh thu - Chi phí - Lợi nhuận - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "67852eeaf2a048bea02ad884",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 2350,
+        "durationText": "00:39:10"
+      }
+    },
+    {
+      "_id": "07949ddfb00c4b0c9affc839",
+      "name": "Bài 28: Doanh thu - Chi phí - Lợi nhuận - Phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "67852eeaf2a048bea02ad884",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1475,
+        "durationText": "00:24:35"
+      }
+    },
+    {
+      "_id": "41ac0b4e48a247a29c39ea95",
+      "name": "Bài 29: Hệ thống báo cáo tài chính - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "cc89684bcdd9472c83a48cde",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1293,
+        "durationText": "00:21:33"
+      }
+    },
+    {
+      "_id": "f02d04e0fe554c248d2576ef",
+      "name": "Bài 30: Hệ thống báo cáo tài chính - Phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "cc89684bcdd9472c83a48cde",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1123,
+        "durationText": "00:18:43"
+      }
+    },
+    {
+      "_id": "6bce9fd9149048d288399ef9",
+      "name": "Bài 31: Tổng kết",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "0676e6f8bebd468a84d3ac31",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:31:32.231583Z",
+      "updatedAt": "2026-06-10T06:31:32.231583Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 753,
+        "durationText": "00:12:33"
+      }
+    }
+  ]
+}

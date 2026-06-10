@@ -1,0 +1,593 @@
+{
+  "courses": [
+    {
+      "_id": "e2dd61b32c92464dbb43d730",
+      "title": "Cách bán hàng trên Etsy Từ A-Z Kiếm tiền online Với Vốn Nhỏ",
+      "shortDescription": "Hướng dẫn Cách làm trên Etsy từ Kinh nghiệm thực chiến - Kiếm tiền online - Khởi nghiệp kinh doanh với ngân sách nhỏ",
+      "description": "Hướng dẫn Cách làm trên Etsy từ Kinh nghiệm thực chiến - Kiếm tiền online - Khởi nghiệp kinh doanh với ngân sách nhỏ",
+      "objectives": [
+        "Hiểu Etsy là gì và điểm mạnh và yếu của Etsy",
+        "Hiểu chính sách Etsy để kinh doanh bền vững lâu dài",
+        "Biết được mình phải bắt đầu từ đâu",
+        "Hiểu được mô hình kinh doanh POD",
+        "Biết cách tạo tài khoản bán hàng trên Etsy đúng chuẩn",
+        "Biết cách xây dựng cửa hàng Etsy đúng chuẩn SEO",
+        "Biết cách phân tích sản phẩm phù hợp nhu cầu người mua",
+        "Biết cách sử dụng các công cụ phân tích sản phẩm hiệu quả",
+        "Biết cách chạy quảng cáo trên Etsy và phân tích chỉ số quảng cáo chuyên nghiệp"
+      ],
+      "requirement": "Chỉ cần có laptop và quyết tâm khởi nghiệp kinh doanh thương mại điện tử thì hãy đăng ký ngay. Bạn không cần nhiều vốn để bán hàng trên Etsy như kinh doanh truyền thống. Bạn cần biết tiếng Anh cơ bản để đọc tài liệu và nghiên cứu sản phẩm. Không cần kinh nghiệm lập trình hay kỹ năng khác",
+      "price": 249000,
+      "slug": "cach-ban-hang-tren-etsy-tu-a-z-kiem-tien-online-voi-von-nho",
+      "thumbnail": "temporary-thumbnail.jpg",
+      "category": "6a1feec6821e84b5f6c3161f",
+      "level": "intermediate",
+      "isProcessLimit": false,
+      "languages": [
+        "Vietnamese"
+      ],
+      "authors": [
+        "69d514eb23fb41760ae187e9"
+      ],
+      "isPublished": true,
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "createdAt": "2026-06-10T06:32:28.139592Z",
+      "updatedAt": "2026-06-10T06:32:28.139592Z",
+      "deletedAt": null,
+      "isDeleted": false,
+      "__v": 0,
+      "updatedBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "enrollmentCount": 313,
+      "rating": 4.8
+    }
+  ],
+  "modules": [
+    {
+      "_id": "a56df6c931d0447ab3d4a79f",
+      "name": "Giới thiệu",
+      "isActive": true,
+      "order": 1,
+      "course": "e2dd61b32c92464dbb43d730",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0
+    },
+    {
+      "_id": "5f0eb2fc232d49c9b1726516",
+      "name": "Kiến thức cơ bản",
+      "isActive": true,
+      "order": 2,
+      "course": "e2dd61b32c92464dbb43d730",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0
+    },
+    {
+      "_id": "d930d5338d1d4d9ba7566976",
+      "name": "Cách bán hàng trên Etsy",
+      "isActive": true,
+      "order": 3,
+      "course": "e2dd61b32c92464dbb43d730",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0
+    },
+    {
+      "_id": "21acc5cdbbe8403981b54a13",
+      "name": "Mẹo Hay",
+      "isActive": true,
+      "order": 4,
+      "course": "e2dd61b32c92464dbb43d730",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0
+    }
+  ],
+  "lessons": [
+    {
+      "_id": "48b5676ff291486c8295cdd3",
+      "name": "Giới thiệu về Etsy và Giảng viên",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "a56df6c931d0447ab3d4a79f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 834,
+        "durationText": "00:13:54"
+      }
+    },
+    {
+      "_id": "3f60b93d1961411e9334f080",
+      "name": "Vì sao nên chọn Etsy?",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "a56df6c931d0447ab3d4a79f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 888,
+        "durationText": "00:14:48"
+      }
+    },
+    {
+      "_id": "402ae8b03e124f4cb453342e",
+      "name": "Nên bắt đầu từ đâu?",
+      "isActive": true,
+      "isFree": true,
+      "order": 3,
+      "type": "video",
+      "module": "a56df6c931d0447ab3d4a79f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 706,
+        "durationText": "00:11:46"
+      }
+    },
+    {
+      "_id": "76d12ad3647c473eae9a7c2b",
+      "name": "Vốn ít cần làm gì?",
+      "isActive": true,
+      "isFree": true,
+      "order": 4,
+      "type": "video",
+      "module": "a56df6c931d0447ab3d4a79f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1051,
+        "durationText": "00:17:31"
+      }
+    },
+    {
+      "_id": "cfc22741ff6242c399dcaa1c",
+      "name": "Cơ hội và thách thức",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "a56df6c931d0447ab3d4a79f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 694,
+        "durationText": "00:11:34"
+      }
+    },
+    {
+      "_id": "8dc57a0162c9420abc320823",
+      "name": "Cấu trúc cơ bản của một cửa hàng trên Etsy",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "5f0eb2fc232d49c9b1726516",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 865,
+        "durationText": "00:14:25"
+      }
+    },
+    {
+      "_id": "a2eb07f08e3947669b9af4ad",
+      "name": "Cách tìm mặt hàng tốt nhất trên Etsy",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "5f0eb2fc232d49c9b1726516",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 533,
+        "durationText": "00:08:53"
+      }
+    },
+    {
+      "_id": "016952ac93a547e1a4d014e2",
+      "name": "Mô hình kinh doanh Print on Demand (POD)",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "5f0eb2fc232d49c9b1726516",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 355,
+        "durationText": "00:05:55"
+      }
+    },
+    {
+      "_id": "2bc4aca12e584b78bdd97688",
+      "name": "Chính sách handmade",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "5f0eb2fc232d49c9b1726516",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 557,
+        "durationText": "00:09:17"
+      }
+    },
+    {
+      "_id": "d7b318504d3b413e82349f1d",
+      "name": "Chính sách sở hữu trí tuệ",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "5f0eb2fc232d49c9b1726516",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 602,
+        "durationText": "00:10:02"
+      }
+    },
+    {
+      "_id": "468dcf50c7ed48f297560e2c",
+      "name": "Các sản phẩm bị cấm",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "5f0eb2fc232d49c9b1726516",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 456,
+        "durationText": "00:07:36"
+      }
+    },
+    {
+      "_id": "63acd9b1bfb14f2980085fb5",
+      "name": "Công cụ nghiên cứu",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "5f0eb2fc232d49c9b1726516",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 723,
+        "durationText": "00:12:03"
+      }
+    },
+    {
+      "_id": "f65381d097a64935aaa22433",
+      "name": "Tạo tài khoản mua hàng trên Etsy (buyer)",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "d930d5338d1d4d9ba7566976",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 848,
+        "durationText": "00:14:08"
+      }
+    },
+    {
+      "_id": "c2d967b35f284167aefb87a5",
+      "name": "Tạo tài khoản bán hàng trên Etsy (seller)",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "d930d5338d1d4d9ba7566976",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 2488,
+        "durationText": "00:41:28"
+      }
+    },
+    {
+      "_id": "9d679eb485b74197a21e7a00",
+      "name": "Cài đặt các thành phần cửa hàng trên Etsy",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "d930d5338d1d4d9ba7566976",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1241,
+        "durationText": "00:20:41"
+      }
+    },
+    {
+      "_id": "ea28ee3aa5574a2b8823212e",
+      "name": "Cách đăng sản phẩm lên Etsy bằng cách tự động và thủ công",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "d930d5338d1d4d9ba7566976",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1811,
+        "durationText": "00:30:11"
+      }
+    },
+    {
+      "_id": "5d8ce23360bb4cce8ac88906",
+      "name": "Thiết lập quảng cáo (ads)",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "d930d5338d1d4d9ba7566976",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 914,
+        "durationText": "00:15:14"
+      }
+    },
+    {
+      "_id": "1cf8764ff6c2442a98aea72c",
+      "name": "Cách cài đặt IP và Ản danh thiết bị với HidemyAcc",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "21acc5cdbbe8403981b54a13",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 632,
+        "durationText": "00:10:32"
+      }
+    },
+    {
+      "_id": "3831bc30212e42f9b8858bcb",
+      "name": "Cách đọc nhanh chỉ số công cụ trên YTuong.me để phân tích sản phẩm",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "21acc5cdbbe8403981b54a13",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:32:28.139781Z",
+      "updatedAt": "2026-06-10T06:32:28.139781Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1356,
+        "durationText": "00:22:36"
+      }
+    }
+  ]
+}

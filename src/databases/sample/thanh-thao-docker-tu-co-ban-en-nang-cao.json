@@ -1,0 +1,2845 @@
+{
+  "courses": [
+    {
+      "_id": "613587b9c2054948a58bdfb4",
+      "title": "Thành Thạo Docker Từ Cơ Bản Đến Nâng Cao",
+      "shortDescription": "Thành thạo Docker trong thực tế: Xây dựng, quản lý và triển khai ứng dụng nhanh chóng và hiệu quả.",
+      "description": "Thành thạo Docker trong thực tế: Xây dựng, quản lý và triển khai ứng dụng nhanh chóng và hiệu quả.",
+      "objectives": [
+        "Hiểu rõ khái niệm Docker và sự khác biệt giữa Container và Virtual Machine",
+        "Cài đặt Docker trên Windows (WSL, Docker Desktop) và Ubuntu, cấu hình môi trường làm việc",
+        "Nắm vững kiến trúc Docker: Docker CLI, Docker Host, Docker Registry và các khái niệm cốt lõi",
+        "Thành thạo thao tác với Container: tạo, chạy, dừng, xoá, logs, port mapping, exec command",
+        "Quản lý Docker Image: pull từ Docker Hub, inspect, tagging và build image với Dockerfile",
+        "Hiểu layered architecture và multi-stage build để tối ưu image trong dự án thực tế",
+        "Quản lý dữ liệu với Docker Storage: volumes, bind mount, tmpfs mount",
+        "Làm chủ Docker Networking: bridge, host và none network",
+        "Sử dụng Docker Compose để triển khai nhiều service qua file YAML",
+        "Làm quen Docker Swarm: tạo service, deploy Docker stack lên Swarm mode",
+        "Push & pull image lên Docker Hub, chia sẻ và triển khai ứng dụng chuyên nghiệp",
+        "Phát triển trực tiếp trong container với VS Code extensions – kĩ năng cần có của bất kì lập trình viên nào"
+      ],
+      "requirement": "Không cần kinh nghiệm lập trình – Bạn sẽ được chia sẻ mọi thứ cần biết. Máy tính có kết nối internet. Chỉ cần bạn chịu khó làm theo và thực hành, bạn sẽ nắm vững kiến thức",
+      "price": 249000,
+      "slug": "thanh-thao-docker-tu-co-ban-en-nang-cao",
+      "thumbnail": "temporary-thumbnail.jpg",
+      "category": "6a1fee36821e84b5f6c315a7",
+      "level": "intermediate",
+      "isProcessLimit": false,
+      "languages": [
+        "Vietnamese"
+      ],
+      "authors": [
+        "69d514eb23fb41760ae187e9"
+      ],
+      "isPublished": true,
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "createdAt": "2026-06-10T06:26:32.822850Z",
+      "updatedAt": "2026-06-10T06:26:32.822850Z",
+      "deletedAt": null,
+      "isDeleted": false,
+      "__v": 0,
+      "updatedBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "enrollmentCount": 2097,
+      "rating": 4.7
+    }
+  ],
+  "modules": [
+    {
+      "_id": "848293ece832451699567750",
+      "name": "Introduction",
+      "isActive": true,
+      "order": 1,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "24d621d4a6ef4b1aa532a0ad",
+      "name": "Tổng quan về Docker",
+      "isActive": true,
+      "order": 2,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "e63c4116dccd4f028f3996d6",
+      "name": "Cài đặt Docker và môi trường",
+      "isActive": true,
+      "order": 3,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "d97ac289402744c38574ee8e",
+      "name": "Docker architecture - Kiến trúc Docker",
+      "isActive": true,
+      "order": 4,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "86ce649c2d9f4b42b2f3972b",
+      "name": "Docker commands and Docker container",
+      "isActive": true,
+      "order": 5,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "66afdc94fdbd419e98e110b0",
+      "name": "Docker image",
+      "isActive": true,
+      "order": 6,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "b9fda4ae7223427e8a2e4b74",
+      "name": "Dockerfile and Build Docker images",
+      "isActive": true,
+      "order": 7,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "9542e33cf8c64e5090ae9384",
+      "name": "Docker Storage và Mounting",
+      "isActive": true,
+      "order": 8,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "4a82a6281a85466ab5ed1859",
+      "name": "Docker Networking",
+      "isActive": true,
+      "order": 9,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "8fa7b8a48ed24d4caf3920f8",
+      "name": "Docker Compose",
+      "isActive": true,
+      "order": 10,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "015e322bdf1f479c9fd3ef6c",
+      "name": "Docker Swarm",
+      "isActive": true,
+      "order": 11,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "aaaa6ad74ca343d690ebb138",
+      "name": "Docker Registry - Lưu trữ và chia sẻ Docker images",
+      "isActive": true,
+      "order": 12,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "aaddbbb2984643979d23faa6",
+      "name": "Dev in Docker containers - kỹ năng cần có",
+      "isActive": true,
+      "order": 13,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "5e84b5931ceb499f98ee65fa",
+      "name": "Tips and Tricks khi sử dụng Docker",
+      "isActive": true,
+      "order": 14,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    },
+    {
+      "_id": "07dae79933e24188b5a2082d",
+      "name": "Conclusion",
+      "isActive": true,
+      "order": 15,
+      "course": "613587b9c2054948a58bdfb4",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0
+    }
+  ],
+  "lessons": [
+    {
+      "_id": "3e3e883f468e44468deb593f",
+      "name": "Giới thiệu giảng viên",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "848293ece832451699567750",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 54,
+        "durationText": "00:00:54"
+      }
+    },
+    {
+      "_id": "bd4aaced80bb416f82a6d2b8",
+      "name": "Khóa học này dành cho ai",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "848293ece832451699567750",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 156,
+        "durationText": "00:02:36"
+      }
+    },
+    {
+      "_id": "60d21ab268f44046b7c9e96f",
+      "name": "Lộ trình thành thạo Docker từ cơ bản đến nâng cao",
+      "isActive": true,
+      "isFree": true,
+      "order": 3,
+      "type": "video",
+      "module": "848293ece832451699567750",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 434,
+        "durationText": "00:07:14"
+      }
+    },
+    {
+      "_id": "d220b5f159104b049393316c",
+      "name": "Điều kiện và một số tips học tập",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "848293ece832451699567750",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 162,
+        "durationText": "00:02:42"
+      }
+    },
+    {
+      "_id": "615f4f83f11e4ebda75d59bb",
+      "name": "Cách học hiệu quả trên Udemy",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "848293ece832451699567750",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 305,
+        "durationText": "00:05:05"
+      }
+    },
+    {
+      "_id": "fb235965b68b4014937f072e",
+      "name": "Vấn đề bản quyền khóa học - Quan trọng",
+      "isActive": true,
+      "isFree": true,
+      "order": 6,
+      "type": "video",
+      "module": "848293ece832451699567750",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 55,
+        "durationText": "00:00:55"
+      }
+    },
+    {
+      "_id": "47d07a2cef3241af9db53bf2",
+      "name": "Docker là gì?",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "24d621d4a6ef4b1aa532a0ad",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 223,
+        "durationText": "00:03:43"
+      }
+    },
+    {
+      "_id": "72f90c83ee194fd49574b7bf",
+      "name": "Tại sao là Docker?",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "24d621d4a6ef4b1aa532a0ad",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 432,
+        "durationText": "00:07:12"
+      }
+    },
+    {
+      "_id": "e96daf4b024b4c198d4e6b36",
+      "name": "So sánh giữa Docker container và máy ảo (VMs)",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "24d621d4a6ef4b1aa532a0ad",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 576,
+        "durationText": "00:09:36"
+      }
+    },
+    {
+      "_id": "e8a7137fb6814097aef67e6a",
+      "name": "Cách cài đặt Docker trên Windows",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "e63c4116dccd4f028f3996d6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 301,
+        "durationText": "00:05:01"
+      }
+    },
+    {
+      "_id": "bcc70b2701a3472688b38908",
+      "name": "Cách cài đặt Docker trên Ubuntu",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "e63c4116dccd4f028f3996d6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 135,
+        "durationText": "00:02:15"
+      }
+    },
+    {
+      "_id": "d75ecb3d249d4370826cf2ad",
+      "name": "Cài đặt Windows Terminal (có thể tích hợp nhiều shell trên Windows)",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "e63c4116dccd4f028f3996d6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 285,
+        "durationText": "00:04:45"
+      }
+    },
+    {
+      "_id": "b68179a507904d848edba2be",
+      "name": "Cài đặt Powershell 7 trên Windows (sẽ thay thế cho Windows Powershell cũ hơn)",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "e63c4116dccd4f028f3996d6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 416,
+        "durationText": "00:06:56"
+      }
+    },
+    {
+      "_id": "216348d39b9544e38a85f962",
+      "name": "Cài đặt WSL (Windows subsystem for Linux)",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "e63c4116dccd4f028f3996d6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 768,
+        "durationText": "00:12:48"
+      }
+    },
+    {
+      "_id": "30defed198a1466cba53335b",
+      "name": "Cài đặt Docker Desktop trên Windows",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "e63c4116dccd4f028f3996d6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 632,
+        "durationText": "00:10:32"
+      }
+    },
+    {
+      "_id": "75da165938ba4cbcb4d1753b",
+      "name": "Docker documentations - tài liệu về Docker",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "e63c4116dccd4f028f3996d6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 169,
+        "durationText": "00:02:49"
+      }
+    },
+    {
+      "_id": "0652b55fea4d4991acf39439",
+      "name": "Các khái niệm và từ ngữ hay gặp",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "d97ac289402744c38574ee8e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 307,
+        "durationText": "00:05:07"
+      }
+    },
+    {
+      "_id": "4996dcb49a72491286184f1f",
+      "name": "Kiến trúc Docker",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "d97ac289402744c38574ee8e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 262,
+        "durationText": "00:04:22"
+      }
+    },
+    {
+      "_id": "544080e4d4884b43895317fc",
+      "name": "Docker CLI  (Docker Client)",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "d97ac289402744c38574ee8e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 115,
+        "durationText": "00:01:55"
+      }
+    },
+    {
+      "_id": "0e56e6392cc94116b8d0d069",
+      "name": "Docker Host",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "d97ac289402744c38574ee8e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 193,
+        "durationText": "00:03:13"
+      }
+    },
+    {
+      "_id": "f11a29c0274649a29f7cdd49",
+      "name": "Docker Registry - Lưu trữ và chia sẻ Docker image",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "d97ac289402744c38574ee8e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 154,
+        "durationText": "00:02:34"
+      }
+    },
+    {
+      "_id": "4c4f531a025d4c3a89cc9fde",
+      "name": "Docker container là gì?",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 237,
+        "durationText": "00:03:57"
+      }
+    },
+    {
+      "_id": "44721b76b62d4497b196f089",
+      "name": "Demo Docker container - hello world",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 294,
+        "durationText": "00:04:54"
+      }
+    },
+    {
+      "_id": "2f056e5c90dd467c9118f9cd",
+      "name": "Demo Docker container - ubuntu",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 264,
+        "durationText": "00:04:24"
+      }
+    },
+    {
+      "_id": "c2c437fcebf54ab1814715cf",
+      "name": "Liệt kê các Docker containers",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 200,
+        "durationText": "00:03:20"
+      }
+    },
+    {
+      "_id": "d855a03afd634f5fae6987dc",
+      "name": "Thực hành - Liệt kê các Docker containers",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 457,
+        "durationText": "00:07:37"
+      }
+    },
+    {
+      "_id": "37cd69eb20114db28fede307",
+      "name": "Cách xóa các Docker containers",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 131,
+        "durationText": "00:02:11"
+      }
+    },
+    {
+      "_id": "95012c6a695647cfba332ddc",
+      "name": "Thực hành - Cách xóa các Docker containers",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 289,
+        "durationText": "00:04:49"
+      }
+    },
+    {
+      "_id": "52295f786045462dbb208e00",
+      "name": "Cách stop, restart, start Docker containers",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 184,
+        "durationText": "00:03:04"
+      }
+    },
+    {
+      "_id": "b06f633b92fd4cecb2083dbd",
+      "name": "Thực hành - Cách stop, restart, start Docker containers",
+      "isActive": true,
+      "isFree": false,
+      "order": 9,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 326,
+        "durationText": "00:05:26"
+      }
+    },
+    {
+      "_id": "dbb53506305640e09ae735a0",
+      "name": "Kiểm tra Docker containers với inspect",
+      "isActive": true,
+      "isFree": false,
+      "order": 10,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 211,
+        "durationText": "00:03:31"
+      }
+    },
+    {
+      "_id": "7dc1e6583eda4a798e21384a",
+      "name": "Các chế độ chạy (running mode) của Docker container",
+      "isActive": true,
+      "isFree": false,
+      "order": 11,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 179,
+        "durationText": "00:02:59"
+      }
+    },
+    {
+      "_id": "7fc7c64e021d47dd865c1a32",
+      "name": "Port mapping",
+      "isActive": true,
+      "isFree": false,
+      "order": 12,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 182,
+        "durationText": "00:03:02"
+      }
+    },
+    {
+      "_id": "d49984324e214e6e95f342f0",
+      "name": "Kiểm tra log của Docker container",
+      "isActive": true,
+      "isFree": false,
+      "order": 13,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 125,
+        "durationText": "00:02:05"
+      }
+    },
+    {
+      "_id": "d091aba88f1444408a0e71bb",
+      "name": "Cách xóa nhiều Docker containers một lúc",
+      "isActive": true,
+      "isFree": false,
+      "order": 14,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 101,
+        "durationText": "00:01:41"
+      }
+    },
+    {
+      "_id": "227b96e012e24643842ad38a",
+      "name": "Cách đổi tên Docker container sau khi đã tạo",
+      "isActive": true,
+      "isFree": false,
+      "order": 15,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 376,
+        "durationText": "00:06:16"
+      }
+    },
+    {
+      "_id": "0ffa57fb1354470b9400dd33",
+      "name": "Thực hành - Cách xóa nhiều Docker containers một lúc",
+      "isActive": true,
+      "isFree": false,
+      "order": 16,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 240,
+        "durationText": "00:04:00"
+      }
+    },
+    {
+      "_id": "acf79d07f7434418954382d3",
+      "name": "Cách chạy một lệnh bất kì trong Docker container",
+      "isActive": true,
+      "isFree": false,
+      "order": 17,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 132,
+        "durationText": "00:02:12"
+      }
+    },
+    {
+      "_id": "db2747ff8f7b41c78946ae89",
+      "name": "Thực hành - Cách chạy một lệnh bất kì trong Docker container",
+      "isActive": true,
+      "isFree": false,
+      "order": 18,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 451,
+        "durationText": "00:07:31"
+      }
+    },
+    {
+      "_id": "595a4b48333b4afa8b427892",
+      "name": "Giải thích lý do có message khi chạy hello-world, bash shell khi chạy ubuntu",
+      "isActive": true,
+      "isFree": false,
+      "order": 19,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 318,
+        "durationText": "00:05:18"
+      }
+    },
+    {
+      "_id": "0e5296a095c14c3792fb0f90",
+      "name": "Chạy Docker container với restart policy (nâng cao)",
+      "isActive": true,
+      "isFree": false,
+      "order": 20,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 642,
+        "durationText": "00:10:42"
+      }
+    },
+    {
+      "_id": "92fd726fbf98418987bd9d85",
+      "name": "Thực hành - Chạy Docker container với restart policy - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 21,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 505,
+        "durationText": "00:08:25"
+      }
+    },
+    {
+      "_id": "298287eef9bc472686666407",
+      "name": "Thực hành - Chạy Docker container với restart policy - Phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 22,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 251,
+        "durationText": "00:04:11"
+      }
+    },
+    {
+      "_id": "33bd06e819d14f5e997a25dc",
+      "name": "Recap về Docker container",
+      "isActive": true,
+      "isFree": false,
+      "order": 23,
+      "type": "video",
+      "module": "86ce649c2d9f4b42b2f3972b",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 341,
+        "durationText": "00:05:41"
+      }
+    },
+    {
+      "_id": "543ac68478b24d96b214f4b6",
+      "name": "Overview về Docker image",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "66afdc94fdbd419e98e110b0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 204,
+        "durationText": "00:03:24"
+      }
+    },
+    {
+      "_id": "637aa4ebcd2a4056a910d3f5",
+      "name": "Docker pull - tải Docker image từ registry",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "66afdc94fdbd419e98e110b0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 246,
+        "durationText": "00:04:06"
+      }
+    },
+    {
+      "_id": "fcf23c40156947cfa6deace5",
+      "name": "Thực hành - Docker pull - tải Docker image từ registry",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "66afdc94fdbd419e98e110b0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 250,
+        "durationText": "00:04:10"
+      }
+    },
+    {
+      "_id": "1c019b2740fe4ca88cb179e0",
+      "name": "Liệt kê các Docker images",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "66afdc94fdbd419e98e110b0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 242,
+        "durationText": "00:04:02"
+      }
+    },
+    {
+      "_id": "960d3f3a247e4044999c2004",
+      "name": "Xóa các Docker images",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "66afdc94fdbd419e98e110b0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 204,
+        "durationText": "00:03:24"
+      }
+    },
+    {
+      "_id": "b3923dfbf24a40948417a9bc",
+      "name": "Thực hành - Xóa các Docker images",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "66afdc94fdbd419e98e110b0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 775,
+        "durationText": "00:12:55"
+      }
+    },
+    {
+      "_id": "f43d8090de0a42e384948489",
+      "name": "Kiểm tra và tag Docker image",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "66afdc94fdbd419e98e110b0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 286,
+        "durationText": "00:04:46"
+      }
+    },
+    {
+      "_id": "7c92d7b161d74ac49b514f3a",
+      "name": "Thực hành - Kiểm tra và tag Docker image",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "66afdc94fdbd419e98e110b0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 374,
+        "durationText": "00:06:14"
+      }
+    },
+    {
+      "_id": "cfda51166e3c4de9ae87235f",
+      "name": "Xóa các resources không sử dụng",
+      "isActive": true,
+      "isFree": false,
+      "order": 9,
+      "type": "video",
+      "module": "66afdc94fdbd419e98e110b0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 209,
+        "durationText": "00:03:29"
+      }
+    },
+    {
+      "_id": "b8296441dd914d16abc35365",
+      "name": "Thực hành - Xóa các resources không sử dụng",
+      "isActive": true,
+      "isFree": false,
+      "order": 10,
+      "type": "video",
+      "module": "66afdc94fdbd419e98e110b0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 445,
+        "durationText": "00:07:25"
+      }
+    },
+    {
+      "_id": "3ce6a7232ae546f1ae08797d",
+      "name": "Overview về Dockerfile",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 238,
+        "durationText": "00:03:58"
+      }
+    },
+    {
+      "_id": "8e89b544d66a42b19a0f6c6d",
+      "name": "Docker instructions: LABEL, ARG, ENV - phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 651,
+        "durationText": "00:10:51"
+      }
+    },
+    {
+      "_id": "ac3bd1eca7f4475582f102bd",
+      "name": "Docker instructions: CMD, ENTRYPOINT, EXPOSE - phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 859,
+        "durationText": "00:14:19"
+      }
+    },
+    {
+      "_id": "c156ee293d9b43c7956b32da",
+      "name": "Lệnh để build Docker Image",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 348,
+        "durationText": "00:05:48"
+      }
+    },
+    {
+      "_id": "c05b70636e5d48e6825934ee",
+      "name": "Thực hành - Build image với Dockerfile - FROM, WORKDIR, COPY, CMD",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 977,
+        "durationText": "00:16:17"
+      }
+    },
+    {
+      "_id": "8ca92003b2f54c8e9d0c2280",
+      "name": "Thực hành - Build image với Dockerfile - RUN",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 244,
+        "durationText": "00:04:04"
+      }
+    },
+    {
+      "_id": "9b061bb2aacd418cb972f542",
+      "name": "Thực hành - So sánh Docker instructions CMD và ENTRYPOINT",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 873,
+        "durationText": "00:14:33"
+      }
+    },
+    {
+      "_id": "8616257f28af48e18ab60e7a",
+      "name": "Layered architecture trong Docker build",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 348,
+        "durationText": "00:05:48"
+      }
+    },
+    {
+      "_id": "5f46519e203d491ebbc0fb89",
+      "name": "Thực hành - Tối ưu build Docker image dựa trên layered architecture",
+      "isActive": true,
+      "isFree": false,
+      "order": 9,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 474,
+        "durationText": "00:07:54"
+      }
+    },
+    {
+      "_id": "7b44bb38cdfc452e88ac23c2",
+      "name": "Thực hành - Tối ưu build Docker image bằng cách gộp nhiều Docker instructions",
+      "isActive": true,
+      "isFree": false,
+      "order": 10,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 701,
+        "durationText": "00:11:41"
+      }
+    },
+    {
+      "_id": "cade2158ac154c91b1940f9b",
+      "name": "Tối ưu build Docker image với multistage build",
+      "isActive": true,
+      "isFree": false,
+      "order": 11,
+      "type": "video",
+      "module": "b9fda4ae7223427e8a2e4b74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 272,
+        "durationText": "00:04:32"
+      }
+    },
+    {
+      "_id": "0364e9cb32794abcb001e5eb",
+      "name": "Overview về Docker Storage",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "9542e33cf8c64e5090ae9384",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 226,
+        "durationText": "00:03:46"
+      }
+    },
+    {
+      "_id": "60dbc4fbb64e49f5b7dc4bfc",
+      "name": "Tổng quan về Docker volume mount",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "9542e33cf8c64e5090ae9384",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 418,
+        "durationText": "00:06:58"
+      }
+    },
+    {
+      "_id": "303504e6613947b48a6bed3f",
+      "name": "Thực hành - Bind mount",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "9542e33cf8c64e5090ae9384",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 359,
+        "durationText": "00:05:59"
+      }
+    },
+    {
+      "_id": "1e6eeab62d4f4323af37e2fb",
+      "name": "Thực hành - Volume mount",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "9542e33cf8c64e5090ae9384",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 374,
+        "durationText": "00:06:14"
+      }
+    },
+    {
+      "_id": "d6a077d70ecb4ce8a88e988e",
+      "name": "Overview về Docker networking",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "4a82a6281a85466ab5ed1859",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 131,
+        "durationText": "00:02:11"
+      }
+    },
+    {
+      "_id": "c6cd1bf8151f4c6bba8b2706",
+      "name": "Host network là gì?",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "4a82a6281a85466ab5ed1859",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 195,
+        "durationText": "00:03:15"
+      }
+    },
+    {
+      "_id": "b0e3adeaffa04b8c830da795",
+      "name": "Thực hành - Host network trên Ubuntu",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "4a82a6281a85466ab5ed1859",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 802,
+        "durationText": "00:13:22"
+      }
+    },
+    {
+      "_id": "95396123eae540659122da6c",
+      "name": "Defaut bridge network là gì?",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "4a82a6281a85466ab5ed1859",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 268,
+        "durationText": "00:04:28"
+      }
+    },
+    {
+      "_id": "dd104666f6a642db805725e4",
+      "name": "Thực hành - Default bridge network",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "4a82a6281a85466ab5ed1859",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 492,
+        "durationText": "00:08:12"
+      }
+    },
+    {
+      "_id": "ead90f9609704cf7ba26ee33",
+      "name": "Custom bridge network là gì?",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "4a82a6281a85466ab5ed1859",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 302,
+        "durationText": "00:05:02"
+      }
+    },
+    {
+      "_id": "fd75e8822c0e44199196203a",
+      "name": "Thực hành - Custom bridge network",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "4a82a6281a85466ab5ed1859",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 785,
+        "durationText": "00:13:05"
+      }
+    },
+    {
+      "_id": "1a9ff276ed784ce98e8e876e",
+      "name": "Null network là gì?",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "4a82a6281a85466ab5ed1859",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 160,
+        "durationText": "00:02:40"
+      }
+    },
+    {
+      "_id": "81c11206c31f4f07ad848944",
+      "name": "Thực hành - Null network",
+      "isActive": true,
+      "isFree": false,
+      "order": 9,
+      "type": "video",
+      "module": "4a82a6281a85466ab5ed1859",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 783,
+        "durationText": "00:13:03"
+      }
+    },
+    {
+      "_id": "1ffacae683c9490ab944b4da",
+      "name": "Overview về Docker Compose",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "8fa7b8a48ed24d4caf3920f8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 208,
+        "durationText": "00:03:28"
+      }
+    },
+    {
+      "_id": "c42f33a6d61c4d4dbc4c047b",
+      "name": "Docker Compose commands",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "8fa7b8a48ed24d4caf3920f8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 162,
+        "durationText": "00:02:42"
+      }
+    },
+    {
+      "_id": "9229c0ed8c80416496dcbdb0",
+      "name": "Overview về YAML",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "8fa7b8a48ed24d4caf3920f8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 304,
+        "durationText": "00:05:04"
+      }
+    },
+    {
+      "_id": "cb99f32fa7d34c13931817fe",
+      "name": "Các kiểu dữ liệu trong YAML file",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "8fa7b8a48ed24d4caf3920f8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 502,
+        "durationText": "00:08:22"
+      }
+    },
+    {
+      "_id": "183946b342824e059b5c4796",
+      "name": "Cài đặt extensions trong VSCode và config để viết YAML file chuẩn xác",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "8fa7b8a48ed24d4caf3920f8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 314,
+        "durationText": "00:05:14"
+      }
+    },
+    {
+      "_id": "a1653d8d173b43aea79cae6e",
+      "name": "Cách lựa chọn default shell trong VSCode",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "8fa7b8a48ed24d4caf3920f8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 177,
+        "durationText": "00:02:57"
+      }
+    },
+    {
+      "_id": "9a9934fe19834c14a44f1f4f",
+      "name": "Vẽ minh hoa kiến trúc sử dụng Docker Compose",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "8fa7b8a48ed24d4caf3920f8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 335,
+        "durationText": "00:05:35"
+      }
+    },
+    {
+      "_id": "73656d00750d4f4fb8fbb743",
+      "name": "Thực hành 1 - Viết Docker Compose YAML file",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "8fa7b8a48ed24d4caf3920f8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 920,
+        "durationText": "00:15:20"
+      }
+    },
+    {
+      "_id": "684103ff70a74f5397872527",
+      "name": "Thực hành 2 - Viết Dockerfile và các files cho các services",
+      "isActive": true,
+      "isFree": false,
+      "order": 9,
+      "type": "video",
+      "module": "8fa7b8a48ed24d4caf3920f8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 911,
+        "durationText": "00:15:11"
+      }
+    },
+    {
+      "_id": "5f06fb6c012148eda1a760a1",
+      "name": "Thực hành 3 - Chạy Docker Compose hoàn chỉnh",
+      "isActive": true,
+      "isFree": false,
+      "order": 10,
+      "type": "video",
+      "module": "8fa7b8a48ed24d4caf3920f8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 689,
+        "durationText": "00:11:29"
+      }
+    },
+    {
+      "_id": "6ffeb41b8f01489c8760e3d5",
+      "name": "Overview về Docker Swarm",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "015e322bdf1f479c9fd3ef6c",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 169,
+        "durationText": "00:02:49"
+      }
+    },
+    {
+      "_id": "4743f2cc436f46bf9b71d156",
+      "name": "Docker Stack - deployment unit trên Swarm mode",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "015e322bdf1f479c9fd3ef6c",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 315,
+        "durationText": "00:05:15"
+      }
+    },
+    {
+      "_id": "25a75f7fa957411695b9d8c0",
+      "name": "Thực hành - Docker Stack - deployment unit trên Swarm mode",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "015e322bdf1f479c9fd3ef6c",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1306,
+        "durationText": "00:21:46"
+      }
+    },
+    {
+      "_id": "d9b0414a9a3943619ec570a2",
+      "name": "Tổng quan về Docker Registry",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "aaaa6ad74ca343d690ebb138",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 206,
+        "durationText": "00:03:26"
+      }
+    },
+    {
+      "_id": "3b9118205930473d8ae7b195",
+      "name": "Thực hành - Đổi tag Docker image và push lên DockerHub",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "aaaa6ad74ca343d690ebb138",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 477,
+        "durationText": "00:07:57"
+      }
+    },
+    {
+      "_id": "774b5bba9f0e4a7baa6cfab9",
+      "name": "Lưu Docker image vào file .tar hoặc .tar.gz",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "aaaa6ad74ca343d690ebb138",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 266,
+        "durationText": "00:04:26"
+      }
+    },
+    {
+      "_id": "a38d51957f7a4301accd382e",
+      "name": "Thực hành - Lưu Docker image vào file .tar hoặc .tar.gz",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "aaaa6ad74ca343d690ebb138",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 531,
+        "durationText": "00:08:51"
+      }
+    },
+    {
+      "_id": "f461b8a226694974b4b2fde8",
+      "name": "Overview về việc Dev trong Docker Container",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "aaddbbb2984643979d23faa6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 238,
+        "durationText": "00:03:58"
+      }
+    },
+    {
+      "_id": "dc488ad2bc28474ca16d7731",
+      "name": "Cài đặt VSCode extensions và set up trong Docker container",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "aaddbbb2984643979d23faa6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 951,
+        "durationText": "00:15:51"
+      }
+    },
+    {
+      "_id": "c09754dafff046108182ae7c",
+      "name": "Thực hành Dev in Docker container",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "aaddbbb2984643979d23faa6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 815,
+        "durationText": "00:13:35"
+      }
+    },
+    {
+      "_id": "ddb2874509c547718035b39c",
+      "name": "Tips/Tricks khi thực hiện build lại Docker image từ việc dev trong container",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "aaddbbb2984643979d23faa6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 188,
+        "durationText": "00:03:08"
+      }
+    },
+    {
+      "_id": "a595287653df402ea6620e98",
+      "name": "Set user root và user thường khi chạy Docker container",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "5e84b5931ceb499f98ee65fa",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 522,
+        "durationText": "00:08:42"
+      }
+    },
+    {
+      "_id": "33aecc2d78b5472f8efb5ce0",
+      "name": "Tạo Dockerfile có thay đổi user",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "5e84b5931ceb499f98ee65fa",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 442,
+        "durationText": "00:07:22"
+      }
+    },
+    {
+      "_id": "116fd50afd8f4372a24d8b1d",
+      "name": "Bài giảng thưởng",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "article",
+      "module": "07dae79933e24188b5a2082d",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T06:26:32.824876Z",
+      "updatedAt": "2026-06-10T06:26:32.824876Z",
+      "__v": 0,
+      "content": "<h3>Bài giảng thưởng</h3><p>Nội dung bài học sẽ được cập nhật sau.</p>",
+      "metadata": {
+        "duration": 61,
+        "durationText": "~1 phút đọc"
+      }
+    }
+  ]
+}
