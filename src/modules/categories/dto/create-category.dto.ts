@@ -7,5 +7,6 @@ export class CreateCategoryDto {
     
     description: string;
     isActive: boolean;
+    icon: string;
     parent: mongoose.Schema.Types.ObjectId;
 }

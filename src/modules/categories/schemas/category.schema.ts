@@ -20,6 +20,9 @@ export class Category {
     @Prop({ default: true })
     isActive: boolean;
 
+    @Prop()
+    icon: string;
+
     @Prop({ type: mongoose.Schema.Types.ObjectId, ref: Category.name })
     parent: Category;
 
