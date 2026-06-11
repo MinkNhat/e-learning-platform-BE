@@ -1,0 +1,1444 @@
+{
+  "courses": [
+    {
+      "_id": "86254dc3857b430f8aa97437",
+      "title": "Phát triển Phần mềm tinh gọn - Lean Software Development",
+      "shortDescription": "Phát triển Phần mềm tinh gọn - Lean Software Development",
+      "description": "Phát triển Phần mềm tinh gọn - Lean Software Development",
+      "objectives": [
+        "Biết được về lịch sử hình thành và phát triển của Phát triển Phần mềm tinh gọn",
+        "Nắm được các nguyên tắc trong Phát triển Phần mềm tinh gọn",
+        "Nắm được lợi ích cũng như thách thức khi áp dụng các nguyên tắc của Phát triển phần mềm tinh gọn",
+        "Biết được sự kết hợp giữa Agile và Lean sẽ mang lại lợi ích gì",
+        "Giới thiệu một số Doanh nghiệp rất thành công trong việc áp dụng Lean"
+      ],
+      "requirement": "Không yêu cầu kinh nghiệm",
+      "price": 249000,
+      "slug": "phat-trien-phan-mem-tinh-gon-lean-software-development",
+      "thumbnail": "phat-trien-phan-mem.jpg",
+      "category": "6a1fee36821e84b5f6c315a7",
+      "level": "intermediate",
+      "isProcessLimit": false,
+      "languages": [
+        "Vietnamese"
+      ],
+      "authors": [
+        "69d514eb23fb41760ae187e9"
+      ],
+      "isPublished": true,
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "createdAt": "2026-06-10T16:47:51.569690Z",
+      "updatedAt": "2026-06-10T16:47:51.569690Z",
+      "deletedAt": null,
+      "isDeleted": false,
+      "__v": 0,
+      "updatedBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "enrollmentCount": 1657,
+      "rating": 5.0
+    }
+  ],
+  "modules": [
+    {
+      "_id": "978ae252a0924eb99cb4066e",
+      "name": "Introduction",
+      "isActive": true,
+      "order": 1,
+      "course": "86254dc3857b430f8aa97437",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0
+    },
+    {
+      "_id": "50c039bbce124eb5b1e34de0",
+      "name": "Nguyên tắc số 1 - Loại bỏ lãng phí",
+      "isActive": true,
+      "order": 2,
+      "course": "86254dc3857b430f8aa97437",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0
+    },
+    {
+      "_id": "55926b2a6ebd4ab39344a219",
+      "name": "Nguyên tắc số 2 - Trao quyền cho nhóm",
+      "isActive": true,
+      "order": 3,
+      "course": "86254dc3857b430f8aa97437",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0
+    },
+    {
+      "_id": "c38a36a12445499fb6648dd3",
+      "name": "Nguyên tắc số 3 - Chuyển giao nhanh (Deliver fast)",
+      "isActive": true,
+      "order": 4,
+      "course": "86254dc3857b430f8aa97437",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0
+    },
+    {
+      "_id": "0488ea3ef32647a69e21a700",
+      "name": "Nguyên tắc số 4 - Tối ưu hóa toàn bộ (Optimize the whole)",
+      "isActive": true,
+      "order": 5,
+      "course": "86254dc3857b430f8aa97437",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0
+    },
+    {
+      "_id": "b3c4020aad134d43844fd3d7",
+      "name": "Nguyên tắc số 5 - Xây dựng chất lượng ngay từ đầu (Build in quality)",
+      "isActive": true,
+      "order": 6,
+      "course": "86254dc3857b430f8aa97437",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0
+    },
+    {
+      "_id": "71cedb007d0b4d5a8f6040fa",
+      "name": "Nguyên tắc số 6 - Trì hoãn quyết định (Defer Decisions)",
+      "isActive": true,
+      "order": 7,
+      "course": "86254dc3857b430f8aa97437",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0
+    },
+    {
+      "_id": "de2565ef7b6a45bc8764772f",
+      "name": "Nguyên tắc số 7 - Tăng cường học hỏi (Amplify leanring)",
+      "isActive": true,
+      "order": 8,
+      "course": "86254dc3857b430f8aa97437",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0
+    },
+    {
+      "_id": "92b5ddc04fd0476eb1ce14bc",
+      "name": "Các kiến thức bổ sung",
+      "isActive": true,
+      "order": 9,
+      "course": "86254dc3857b430f8aa97437",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0
+    }
+  ],
+  "lessons": [
+    {
+      "_id": "b2df73d99c914e5298524f8e",
+      "name": "Giới thiệu thông tin Giảng viên (Instructor introduction)",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "978ae252a0924eb99cb4066e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 120,
+        "durationText": "00:02:00"
+      }
+    },
+    {
+      "_id": "a535d1698c934c49a78e60e1",
+      "name": "Giới thiệu nội dung khóa học (Course Content)",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "978ae252a0924eb99cb4066e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 99,
+        "durationText": "00:01:39"
+      }
+    },
+    {
+      "_id": "c45c77dd3b5847c88c93a26d",
+      "name": "Giới thiệu chung (General Introduction)",
+      "isActive": true,
+      "isFree": true,
+      "order": 3,
+      "type": "video",
+      "module": "978ae252a0924eb99cb4066e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 111,
+        "durationText": "00:01:51"
+      }
+    },
+    {
+      "_id": "6a40c413223540cf9497b783",
+      "name": "Nguyên tắc số 1 - Loại bỏ sự lãng phí (Eliminate waste) - Lợi ích",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 325,
+        "durationText": "00:05:25"
+      }
+    },
+    {
+      "_id": "072e935c7111430aa9ca8c9a",
+      "name": "Đo lường lãng phí - Lead Time",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 324,
+        "durationText": "00:05:24"
+      }
+    },
+    {
+      "_id": "4463f0d9aae642b2bffc2bd3",
+      "name": "Đo lường lãng phí - Cycle Time",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 370,
+        "durationText": "00:06:10"
+      }
+    },
+    {
+      "_id": "f1eaf0f464f8438cb7b00b05",
+      "name": "Đo lường lãng phí - Rework Rate",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 175,
+        "durationText": "00:02:55"
+      }
+    },
+    {
+      "_id": "6e727ecae042472a83d30bb9",
+      "name": "Đo lường lãng phí - Defect Density - Khái niệm & Công thức tính",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 201,
+        "durationText": "00:03:21"
+      }
+    },
+    {
+      "_id": "65e3d9304dcb4402a9762711",
+      "name": "Đo lường lãng phí - Defect Density - Ví dụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 237,
+        "durationText": "00:03:57"
+      }
+    },
+    {
+      "_id": "11109662fe054b81bd58768e",
+      "name": "Đo lường lãng phí - Defect Density - Giải pháp - 01",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 305,
+        "durationText": "00:05:05"
+      }
+    },
+    {
+      "_id": "f57ca318b6da45dd8996f307",
+      "name": "Đo lường lãng phí - Defect Density - Giải pháp - 02",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 276,
+        "durationText": "00:04:36"
+      }
+    },
+    {
+      "_id": "1251404294b54362b1a7730a",
+      "name": "Đo lường lãng phí - Work In Progress - 01",
+      "isActive": true,
+      "isFree": false,
+      "order": 9,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 281,
+        "durationText": "00:04:41"
+      }
+    },
+    {
+      "_id": "3d97011abf054871b514d711",
+      "name": "Đo lường lãng phí - Work In Progress - 02",
+      "isActive": true,
+      "isFree": false,
+      "order": 10,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 281,
+        "durationText": "00:04:41"
+      }
+    },
+    {
+      "_id": "f44137d59c7944009f10e5fd",
+      "name": "Đo lường lãng phí - Work In Progress - 03",
+      "isActive": true,
+      "isFree": false,
+      "order": 11,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 248,
+        "durationText": "00:04:08"
+      }
+    },
+    {
+      "_id": "bc4fa679886143aaab771bd7",
+      "name": "Đo lường lãng phí - Work In Progress - 04",
+      "isActive": true,
+      "isFree": false,
+      "order": 12,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 372,
+        "durationText": "00:06:12"
+      }
+    },
+    {
+      "_id": "d1e7e14c38294d4eab5c1b0a",
+      "name": "Nguyên tắc số 1 - Loại bỏ lãng phí - Nhược điểm và cách khắc phục",
+      "isActive": true,
+      "isFree": false,
+      "order": 13,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 316,
+        "durationText": "00:05:16"
+      }
+    },
+    {
+      "_id": "47a6ce781534462bb6180282",
+      "name": "Nguyên tắc số 1 - Loại bỏ lãng phí - Kỹ thuật và công cụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 14,
+      "type": "video",
+      "module": "50c039bbce124eb5b1e34de0",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 348,
+        "durationText": "00:05:48"
+      }
+    },
+    {
+      "_id": "baf92092f6e04f6da00ec6f0",
+      "name": "Nguyên tắc số 2 - Trao quyền cho nhóm (Empower the team)",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "55926b2a6ebd4ab39344a219",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 370,
+        "durationText": "00:06:10"
+      }
+    },
+    {
+      "_id": "08c6198226e145e48df5205c",
+      "name": "Nguyên tắc số 2 - Trao quyền cho nhóm - Rủi ro",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "55926b2a6ebd4ab39344a219",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 206,
+        "durationText": "00:03:26"
+      }
+    },
+    {
+      "_id": "526d2eab6741405882b8b3a8",
+      "name": "Nguyên tắc số 2 - Trao quyền cho nhóm - Biện pháp khắc phục",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "55926b2a6ebd4ab39344a219",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 234,
+        "durationText": "00:03:54"
+      }
+    },
+    {
+      "_id": "406ce8809f99451fa7f5a7d1",
+      "name": "Nguyên tắc số 2 - Trao quyền cho nhóm - Công cụ sử dụng",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "55926b2a6ebd4ab39344a219",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 251,
+        "durationText": "00:04:11"
+      }
+    },
+    {
+      "_id": "1c233f53ed8040cbb70e4848",
+      "name": "Nguyên tắc số 3 - Chuyển giao nhanh - Lý do",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "c38a36a12445499fb6648dd3",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 326,
+        "durationText": "00:05:26"
+      }
+    },
+    {
+      "_id": "681803d4483e463895f9f0d2",
+      "name": "Nguyên tắc số 3 - Chuyển giao nhanh - Thách thức",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "c38a36a12445499fb6648dd3",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 176,
+        "durationText": "00:02:56"
+      }
+    },
+    {
+      "_id": "73730e4890cc433e94e1fbb3",
+      "name": "Nguyên tắc số 3 - Chuyển giao nhanh - Khi nào áp dụng?",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "c38a36a12445499fb6648dd3",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 319,
+        "durationText": "00:05:19"
+      }
+    },
+    {
+      "_id": "a9be4ad6ada54ed2955ba9cd",
+      "name": "Nguyên tắc số 3 - Chuyển giao nhanh - Áp dụng",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "c38a36a12445499fb6648dd3",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 336,
+        "durationText": "00:05:36"
+      }
+    },
+    {
+      "_id": "eb3be4bb742049bcbd257947",
+      "name": "Nguyên tắc số 3 - Chuyển giao nhanh -  Đo lường",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "c38a36a12445499fb6648dd3",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 253,
+        "durationText": "00:04:13"
+      }
+    },
+    {
+      "_id": "065a844cb5fd49feba9b7656",
+      "name": "Nguyên tắc số 3 - Chuyển giao nhanh - Công cụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "c38a36a12445499fb6648dd3",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 312,
+        "durationText": "00:05:12"
+      }
+    },
+    {
+      "_id": "e95e42e8951b435d8e500447",
+      "name": "Nguyên tắc số 4 - Tối ưu hóa toàn bộ - Đặc điểm",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "0488ea3ef32647a69e21a700",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 253,
+        "durationText": "00:04:13"
+      }
+    },
+    {
+      "_id": "2e7d07143b3548c3990c50d5",
+      "name": "Nguyên tắc số 4 - Tối ưu hóa toàn bộ - Lợi ích",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "0488ea3ef32647a69e21a700",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 146,
+        "durationText": "00:02:26"
+      }
+    },
+    {
+      "_id": "5f13a13e477048838770a382",
+      "name": "Nguyên tắc số 4 - Tối ưu hóa toàn bộ - Tại sao khó thực hiện - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "0488ea3ef32647a69e21a700",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 218,
+        "durationText": "00:03:38"
+      }
+    },
+    {
+      "_id": "82bc07147f7c484589a154ae",
+      "name": "Nguyên tắc số 4 - Tối ưu hóa toàn bộ - Tại sao khó thực hiện - Phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "0488ea3ef32647a69e21a700",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 301,
+        "durationText": "00:05:01"
+      }
+    },
+    {
+      "_id": "7047326bbc2f47f9861f6520",
+      "name": "Nguyên tắc số 4 - Tối ưu hóa toàn bộ - Công cụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "0488ea3ef32647a69e21a700",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 178,
+        "durationText": "00:02:58"
+      }
+    },
+    {
+      "_id": "27c86d20f9cf4d3b9e9c2d55",
+      "name": "Nguyên tắc số 5 - Xây dựng chất lượng ngay từ đầu - Tại sao?",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "b3c4020aad134d43844fd3d7",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 163,
+        "durationText": "00:02:43"
+      }
+    },
+    {
+      "_id": "0bbc5e7706654aeeaeaa62a4",
+      "name": "Nguyên tắc số 5 - Xây dựng chất lượng ngay từ đầu - Nhược điểm và khắc phục",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "b3c4020aad134d43844fd3d7",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 241,
+        "durationText": "00:04:01"
+      }
+    },
+    {
+      "_id": "5bdf9dbe4ec34ba38929f83e",
+      "name": "Nguyên tắc số 5 - Xây dựng chất lượng ngay từ đầu - Xây dựng và công cụ - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "b3c4020aad134d43844fd3d7",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 283,
+        "durationText": "00:04:43"
+      }
+    },
+    {
+      "_id": "129672d19f2b4e1ba0b53cd6",
+      "name": "Nguyên tắc số 5 - Xây dựng chất lượng ngay từ đầu - Xây dựng và công cụ - Phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "b3c4020aad134d43844fd3d7",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 252,
+        "durationText": "00:04:12"
+      }
+    },
+    {
+      "_id": "581728fbe6a74c21b68e7ee4",
+      "name": "Nguyên tắc số 5 - Xây dựng chất lượng ngay từ đầu - Xây dựng và công cụ - Phần 3",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "b3c4020aad134d43844fd3d7",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 304,
+        "durationText": "00:05:04"
+      }
+    },
+    {
+      "_id": "f0edec6978ba4fb69d64d4f1",
+      "name": "Nguyên tắc số 6 - Trì hoãn quyết định - Lợi ích",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "71cedb007d0b4d5a8f6040fa",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 399,
+        "durationText": "00:06:39"
+      }
+    },
+    {
+      "_id": "05b9250d4af84d0ba46dcc35",
+      "name": "Nguyên tắc số 6 - Trì hoãn quyết định - Nhược điểm",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "71cedb007d0b4d5a8f6040fa",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 174,
+        "durationText": "00:02:54"
+      }
+    },
+    {
+      "_id": "7c7234420b4c45a8933d057b",
+      "name": "Nguyên tắc số 6 - Trì hoãn quyết định - Thách thức",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "71cedb007d0b4d5a8f6040fa",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 321,
+        "durationText": "00:05:21"
+      }
+    },
+    {
+      "_id": "eb3aa83fab404f22a2972094",
+      "name": "Nguyên tắc số 6 - Trì hoãn quyết định - Defer Decision và Deliver Fast",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "71cedb007d0b4d5a8f6040fa",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 361,
+        "durationText": "00:06:01"
+      }
+    },
+    {
+      "_id": "d5c3134ab51f4862aaf8e5f1",
+      "name": "Nguyên tắc số 6 - Trì hoãn quyết định - Công cụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "71cedb007d0b4d5a8f6040fa",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 438,
+        "durationText": "00:07:18"
+      }
+    },
+    {
+      "_id": "4269f1b854b34d2c9a3a23f9",
+      "name": "Nguyên tắc số 7 - Tăng cường học hỏi - Đặc điểm và Lợi ích",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "de2565ef7b6a45bc8764772f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 407,
+        "durationText": "00:06:47"
+      }
+    },
+    {
+      "_id": "bd1d3d7db8584b4ca797ed66",
+      "name": "Nguyên tắc số 7 - Tăng cường học hỏi - Ưu nhược điểm và cách khắc phục",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "de2565ef7b6a45bc8764772f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 170,
+        "durationText": "00:02:50"
+      }
+    },
+    {
+      "_id": "e783ac0d2d2d4bdf80622b0c",
+      "name": "Nguyên tắc số 7 - Tăng cường học hỏi - Rào cản và cách khắc phục",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "de2565ef7b6a45bc8764772f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 348,
+        "durationText": "00:05:48"
+      }
+    },
+    {
+      "_id": "d9522d699a0d4cd5b9c8d25a",
+      "name": "Nguyên tắc số 7 - Tăng cường học hỏi - Phương pháp và Công cụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "de2565ef7b6a45bc8764772f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 347,
+        "durationText": "00:05:47"
+      }
+    },
+    {
+      "_id": "0da73b25f82941fe87a31211",
+      "name": "Lợi ích và thách thức (Benefit and Challanges)",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "92b5ddc04fd0476eb1ce14bc",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 302,
+        "durationText": "00:05:02"
+      }
+    },
+    {
+      "_id": "f71fdd643f204b0aaa5b2966",
+      "name": "So sánh Agile và Lean",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "92b5ddc04fd0476eb1ce14bc",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 213,
+        "durationText": "00:03:33"
+      }
+    },
+    {
+      "_id": "e160d90faedb4f479e4fe7c1",
+      "name": "Cách kết hợp Agile & Lean",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "92b5ddc04fd0476eb1ce14bc",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 248,
+        "durationText": "00:04:08"
+      }
+    },
+    {
+      "_id": "1ee0d53f359e43dfa4303eb7",
+      "name": "Giới thiệu một số công ty hàng đầu đang áp dụng Lean",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "92b5ddc04fd0476eb1ce14bc",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:51.573605Z",
+      "updatedAt": "2026-06-10T16:47:51.573605Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 278,
+        "durationText": "00:04:38"
+      }
+    }
+  ]
+}

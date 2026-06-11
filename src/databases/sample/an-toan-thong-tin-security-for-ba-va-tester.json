@@ -1,0 +1,1079 @@
+{
+  "courses": [
+    {
+      "_id": "9f6f999325a547ccb88ce8d8",
+      "title": "An toàn thông tin - Security for BA và Tester",
+      "shortDescription": "Đạo tạo an toàn bảo mật thông tin cho BA và Tester, ATTT, Security, OWASP Top 10",
+      "description": "Đạo tạo an toàn bảo mật thông tin cho BA và Tester, ATTT, Security, OWASP Top 10",
+      "objectives": [
+        "Nắm bắt được 10 nhóm lỗ hổng an toàn thông tin do OWASP đề xuất",
+        "Nắm vững được các lỗ hổng an toàn thông tin thường gặp",
+        "Được cung cấp một số checklist, template để hỗ trợ cho quá trình làm việc",
+        "Có hiểu biết cơ bản về an toàn thông tin cho các hệ thống phần mềm"
+      ],
+      "requirement": "Đã có kiến thức cơ bản về các hệ thống phần mềm. Đã từng tham gia dự án phần mềm với vai trò Developer, BA hoặc Tester. Biết sử dụng hoặc hiểu biết cơ bản về API",
+      "price": 249000,
+      "slug": "an-toan-thong-tin-security-for-ba-va-tester",
+      "thumbnail": "an-toan-thong-tin.jpeg",
+      "category": "6a1fee36821e84b5f6c315a7",
+      "level": "intermediate",
+      "isProcessLimit": false,
+      "languages": [
+        "Vietnamese"
+      ],
+      "authors": [
+        "69d514eb23fb41760ae187e9"
+      ],
+      "isPublished": true,
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "createdAt": "2026-06-10T16:49:23.675798Z",
+      "updatedAt": "2026-06-10T16:49:23.675798Z",
+      "deletedAt": null,
+      "isDeleted": false,
+      "__v": 0,
+      "updatedBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "enrollmentCount": 1134,
+      "rating": 4.9
+    }
+  ],
+  "modules": [
+    {
+      "_id": "9f9046fc6c8444a4b2727d74",
+      "name": "Giới thiệu về Giảng viên",
+      "isActive": true,
+      "order": 1,
+      "course": "9f6f999325a547ccb88ce8d8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0
+    },
+    {
+      "_id": "c381809338894f8a8c67ccec",
+      "name": "Giới thiệu về An toàn thông tin",
+      "isActive": true,
+      "order": 2,
+      "course": "9f6f999325a547ccb88ce8d8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0
+    },
+    {
+      "_id": "509ebb4b3e0c49848ca92f59",
+      "name": "A01 - Broken Access Control",
+      "isActive": true,
+      "order": 3,
+      "course": "9f6f999325a547ccb88ce8d8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0
+    },
+    {
+      "_id": "88235fe51b204d86bdefc5f6",
+      "name": "A02 - Crytographic Failures - Thất bại trong việc mã hóa",
+      "isActive": true,
+      "order": 4,
+      "course": "9f6f999325a547ccb88ce8d8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0
+    },
+    {
+      "_id": "f88eefcc135d4d51b51c5056",
+      "name": "A03 - Injection",
+      "isActive": true,
+      "order": 5,
+      "course": "9f6f999325a547ccb88ce8d8",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0
+    }
+  ],
+  "lessons": [
+    {
+      "_id": "15dbf4eb5e1c4c96af4c903f",
+      "name": "Giới thiệu về giảng viên",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "9f9046fc6c8444a4b2727d74",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 120,
+        "durationText": "00:02:00"
+      }
+    },
+    {
+      "_id": "2868e165ea4b494e959fcd26",
+      "name": "Nhận thức về An toàn thông tin - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "c381809338894f8a8c67ccec",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 351,
+        "durationText": "00:05:51"
+      }
+    },
+    {
+      "_id": "07759b320217481da173828f",
+      "name": "Nhận thức về An toàn thông tin - Thiệt hại do mất ATTT gây ra",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "c381809338894f8a8c67ccec",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 147,
+        "durationText": "00:02:27"
+      }
+    },
+    {
+      "_id": "11d6bfae5732406ebfe83127",
+      "name": "Nhận thức về An toàn thông tin - Thống kê về mất ATTT",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "c381809338894f8a8c67ccec",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 286,
+        "durationText": "00:04:46"
+      }
+    },
+    {
+      "_id": "f90e9b88235f49e9967b79a8",
+      "name": "An toàn thông tin là gì?",
+      "isActive": true,
+      "isFree": true,
+      "order": 4,
+      "type": "video",
+      "module": "c381809338894f8a8c67ccec",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 272,
+        "durationText": "00:04:32"
+      }
+    },
+    {
+      "_id": "f80f3c5e129b4dfdbb2001ec",
+      "name": "An toàn thông tin là gì? - Cân bằng CIA",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "c381809338894f8a8c67ccec",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 412,
+        "durationText": "00:06:52"
+      }
+    },
+    {
+      "_id": "91fbf957fe034d578787d736",
+      "name": "An toàn thông tin - Yếu tố - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "c381809338894f8a8c67ccec",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 176,
+        "durationText": "00:02:56"
+      }
+    },
+    {
+      "_id": "238f2aa85e6b424e92d6bec4",
+      "name": "An toàn thông tin - Yếu tố - Phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "c381809338894f8a8c67ccec",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 303,
+        "durationText": "00:05:03"
+      }
+    },
+    {
+      "_id": "6bc922beeded4a3eb7daaa46",
+      "name": "An toàn thông tin - OWASP top 10",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "c381809338894f8a8c67ccec",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 379,
+        "durationText": "00:06:19"
+      }
+    },
+    {
+      "_id": "952ba4b8450d438e8ee228f5",
+      "name": "Danh sách các lỗ hổng trong nhóm Broken Access Control",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "509ebb4b3e0c49848ca92f59",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 294,
+        "durationText": "00:04:54"
+      }
+    },
+    {
+      "_id": "422b735f1b0443978af7c21f",
+      "name": "A01 - Phân quyền tối thiểu (Least Previlege) & Deny by Default - Ví dụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "509ebb4b3e0c49848ca92f59",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 293,
+        "durationText": "00:04:53"
+      }
+    },
+    {
+      "_id": "0f95eeefef5344caac6a3367",
+      "name": "A01 - Phân quyền tối thiểu (Least Previlege) & Deny by Default - Phòng tránh -01",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "509ebb4b3e0c49848ca92f59",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 308,
+        "durationText": "00:05:08"
+      }
+    },
+    {
+      "_id": "c3b0fd790919473bb64f3ab6",
+      "name": "A01 - Phân quyền tối thiểu (Least Previlege) & Deny by Default - Phòng tránh -02",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "509ebb4b3e0c49848ca92f59",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 343,
+        "durationText": "00:05:43"
+      }
+    },
+    {
+      "_id": "95a438d62fec45958a9c5d37",
+      "name": "A01 - Lỗ hổng IDOR - Ví dụ",
+      "isActive": true,
+      "isFree": true,
+      "order": 5,
+      "type": "video",
+      "module": "509ebb4b3e0c49848ca92f59",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 248,
+        "durationText": "00:04:08"
+      }
+    },
+    {
+      "_id": "d212f8d6086c4800b3d7d80d",
+      "name": "A01 - Lỗ hổng IDOR - Phòng tránh",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "509ebb4b3e0c49848ca92f59",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 355,
+        "durationText": "00:05:55"
+      }
+    },
+    {
+      "_id": "2661410c3d1d47c6b620643a",
+      "name": "A01 - Lỗ hổng leo thang đặc quyền - Ví dụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "509ebb4b3e0c49848ca92f59",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 276,
+        "durationText": "00:04:36"
+      }
+    },
+    {
+      "_id": "d033b43a61af41f2a47a94d6",
+      "name": "A01 - Lỗ hổng leo thang đặc quyền - Phân loại",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "509ebb4b3e0c49848ca92f59",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 203,
+        "durationText": "00:03:23"
+      }
+    },
+    {
+      "_id": "215030bd55ed43a492a000ba",
+      "name": "Nhóm lỗ hổng Broken Access Control - Phòng tránh - Phần 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 9,
+      "type": "video",
+      "module": "509ebb4b3e0c49848ca92f59",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 268,
+        "durationText": "00:04:28"
+      }
+    },
+    {
+      "_id": "afbb11dbd9ec4f1ca2ace9ca",
+      "name": "Nhóm lỗ hổng Broken Access Control - Phòng tránh - Phần 2",
+      "isActive": true,
+      "isFree": false,
+      "order": 10,
+      "type": "video",
+      "module": "509ebb4b3e0c49848ca92f59",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 359,
+        "durationText": "00:05:59"
+      }
+    },
+    {
+      "_id": "f112028b0f344dbcbe45d3a6",
+      "name": "A02 - Crytographics Failures - 01",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "88235fe51b204d86bdefc5f6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 366,
+        "durationText": "00:06:06"
+      }
+    },
+    {
+      "_id": "bca2d198d55a4fb886879dcd",
+      "name": "A02 - Crytographics Failures - 02",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "88235fe51b204d86bdefc5f6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 317,
+        "durationText": "00:05:17"
+      }
+    },
+    {
+      "_id": "025e1d6cdb004aacb5a60a92",
+      "name": "A02 - Crytographics Failures - 03",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "88235fe51b204d86bdefc5f6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 278,
+        "durationText": "00:04:38"
+      }
+    },
+    {
+      "_id": "6e0bc6e12f0c41a58c693c2f",
+      "name": "A02 - Crytographics Failures - 04",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "88235fe51b204d86bdefc5f6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 270,
+        "durationText": "00:04:30"
+      }
+    },
+    {
+      "_id": "a2d28eee26044eacbbb36e11",
+      "name": "A02 - Crytographics Failures - 05",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "88235fe51b204d86bdefc5f6",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 348,
+        "durationText": "00:05:48"
+      }
+    },
+    {
+      "_id": "53d1c1333fc445a0b9351b11",
+      "name": "A03 - Injection là gì? Các lỗ hổng Injection",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 239,
+        "durationText": "00:03:59"
+      }
+    },
+    {
+      "_id": "7befba29e3584c5dbe163dfa",
+      "name": "A03 - Injection - Phân loại",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 206,
+        "durationText": "00:03:26"
+      }
+    },
+    {
+      "_id": "cb4e8834f1174f3ead57d0ea",
+      "name": "A03 - SQL Injection - Ví dụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 293,
+        "durationText": "00:04:53"
+      }
+    },
+    {
+      "_id": "15eee53782184407b6c57766",
+      "name": "A03 - SQL Injection - Nguyên nhân & Phòng tránh",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 169,
+        "durationText": "00:02:49"
+      }
+    },
+    {
+      "_id": "6d59240647ee4293a512d638",
+      "name": "A03 - OS Command Injection - Ví dụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 294,
+        "durationText": "00:04:54"
+      }
+    },
+    {
+      "_id": "deaab864e78d4016bbe03d60",
+      "name": "A03 - OS Command Injection - Nguyên nhân - 01",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 345,
+        "durationText": "00:05:45"
+      }
+    },
+    {
+      "_id": "ed348c95bdc1468eb11db2c6",
+      "name": "A03 - OS Command Injection - Nguyên nhân - 02",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 169,
+        "durationText": "00:02:49"
+      }
+    },
+    {
+      "_id": "7b99d30a359247be82abd02c",
+      "name": "A03 - OS Command Injection - Phòng tránh",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 205,
+        "durationText": "00:03:25"
+      }
+    },
+    {
+      "_id": "a3de8c327ceb4f4598f21de8",
+      "name": "A03 - LDAP Injection - Nguyên nhân",
+      "isActive": true,
+      "isFree": false,
+      "order": 9,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 346,
+        "durationText": "00:05:46"
+      }
+    },
+    {
+      "_id": "1e75ae47dbd6469b86c1ffce",
+      "name": "A03 - LDAP Injection - Phòng tránh",
+      "isActive": true,
+      "isFree": false,
+      "order": 10,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 150,
+        "durationText": "00:02:30"
+      }
+    },
+    {
+      "_id": "eee814c4b4e640878a950859",
+      "name": "A03 - Template Injection - Khái niệm & Ví dụ",
+      "isActive": true,
+      "isFree": false,
+      "order": 11,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 296,
+        "durationText": "00:04:56"
+      }
+    },
+    {
+      "_id": "583f6c82ce32450baa4dff6c",
+      "name": "A03 - Template Injection - Nguyên nhân & Phòng tránh",
+      "isActive": true,
+      "isFree": false,
+      "order": 12,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 325,
+        "durationText": "00:05:25"
+      }
+    },
+    {
+      "_id": "f38aa25c5ed84079ba2fc78b",
+      "name": "A03 - Lỗ hổng XSS - Phân loại",
+      "isActive": true,
+      "isFree": false,
+      "order": 13,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 344,
+        "durationText": "00:05:44"
+      }
+    },
+    {
+      "_id": "66995a340ad74a50b9b77522",
+      "name": "A03 - Lỗ hổng XSS - Nguyên nhân & Phòng tránh",
+      "isActive": true,
+      "isFree": false,
+      "order": 14,
+      "type": "video",
+      "module": "f88eefcc135d4d51b51c5056",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:23.675978Z",
+      "updatedAt": "2026-06-10T16:49:23.675978Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 316,
+        "durationText": "00:05:16"
+      }
+    }
+  ]
+}

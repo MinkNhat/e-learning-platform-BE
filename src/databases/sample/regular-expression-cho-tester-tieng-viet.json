@@ -1,0 +1,257 @@
+{
+  "courses": [
+    {
+      "_id": "afcba6d9d68e40e7b0ad9fb7",
+      "title": "Regular Expression cho Tester tiếng Việt",
+      "shortDescription": "Nắm vững Regular Expression (Regex) để tự động hóa trích xuất dữ liệu, kiểm thử API và nâng cao hiệu suất làm QA/QC.",
+      "description": "Nắm vững Regular Expression (Regex) để tự động hóa trích xuất dữ liệu, kiểm thử API và nâng cao hiệu suất làm QA/QC.",
+      "objectives": [
+        "Nắm vững toàn bộ cú pháp Regular Expression (Regex) từ cơ bản đến nâng cao.",
+        "Ứng dụng Regex để trích xuất và xác thực dữ liệu test một cách chuẩn xác.",
+        "Tích hợp hiệu quả Regex vào các tool test phổ biến như JMeter và Postman.",
+        "Tối ưu hóa kịch bản test tự động, giảm thiểu đáng kể thời gian bảo trì code.",
+        "Xử lý và tìm kiếm lỗi (bugs) cực nhanh trong các file log hệ thống khổng lồ."
+      ],
+      "requirement": "Không yêu cầu kinh nghiệm lập trình hay kiến thức nền tảng về Regex từ trước.. - Chỉ cần một chiếc máy tính có kết nối internet và tinh thần sẵn sàng học hỏi.. - Có hiểu biết cơ bản về quy trình kiểm thử phần mềm (QA/QC) là một lợi thế (nhưng không bắt buộc).. - Đã từng thao tác qua Postman, JMeter hoặc các công cụ Automation Testing là một điểm cộng lớn.",
+      "price": 249000,
+      "slug": "regular-expression-cho-tester-tieng-viet",
+      "thumbnail": "regular-expression.jpg",
+      "category": "6a1fee36821e84b5f6c315a7",
+      "level": "beginner",
+      "isProcessLimit": false,
+      "languages": [
+        "Vietnamese"
+      ],
+      "authors": [
+        "69d514eb23fb41760ae187e9"
+      ],
+      "isPublished": true,
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "createdAt": "2026-06-10T16:48:19.386075Z",
+      "updatedAt": "2026-06-10T16:48:19.386075Z",
+      "deletedAt": null,
+      "isDeleted": false,
+      "__v": 0,
+      "updatedBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "enrollmentCount": 120,
+      "rating": 5.0
+    }
+  ],
+  "modules": [
+    {
+      "_id": "b965e845a4314cf3a497def3",
+      "name": "Giới thiệu",
+      "isActive": true,
+      "order": 1,
+      "course": "afcba6d9d68e40e7b0ad9fb7",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:48:19.386324Z",
+      "updatedAt": "2026-06-10T16:48:19.386324Z",
+      "__v": 0
+    },
+    {
+      "_id": "05339c7a860e4fe991e772ab",
+      "name": "Phần 1: Học Cơ Bản",
+      "isActive": true,
+      "order": 2,
+      "course": "afcba6d9d68e40e7b0ad9fb7",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:48:19.386324Z",
+      "updatedAt": "2026-06-10T16:48:19.386324Z",
+      "__v": 0
+    }
+  ],
+  "lessons": [
+    {
+      "_id": "fb1193ff9fd743388440a7ac",
+      "name": "Giới thiệu",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "b965e845a4314cf3a497def3",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:48:19.386324Z",
+      "updatedAt": "2026-06-10T16:48:19.386324Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 80,
+        "durationText": "00:01:20"
+      }
+    },
+    {
+      "_id": "7db4beda115941e2bf03d926",
+      "name": "Bài 1: Tổng quan về RegEx, lý do cần dùng RegEx",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "05339c7a860e4fe991e772ab",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:48:19.386324Z",
+      "updatedAt": "2026-06-10T16:48:19.386324Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 521,
+        "durationText": "00:08:41"
+      }
+    },
+    {
+      "_id": "15fdc0923c4747f3a1984661",
+      "name": "Bài 2: Metacharacters và Quantifiers",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "05339c7a860e4fe991e772ab",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:48:19.386324Z",
+      "updatedAt": "2026-06-10T16:48:19.386324Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 965,
+        "durationText": "00:16:05"
+      }
+    },
+    {
+      "_id": "0153141a65564f0bad0043f5",
+      "name": "Bài 3: Tập hợp ký tự dùng ngoặc vuông và phép chọn lựa",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "05339c7a860e4fe991e772ab",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:48:19.386324Z",
+      "updatedAt": "2026-06-10T16:48:19.386324Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 515,
+        "durationText": "00:08:35"
+      }
+    },
+    {
+      "_id": "d5d994e59b1b42e1b25dd767",
+      "name": "Bài thực hành 1",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "05339c7a860e4fe991e772ab",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:48:19.386324Z",
+      "updatedAt": "2026-06-10T16:48:19.386324Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 197,
+        "durationText": "00:03:17"
+      }
+    },
+    {
+      "_id": "4b4ab5e5611b4ff79d2b9ece",
+      "name": "Bài 4: Neo và gom nhóm",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "05339c7a860e4fe991e772ab",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:48:19.386324Z",
+      "updatedAt": "2026-06-10T16:48:19.386324Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 584,
+        "durationText": "00:09:44"
+      }
+    },
+    {
+      "_id": "93dfa240b58641a18a8e245a",
+      "name": "Bài thực hành 2: Neo và gom nhóm",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "05339c7a860e4fe991e772ab",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:48:19.386324Z",
+      "updatedAt": "2026-06-10T16:48:19.386324Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 151,
+        "durationText": "00:02:31"
+      }
+    }
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "courses": [
+    {
+      "_id": "0915e1ecdc414185b778ee4a",
+      "title": "API Automation Testing với Playwright TypeScript",
+      "shortDescription": "Làm chủ API Testing với Playwright & TypeScript: Từ cơ bản đến chuyên gia và tích hợp CI/CD thực chiến.",
+      "description": "Làm chủ API Testing với Playwright & TypeScript: Từ cơ bản đến chuyên gia và tích hợp CI/CD thực chiến.",
+      "objectives": [
+        "* Làm chủ các phương thức HTTP (GET, POST, PUT, DELETE) bằng Playwright TypeScript.",
+        "* Xây dựng Framework API Testing chuyên nghiệp, có khả năng tái sử dụng từ con số 0.",
+        "* Xử lý xác thực phức tạp (Authentication) như JWT, Cookies và Bearer Token tự động.",
+        "* Thực hiện xác thực dữ liệu (Assertions) và kiểm tra cấu trúc JSON Schema chuyên sâu.",
+        "* Tích hợp bộ kiểm thử API vào quy trình CI/CD (GitHub Actions) để tự động hóa hoàn toàn.",
+        "* Kỹ thuật xử lý dữ liệu động và quản lý biến môi trường hiệu quả trong dự án thực tế."
+      ],
+      "requirement": "* Kiến thức cơ bản về lập trình (ưu tiên JavaScript hoặc TypeScript) là một lợi thế.. * Hiểu biết cơ bản về khái niệm API (RESTful) sẽ giúp bạn tiếp thu nhanh hơn.. * Máy tính (Windows/Mac/Linux) có cài đặt NodeJS và Visual Studio Code.. * Không yêu cầu kinh nghiệm về Playwright - Tôi sẽ hướng dẫn bạn từ những bước cài đặt đầu tiên.. * Tinh thần sẵn sàng thực hành và tư duy giải quyết vấn đề trong kiểm thử phần mềm.",
+      "price": 249000,
+      "slug": "api-automation-testing-voi-playwright-typescript",
+      "thumbnail": "api-automation.jpg",
+      "category": "6a1fee36821e84b5f6c315a7",
+      "level": "beginner",
+      "isProcessLimit": false,
+      "languages": [
+        "Vietnamese"
+      ],
+      "authors": [
+        "69d514eb23fb41760ae187e9"
+      ],
+      "isPublished": true,
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "createdAt": "2026-06-10T16:49:37.812314Z",
+      "updatedAt": "2026-06-10T16:49:37.812314Z",
+      "deletedAt": null,
+      "isDeleted": false,
+      "__v": 0,
+      "updatedBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "enrollmentCount": 22,
+      "rating": 5
+    }
+  ],
+  "modules": [
+    {
+      "_id": "c8b43bb489bb4cd78137b394",
+      "name": "Giới thiệu",
+      "isActive": true,
+      "order": 1,
+      "course": "0915e1ecdc414185b778ee4a",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0
+    },
+    {
+      "_id": "f02851fd47ce4943b598d2a9",
+      "name": "Cơ bản về API Testing",
+      "isActive": true,
+      "order": 2,
+      "course": "0915e1ecdc414185b778ee4a",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0
+    },
+    {
+      "_id": "da43007e2a8745f0aee96e84",
+      "name": "API automation testing with Playwright",
+      "isActive": true,
+      "order": 3,
+      "course": "0915e1ecdc414185b778ee4a",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0
+    },
+    {
+      "_id": "abcbf04673924cebb214c973",
+      "name": "Authentication: từ cơ bản tới tối ưu",
+      "isActive": true,
+      "order": 4,
+      "course": "0915e1ecdc414185b778ee4a",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0
+    }
+  ],
+  "lessons": [
+    {
+      "_id": "8b49683775484174b22650c7",
+      "name": "Giới thiệu khoá học",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "c8b43bb489bb4cd78137b394",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 225,
+        "durationText": "00:03:45"
+      }
+    },
+    {
+      "_id": "090008bd794d4702aaf18480",
+      "name": "Giới thiệu về API và API testing",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "f02851fd47ce4943b598d2a9",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 327,
+        "durationText": "00:05:27"
+      }
+    },
+    {
+      "_id": "a30e3071ca1545cf848c9654",
+      "name": "Giới thiệu về format: JSON",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "f02851fd47ce4943b598d2a9",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 377,
+        "durationText": "00:06:17"
+      }
+    },
+    {
+      "_id": "ec4d299a4d1c449a87781a5f",
+      "name": "Cài đặt Playwright",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "da43007e2a8745f0aee96e84",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 417,
+        "durationText": "00:06:57"
+      }
+    },
+    {
+      "_id": "79c1fecb297441fab3166d72",
+      "name": "Cơ bản API 1: GET, POST",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "da43007e2a8745f0aee96e84",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 774,
+        "durationText": "00:12:54"
+      }
+    },
+    {
+      "_id": "251f43cdbd6849b29e677576",
+      "name": "Cơ bản 2 API 2: PUT, PATCH, DELETE",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "da43007e2a8745f0aee96e84",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 316,
+        "durationText": "00:05:16"
+      }
+    },
+    {
+      "_id": "ed349f9a1bcc4875a7fcc4d8",
+      "name": "Cơ bản API 3: Assertion",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "da43007e2a8745f0aee96e84",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 456,
+        "durationText": "00:07:36"
+      }
+    },
+    {
+      "_id": "9edbac08629944f7b7f0d914",
+      "name": "Cơ bản API 4: Soft-assertion",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "da43007e2a8745f0aee96e84",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 223,
+        "durationText": "00:03:43"
+      }
+    },
+    {
+      "_id": "9686b16246e34f52919aee0e",
+      "name": "Cơ bản API 5: Config baseURL",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "da43007e2a8745f0aee96e84",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 145,
+        "durationText": "00:02:25"
+      }
+    },
+    {
+      "_id": "6f9c0a00517f43ccbfb6f2e0",
+      "name": "Cơ bản: dùng token để authentication",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "abcbf04673924cebb214c973",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 395,
+        "durationText": "00:06:35"
+      }
+    },
+    {
+      "_id": "9d430497cc4f47a483e3f51f",
+      "name": "Tối ưu 1: đưa code ra hàm chung để dùng lại",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "abcbf04673924cebb214c973",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 152,
+        "durationText": "00:02:32"
+      }
+    },
+    {
+      "_id": "9d0107292a994761a13daaac",
+      "name": "Tối ưu 2: cấu hình lại base URL",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "abcbf04673924cebb214c973",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 188,
+        "durationText": "00:03:08"
+      }
+    },
+    {
+      "_id": "33236c84ef92428caf3426db",
+      "name": "Tối ưu 3: sử dụng hooks để code ngắn hơn",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "abcbf04673924cebb214c973",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 237,
+        "durationText": "00:03:57"
+      }
+    },
+    {
+      "_id": "8bc96662f3a24b24ab5ff88c",
+      "name": "Tối ưu 4: sử dụng context",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "abcbf04673924cebb214c973",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 283,
+        "durationText": "00:04:43"
+      }
+    },
+    {
+      "_id": "c0de36562bbb4d579feee6d7",
+      "name": "Tối ưu 5: sử dụng fixture",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "abcbf04673924cebb214c973",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:49:37.812488Z",
+      "updatedAt": "2026-06-10T16:49:37.812488Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 354,
+        "durationText": "00:05:54"
+      }
+    }
+  ]
+}

@@ -1,0 +1,757 @@
+{
+  "courses": [
+    {
+      "_id": "a59a64668d3b46d7919c7552",
+      "title": "SAP S/4HANA for Beginners",
+      "shortDescription": "Khoá đào tạo cho người mới bắt đầu về SAP với hướng dẫn thực hành trên hệ thống SAP S/4HANA phiên bản mới nhất",
+      "description": "Khoá đào tạo cho người mới bắt đầu về SAP với hướng dẫn thực hành trên hệ thống SAP S/4HANA phiên bản mới nhất",
+      "objectives": [
+        "Tổng quát về hệ sinh thái công nghệ của SAP và Vai trò trung tâm của SAP S/4HANA trong hệ sinh thái;",
+        "Thực trạng triển khai và Các gói giải pháp khi triển khai SAP",
+        "Hiểu cấu trúc của một doanh nghiệp qua việc phân tích các loại dữ liệu trong hệ thống SAP S/4HANA",
+        "Hiểu sâu về SAP S/4HANA qua một tình huống thực tế trong chuỗi cung ứng: Từ hoạch định nhu cầu vật tư đến mua hàng, quản trị vật tư và bán hàng.",
+        "Định hướng nghề nghiệp với SAP S/4HANA - Nhu cầu và Thách thức",
+        "Cách thức tiếp tục tự học chuyên sâu về SAP S/4HANA",
+        "Cách thức đăng ký dự thi chứng chỉ toàn cầu SAP Global Certification"
+      ],
+      "requirement": "Kiến thức cơ bản về kinh doanh và niềm đam mê tìm hiểu công nghệ mới",
+      "price": 249000,
+      "slug": "sap-s4hana-for-beginners",
+      "thumbnail": "sap-s4hana.jpeg",
+      "category": "6a1fee36821e84b5f6c315a7",
+      "level": "beginner",
+      "isProcessLimit": false,
+      "languages": [
+        "Vietnamese"
+      ],
+      "authors": [
+        "69d514eb23fb41760ae187e9"
+      ],
+      "isPublished": true,
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "createdAt": "2026-06-10T16:47:00.577485Z",
+      "updatedAt": "2026-06-10T16:47:00.577485Z",
+      "deletedAt": null,
+      "isDeleted": false,
+      "__v": 0,
+      "updatedBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "enrollmentCount": 1805,
+      "rating": 4.8
+    }
+  ],
+  "modules": [
+    {
+      "_id": "10b7151cc1d54333b0f1da15",
+      "name": "Giới thiệu SAP và SAP S/4HANA",
+      "isActive": true,
+      "order": 1,
+      "course": "a59a64668d3b46d7919c7552",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0
+    },
+    {
+      "_id": "f6bfe622b33841e898c19a92",
+      "name": "Tìm hiểu cấu trúc doanh nghiệp qua phân tích các loại dữ liệu trong SAP S/4HANA",
+      "isActive": true,
+      "order": 2,
+      "course": "a59a64668d3b46d7919c7552",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0
+    },
+    {
+      "_id": "109493ac370a47878541be8f",
+      "name": "Tình huống: Hoạch định nhu cầu vật tư đến mua hàng, quản trị vật tư và bán hàng",
+      "isActive": true,
+      "order": 3,
+      "course": "a59a64668d3b46d7919c7552",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0
+    },
+    {
+      "_id": "aa6cb775e4534427bfea103e",
+      "name": "Bonus",
+      "isActive": true,
+      "order": 4,
+      "course": "a59a64668d3b46d7919c7552",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0
+    },
+    {
+      "_id": "9cc62d4128344af3b6f14965",
+      "name": "Bài kiểm tra cuối khóa",
+      "isActive": true,
+      "order": 5,
+      "course": "a59a64668d3b46d7919c7552",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0
+    }
+  ],
+  "lessons": [
+    {
+      "_id": "5b3d4c2097e146fa81531800",
+      "name": "Giới thiệu khóa học",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "10b7151cc1d54333b0f1da15",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 131,
+        "durationText": "00:02:11"
+      }
+    },
+    {
+      "_id": "11e2b4bbb2364a6b80dce6df",
+      "name": "Giới thiệu SAP S/4HANA",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "10b7151cc1d54333b0f1da15",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 727,
+        "durationText": "00:12:07"
+      }
+    },
+    {
+      "_id": "09d84798a26c4ea390843f86",
+      "name": "ERP là gì?",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "10b7151cc1d54333b0f1da15",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1101,
+        "durationText": "00:18:21"
+      }
+    },
+    {
+      "_id": "4a38cb77377246899f2546ef",
+      "name": "Giới thiệu",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "f6bfe622b33841e898c19a92",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 199,
+        "durationText": "00:03:19"
+      }
+    },
+    {
+      "_id": "904f0eabe51642a3b758ef9b",
+      "name": "Đăng nhập SAP S/4HANA qua các giao diện Fiori và GUI",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "f6bfe622b33841e898c19a92",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1254,
+        "durationText": "00:20:54"
+      }
+    },
+    {
+      "_id": "b72d22e93fb2480786d4f5ae",
+      "name": "Cấu trúc doanh nghiệp trong hệ thống SAP S/4HANA thông qua Organizational Data",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "f6bfe622b33841e898c19a92",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 664,
+        "durationText": "00:11:04"
+      }
+    },
+    {
+      "_id": "721776b371b047c88292fd11",
+      "name": "Organizational Level có liên quan trong các qui trình nghiệp vụ cơ bản",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "f6bfe622b33841e898c19a92",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 999,
+        "durationText": "00:16:39"
+      }
+    },
+    {
+      "_id": "35a7199fa7f34d048d9fd31f",
+      "name": "Material Master Data",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "f6bfe622b33841e898c19a92",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1308,
+        "durationText": "00:21:48"
+      }
+    },
+    {
+      "_id": "4ad1f17022c5431a83a38f98",
+      "name": "Business Partner Master Data",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "f6bfe622b33841e898c19a92",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1025,
+        "durationText": "00:17:05"
+      }
+    },
+    {
+      "_id": "5dac2984f43d40e9b604b1f0",
+      "name": "Quản lý dữ liệu của Master Data ở các Organizational Element khác nhau",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "f6bfe622b33841e898c19a92",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1794,
+        "durationText": "00:29:54"
+      }
+    },
+    {
+      "_id": "56beac6b22234db58d94fd07",
+      "name": "Transaction Data và các loại document cơ bản trong SAP S/4HANA",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "f6bfe622b33841e898c19a92",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 874,
+        "durationText": "00:14:34"
+      }
+    },
+    {
+      "_id": "a7f2aeeda8b8458c89ba272f",
+      "name": "Giới thiệu",
+      "isActive": true,
+      "isFree": true,
+      "order": 1,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 157,
+        "durationText": "00:02:37"
+      }
+    },
+    {
+      "_id": "dd365788bf3c4a649cb344ba",
+      "name": "Mô tả tình huống thực tế: Từ hoạch định nhu cầu vật tư đến mua hàng và bán hàng.",
+      "isActive": true,
+      "isFree": true,
+      "order": 2,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 921,
+        "durationText": "00:15:21"
+      }
+    },
+    {
+      "_id": "cd158bbd5142417c926e9fe5",
+      "name": "Chuẩn bị Master Data: Tạo Material mô tả sản phẩm mới",
+      "isActive": true,
+      "isFree": false,
+      "order": 3,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 617,
+        "durationText": "00:10:17"
+      }
+    },
+    {
+      "_id": "8f78bca6a2714b20ab972796",
+      "name": "Chuẩn bị Master Data: Vendor và Customer",
+      "isActive": true,
+      "isFree": false,
+      "order": 4,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 709,
+        "durationText": "00:11:49"
+      }
+    },
+    {
+      "_id": "a7793ac2c47748c9ad4f9919",
+      "name": "Lập kế hoạch và Chạy kế hoạch với MRP Run",
+      "isActive": true,
+      "isFree": false,
+      "order": 5,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1167,
+        "durationText": "00:19:27"
+      }
+    },
+    {
+      "_id": "e9cede4043e643db90677c49",
+      "name": "Mua hàng từ nhà cung cấp",
+      "isActive": true,
+      "isFree": false,
+      "order": 6,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1589,
+        "durationText": "00:26:29"
+      }
+    },
+    {
+      "_id": "c7b6a050e16044dc80b49330",
+      "name": "Pre-Sales activities: Quản lý giá (Material price) & Báo giá (Quotation)",
+      "isActive": true,
+      "isFree": false,
+      "order": 7,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 691,
+        "durationText": "00:11:31"
+      }
+    },
+    {
+      "_id": "f44d985f225a49a38fecd550",
+      "name": "Sales processing: Xử lý đơn hàng",
+      "isActive": true,
+      "isFree": false,
+      "order": 8,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1091,
+        "durationText": "00:18:11"
+      }
+    },
+    {
+      "_id": "8ae79097fd074c868b1a31e1",
+      "name": "Distribution: Xử lý vận đơn xuất kho",
+      "isActive": true,
+      "isFree": false,
+      "order": 9,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1147,
+        "durationText": "00:19:07"
+      }
+    },
+    {
+      "_id": "d33857a1bc9c4a25a3210c32",
+      "name": "Quản lý sổ sách kế toán",
+      "isActive": true,
+      "isFree": false,
+      "order": 10,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1645,
+        "durationText": "00:27:25"
+      }
+    },
+    {
+      "_id": "d689cb788b04482c8b1d61c4",
+      "name": "Tổng kết khóa học - Tóm tắt thuật ngữ SAP",
+      "isActive": true,
+      "isFree": false,
+      "order": 11,
+      "type": "video",
+      "module": "109493ac370a47878541be8f",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1194,
+        "durationText": "00:19:54"
+      }
+    },
+    {
+      "_id": "cfd7a6ff2f994843aa7f8dee",
+      "name": "SAP S/4HANA: Cơ hội nghề nghiệp và các định hướng",
+      "isActive": true,
+      "isFree": false,
+      "order": 1,
+      "type": "video",
+      "module": "aa6cb775e4534427bfea103e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1738,
+        "durationText": "00:28:58"
+      }
+    },
+    {
+      "_id": "5f6573a600a14be5960c8aa9",
+      "name": "Tự học SAP S/4HANA thế nào?",
+      "isActive": true,
+      "isFree": false,
+      "order": 2,
+      "type": "video",
+      "module": "aa6cb775e4534427bfea103e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1926,
+        "durationText": "00:32:06"
+      }
+    },
+    {
+      "_id": "85c73af5997d46a989defa84",
+      "name": "Thi chứng chỉ toàn cầu: SAP Global Certification",
+      "isActive": true,
+      "isFree": true,
+      "order": 3,
+      "type": "video",
+      "module": "aa6cb775e4534427bfea103e",
+      "createdBy": {
+        "_id": "69d514eb23fb41760ae187e9",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-10T16:47:00.577640Z",
+      "updatedAt": "2026-06-10T16:47:00.577640Z",
+      "__v": 0,
+      "content": "",
+      "metadata": {
+        "videoUrl": "https://www.youtube.com/watch?v=wjCJv4W4kvw",
+        "ytbId": "wjCJv4W4kvw",
+        "duration": 1597,
+        "durationText": "00:26:37"
+      }
+    }
+  ]
+}
