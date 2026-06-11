@@ -21,9 +21,12 @@ async function bootstrap() {
   app.useGlobalInterceptors(new TransformInterceptor(reflector));
 
   app.useStaticAssets(join(__dirname, '..', 'public'));
-  app.useStaticAssets(join(process.cwd(), '..', 'upload'), {
-    prefix: '/upload',
-  });
+  app.useStaticAssets(
+    join(process.cwd(), process.env.UPLOAD_PATH || 'upload'),
+    {
+      prefix: '/upload',
+    },
+  );
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.setViewEngine('ejs');
   
