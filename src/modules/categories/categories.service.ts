@@ -25,14 +25,14 @@ export class CategoriesService {
   }
 
   async findRootCategories() {
-    return await this.categoryModel.find({ parent: null }).select({ _id: 1, name: 1, slug: 1, level: 1 });
+    return await this.categoryModel.find({ parent: null }).select({ _id: 1, name: 1, slug: 1, level: 1, icon: 1 });
   }
 
   async findChildCategories(categoryIdOrSlug: string) {
     const category = await this.categoryModel.findOne(this.getCategoryLookupQuery(categoryIdOrSlug)).select({ _id: 1 });
     if (!category) throw new BadRequestException(`category with id or slug=${categoryIdOrSlug} not found`)
 
-    return await this.categoryModel.find({ parent: category._id }).select({ _id: 1, name: 1, slug: 1, level: 1 });
+    return await this.categoryModel.find({ parent: category._id }).select({ _id: 1, name: 1, slug: 1, level: 1, icon: 1 });
   }
 
   async create(createCategoryDto: CreateCategoryDto, user: IUser) {
@@ -64,7 +64,8 @@ export class CategoriesService {
     return {
       _id: newCate?._id,
       name: newCate?.name,
-      createdAt: newCate?.createdAt
+      slug: newCate?.slug,
+      createdAt: newCate?.createdAt,
     };
   }
 

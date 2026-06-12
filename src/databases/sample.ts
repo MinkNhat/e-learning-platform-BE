@@ -726,7 +726,7 @@ export const CATEGORIES = [{
   "level": 0,
   "isActive": true,
   "parent": null,
-  "icon": "PaletteOutlined",
+  "icon": "FormatPainterOutlined",
   "createdBy": {
     "_id": "69d514eb23fb41760ae187e9",
     "email": "admin@gmail.com"
