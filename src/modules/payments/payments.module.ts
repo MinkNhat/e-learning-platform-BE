@@ -6,6 +6,7 @@ import { Payment, PaymentSchema } from './schemas/payment.schema';
 import { Order, OrderSchema } from '../orders/schemas/order.schema';
 import { VnpayTransaction, VnpayTransactionSchema } from './schemas/vnpay-transaction.schema';
 import { EnrollmentsModule } from '../enrollments/enrollments.module';
+import { Course, CourseSchema } from '../courses/schemas/course.schema';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { EnrollmentsModule } from '../enrollments/enrollments.module';
       { name: Payment.name, schema: PaymentSchema },
       { name: VnpayTransaction.name, schema: VnpayTransactionSchema },
       { name: Order.name, schema: OrderSchema },
+      { name: Course.name, schema: CourseSchema },
     ]),
     EnrollmentsModule,
   ],

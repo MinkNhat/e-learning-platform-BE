@@ -6,9 +6,6 @@ export class CreatePaymentDto {
     courseId: string;
 
     @IsNotEmpty()
-    amount: number;
-
-    @IsNotEmpty()
     @IsEnum(PaymentProvider)
     provider: PaymentProvider;
 }

@@ -4,7 +4,6 @@ import { CreatePaymentDto } from './dto/create-payment.dto';
 import { UpdatePaymentDto } from './dto/update-payment.dto';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 import { Public, User } from 'src/core/decorators/customize';
-import { verifyVnpaySignature } from './vnpay/vnpay.helper';
 
 @Controller('payments')
 export class PaymentsController {
@@ -26,11 +25,17 @@ export class PaymentsController {
   @Public()
   @Get('vnpay-return')
   async returnUrl(@Query() query: Record<string, string>, @Res() res) {
-    const isValid = verifyVnpaySignature(query);
-    const success = isValid && query.vnp_ResponseCode === '00';
-    const code = query.vnp_ResponseCode || '01';
-    
-    const redirectUrl = `${process.env.FRONTEND_URL}/payment-result?success=${success}&code=${code}&orderId=${query.vnp_TxnRef}`;
-    return redirectUrl;
+    const result = await this.paymentsService.handleReturn(query);
+    const frontendUrl = process.env.FRONTEND_URL;
+    const redirectUrl = new URL('/payment-result', frontendUrl);
+
+    redirectUrl.searchParams.set('success', String(result.success));
+    redirectUrl.searchParams.set('code', result.code);
+    redirectUrl.searchParams.set('isValid', String(result.isValid));
+    redirectUrl.searchParams.set('txnRef', result.txnRef || '');
+    redirectUrl.searchParams.set('orderId', result.orderId);
+    redirectUrl.searchParams.set('courseId', result.courseId);
+
+    return res.redirect(redirectUrl.toString());
   }
 }

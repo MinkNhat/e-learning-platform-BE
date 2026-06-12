@@ -8,6 +8,7 @@ import { EnrollmentsService } from "../enrollments/enrollments.service";
 import { createVnpayUrl, verifyVnpaySignature } from "./vnpay/vnpay.helper";
 import { PaymentStatus, VnpayTransactionStatus } from "src/core/enums/payment.enum";
 import { CreatePaymentDto } from "./dto/create-payment.dto";
+import { Course } from "../courses/schemas/course.schema";
 
 @Injectable()
 export class PaymentsService {
@@ -15,27 +16,31 @@ export class PaymentsService {
     @InjectModel(Payment.name) private paymentModel: Model<Payment>,
     @InjectModel(VnpayTransaction.name) private vnpayTxnModel: Model<VnpayTransaction>,
     @InjectModel(Order.name) private orderModel: Model<Order>,
+    @InjectModel(Course.name) private courseModel: Model<Course>,
     private readonly enrollmentsService: EnrollmentsService,
   ) {}
 
   async initiatePayment(userId: string, createPaymentDto: CreatePaymentDto, ip: string) {
-    const { courseId, amount, provider } = createPaymentDto;
+    const { courseId, provider } = createPaymentDto;
 
-    // Check enroll
+    // Check enrollment
     const existed = await this.enrollmentsService.isEnrolled(userId, courseId);
     if (existed.isEnrolled) throw new BadRequestException('Bạn đã sở hữu khoá học này');
+
+    const course = await this.courseModel.findById(courseId);
+    if (!course) throw new BadRequestException('Khoá học không tồn tại');
 
     const order = await this.orderModel.create({
       user: userId,
       course: courseId,
-      amount,
+      amount: course.price,
     });
 
     const payment = await this.paymentModel.create({
       order: order._id,
       user: userId,
       provider,
-      amount,
+      amount: course.price,
     });
 
     const vnpTxnRef = `${order._id}-${Date.now()}`;
@@ -46,8 +51,8 @@ export class PaymentsService {
 
     const paymentUrl = createVnpayUrl(
       vnpTxnRef,
-      amount,
-      `Thanh toán khoá học ${courseId}`,
+      course.price,
+      `Thanh toán khoá học ${course.id}`,
       ip,
     );
 
@@ -107,5 +112,29 @@ export class PaymentsService {
     }
 
     return { RspCode: '00', Message: 'Confirm Success' };
+  }
+
+  async handleReturn(query: Record<string, string>) {
+    const isValid = verifyVnpaySignature(query);
+    const success =
+      isValid &&
+      query.vnp_ResponseCode === '00' &&
+      query.vnp_TransactionStatus === '00';
+    const code = query.vnp_ResponseCode || '01';
+
+    const txn = query.vnp_TxnRef
+      ? await this.vnpayTxnModel.findOne({ vnpTxnRef: query.vnp_TxnRef })
+      : null;
+    const payment = txn ? await this.paymentModel.findById(txn.payment) : null;
+    const order = payment ? await this.orderModel.findById(payment.order) : null;
+
+    return {
+      success,
+      code,
+      isValid,
+      txnRef: query.vnp_TxnRef,
+      orderId: order?._id ? String(order._id) : '',
+      courseId: order?.course ? String(order.course) : '',
+    };
   }
 }
