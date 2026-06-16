@@ -22,8 +22,8 @@ export class DatabasesService implements OnModuleInit {
     ) {}
 
     async onModuleInit() {
-        const isInit = this.configService.get<string>("SHOULD_INIT");
-        if (Boolean(isInit)) {
+        const isInit = this.configService.get<string>("SHOULD_INIT") === "true";
+        if (isInit) {
 
             const countUser = await this.userModel.count({});
             const countPermission = await this.permissionModel.count({});
@@ -47,6 +47,12 @@ export class DatabasesService implements OnModuleInit {
                     {
                         name: RoleName.USER,
                         description: "Normal user",
+                        isActive: true,
+                        permissions: []
+                    },
+                    {
+                        name: RoleName.TEACHER,
+                        description: "Teacher / Course author",
                         isActive: true,
                         permissions: []
                     }

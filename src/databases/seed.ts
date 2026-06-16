@@ -10,7 +10,9 @@ import { Lesson } from 'src/modules/lessons/schemas/lesson.schema';
 import { Module as CourseModule } from 'src/modules/modules/schemas/module.schema';
 import { recalculateCourseStats } from './migrations/recalculate-course-stats.migration';
 import { Category } from 'src/modules/categories/schemas/category.schema';
-import { CATEGORIES } from './sample';
+import { AUTHORS, CATEGORIES } from './sample';
+import { User } from 'src/modules/users/schemas/user.schema';
+import { Role } from 'src/modules/roles/schemas/role.schema';
 
 const logger = new Logger('Seed');
 
@@ -66,6 +68,36 @@ const seedCollection = async <T>(model: Model<T>, items: T[], label: string) => 
     logger.log(`Inserted ${items.length} ${label} records.`);
 };
 
+const resolveAuthorRoles = async (roleModel: Model<Role>) => {
+    return Promise.all(AUTHORS.map(async ({ roleName, ...author }) => {
+        const role = await roleModel.findOne({ name: roleName });
+
+        if (!role) {
+            throw new Error(`Role not found: ${roleName}`);
+        }
+
+        return {
+            ...author,
+            role: role._id,
+        };
+    }));
+};
+
+const seedAuthors = async (userModel: Model<User>, authors: any[]) => {
+    const emails = authors.map((author) => author.email);
+    const existingAuthors = await userModel.find({ email: { $in: emails } }).select('email');
+    const existingEmails = new Set(existingAuthors.map((author) => author.email));
+    const newAuthors = authors.filter((author) => !existingEmails.has(author.email));
+
+    if (newAuthors.length === 0) {
+        logger.log('Skip authors, all sample authors already exist.');
+        return;
+    }
+
+    await userModel.insertMany(newAuthors);
+    logger.log(`Inserted ${newAuthors.length} authors records.`);
+};
+
 async function bootstrap() {
     const app = await NestFactory.createApplicationContext(AppModule);
 
@@ -74,9 +106,14 @@ async function bootstrap() {
         const moduleModel = app.get<Model<CourseModule>>(getModelToken(CourseModule.name));
         const lessonModel = app.get<Model<Lesson>>(getModelToken(Lesson.name));
         const categoryModel = app.get<Model<Category>>(getModelToken(Category.name));
+        const userModel = app.get<Model<User>>(getModelToken(User.name));
+        const roleModel = app.get<Model<Role>>(getModelToken(Role.name));
         const sampleData = loadSampleData();
+        const authors = await resolveAuthorRoles(roleModel);
 
         await seedCollection(categoryModel, CATEGORIES as any, 'categories');
+        await seedAuthors(userModel, authors);
+
         await seedCollection(courseModel, sampleData.courses, 'courses');
         await seedCollection(moduleModel, sampleData.modules, 'modules');
         await seedCollection(lessonModel, sampleData.lessons, 'lessons');
