@@ -11,7 +11,6 @@ export class MailController {
   ) {}
 
   @Get()
-  @Public()
   async sendEmail() {
     await this.mailerService.sendMail({
       to: "user@example.com",

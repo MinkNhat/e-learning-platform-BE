@@ -462,38 +462,6 @@ export const INIT_PERMISSIONS = [
             "email": "admin@gmail.com"
         }
     },
-    {
-        "_id": "69d74f576167d051fd0b88c1",
-        "name": "Get root categories",
-        "apiPath": "/api/v1/categories/root",
-        "method": "GET",
-        "module": "CATEGORIES",
-        "createdBy": {
-            "_id": "69d514eb23fb41760ae187e9",
-            "email": "admin@gmail.com"
-        },
-        "isDeleted": false,
-        "deletedAt": null,
-        "createdAt": "2026-04-09T07:03:51.690Z",
-        "updatedAt": "2026-04-09T07:03:51.690Z",
-        "__v": 0
-    },
-    {
-        "_id": "69d74f8e6167d051fd0b88ca",
-        "name": "Get categories by parent",
-        "apiPath": "/api/v1/categories/:id/children",
-        "method": "GET",
-        "module": "CATEGORIES",
-        "createdBy": {
-            "_id": "69d514eb23fb41760ae187e9",
-            "email": "admin@gmail.com"
-        },
-        "isDeleted": false,
-        "deletedAt": null,
-        "createdAt": "2026-04-09T07:04:46.827Z",
-        "updatedAt": "2026-04-09T07:04:46.827Z",
-        "__v": 0
-    },
 
     // MODULES
     {

@@ -1,12 +1,13 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { MeService } from './me.service';
-import { User } from 'src/core/decorators/customize';
+import { Public, User } from 'src/core/decorators/customize';
 import { IUser } from '../users/users.interface';
 
 @Controller('me')
 export class MeController {
   constructor(private readonly meService: MeService) {}
 
+  @Public()
   @Get('courses')
   findMyCourses(
     @Query("current") currentPage: string,

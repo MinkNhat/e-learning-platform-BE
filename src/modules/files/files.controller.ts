@@ -7,7 +7,6 @@ import { Public } from 'src/core/decorators/customize';
 export class FilesController {
   constructor(private readonly filesService: FilesService) {}
 
-  @Public()
   @Post('upload')
   @UseInterceptors(createUploadInterceptor('fileUpload'))
   uploadFile(@UploadedFile() file: Express.Multer.File) {

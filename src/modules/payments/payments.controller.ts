@@ -9,6 +9,7 @@ import { Public, User } from 'src/core/decorators/customize';
 export class PaymentsController {
   constructor(private readonly paymentsService: PaymentsService) {}
 
+  @Public()
   @Post('create')
   @UseGuards(JwtAuthGuard)
   async create(@Body() dto: CreatePaymentDto, @Req() req, @User() user) {
