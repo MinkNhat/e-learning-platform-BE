@@ -7,7 +7,6 @@ import { IUser } from '../users/users.interface';
 export class MeController {
   constructor(private readonly meService: MeService) {}
 
-  @Public()
   @Get('courses')
   findMyCourses(
     @Query("current") currentPage: string,

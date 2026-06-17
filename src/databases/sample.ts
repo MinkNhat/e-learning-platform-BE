@@ -645,6 +645,42 @@ export const INIT_PERMISSIONS = [
         "createdAt": "2026-04-09T06:48:16.598Z",
         "updatedAt": "2026-04-09T06:48:16.598Z",
         "__v": 0
+    },
+
+    // PAYMENTS
+    {
+      "_id": "6a32c3e6b9dde15b855641ed",
+      "name": "Create a payment",
+      "apiPath": "/api/v1/payments/create",
+      "method": "POST",
+      "module": "PAYMENTS",
+      "createdBy": {
+        "_id": "6a318dff6c33ce91a7471853",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-17T15:57:26.661Z",
+      "updatedAt": "2026-06-17T15:57:26.661Z",
+      "__v": 0
+    },
+
+    // ME
+    {
+      "_id": "6a32c4613b0c903d531485a9",
+      "name": "Fetch my courses with paginate",
+      "apiPath": "/api/v1/me/courses",
+      "method": "GET",
+      "module": "ME",
+      "createdBy": {
+        "_id": "6a318dff6c33ce91a7471853",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-17T15:59:29.315Z",
+      "updatedAt": "2026-06-17T15:59:29.315Z",
+      "__v": 0
     }
 ]
 

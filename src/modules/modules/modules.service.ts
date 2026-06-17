@@ -70,10 +70,7 @@ export class ModulesService {
 
   async findOne(id: string) {
     if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Module with id='${id}' not found`);
-    return await this.moduleModel.findById(id).populate({
-      path: 'lessons',
-      select: { _id: 1, name: 1, type: 1 }
-    });
+    return await this.moduleModel.findById(id);
   }
 
   async findLessonsByModule(id: string) {
