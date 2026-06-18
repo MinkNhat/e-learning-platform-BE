@@ -330,8 +330,8 @@ export const INIT_PERMISSIONS = [
     },
     {
         "_id": "6a1fe21d9838e64e17af4910",
-        "name": "Fetch modules by course id",
-        "apiPath": "/api/v1/courses/:id/modules",
+        "name": "Fetch course manage detail",
+        "apiPath": "/api/v1/courses/:id/manage",
         "method": "GET",
         "module": "COURSES",
         "createdBy": {
@@ -501,54 +501,6 @@ export const INIT_PERMISSIONS = [
         "__v": 0
     },
     {
-        "_id": "69d74b373d88d336bc01ceb0",
-        "name": "Fetch module by id",
-        "apiPath": "/api/v1/modules/:id",
-        "method": "GET",
-        "module": "MODULES",
-        "createdBy": {
-            "_id": "69d514eb23fb41760ae187e9",
-            "email": "admin@gmail.com"
-        },
-        "isDeleted": false,
-        "deletedAt": null,
-        "createdAt": "2026-04-09T06:46:15.088Z",
-        "updatedAt": "2026-04-09T06:46:15.088Z",
-        "__v": 0
-    },
-    {
-        "_id": "69d74b473d88d336bc01ceb9",
-        "name": "Fetch modules with paginate",
-        "apiPath": "/api/v1/modules",
-        "method": "GET",
-        "module": "MODULES",
-        "createdBy": {
-            "_id": "69d514eb23fb41760ae187e9",
-            "email": "admin@gmail.com"
-        },
-        "isDeleted": false,
-        "deletedAt": null,
-        "createdAt": "2026-04-09T06:46:31.536Z",
-        "updatedAt": "2026-04-09T06:46:31.536Z",
-        "__v": 0
-    },
-    {
-        "_id": "6a1fe1ea9838e64e17af4903",
-        "name": "Fetch lessons by module id",
-        "apiPath": "/api/v1/modules/:id/lessons",
-        "method": "GET",
-        "module": "MODULES",
-        "createdBy": {
-            "_id": "69d514eb23fb41760ae187e9",
-            "email": "admin@gmail.com"
-        },
-        "isDeleted": false,
-        "deletedAt": null,
-        "createdAt": "2026-06-03T08:12:26.251Z",
-        "updatedAt": "2026-06-03T08:12:26.251Z",
-        "__v": 0
-    },
-    {
         "_id": "69d74b583d88d336bc01cec2",
         "name": "Delete a module",
         "apiPath": "/api/v1/modules/:id",
@@ -580,38 +532,6 @@ export const INIT_PERMISSIONS = [
         "deletedAt": null,
         "createdAt": "2026-04-09T06:47:08.580Z",
         "updatedAt": "2026-04-09T06:47:08.580Z",
-        "__v": 0
-    },
-    {
-        "_id": "69d74b7c3d88d336bc01ced4",
-        "name": "Fetch a lesson by id",
-        "apiPath": "/api/v1/lessons/:id",
-        "method": "GET",
-        "module": "LESSONS",
-        "createdBy": {
-            "_id": "69d514eb23fb41760ae187e9",
-            "email": "admin@gmail.com"
-        },
-        "isDeleted": false,
-        "deletedAt": null,
-        "createdAt": "2026-04-09T06:47:24.915Z",
-        "updatedAt": "2026-04-09T06:47:24.915Z",
-        "__v": 0
-    },
-    {
-        "_id": "69d74b8f3d88d336bc01cedd",
-        "name": "Fetch lessons with paginate",
-        "apiPath": "/api/v1/lessons",
-        "method": "GET",
-        "module": "LESSONS",
-        "createdBy": {
-            "_id": "69d514eb23fb41760ae187e9",
-            "email": "admin@gmail.com"
-        },
-        "isDeleted": false,
-        "deletedAt": null,
-        "createdAt": "2026-04-09T06:47:43.707Z",
-        "updatedAt": "2026-04-09T06:47:43.707Z",
         "__v": 0
     },
     {
@@ -680,6 +600,38 @@ export const INIT_PERMISSIONS = [
       "deletedAt": null,
       "createdAt": "2026-06-17T15:59:29.315Z",
       "updatedAt": "2026-06-17T15:59:29.315Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a32c4b0b9dde15b85564211",
+      "name": "Fetch my course modules",
+      "apiPath": "/api/v1/me/courses/:courseId/modules",
+      "method": "GET",
+      "module": "ME",
+      "createdBy": {
+        "_id": "6a318dff6c33ce91a7471853",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a32c4d23b0c903d531485b2",
+      "name": "Fetch my lesson detail",
+      "apiPath": "/api/v1/me/lessons/:lessonId",
+      "method": "GET",
+      "module": "ME",
+      "createdBy": {
+        "_id": "6a318dff6c33ce91a7471853",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
       "__v": 0
     }
 ]

@@ -41,15 +41,15 @@ export class CoursesController {
     return this.coursesService.findAll(+currentPage, +limit, qs);
   }
 
+  @Get(':id/manage')
+  findOneForManage(@Param('id') id: string): Promise<any> {
+    return this.coursesService.findOneForManage(id);
+  }
+
   @Get(':id')
   @Public()
   findOne(@Param('id') id: string): Promise<any> {
     return this.coursesService.findOne(id);
-  }
-
-  @Get(':id/modules')
-  findModulesByCourse(@Param('id') id: string) {
-    return this.coursesService.findModulesByCourse(id);
   }
 
   @Patch(':id')

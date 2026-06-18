@@ -15,16 +15,6 @@ export class ModulesController {
     return this.modulesService.create(createModuleDto, user);
   }
 
-  @Get()
-  @ResponseMessage('Fetch modules with paginate')
-  findAll(
-    @Query('current') currentPage: string,
-    @Query('pageSize') limit: string,
-    @Query() qs: string
-  ) {
-    return this.modulesService.findAll(+currentPage, +limit, qs);
-  }
-
   @Patch(':id')
   @ResponseMessage('Update a module')
   update(

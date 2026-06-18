@@ -55,16 +55,6 @@ export class CoursesService {
     };
   }
 
-  async findModulesByCourse(courseIdOrSlug: string) {
-    const course = await this.courseModel.findOne(this.getCourseLookupQuery(courseIdOrSlug)).select({ _id: 1 });
-
-    if (!course) throw new BadRequestException(`course with id or slug=${courseIdOrSlug} not found`);
-
-    return this.moduleModel.find({ course: course._id })
-      .select({ _id: 1, name: 1, order: 1, totalLessons: 1, totalLength: 1 })
-      .sort({ order: 1 });
-  }
-
   async findAll(currentPage: number, limit: number, qs: string) {
     const { filter, sort, projection, population } = aqp(qs);
     delete filter.current;
@@ -115,9 +105,9 @@ export class CoursesService {
     const modules = await this.moduleModel.find({ course: course._id }).select({ _id: 1, name: 1, order: 1 }).sort({ order: 1 });
     const moduleIds = modules.map((m) => m._id);
 
-    // Group lessons by module
-    const lessons = await this.lessonModel.find({ module: { $in: moduleIds } }).sort({ order: 1 });
+    const lessons = await this.lessonModel.find({ module: { $in: moduleIds } }).select({ _id: 1, name: 1, type: 1, order: 1, isFree: 1, metadata: 1, module: 1 }).sort({ order: 1 });
     const lessonsMap = new Map<string, any[]>();
+    
     for (const lesson of lessons) {
       const key = lesson.module.toString();
       if (!lessonsMap.has(key)) { lessonsMap.set(key, []) }
@@ -127,10 +117,11 @@ export class CoursesService {
         name: lesson.name,
         type: lesson.type,
         order: lesson.order,
-        content: lesson.content,
-        isActive: lesson.isActive,
         isFree: lesson.isFree,
-        metadata: lesson.metadata
+        metadata: {
+          duration: lesson.metadata?.duration,
+          durationString: lesson.metadata?.durationString,
+        }
       });
     }
 
@@ -144,6 +135,52 @@ export class CoursesService {
       }))
     };
 }
+
+  async findOneForManage(courseIdOrSlug: string): Promise<any> {
+    const course = await this.courseModel.findOne(this.getCourseLookupQuery(courseIdOrSlug))
+      .populate([
+        { path: 'category', select: '_id name slug' },
+        { path: 'authors', select: '_id name avatar' },
+      ])
+      .lean();
+    if (!course) throw new BadRequestException(`course with id or slug=${courseIdOrSlug} not found`);
+
+    const modules = await this.moduleModel.find({ course: course._id }).sort({ order: 1 });
+    const moduleIds = modules.map((m) => m._id);
+
+    const lessons = await this.lessonModel.find({ module: { $in: moduleIds } }).sort({ order: 1 });
+    const lessonsMap = new Map<string, any[]>();
+
+    for (const lesson of lessons) {
+      const key = lesson.module.toString();
+      if (!lessonsMap.has(key)) { lessonsMap.set(key, []) }
+
+      lessonsMap.get(key)!.push({
+        _id: lesson._id,
+        name: lesson.name,
+        type: lesson.type,
+        order: lesson.order,
+        content: lesson.content,
+        isActive: lesson.isActive,
+        isFree: lesson.isFree,
+        metadata: lesson.metadata,
+      });
+    }
+
+    return {
+      ...course,
+      modules: modules.map((m) => ({
+        _id: m._id,
+        name: m.name,
+        description: m.description,
+        order: m.order,
+        isActive: m.isActive,
+        totalLessons: m.totalLessons,
+        totalLength: m.totalLength,
+        lessons: lessonsMap.get(m._id.toString()) || [],
+      }))
+    };
+  }
 
   async update(id: string, updateCourseDto: UpdateCourseDto, user: IUser) {
     const course = await this.courseModel.findById(id);
