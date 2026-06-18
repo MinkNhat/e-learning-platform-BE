@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestj
 import { ModulesService } from './modules.service';
 import { CreateModuleDto } from './dto/create-module.dto';
 import { UpdateModuleDto } from './dto/update-module.dto';
-import { Public, ResponseMessage, User } from 'src/core/decorators/customize';
+import { ResponseMessage, User } from 'src/core/decorators/customize';
 import { IUser } from 'src/modules/users/users.interface';
 
 @Controller('modules')
@@ -23,18 +23,6 @@ export class ModulesController {
     @Query() qs: string
   ) {
     return this.modulesService.findAll(+currentPage, +limit, qs);
-  }
-
-  @Get(':id')
-  @ResponseMessage('Fetch a module by id')
-  findOne(@Param('id') id: string) {
-    return this.modulesService.findOne(id);
-  }
-
-  @Get(':id/lessons')
-  @ResponseMessage('Fetch lessons of a module')
-  findLessons(@Param('id') id: string) {
-    return this.modulesService.findLessonsByModule(id);
   }
 
   @Patch(':id')

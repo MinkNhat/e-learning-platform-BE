@@ -5,7 +5,6 @@ import { Lesson, LessonDocument } from './schemas/lesson.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { SoftDeleteModel } from 'soft-delete-plugin-mongoose';
 import { IUser } from 'src/modules/users/users.interface';
-import aqp from 'api-query-params';
 import mongoose from 'mongoose';
 import { Module, ModuleDocument } from '../modules/schemas/module.schema';
 import { YtbService } from 'src/utils/ytb.service';
@@ -56,41 +55,6 @@ export class LessonsService {
       name: newLesson?.name,
       createdAt: newLesson?.createdAt
     };
-  }
-
-  async findAll(currentPage: number, limit: number, qs: string) {
-    const { filter, sort, population, projection } = aqp(qs);
-    delete filter.current;
-    delete filter.pageSize;
-
-    let offset = (+currentPage - 1) * (+limit);
-    let defaultLimit = +limit ? +limit : 10;
-
-    const totalItems = (await this.lessonModel.find(filter)).length;
-    const totalPages = Math.ceil(totalItems / defaultLimit);
-
-    const result = await this.lessonModel.find(filter)
-      .skip(offset)
-      .limit(defaultLimit)
-      .sort(sort as any)
-      .populate(population)
-      .select(projection as any)
-      .exec();
-
-    return {
-      meta: {
-        current: currentPage,
-        pageSize: limit,
-        pages: totalPages,
-        total: totalItems
-      },
-      result
-    };
-  }
-
-  async findOne(id: string) {
-    if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`Lesson with id='${id}' not found`);
-    return await this.lessonModel.findById(id);
   }
 
   async update(id: string, updateLessonDto: UpdateLessonDto, user: IUser) {
