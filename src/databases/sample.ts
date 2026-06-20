@@ -604,8 +604,8 @@ export const INIT_PERMISSIONS = [
     },
     {
       "_id": "6a32c4b0b9dde15b85564211",
-      "name": "Fetch my course modules",
-      "apiPath": "/api/v1/me/courses/:courseId/modules",
+      "name": "Fetch my recent lesson",
+      "apiPath": "/api/v1/me/courses/:courseSlug/continue",
       "method": "GET",
       "module": "ME",
       "createdBy": {
@@ -623,6 +623,22 @@ export const INIT_PERMISSIONS = [
       "name": "Fetch my lesson detail",
       "apiPath": "/api/v1/me/lessons/:lessonId",
       "method": "GET",
+      "module": "ME",
+      "createdBy": {
+        "_id": "6a318dff6c33ce91a7471853",
+        "email": "admin@gmail.com"
+      },
+      "isDeleted": false,
+      "deletedAt": null,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "__v": 0
+    },
+    {
+      "_id": "6a32c4f43b0c903d531485b3",
+      "name": "Complete my lesson",
+      "apiPath": "/api/v1/me/lessons/:lessonId/complete",
+      "method": "PATCH",
       "module": "ME",
       "createdBy": {
         "_id": "6a318dff6c33ce91a7471853",
