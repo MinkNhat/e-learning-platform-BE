@@ -39,7 +39,7 @@ export class CourseContentService {
     };
   }
 
-  async getCourseOutline(courseId: string, mode: CourseOutlineMode = 'public') {
+  async getCourseOutline(courseId: string, mode: CourseOutlineMode = 'public'): Promise<any[]> {
     const moduleSelect =
       mode === 'manage'
         ? { _id: 1, name: 1, description: 1, order: 1, isActive: 1, totalLessons: 1, totalLength: 1 }
