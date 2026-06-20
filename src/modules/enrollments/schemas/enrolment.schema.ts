@@ -29,6 +29,18 @@ export class Enrolment {
     @Prop({default: 0})
     progress: number;
 
+    @Prop({default: 0})
+    completedLessonsCount: number;
+
+    @Prop({default: 0})
+    totalLessonsSnapshot: number;
+
+    @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'Lesson'})
+    lastLesson: mongoose.Schema.Types.ObjectId;
+
+    @Prop()
+    lastAccessedAt: Date;
+
     @Prop({type: Object})
     createdBy: {
         _id: mongoose.Schema.Types.ObjectId;
