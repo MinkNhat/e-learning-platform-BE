@@ -11,6 +11,7 @@ import { Module, ModuleDocument } from '../modules/schemas/module.schema';
 import { Lesson, LessonDocument } from '../lessons/schemas/lesson.schema';
 import { SlugService } from 'src/utils/slug.service';
 import { Category, CategoryDocument } from '../categories/schemas/category.schema';
+import { CourseContentService } from './course-content.service';
 
 @Injectable()
 export class CoursesService {
@@ -20,6 +21,7 @@ export class CoursesService {
     @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>,
     @InjectModel(Category.name) private categoryModel: SoftDeleteModel<CategoryDocument>,
     private slugService: SlugService,
+    private courseContentService: CourseContentService,
   ) {}
 
   private getCourseLookupQuery(courseIdOrSlug: string) {
@@ -102,37 +104,11 @@ export class CoursesService {
       .lean();
     if (!course) throw new BadRequestException(`course with id or slug=${courseIdOrSlug} not found`);
 
-    const modules = await this.moduleModel.find({ course: course._id }).select({ _id: 1, name: 1, order: 1 }).sort({ order: 1 });
-    const moduleIds = modules.map((m) => m._id);
-
-    const lessons = await this.lessonModel.find({ module: { $in: moduleIds } }).select({ _id: 1, name: 1, type: 1, order: 1, isFree: 1, metadata: 1, module: 1 }).sort({ order: 1 });
-    const lessonsMap = new Map<string, any[]>();
-    
-    for (const lesson of lessons) {
-      const key = lesson.module.toString();
-      if (!lessonsMap.has(key)) { lessonsMap.set(key, []) }
-
-      lessonsMap.get(key)!.push({
-        _id: lesson._id,
-        name: lesson.name,
-        type: lesson.type,
-        order: lesson.order,
-        isFree: lesson.isFree,
-        metadata: {
-          duration: lesson.metadata?.duration,
-          durationString: lesson.metadata?.durationString,
-        }
-      });
-    }
+    const modules = await this.courseContentService.getCourseOutline(course._id.toString(), 'public');
 
     return {
       ...course,
-      modules: modules.map((m) => ({
-        _id: m._id,
-        name: m.name,
-        order: m.order,
-        lessons: lessonsMap.get(m._id.toString()) || [],
-      }))
+      modules,
     };
 }
 
@@ -145,40 +121,11 @@ export class CoursesService {
       .lean();
     if (!course) throw new BadRequestException(`course with id or slug=${courseIdOrSlug} not found`);
 
-    const modules = await this.moduleModel.find({ course: course._id }).sort({ order: 1 });
-    const moduleIds = modules.map((m) => m._id);
-
-    const lessons = await this.lessonModel.find({ module: { $in: moduleIds } }).sort({ order: 1 });
-    const lessonsMap = new Map<string, any[]>();
-
-    for (const lesson of lessons) {
-      const key = lesson.module.toString();
-      if (!lessonsMap.has(key)) { lessonsMap.set(key, []) }
-
-      lessonsMap.get(key)!.push({
-        _id: lesson._id,
-        name: lesson.name,
-        type: lesson.type,
-        order: lesson.order,
-        content: lesson.content,
-        isActive: lesson.isActive,
-        isFree: lesson.isFree,
-        metadata: lesson.metadata,
-      });
-    }
+    const modules = await this.courseContentService.getCourseOutline(course._id.toString(), 'manage');
 
     return {
       ...course,
-      modules: modules.map((m) => ({
-        _id: m._id,
-        name: m.name,
-        description: m.description,
-        order: m.order,
-        isActive: m.isActive,
-        totalLessons: m.totalLessons,
-        totalLength: m.totalLength,
-        lessons: lessonsMap.get(m._id.toString()) || [],
-      }))
+      modules,
     };
   }
 

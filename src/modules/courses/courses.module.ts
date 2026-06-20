@@ -8,6 +8,7 @@ import { Module as ModuleModel } from '../modules/schemas/module.schema';
 import { Lesson, LessonSchema } from '../lessons/schemas/lesson.schema';
 import { SlugService } from 'src/utils/slug.service';
 import { Category, CategorySchema } from '../categories/schemas/category.schema';
+import { CourseContentService } from './course-content.service';
 
 @Module({
   imports: [
@@ -17,12 +18,13 @@ import { Category, CategorySchema } from '../categories/schemas/category.schema'
       { name: Lesson.name, schema: LessonSchema },
       { name: Category.name, schema: CategorySchema },
     ]),
-],
+  ],
   controllers: [CoursesController],
   providers: [
     CoursesService,
+    CourseContentService,
     SlugService,
   ],
-  exports: [CoursesService]
+  exports: [CoursesService, CourseContentService]
 })
 export class CoursesModule {}
