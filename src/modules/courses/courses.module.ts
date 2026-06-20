@@ -9,6 +9,7 @@ import { Lesson, LessonSchema } from '../lessons/schemas/lesson.schema';
 import { SlugService } from 'src/utils/slug.service';
 import { Category, CategorySchema } from '../categories/schemas/category.schema';
 import { CourseContentService } from './course-content.service';
+import { Enrolment, EnrolmentSchema } from '../enrollments/schemas/enrolment.schema';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { CourseContentService } from './course-content.service';
       { name: ModuleModel.name, schema: ModuleSchema },
       { name: Lesson.name, schema: LessonSchema },
       { name: Category.name, schema: CategorySchema },
+      { name: Enrolment.name, schema: EnrolmentSchema },
     ]),
   ],
   controllers: [CoursesController],

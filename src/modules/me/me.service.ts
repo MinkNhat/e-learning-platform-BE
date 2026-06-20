@@ -97,10 +97,6 @@ export class MeService {
     return { course, enrollment };
   }
 
-  private flattenLessons(modules: any[]) {
-    return modules.flatMap((module) => module.lessons || []);
-  }
-
   private decorateModulesWithProgress(modules: any[], progressList: any[]) {
     const progressMap = new Map(progressList.map((item) => [item.lesson.toString(), item]));
     return modules.map((module) => ({
@@ -115,10 +111,6 @@ export class MeService {
         };
       }),
     }));
-  }
-
-  private async getProgressList(userId: string, courseId: string) {
-    return this.lessonProgressModel.find({ user: userId, course: courseId }).lean();
   }
 
   private async syncEnrollmentProgress(userId: string, courseId: string, totalLessons: number, lastLessonId?: string) {
@@ -188,7 +180,7 @@ export class MeService {
     }
 
     const modules = await this.courseContentService.getCourseOutline(course._id.toString(), 'learn');
-    const firstLesson = this.flattenLessons(modules)[0];
+    const firstLesson = modules.flatMap((module) => module.lessons || [])[0];
 
     if (firstLesson) {
       return firstLesson;
@@ -213,14 +205,14 @@ export class MeService {
       throw new BadRequestException(`Lesson with id='${lessonId}' not found in course='${courseSlug}'`);
     }
 
-    const allLessons = this.flattenLessons(modules);
+    const allLessons = modules.flatMap((module) => module.lessons || []);
     const lessonProgress = await this.touchLessonProgress(
       user._id,
       course._id.toString(),
       currentModule._id.toString(),
       lesson._id.toString(),
     );
-    const progressList = await this.getProgressList(user._id, course._id.toString());
+    const progressList = await this.lessonProgressModel.find({ user: user._id, course: course._id.toString() }).lean();
     const decoratedModules = this.decorateModulesWithProgress(modules, progressList);
     const courseStats = await this.syncEnrollmentProgress(user._id, course._id.toString(), allLessons.length, lesson._id.toString());
 
@@ -269,7 +261,7 @@ export class MeService {
       },
       { upsert: true, new: true },
     ).lean();
-    const allLessons = this.flattenLessons(modules);
+    const allLessons = modules.flatMap((module) => module.lessons || []);
     const courseStats = await this.syncEnrollmentProgress(user._id, course._id.toString(), allLessons.length, lessonId);
 
     return this.buildProgressSummary(courseStats, lessonProgress);

@@ -12,6 +12,7 @@ import { Lesson, LessonDocument } from '../lessons/schemas/lesson.schema';
 import { SlugService } from 'src/utils/slug.service';
 import { Category, CategoryDocument } from '../categories/schemas/category.schema';
 import { CourseContentService } from './course-content.service';
+import { Enrolment, EnrolmentDocument } from '../enrollments/schemas/enrolment.schema';
 
 @Injectable()
 export class CoursesService {
@@ -20,6 +21,7 @@ export class CoursesService {
     @InjectModel(Module.name) private moduleModel: SoftDeleteModel<ModuleDocument>,
     @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>,
     @InjectModel(Category.name) private categoryModel: SoftDeleteModel<CategoryDocument>,
+    @InjectModel(Enrolment.name) private enrolmentModel: SoftDeleteModel<EnrolmentDocument>,
     private slugService: SlugService,
     private courseContentService: CourseContentService,
   ) {}
@@ -65,7 +67,12 @@ export class CoursesService {
     let offset = (+currentPage - 1) * (+limit);
     let defaultLimit = +limit ? +limit : 10;
 
-    const totalItems = (await this.courseModel.find(filter)).length;
+    const finalFilter = {
+      ...filter,
+      isPublished: true,
+    };
+
+    const totalItems = await this.courseModel.countDocuments(finalFilter);
     const totalPages = Math.ceil(totalItems / defaultLimit);
 
     let finalPopulation = population || [];
@@ -76,7 +83,7 @@ export class CoursesService {
       finalPopulation.push({ path: 'authors', select: '_id name avatar' });
     }
 
-    const result = await this.courseModel.find(filter)
+    const result = await this.courseModel.find(finalFilter)
       .skip(offset)
       .limit(defaultLimit)
       .sort(sort as any)
@@ -96,7 +103,10 @@ export class CoursesService {
   }
 
   async findOne(courseIdOrSlug: string): Promise<any> {
-    const course = await this.courseModel.findOne(this.getCourseLookupQuery(courseIdOrSlug))
+    const course = await this.courseModel.findOne({
+      ...this.getCourseLookupQuery(courseIdOrSlug),
+      isPublished: true,
+    })
       .populate([
         { path: 'category', select: '_id name slug' }, 
         { path: 'authors', select: '_id name avatar' },
@@ -130,8 +140,10 @@ export class CoursesService {
   }
 
   async update(id: string, updateCourseDto: UpdateCourseDto, user: IUser) {
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
+
     const course = await this.courseModel.findById(id);
-    if(!mongoose.Types.ObjectId.isValid(id) || !course) throw new BadRequestException(`course with id=${id} not found`);
+    if(!course) throw new BadRequestException(`course with id=${id} not found`);
 
     const category = await this.categoryModel.findById(updateCourseDto.category);
     if (!category) throw new BadRequestException(`category with id=${updateCourseDto.category} not found`);
@@ -149,17 +161,65 @@ export class CoursesService {
   }
 
   async remove(id: string, user: IUser) {
-    const course = await this.courseModel.findById(id);
-    if(!mongoose.Types.ObjectId.isValid(id) || !course) throw new BadRequestException(`course with id=${id} not found`);
+    if(!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`course with id=${id} not found`);
 
-    // delete modules and lessons of course
+    const course = await this.courseModel.findById(id);
+    if(!course) throw new BadRequestException(`course with id=${id} not found`);
+
+    const enrolledCount = await this.enrolmentModel.countDocuments({
+      course: id,
+      isDeleted: { $ne: true },
+    });
+
+    if (enrolledCount > 0) {
+      await this.courseModel.updateOne(
+        { _id: id },
+        {
+          isPublished: false,
+          updatedBy: {
+            _id: user._id,
+            email: user.email,
+          },
+        },
+      );
+
+      return {
+        acknowledged: true,
+        action: 'unpublished',
+        message: 'Course has enrollments, so it was unpublished instead of deleted.',
+      };
+    }
+
     const modules = await this.moduleModel.find({ course: id }).select({ _id: 1 });
     const moduleIds = modules.map((m) => m._id);
-    await this.lessonModel.deleteMany({ module: { $in: moduleIds } });
-    await this.moduleModel.deleteMany({ course: id });
+
+    if (moduleIds.length) {
+      await this.lessonModel.updateMany(
+        { module: { $in: moduleIds } },
+        {
+          deletedBy: {
+            _id: user._id,
+            email: user.email,
+          },
+        },
+      );
+      await this.lessonModel.softDelete({ module: { $in: moduleIds } });
+    }
+
+    await this.moduleModel.updateMany(
+      { course: id },
+      {
+        deletedBy: {
+          _id: user._id,
+          email: user.email,
+        },
+      },
+    );
+    await this.moduleModel.softDelete({ course: id });
 
     await this.courseModel.updateOne(
       {_id: id}, {
+      isPublished: false,
       deletedBy: {
         _id: user._id,
         email: user.email
