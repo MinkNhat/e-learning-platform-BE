@@ -172,22 +172,7 @@ export class CoursesService {
     });
 
     if (enrolledCount > 0) {
-      await this.courseModel.updateOne(
-        { _id: id },
-        {
-          isPublished: false,
-          updatedBy: {
-            _id: user._id,
-            email: user.email,
-          },
-        },
-      );
-
-      return {
-        acknowledged: true,
-        action: 'unpublished',
-        message: 'Course has enrollments, so it was unpublished instead of deleted.',
-      };
+      throw new BadRequestException('Cannot delete course with enrollments. Please unpublish it instead.');
     }
 
     const modules = await this.moduleModel.find({ course: id }).select({ _id: 1 });
