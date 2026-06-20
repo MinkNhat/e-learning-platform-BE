@@ -197,7 +197,7 @@ export class MeService {
     throw new BadRequestException(`Course with slug='${courseSlug}' has no lessons`);
   }
 
-  async findMyLesson(courseSlug: string, lessonId: string, user: IUser) {
+  async findMyLesson(courseSlug: string, lessonId: string, user: IUser): Promise<any> {
     if (!mongoose.Types.ObjectId.isValid(lessonId)) {
       throw new BadRequestException(`Lesson with id='${lessonId}' not found`);
     }
