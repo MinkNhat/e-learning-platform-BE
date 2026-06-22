@@ -52,14 +52,20 @@ export class MeService {
       .skip(offset)
       .limit(defaultLimit)
       .sort(finalSort as any)
-      .populate({
-        path: 'course',
-        select: '_id title slug shortDescription thumbnail level rating price totalLessons totalLength enrollmentCount',
-        populate: [
-          { path: 'category', select: '_id name slug' },
-          { path: 'authors', select: '_id name avatar' },
-        ],
-      })
+      .populate(
+        [{
+          path: 'course',
+          select: '_id title slug shortDescription thumbnail level rating price totalLessons totalLength enrollmentCount',
+          populate: [
+            { path: 'category', select: '_id name slug' },
+            { path: 'authors', select: '_id name avatar' },
+          ],
+          },
+          {
+            path: 'lastLesson',
+            select: '_id name',
+          }
+        ])
       .select(projection || '_id course enrolDate completedDate progress completedLessonsCount totalLessonsSnapshot lastLesson lastAccessedAt')
       .lean();
 
