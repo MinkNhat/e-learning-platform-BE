@@ -661,7 +661,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "BarChartOutlined",
+    "icon": "CodeCircleIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -680,7 +680,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "3bbaee7076924e4393e7d1f7",
-    "icon": "BarChartOutlined",
+    "icon": "WebDesign01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -699,7 +699,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "3bbaee7076924e4393e7d1f7",
-    "icon": "CameraOutlined",
+    "icon": "DatabaseIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -718,7 +718,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "3bbaee7076924e4393e7d1f7",
-    "icon": "GlobalOutlined",
+    "icon": "SmartPhone01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -737,7 +737,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "3bbaee7076924e4393e7d1f7",
-    "icon": "RocketOutlined",
+    "icon": "CodeIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -756,7 +756,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "3bbaee7076924e4393e7d1f7",
-    "icon": "BarChartOutlined",
+    "icon": "GameController01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -775,7 +775,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "3bbaee7076924e4393e7d1f7",
-    "icon": "BookOutlined",
+    "icon": "Database01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -794,7 +794,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "3bbaee7076924e4393e7d1f7",
-    "icon": "CameraOutlined",
+    "icon": "Bug01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -813,7 +813,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "3bbaee7076924e4393e7d1f7",
-    "icon": "GlobalOutlined",
+    "icon": "SoftwareIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -832,7 +832,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "3bbaee7076924e4393e7d1f7",
-    "icon": "FormatPainterOutlined",
+    "icon": "ToolsIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -851,7 +851,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "3bbaee7076924e4393e7d1f7",
-    "icon": "LineChartOutlined",
+    "icon": "WorkflowCircle01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -870,7 +870,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "CameraOutlined",
+    "icon": "Briefcase01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -889,7 +889,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "MobileOutlined",
+    "icon": "Rocket01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -908,7 +908,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "RocketOutlined",
+    "icon": "MessageMultiple01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -927,7 +927,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "SafetyCertificateOutlined",
+    "icon": "ManagerIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -946,7 +946,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "MobileOutlined",
+    "icon": "ShoppingCart01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -965,7 +965,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "LaptopOutlined",
+    "icon": "StrategyIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -984,7 +984,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "CustomerServiceOutlined",
+    "icon": "ChartHistogramIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1003,7 +1003,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "TranslationOutlined",
+    "icon": "ProjectorIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1022,7 +1022,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "ReadOutlined",
+    "icon": "LegalDocument01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1041,7 +1041,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "GlobalOutlined",
+    "icon": "Analytics01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1060,7 +1060,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "ReadOutlined",
+    "icon": "UserGroupIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1079,7 +1079,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "CloudOutlined",
+    "icon": "Factory01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1098,7 +1098,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "CustomerServiceOutlined",
+    "icon": "ShoppingBag01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1117,7 +1117,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "DatabaseOutlined",
+    "icon": "Megaphone01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1136,7 +1136,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "LineChartOutlined",
+    "icon": "House01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1155,7 +1155,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5d79b8e74b354084ad84884b",
-    "icon": "LaptopOutlined",
+    "icon": "Briefcase02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1174,7 +1174,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "VideoCameraOutlined",
+    "icon": "MoneyBag01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1193,7 +1193,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "BarChartOutlined",
+    "icon": "BookOpen01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1212,7 +1212,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "CameraOutlined",
+    "icon": "CheckListIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1231,7 +1231,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "VideoCameraOutlined",
+    "icon": "BitcoinCircleIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1250,7 +1250,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "ToolOutlined",
+    "icon": "ChartLineData01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1269,7 +1269,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "BookOutlined",
+    "icon": "Wallet01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1288,7 +1288,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "ToolOutlined",
+    "icon": "Certificate01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1307,7 +1307,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "DatabaseOutlined",
+    "icon": "AnalyticsUpIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1326,7 +1326,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "ReadOutlined",
+    "icon": "TradeUpIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1345,7 +1345,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "TranslationOutlined",
+    "icon": "MoneyExchange01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1364,7 +1364,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "BookOutlined",
+    "icon": "Invoice01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1383,7 +1383,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "737869cfd21c489fb61dbae9",
-    "icon": "GlobalOutlined",
+    "icon": "Money01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1402,7 +1402,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "ToolOutlined",
+    "icon": "ComputerIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1421,7 +1421,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "094ddae833ac4590a223882a",
-    "icon": "BookOutlined",
+    "icon": "Certificate02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1440,7 +1440,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "094ddae833ac4590a223882a",
-    "icon": "ExperimentOutlined",
+    "icon": "SecurityLockIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1459,7 +1459,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "094ddae833ac4590a223882a",
-    "icon": "GlobalOutlined",
+    "icon": "CpuIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1478,7 +1478,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "094ddae833ac4590a223882a",
-    "icon": "GlobalOutlined",
+    "icon": "ServerStack01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1497,7 +1497,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "094ddae833ac4590a223882a",
-    "icon": "VideoCameraOutlined",
+    "icon": "ComputerPhoneSyncIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1516,7 +1516,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "CameraOutlined",
+    "icon": "OfficeIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1535,7 +1535,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b156cbdfbb614fe0b5d3703d",
-    "icon": "CodeOutlined",
+    "icon": "MicrosoftIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1554,7 +1554,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b156cbdfbb614fe0b5d3703d",
-    "icon": "DatabaseOutlined",
+    "icon": "AppleIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1573,7 +1573,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b156cbdfbb614fe0b5d3703d",
-    "icon": "CodeOutlined",
+    "icon": "GoogleIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1592,7 +1592,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b156cbdfbb614fe0b5d3703d",
-    "icon": "VideoCameraOutlined",
+    "icon": "DatabaseSync01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1611,7 +1611,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b156cbdfbb614fe0b5d3703d",
-    "icon": "VideoCameraOutlined",
+    "icon": "DatabaseSettingIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1630,7 +1630,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b156cbdfbb614fe0b5d3703d",
-    "icon": "CustomerServiceOutlined",
+    "icon": "Task01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1649,7 +1649,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "BulbOutlined",
+    "icon": "UserLove01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1668,7 +1668,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "CodeOutlined",
+    "icon": "RefreshIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1687,7 +1687,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "ToolOutlined",
+    "icon": "TaskDone01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1706,7 +1706,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "CodeOutlined",
+    "icon": "ChampionIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1725,7 +1725,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "CustomerServiceOutlined",
+    "icon": "WorkHistoryIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1744,7 +1744,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "VideoCameraOutlined",
+    "icon": "FavouriteIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1763,7 +1763,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "BookOutlined",
+    "icon": "SmileIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1782,7 +1782,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "BookOutlined",
+    "icon": "MagicWand01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1801,7 +1801,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "RocketOutlined",
+    "icon": "PrayingHandsIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1820,7 +1820,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "ReadOutlined",
+    "icon": "UserStar01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1839,7 +1839,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "CameraOutlined",
+    "icon": "BulbIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1858,7 +1858,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "FormatPainterOutlined",
+    "icon": "ShareKnowledgeIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1877,7 +1877,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "BarChartOutlined",
+    "icon": "UserCheck01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1896,7 +1896,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "BarChartOutlined",
+    "icon": "PeaceMindIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1915,7 +1915,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "FormatPainterOutlined",
+    "icon": "BrainIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1934,7 +1934,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "SafetyCertificateOutlined",
+    "icon": "FireIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1953,7 +1953,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "363d7b51c81e4734930f3b02",
-    "icon": "BookOutlined",
+    "icon": "UserIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1972,7 +1972,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "LaptopOutlined",
+    "icon": "PaintBrush01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -1991,7 +1991,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "865240bea5f541b5afd0fccc",
-    "icon": "BarChartOutlined",
+    "icon": "WebDesign02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2010,7 +2010,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "865240bea5f541b5afd0fccc",
-    "icon": "BarChartOutlined",
+    "icon": "PencilEdit01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2029,7 +2029,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "865240bea5f541b5afd0fccc",
-    "icon": "GlobalOutlined",
+    "icon": "ColorPickerIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2048,7 +2048,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "865240bea5f541b5afd0fccc",
-    "icon": "LaptopOutlined",
+    "icon": "UserStoryIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2067,7 +2067,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "865240bea5f541b5afd0fccc",
-    "icon": "ExperimentOutlined",
+    "icon": "GameIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2086,7 +2086,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "865240bea5f541b5afd0fccc",
-    "icon": "ToolOutlined",
+    "icon": "CubeIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2105,7 +2105,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "865240bea5f541b5afd0fccc",
-    "icon": "CameraOutlined",
+    "icon": "Dress01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2124,7 +2124,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "865240bea5f541b5afd0fccc",
-    "icon": "FormatPainterOutlined",
+    "icon": "Building03Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2143,7 +2143,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "865240bea5f541b5afd0fccc",
-    "icon": "RocketOutlined",
+    "icon": "Sofa01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2162,7 +2162,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "865240bea5f541b5afd0fccc",
-    "icon": "TranslationOutlined",
+    "icon": "PaletteIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2181,7 +2181,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "BarChartOutlined",
+    "icon": "MarketingIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2200,7 +2200,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "BookOutlined",
+    "icon": "DigitalMarketingIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2219,7 +2219,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "BarChartOutlined",
+    "icon": "Search01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2238,7 +2238,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "VideoCameraOutlined",
+    "icon": "SocialMediaIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2257,7 +2257,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "SafetyCertificateOutlined",
+    "icon": "Award01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2276,7 +2276,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "CameraOutlined",
+    "icon": "Target01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2295,7 +2295,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "CodeOutlined",
+    "icon": "AnalyticsDownIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2314,7 +2314,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "VideoCameraOutlined",
+    "icon": "PublicIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2333,7 +2333,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "LaptopOutlined",
+    "icon": "AdsIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2352,7 +2352,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "ToolOutlined",
+    "icon": "VideoReplayIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2371,7 +2371,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "RocketOutlined",
+    "icon": "ContentWritingIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2390,7 +2390,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "ExperimentOutlined",
+    "icon": "ChartIncreaseIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2409,7 +2409,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "SafetyCertificateOutlined",
+    "icon": "AffiliateIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2428,7 +2428,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "CustomerServiceOutlined",
+    "icon": "PackageIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2447,7 +2447,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "5a5f3aa1b20e45da8c5fb293",
-    "icon": "RocketOutlined",
+    "icon": "Megaphone02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2466,7 +2466,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "ExperimentOutlined",
+    "icon": "LifeLineIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2485,7 +2485,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "24f81b677f3a475ab956b01f",
-    "icon": "GlobalOutlined",
+    "icon": "PaintBoardIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2504,7 +2504,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "24f81b677f3a475ab956b01f",
-    "icon": "SafetyCertificateOutlined",
+    "icon": "MakeupIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2523,7 +2523,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "24f81b677f3a475ab956b01f",
-    "icon": "BarChartOutlined",
+    "icon": "MagicWand01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2542,7 +2542,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "24f81b677f3a475ab956b01f",
-    "icon": "TranslationOutlined",
+    "icon": "Restaurant01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2561,7 +2561,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "24f81b677f3a475ab956b01f",
-    "icon": "CloudOutlined",
+    "icon": "GameController03Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2580,7 +2580,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "24f81b677f3a475ab956b01f",
-    "icon": "CodeOutlined",
+    "icon": "GardenIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2599,7 +2599,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "24f81b677f3a475ab956b01f",
-    "icon": "ToolOutlined",
+    "icon": "DogIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2618,7 +2618,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "24f81b677f3a475ab956b01f",
-    "icon": "MobileOutlined",
+    "icon": "Airplane01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2637,7 +2637,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "24f81b677f3a475ab956b01f",
-    "icon": "CameraOutlined",
+    "icon": "Coffee01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2656,7 +2656,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "LaptopOutlined",
+    "icon": "CameraVideoIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2675,7 +2675,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "42a41041544d4eb38f9518a7",
-    "icon": "CloudOutlined",
+    "icon": "Camera01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2694,7 +2694,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "42a41041544d4eb38f9518a7",
-    "icon": "BulbOutlined",
+    "icon": "Camera02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2713,7 +2713,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "42a41041544d4eb38f9518a7",
-    "icon": "RocketOutlined",
+    "icon": "UserSquareIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2732,7 +2732,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "42a41041544d4eb38f9518a7",
-    "icon": "BarChartOutlined",
+    "icon": "CameraLensIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2751,7 +2751,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "42a41041544d4eb38f9518a7",
-    "icon": "ReadOutlined",
+    "icon": "ShoppingBag02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2770,7 +2770,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "42a41041544d4eb38f9518a7",
-    "icon": "VideoCameraOutlined",
+    "icon": "Video01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2789,7 +2789,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "42a41041544d4eb38f9518a7",
-    "icon": "ReadOutlined",
+    "icon": "Image01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2808,7 +2808,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "GlobalOutlined",
+    "icon": "HealthIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2827,7 +2827,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "DatabaseOutlined",
+    "icon": "Dumbbell01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2846,7 +2846,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "GlobalOutlined",
+    "icon": "HeartCheckIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2865,7 +2865,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "ExperimentOutlined",
+    "icon": "FootballIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2884,7 +2884,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "FormatPainterOutlined",
+    "icon": "Apple01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2903,7 +2903,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "BarChartOutlined",
+    "icon": "Yoga01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2922,7 +2922,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "BarChartOutlined",
+    "icon": "Brain02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2941,7 +2941,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "BulbOutlined",
+    "icon": "BoxingGloveIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2960,7 +2960,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "CustomerServiceOutlined",
+    "icon": "FirstAidKitIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2979,7 +2979,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "SafetyCertificateOutlined",
+    "icon": "DanceIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -2998,7 +2998,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "LineChartOutlined",
+    "icon": "MeditationIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3017,7 +3017,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "b6a716c69c75454f972a12bc",
-    "icon": "DatabaseOutlined",
+    "icon": "HeartAddIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3036,7 +3036,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "CodeOutlined",
+    "icon": "MusicNote01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3055,7 +3055,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "311bba936e0f43809234d865",
-    "icon": "LaptopOutlined",
+    "icon": "PianoIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3074,7 +3074,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "311bba936e0f43809234d865",
-    "icon": "TranslationOutlined",
+    "icon": "MusicNoteSquare01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3093,7 +3093,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "311bba936e0f43809234d865",
-    "icon": "ToolOutlined",
+    "icon": "MusicNote02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3112,7 +3112,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "311bba936e0f43809234d865",
-    "icon": "SafetyCertificateOutlined",
+    "icon": "Mic01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3131,7 +3131,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "311bba936e0f43809234d865",
-    "icon": "GlobalOutlined",
+    "icon": "SlidersHorizontalIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3150,7 +3150,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "311bba936e0f43809234d865",
-    "icon": "BarChartOutlined",
+    "icon": "MusicPlaylist01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3169,7 +3169,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "311bba936e0f43809234d865",
-    "icon": "LineChartOutlined",
+    "icon": "HeadphonesIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3188,7 +3188,7 @@ export const CATEGORIES = [
     "level": 0,
     "isActive": true,
     "parent": null,
-    "icon": "CameraOutlined",
+    "icon": "TeacherIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3207,7 +3207,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "abe7928614544565baf09e7b",
-    "icon": "LineChartOutlined",
+    "icon": "Configuration01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3226,7 +3226,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "abe7928614544565baf09e7b",
-    "icon": "FormatPainterOutlined",
+    "icon": "BookOpen02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3245,7 +3245,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "abe7928614544565baf09e7b",
-    "icon": "ExperimentOutlined",
+    "icon": "Calculator01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3264,7 +3264,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "abe7928614544565baf09e7b",
-    "icon": "CloudOutlined",
+    "icon": "TestTube01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3283,7 +3283,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "abe7928614544565baf09e7b",
-    "icon": "LineChartOutlined",
+    "icon": "OnlineLearning01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3302,7 +3302,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "abe7928614544565baf09e7b",
-    "icon": "FormatPainterOutlined",
+    "icon": "UserGroup02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3321,7 +3321,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "abe7928614544565baf09e7b",
-    "icon": "BulbOutlined",
+    "icon": "TranslateIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3340,7 +3340,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "abe7928614544565baf09e7b",
-    "icon": "SafetyCertificateOutlined",
+    "icon": "Presentation01Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3359,7 +3359,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "abe7928614544565baf09e7b",
-    "icon": "CodeOutlined",
+    "icon": "TestTube02Icon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"
@@ -3378,7 +3378,7 @@ export const CATEGORIES = [
     "level": 1,
     "isActive": true,
     "parent": "abe7928614544565baf09e7b",
-    "icon": "VideoCameraOutlined",
+    "icon": "GraduationCapIcon",
     "createdBy": {
       "_id": "69d514eb23fb41760ae187e9",
       "email": "admin@gmail.com"

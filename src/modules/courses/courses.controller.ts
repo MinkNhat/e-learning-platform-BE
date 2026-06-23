@@ -41,6 +41,17 @@ export class CoursesController {
     return this.coursesService.findAll(+currentPage, +limit, qs);
   }
 
+  @Get('search')
+  @Public()
+  search(
+    @Query('q') query: string,
+    @Query('page') page: string,
+    @Query('limit') limit: string,
+    @Query('scope') scope?: string,
+  ) {
+    return this.coursesService.search(query, +page, +limit, scope);
+  }
+
   @Get(':id/manage')
   findOneForManage(@Param('id') id: string): Promise<any> {
     return this.coursesService.findOneForManage(id);

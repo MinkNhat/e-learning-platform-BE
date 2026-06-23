@@ -102,6 +102,93 @@ export class CoursesService {
     }
   }
 
+  async search(query: string, page: number, limit: number, scope?: string) {
+    const keyword = query?.trim();
+    if (!keyword) {
+      throw new BadRequestException('Query parameter q is required');
+    }
+
+    const currentPage = Number.isFinite(page) && page > 0 ? Math.floor(page) : 1;
+    const pageSize = Number.isFinite(limit) && limit > 0 ? Math.min(Math.floor(limit), 100) : 10;
+    const titlePattern = new RegExp(this.escapeRegExp(keyword), 'i');
+
+    const [courseTitleMatches, lessonTitleMatches] = await Promise.all([
+      this.courseModel.find({ title: titlePattern, isPublished: true }).select('_id title').lean(),
+      scope === 'course' ? Promise.resolve([]) : this.lessonModel.find({ name: titlePattern }).select('_id name module').lean(),
+    ]);
+
+    const lessonModuleIds = lessonTitleMatches.map((lesson) => lesson.module);
+    const lessonModules = lessonModuleIds.length ? await this.moduleModel.find({ _id: { $in: lessonModuleIds } }).select('_id course').lean() : [];
+    const modulesById = new Map(lessonModules.map((module) => [module._id.toString(), module]));
+
+    const matchesByCourse = new Map<string, any[]>();
+    const addMatch = (courseId: mongoose.Types.ObjectId | string, match: any) => {
+      const key = courseId.toString();
+      const matches = matchesByCourse.get(key) || [];
+      matches.push(match);
+      matchesByCourse.set(key, matches);
+    };
+
+    for (const course of courseTitleMatches) {
+      addMatch(course._id, {
+        type: 'course',
+        field: 'title',
+        id: course._id,
+        title: course.title,
+      });
+    }
+
+    for (const lesson of lessonTitleMatches) {
+      const module = modulesById.get(lesson.module.toString());
+      if (!module) continue;
+
+      addMatch(module.course as any, {
+        type: 'lesson',
+        field: 'name',
+        id: lesson._id,
+        title: lesson.name,
+      });
+    }
+
+    const courseIds = [...matchesByCourse.keys()];
+    if (!courseIds.length) {
+      return {
+        meta: { current: currentPage, pageSize, pages: 0, total: 0 },
+        result: [],
+      };
+    }
+
+    const filter = { _id: { $in: courseIds }, isPublished: true };
+    const totalItems = await this.courseModel.countDocuments(filter);
+    
+    const courses = await this.courseModel.find(filter)
+      .skip((currentPage - 1) * pageSize)
+      .limit(pageSize)
+      .sort({ updatedAt: -1 })
+      .populate([
+        { path: 'category', select: 'name slug' },
+        { path: 'authors', select: '_id name avatar' },
+      ])
+      .lean();
+
+    return {
+      meta: {
+        current: currentPage,
+        pageSize,
+        pages: Math.ceil(totalItems / pageSize),
+        total: totalItems,
+      },
+      result: courses.map((course) => ({
+        ...course,
+        matches: matchesByCourse.get(course._id.toString()) || [],
+      })),
+    };
+  }
+
+  private escapeRegExp(value: string) {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
   async findOne(courseIdOrSlug: string): Promise<any> {
     const course = await this.courseModel.findOne({
       ...this.getCourseLookupQuery(courseIdOrSlug),
