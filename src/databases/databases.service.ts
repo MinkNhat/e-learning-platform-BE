@@ -55,6 +55,12 @@ export class DatabasesService implements OnModuleInit {
                         description: "Teacher / Course author",
                         isActive: true,
                         permissions: []
+                    },
+                    {
+                        name: RoleName.WRITER,
+                        description: "Blog writer",
+                        isActive: true,
+                        permissions: []
                     }
                 ]);
             }
