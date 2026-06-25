@@ -73,7 +73,7 @@ export function createUploadInterceptor(
     options: UploadOptions = {},
 ) {
     const allowedMimeTypes = options.allowedMimeTypes;
-    const allowedExtensions = options.allowedExtensions ?? ['jpg', 'jpeg', 'png', 'gif', 'pdf', 'doc', 'docx', 'mp4', 'mpeg', 'avi'];
+    const allowedExtensions = options.allowedExtensions ?? ['jpg', 'jpeg', 'png', 'webp', 'gif', 'pdf', 'doc', 'docx', 'mp4', 'mpeg', 'avi'];
     const maxFileSize = options.maxFileSize ?? (1024 * 1024 * 10);
     const customFilename = options.customFilename;
     const folder = options.folder ?? 'default';

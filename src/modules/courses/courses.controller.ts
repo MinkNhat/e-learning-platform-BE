@@ -14,8 +14,8 @@ export class CoursesController {
   @Post()
   @UseInterceptors(
     createUploadInterceptor('thumbnail', {
-      allowedMimeTypes: ['image/jpeg', 'image/png'],
-      allowedExtensions: ['jpg', 'jpeg', 'png'],
+      allowedMimeTypes: ['image/jpeg', 'image/png', 'image/webp'],
+      allowedExtensions: ['jpg', 'jpeg', 'png', 'webp'],
       maxFileSize: 2 * 1024 * 1024,
       folder: 'thumbnails'
     }),
@@ -36,9 +36,15 @@ export class CoursesController {
   findAll(
     @Query("current") currentPage: string,
     @Query("pageSize") limit: string,
-    @Query() qs: string
+    @Query() query: Record<string, string>,
+    @Query('excludeEnrolled') excludeEnrolled: string,
+    @Query('userId') userId: string,
   ) {
-    return this.coursesService.findAll(+currentPage, +limit, qs);
+    const qs = new URLSearchParams(
+      Object.entries(query).filter(([key]) => !['current', 'pageSize', 'excludeEnrolled', 'userId'].includes(key)),
+    ).toString();
+    
+    return this.coursesService.findAll(+currentPage, +limit, qs, excludeEnrolled === 'true', userId);
   }
 
   @Get('search')
@@ -66,9 +72,9 @@ export class CoursesController {
   @Patch(':id')
   @UseInterceptors(
     createUploadInterceptor('thumbnail', {
-      allowedMimeTypes: ['image/jpeg', 'image/png'],
-      allowedExtensions: ['jpg', 'jpeg', 'png'],
-      maxFileSize: 2 * 1024 * 1024,
+      allowedMimeTypes: ['image/jpeg', 'image/png', 'image/webp'],
+      allowedExtensions: ['jpg', 'jpeg', 'png', 'webp'],
+      maxFileSize: 5 * 1024 * 1024,
       folder: 'thumbnails'
     }),
   )
