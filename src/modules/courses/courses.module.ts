@@ -10,6 +10,7 @@ import { SlugService } from 'src/utils/slug.service';
 import { Category, CategorySchema } from '../categories/schemas/category.schema';
 import { CourseContentService } from './course-content.service';
 import { Enrolment, EnrolmentSchema } from '../enrollments/schemas/enrolment.schema';
+import { Quiz, QuizSchema } from '../quizzes/schemas/quiz.schema';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { Enrolment, EnrolmentSchema } from '../enrollments/schemas/enrolment.sch
       { name: Lesson.name, schema: LessonSchema },
       { name: Category.name, schema: CategorySchema },
       { name: Enrolment.name, schema: EnrolmentSchema },
+      { name: Quiz.name, schema: QuizSchema },
     ]),
   ],
   controllers: [CoursesController],

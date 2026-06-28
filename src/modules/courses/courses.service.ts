@@ -59,7 +59,7 @@ export class CoursesService {
     };
   }
 
-  async findAll(currentPage: number, limit: number, qs: string) {
+  async findAll(currentPage: number, limit: number, qs: string, excludeEnrolled = false, userId?: string) {
     const { filter, sort, projection, population } = aqp(qs);
     delete filter.current;
     delete filter.pageSize;
@@ -67,10 +67,19 @@ export class CoursesService {
     let offset = (+currentPage - 1) * (+limit);
     let defaultLimit = +limit ? +limit : 10;
 
-    const finalFilter = {
+    const finalFilter: Record<string, any> = {
       ...filter,
       isPublished: true,
     };
+
+    // Exclude enrolled courses if requested
+    if (excludeEnrolled && userId && mongoose.Types.ObjectId.isValid(userId)) {
+      const enrolledCourseIds = await this.enrolmentModel.distinct('course', {
+        user: userId,
+        isActive: true,
+      });
+      finalFilter._id = { $nin: enrolledCourseIds };
+    }
 
     const totalItems = await this.courseModel.countDocuments(finalFilter);
     const totalPages = Math.ceil(totalItems / defaultLimit);
