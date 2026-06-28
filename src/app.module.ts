@@ -19,6 +19,9 @@ import { LessonsModule } from './modules/lessons/lessons.module';
 import { PaymentsModule } from './modules/payments/payments.module';
 import { OrdersModule } from './modules/orders/orders.module';
 import { MeModule } from './modules/me/me.module';
+import { BlogsModule } from './modules/blogs/blogs.module';
+import { CommentsModule } from './modules/comments/comments.module';
+import { QuizzesModule } from './modules/quizzes/quizzes.module';
 
 @Module({
   imports: [
@@ -54,6 +57,9 @@ import { MeModule } from './modules/me/me.module';
     PaymentsModule,
     OrdersModule,
     MeModule,
+    BlogsModule,
+    CommentsModule,
+    QuizzesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
