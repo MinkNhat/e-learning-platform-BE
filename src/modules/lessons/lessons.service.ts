@@ -11,6 +11,7 @@ import { YtbService } from 'src/utils/ytb.service';
 import { LessonType } from 'src/core/enums/lesson-type.enum';
 import { estimateReadingMinutes } from 'src/utils/utils';
 import { Course, CourseDocument } from '../courses/schemas/course.schema';
+import { Quiz, QuizDocument } from '../quizzes/schemas/quiz.schema';
 
 @Injectable()
 export class LessonsService {
@@ -18,12 +19,14 @@ export class LessonsService {
     @InjectModel(Lesson.name) private lessonModel: SoftDeleteModel<LessonDocument>,
     @InjectModel(Module.name) private moduleModel: SoftDeleteModel<ModuleDocument>,
     @InjectModel(Course.name) private courseModel: SoftDeleteModel<CourseDocument>,
+    @InjectModel(Quiz.name) private quizModel: SoftDeleteModel<QuizDocument>,
     private ytbService: YtbService,
   ) {}
 
   async create(createLessonDto: CreateLessonDto, user: IUser) {
     const module = await this.moduleModel.findOne({ _id: createLessonDto.module });
     if (!module) throw new BadRequestException(`Module with id='${createLessonDto.module}' not found`);
+    if (await this.quizModel.exists({ module: module._id, order: createLessonDto.order })) throw new BadRequestException('A quiz already exists at this order in the module');
 
     createLessonDto.metadata = createLessonDto.metadata ?? {};
 
@@ -66,6 +69,10 @@ export class LessonsService {
     const currentModuleId = lesson.module as any;
     const updatePayload = { ...updateLessonDto };
     delete updatePayload.module;
+
+    if (updatePayload.order !== undefined && await this.quizModel.exists({ module: currentModuleId, order: updatePayload.order })) {
+      throw new BadRequestException('A quiz already exists at this order in the module');
+    }
 
     const metadata = {
       ...(lesson.metadata ?? {}),
