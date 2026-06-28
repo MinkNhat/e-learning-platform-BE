@@ -29,6 +29,9 @@ export class PaymentsService {
 
     const course = await this.courseModel.findById(courseId);
     if (!course) throw new BadRequestException('Khoá học không tồn tại');
+    if (course.price == null || Number(course.price) <= 0) {
+      throw new BadRequestException('Khoá học miễn phí không cần thanh toán');
+    }
 
     const order = await this.orderModel.create({
       user: userId,

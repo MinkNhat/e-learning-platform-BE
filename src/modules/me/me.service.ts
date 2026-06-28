@@ -107,14 +107,10 @@ export class MeService {
     const progressMap = new Map(progressList.map((item) => [item.lesson.toString(), item]));
     return modules.map((module) => ({
       ...module,
-      lessons: (module.lessons || []).map((lesson) => {
-        const progress = progressMap.get(lesson._id.toString());
-        return {
-          ...lesson,
-          progressStatus: progress?.status || 'not_started',
-          completedAt: progress?.completedAt,
-          lastAccessedAt: progress?.lastAccessedAt,
-        };
+      items: (module.items || []).map((item) => {
+        if (item.type !== 'lesson') return item;
+        const progress = progressMap.get(item._id.toString());
+        return { ...item, progressStatus: progress?.status || 'not_started', completedAt: progress?.completedAt, lastAccessedAt: progress?.lastAccessedAt };
       }),
     }));
   }
@@ -186,7 +182,7 @@ export class MeService {
     }
 
     const modules = await this.courseContentService.getCourseOutline(course._id.toString(), 'learn');
-    const firstLesson = modules.flatMap((module) => module.lessons || [])[0];
+    const firstLesson = modules.flatMap((module) => module.items || []).find((item) => item.type === 'lesson');
 
     if (firstLesson) {
       return firstLesson;
@@ -211,7 +207,7 @@ export class MeService {
       throw new BadRequestException(`Lesson with id='${lessonId}' not found in course='${courseSlug}'`);
     }
 
-    const allLessons = modules.flatMap((module) => module.lessons || []);
+    const allLessons = modules.flatMap((module) => module.items || []).filter((item) => item.type === 'lesson');
     const lessonProgress = await this.touchLessonProgress(
       user._id,
       course._id.toString(),
@@ -267,7 +263,7 @@ export class MeService {
       },
       { upsert: true, new: true },
     ).lean();
-    const allLessons = modules.flatMap((module) => module.lessons || []);
+    const allLessons = modules.flatMap((module) => module.items || []).filter((item) => item.type === 'lesson');
     const courseStats = await this.syncEnrollmentProgress(user._id, course._id.toString(), allLessons.length, lessonId);
 
     return this.buildProgressSummary(courseStats, lessonProgress);

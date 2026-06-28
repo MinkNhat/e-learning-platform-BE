@@ -73,3 +73,4 @@ export class Enrolment {
 }
 
 export const EnrolmentSchema = SchemaFactory.createForClass(Enrolment);
+EnrolmentSchema.index({ user: 1, course: 1 }, { unique: true });
