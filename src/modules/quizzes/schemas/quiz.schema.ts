@@ -27,10 +27,10 @@ export class Quiz {
   @Prop({ default: null, min: 1 })
   timeLimitSeconds?: number;
 
-  @Prop({ default: 70, min: 0, max: 100 })
+  @Prop({ default: 50, min: 0, max: 100 })
   passingScore: number;
 
-  @Prop({ default: null, min: 1 })
+  @Prop({ default: 3, min: 1 })
   maxAttempts?: number;
 
   @Prop({ default: false })
