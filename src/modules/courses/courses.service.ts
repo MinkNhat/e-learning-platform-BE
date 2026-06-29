@@ -111,7 +111,7 @@ export class CoursesService {
     }
   }
 
-  async search(query: string, page: number, limit: number, scope?: string) {
+  async search(query: string, page: number, limit: number, scope?: string): Promise<any> {
     const keyword = query?.trim();
     if (!keyword) {
       throw new BadRequestException('Query parameter q is required');

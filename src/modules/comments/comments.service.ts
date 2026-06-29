@@ -38,7 +38,7 @@ export class CommentsService {
     }
   }
 
-  async findAll(targetType: CommentTargetType, targetId: string, currentPage = 1, limit = 10) {
+  async findAll(targetType: CommentTargetType, targetId: string, currentPage = 1, limit = 10): Promise<any> {
     await this.assertTarget(targetType, targetId);
 
     const filter = { targetType, targetId, parent: null };

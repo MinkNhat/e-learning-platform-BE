@@ -179,7 +179,7 @@ export class QuizzesService {
     }
   }
 
-  async startAttempt(quizId: string, user: IUser) {
+  async startAttempt(quizId: string, user: IUser): Promise<any> {
     const quiz = await this.getQuiz(quizId);
     if (!quiz.isActive) throw new BadRequestException('Quiz is inactive');
 
@@ -231,7 +231,7 @@ export class QuizzesService {
     return { isCorrect, earnedPoints: isCorrect ? question.points : 0 };
   }
 
-  async submitAttempt(id: string, user: IUser) {
+  async submitAttempt(id: string, user: IUser): Promise<any> {
     const attempt = await this.attemptModel.findById(id).populate('quiz');
     if (!attempt || attempt.user.toString() !== user._id) throw new ForbiddenException('Quiz attempt not found');
 
@@ -256,7 +256,7 @@ export class QuizzesService {
     return this.getAttempt(id, user);
   }
 
-  async getAttempt(id: string, user: IUser) {
+  async getAttempt(id: string, user: IUser): Promise<any> {
     const attempt = await this.attemptModel.findById(id).populate('quiz');
     if (!attempt || attempt.user.toString() !== user._id) throw new ForbiddenException('Quiz attempt not found');
 

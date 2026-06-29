@@ -14,6 +14,9 @@ export class Blog {
   @Prop({ required: true, unique: true, trim: true })
   slug: string;
 
+  @Prop({ trim: true, maxlength: 500 })
+  description?: string;
+
   @Prop({ required: true })
   content: string;
 
