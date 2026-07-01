@@ -1,13 +1,22 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Req, Query, Res } from '@nestjs/common';
+import { Controller, Get, Post, Body, UseGuards, Req, Query, Res } from '@nestjs/common';
 import { PaymentsService } from './payments.service';
 import { CreatePaymentDto } from './dto/create-payment.dto';
-import { UpdatePaymentDto } from './dto/update-payment.dto';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
-import { Public, User } from 'src/core/decorators/customize';
+import { Public, ResponseMessage, User } from 'src/core/decorators/customize';
 
 @Controller('payments')
 export class PaymentsController {
   constructor(private readonly paymentsService: PaymentsService) {}
+
+  @Get()
+  @ResponseMessage('Fetch payments with paginate')
+  findAll(
+    @Query('current') currentPage: string,
+    @Query('pageSize') limit: string,
+    @Query() qs: string,
+  ) {
+    return this.paymentsService.findAll(+currentPage, +limit, qs);
+  }
 
   @Post('create')
   @UseGuards(JwtAuthGuard)

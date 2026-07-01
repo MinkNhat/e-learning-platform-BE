@@ -9,6 +9,7 @@ import { createVnpayUrl, verifyVnpaySignature } from "./vnpay/vnpay.helper";
 import { PaymentStatus, VnpayTransactionStatus } from "src/core/enums/payment.enum";
 import { CreatePaymentDto } from "./dto/create-payment.dto";
 import { Course } from "../courses/schemas/course.schema";
+import aqp from 'api-query-params';
 
 @Injectable()
 export class PaymentsService {
@@ -19,6 +20,40 @@ export class PaymentsService {
     @InjectModel(Course.name) private courseModel: Model<Course>,
     private readonly enrollmentsService: EnrollmentsService,
   ) {}
+
+  async findAll(currentPage: number, limit: number, qs: string) {
+    const { filter, sort, projection } = aqp(qs);
+    delete filter.current;
+    delete filter.pageSize;
+
+    const page = +currentPage || 1;
+    const pageSize = +limit || 10;
+    const offset = (page - 1) * pageSize;
+
+    const totalItems = await this.paymentModel.countDocuments(filter);
+    const result = await this.paymentModel.find(filter)
+      .skip(offset)
+      .limit(pageSize)
+      .sort(sort as any)
+      .populate({ path: 'user', select: '_id name email' })
+      .populate({
+        path: 'order',
+        select: '_id course amount currency status createdAt',
+        populate: { path: 'course', select: '_id title price' },
+      })
+      .select(projection as any)
+      .exec();
+
+    return {
+      meta: {
+        current: page,
+        pageSize,
+        pages: Math.ceil(totalItems / pageSize),
+        total: totalItems,
+      },
+      result,
+    };
+  }
 
   async initiatePayment(userId: string, createPaymentDto: CreatePaymentDto, ip: string) {
     const { courseId, provider } = createPaymentDto;
