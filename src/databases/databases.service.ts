@@ -29,10 +29,18 @@ export class DatabasesService implements OnModuleInit {
             const countPermission = await this.permissionModel.count({});
             const countRole = await this.roleModel.count({});
 
-            //create permissions
-            if (countPermission === 0) {
-                await this.permissionModel.insertMany(INIT_PERMISSIONS);
-            }
+            await this.permissionModel.bulkWrite(
+                INIT_PERMISSIONS.map(permission => ({
+                    updateOne: {
+                        filter: {
+                            apiPath: permission.apiPath,
+                            method: permission.method,
+                        },
+                        update: { $set: permission },
+                        upsert: true,
+                    }
+                }))
+            );
 
             // create roles
             if (countRole === 0) {
@@ -63,6 +71,12 @@ export class DatabasesService implements OnModuleInit {
                         permissions: []
                     }
                 ]);
+            } else {
+                const permissions = await this.permissionModel.find({}).select("_id");
+                await this.roleModel.updateOne(
+                    { name: RoleName.ADMIN },
+                    { $addToSet: { permissions: { $each: permissions.map(permission => permission._id) } } }
+                );
             }
 
             // create users

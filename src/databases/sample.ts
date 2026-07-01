@@ -9,6 +9,9 @@ export const INIT_PERMISSIONS = [
   // FILES
   { "name": "Upload Single File", "apiPath": "/api/v1/files/upload", "method": "POST", "module": "FILES" },
 
+  // DASHBOARD
+  { "name": "Dashboard stats", "apiPath": "/api/v1/dashboard/stats", "method": "GET", "module": "DASHBOARD" },
+
   // PERMISSIONS
   { "name": "Create a permission", "apiPath": "/api/v1/permissions", "method": "POST", "module": "PERMISSIONS" },
   { "name": "Fetch Permission with paginate", "apiPath": "/api/v1/permissions", "method": "GET", "module": "PERMISSIONS" },
@@ -34,8 +37,9 @@ export const INIT_PERMISSIONS = [
   // CATEGORIES
   { "name": "Create a category", "apiPath": "/api/v1/categories", "method": "POST", "module": "CATEGORIES" },
   { "name": "Update a category", "apiPath": "/api/v1/categories/:id", "method": "PATCH", "module": "CATEGORIES" },
-  { "name": "Fetch category by id", "apiPath": "/api/v1/categories:/id", "method": "GET", "module": "CATEGORIES" },
+  { "name": "Fetch category by id", "apiPath": "/api/v1/categories/:id", "method": "GET", "module": "CATEGORIES" },
   { "name": "Fetch categories with paginate", "apiPath": "/api/v1/categories", "method": "GET", "module": "CATEGORIES" },
+  { "name": "Fetch root categories", "apiPath": "/api/v1/categories/root", "method": "GET", "module": "CATEGORIES" },
   { "name": "Delete a category", "apiPath": "/api/v1/categories/:id", "method": "DELETE", "module": "CATEGORIES" },
 
   // MODULES
@@ -50,6 +54,7 @@ export const INIT_PERMISSIONS = [
 
   // PAYMENTS
   { "name": "Create a payment", "apiPath": "/api/v1/payments/create", "method": "POST", "module": "PAYMENTS" },
+  { "name": "Fetch payments", "apiPath": "/api/v1/payments", "method": "GET", "module": "PAYMENTS" },
 
   // ME
   { "name": "Fetch my courses with paginate", "apiPath": "/api/v1/me/courses", "method": "GET", "module": "ME" },
@@ -58,6 +63,8 @@ export const INIT_PERMISSIONS = [
   { "name": "Complete my lesson", "apiPath": "/api/v1/me/lessons/:lessonId/complete", "method": "PATCH", "module": "ME" },
 
   // ENROLLMENTS
+  { "name": "Fetch enrollments", "apiPath": "/api/v1/enrollments", "method": "GET", "module": "ENROLLMENTS" },
+  { "name": "Create enrollment manually", "apiPath": "/api/v1/enrollments", "method": "POST", "module": "ENROLLMENTS" },
   { "name": "Enroll free course", "apiPath": "/api/v1/enrollments/free", "method": "POST", "module": "ENROLLMENTS" },
 
   // BLOGS
