@@ -39,12 +39,13 @@ export class CoursesController {
     @Query() query: Record<string, string>,
     @Query('excludeEnrolled') excludeEnrolled: string,
     @Query('userId') userId: string,
+    @Query('includeUnpublished') includeUnpublished: string,
   ) {
     const qs = new URLSearchParams(
-      Object.entries(query).filter(([key]) => !['current', 'pageSize', 'excludeEnrolled', 'userId'].includes(key)),
+      Object.entries(query).filter(([key]) => !['current', 'pageSize', 'excludeEnrolled', 'userId', 'includeUnpublished'].includes(key)),
     ).toString();
     
-    return this.coursesService.findAll(+currentPage, +limit, qs, excludeEnrolled === 'true', userId);
+    return this.coursesService.findAll(+currentPage, +limit, qs, excludeEnrolled === 'true', userId, includeUnpublished === 'true');
   }
 
   @Get('search')

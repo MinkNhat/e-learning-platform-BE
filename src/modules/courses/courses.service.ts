@@ -59,7 +59,7 @@ export class CoursesService {
     };
   }
 
-  async findAll(currentPage: number, limit: number, qs: string, excludeEnrolled = false, userId?: string) {
+  async findAll(currentPage: number, limit: number, qs: string, excludeEnrolled = false, userId?: string, includeUnpublished = false) {
     const { filter, sort, projection, population } = aqp(qs);
     delete filter.current;
     delete filter.pageSize;
@@ -67,10 +67,7 @@ export class CoursesService {
     let offset = (+currentPage - 1) * (+limit);
     let defaultLimit = +limit ? +limit : 10;
 
-    const finalFilter: Record<string, any> = {
-      ...filter,
-      isPublished: true,
-    };
+    const finalFilter: Record<string, any> = includeUnpublished ? { ...filter } : { ...filter, isPublished: true };
 
     // Exclude enrolled courses if requested
     if (excludeEnrolled && userId && mongoose.Types.ObjectId.isValid(userId)) {
