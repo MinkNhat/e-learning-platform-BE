@@ -11,7 +11,7 @@ export class CreateUserDto {
 
     @IsOptional()
     @MaxLength(11)
-    @Matches(/^(\\+84|0)[0-9]{9,10}$/, { message: 'Phone number must start with +84 or 0, and have 10-11 digits' })
+    @Matches(/^(\+84|0)[0-9]{9,10}$/, { message: 'Phone number must start with +84 or 0, and have 10-11 digits' })
     phone: string;
 
     @IsNotEmpty()

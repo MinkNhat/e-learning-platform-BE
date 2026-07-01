@@ -141,12 +141,22 @@ export class UsersService {
       throw new BadRequestException(`User with id='${id}' not found`);
     }
 
-    const userRole = await this.roleModel.findOne({ name: updateUserDto.role });
+    const payload: any = { ...updateUserDto };
+    delete payload.email;
+    delete payload.password;
+
+    if (payload.role && user.role?.name === RoleName.ADMIN) {
+      const userRole = await this.roleModel.findOne({ name: payload.role });
+      if (!userRole) throw new BadRequestException(`Role with name='${payload.role}' not found`);
+      payload.role = userRole._id;
+    } else {
+      delete payload.role;
+    }
+
     return await this.userModel.updateOne(
       {_id: id},
       {
-        ...updateUserDto,
-        role: userRole?._id,
+        ...payload,
         updatedBy: {
           _id: user._id,
           email: user.email
