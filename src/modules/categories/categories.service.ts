@@ -42,12 +42,12 @@ export class CategoriesService {
       throw new BadRequestException(`Category with name='${name}' already exists!`)
     }
 
-    const parentCate = await this.categoryModel.findById(parent);
+    const parentCate = parent ? await this.categoryModel.findById(parent) : null;
     if (parent && !parentCate) {
       throw new BadRequestException(`Parent category with id=${parent} not found`)
     }
 
-    const level = parentCate ? parentCate.level + 1 : 0;
+    const level = parentCate ? 1 : 0;
     const slug = await this.slugService.generate(this.categoryModel, name);
 
     const newCate = await this.categoryModel.create({
@@ -110,9 +110,20 @@ export class CategoriesService {
   async update(id: string, updateCategoryDto: UpdateCategoryDto, user: IUser) {
     if (!mongoose.Types.ObjectId.isValid(id)) throw new BadRequestException(`category with id=${id} not found`)
 
-    const { name, parent } = updateCategoryDto;
+    const { parent } = updateCategoryDto;
     const currentCate = await this.categoryModel.findById(id);
-    const level = parent ? (await this.categoryModel.findById(parent)).level + 1 : currentCate.level;
+    if (!currentCate) throw new BadRequestException(`category with id=${id} not found`)
+
+    let level = currentCate.level;
+    if (Object.prototype.hasOwnProperty.call(updateCategoryDto, 'parent')) {
+      if (parent) {
+        const parentCate = await this.categoryModel.findById(parent);
+        if (!parentCate) throw new BadRequestException(`Parent category with id=${parent} not found`)
+        level = 1;
+      } else {
+        level = 0;
+      }
+    }
 
     return await this.categoryModel.updateOne(
       { _id: id },
