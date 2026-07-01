@@ -22,6 +22,12 @@ import { MeModule } from './modules/me/me.module';
 import { BlogsModule } from './modules/blogs/blogs.module';
 import { CommentsModule } from './modules/comments/comments.module';
 import { QuizzesModule } from './modules/quizzes/quizzes.module';
+import { User, UserSchema } from './modules/users/schemas/user.schema';
+import { Course, CourseSchema } from './modules/courses/schemas/course.schema';
+import { Blog, BlogSchema } from './modules/blogs/schemas/blog.schema';
+import { Enrolment, EnrolmentSchema } from './modules/enrollments/schemas/enrolment.schema';
+import { Order, OrderSchema } from './modules/orders/schemas/order.schema';
+import { Payment, PaymentSchema } from './modules/payments/schemas/payment.schema';
 
 @Module({
   imports: [
@@ -41,6 +47,14 @@ import { QuizzesModule } from './modules/quizzes/quizzes.module';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
+    MongooseModule.forFeature([
+      { name: User.name, schema: UserSchema },
+      { name: Course.name, schema: CourseSchema },
+      { name: Blog.name, schema: BlogSchema },
+      { name: Enrolment.name, schema: EnrolmentSchema },
+      { name: Order.name, schema: OrderSchema },
+      { name: Payment.name, schema: PaymentSchema },
+    ]),
 
     UsersModule,
     AuthModule,
