@@ -44,18 +44,17 @@ export class AuthController {
     @Get('/google/callback')
     async googleCallback(
         @Req() req: Request & { user: ISocialProfile },
-        @Res({ passthrough: true }) response: Response
+        @Res() response: Response
     ) {
         const result = await this.authService.socialLogin(req.user, response);
         const state = typeof req.query?.state === 'string' ? req.query.state : undefined;
         const redirectUrl = this.authService.getSocialLoginRedirectUrl(result.access_token, state);
 
         if (redirectUrl) {
-            response.redirect(redirectUrl);
-            return;
+            return response.redirect(redirectUrl);
         }
 
-        return result;
+        return response.json(result);
     }
     
     @Get('/account')
