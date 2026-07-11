@@ -16,9 +16,14 @@ export class CommentsController {
     @Query('targetType') targetType: CommentTargetType, 
     @Query('targetId') targetId: string, 
     @Query('current') current: string, 
-    @Query('pageSize') pageSize: string
+    @Query('pageSize') pageSize: string,
+    @Query() query: Record<string, string>,
   ) {
-    return this.commentsService.findAll(targetType, targetId, +current || 1, +pageSize || 10);
+    const qs = new URLSearchParams(
+      Object.entries(query).filter(([key]) => !['targetType', 'targetId', 'current', 'pageSize'].includes(key)),
+    ).toString();
+
+    return this.commentsService.findAll(targetType, targetId, +current || 1, +pageSize || 10, qs);
   }
 
   @Post() 

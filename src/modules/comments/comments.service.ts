@@ -1,5 +1,6 @@
 import { BadRequestException, ForbiddenException, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
+import aqp from 'api-query-params';
 import mongoose from 'mongoose';
 import { SoftDeleteModel } from 'soft-delete-plugin-mongoose';
 import { Blog, BlogDocument } from '../blogs/schemas/blog.schema';
@@ -38,20 +39,22 @@ export class CommentsService {
     }
   }
 
-  async findAll(targetType: CommentTargetType, targetId: string, currentPage = 1, limit = 10): Promise<any> {
+  async findAll(targetType: CommentTargetType, targetId: string, currentPage = 1, limit = 10, qs = ''): Promise<any> {
     await this.assertTarget(targetType, targetId);
 
-    const filter = { targetType, targetId, parent: null };
+    const { filter, sort } = aqp(qs);
+    const finalFilter = { ...filter, targetType, targetId, parent: null };
+    const finalSort = sort && Object.keys(sort).length ? sort : { createdAt: -1 };
     let offset = (+currentPage - 1) * (+limit);
     let defaultLimit = +limit ? +limit : 10;
 
-    const totalItems = await this.commentModel.countDocuments(filter);
+    const totalItems = await this.commentModel.countDocuments(finalFilter);
     const totalPages = Math.ceil(totalItems / defaultLimit);
 
-    const result = await this.commentModel.find(filter)
+    const result = await this.commentModel.find(finalFilter)
       .skip(offset)
       .limit(defaultLimit)
-      .sort({ createdAt: -1 })
+      .sort(finalSort as any)
       .populate('author', '_id name avatar')
       .lean();
 
