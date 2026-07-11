@@ -1,5 +1,6 @@
 import { Schema, Prop, SchemaFactory } from "@nestjs/mongoose";
 import mongoose, { HydratedDocument } from "mongoose";
+import { SocialProvider } from "src/core/enums/social-provider.enum";
 import { Role } from "src/modules/roles/schemas/role.schema";
 
 export type UserDocument = HydratedDocument<User>;
@@ -15,8 +16,14 @@ export class User {
     @Prop()
     phone: string;
 
-    @Prop({required: true})
+    @Prop()
     password: string;
+
+    @Prop({ enum: SocialProvider, default: SocialProvider.LOCAL })
+    authProvider: SocialProvider;
+
+    @Prop()
+    providerId: string;
 
     @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'Role'})
     role: Role; 
@@ -62,3 +69,11 @@ export class User {
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
+
+UserSchema.index(
+    { authProvider: 1, providerId: 1 },
+    {
+        unique: true,
+        partialFilterExpression: { providerId: { $exists: true, $type: 'string' } },
+    },
+);

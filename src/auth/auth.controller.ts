@@ -6,6 +6,8 @@ import { Request, Response } from "express";
 import { IUser } from "src/modules/users/users.interface";
 import { RegisterUserDto } from "src/modules/users/dto/create-user.dto";
 import { RolesService } from "src/modules/roles/roles.service";
+import { GoogleAuthGuard } from "./guards/google-auth.guard";
+import type { ISocialProfile } from "./interfaces/social-profile.interface";
 
 @Controller("auth")
 export class AuthController {
@@ -28,6 +30,30 @@ export class AuthController {
     @Post('/register')
     async register(@Body() user: RegisterUserDto) {
         return this.authService.register(user);
+    }
+
+    @Public()
+    @UseGuards(GoogleAuthGuard)
+    @Get('/google')
+    async googleLogin() {}
+
+    @Public()
+    @UseGuards(GoogleAuthGuard)
+    @Get('/google/callback')
+    async googleCallback(
+        @Req() req: Request & { user: ISocialProfile },
+        @Res({ passthrough: true }) response: Response
+    ) {
+        const result = await this.authService.socialLogin(req.user, response);
+        const state = typeof req.query?.state === 'string' ? req.query.state : undefined;
+        const redirectUrl = this.authService.getSocialLoginRedirectUrl(result.access_token, state);
+
+        if (redirectUrl) {
+            response.redirect(redirectUrl);
+            return;
+        }
+
+        return result;
     }
     
     @Get('/account')

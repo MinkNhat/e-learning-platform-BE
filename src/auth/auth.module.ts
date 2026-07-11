@@ -9,6 +9,7 @@ import ms from 'ms';
 import { AuthController } from './auth.controller';
 import { UsersModule } from 'src/modules/users/users.module';
 import { RolesModule } from 'src/modules/roles/roles.module';
+import { GoogleStrategy } from './passport/google.strategy';
 
 @Module({
   imports: [
@@ -24,7 +25,12 @@ import { RolesModule } from 'src/modules/roles/roles.module';
       inject: [ConfigService],
     })
   ],
-  providers: [AuthService, LocalStrategy, JwtStrategy],
+  providers: [
+    AuthService, 
+    LocalStrategy, 
+    JwtStrategy, 
+    GoogleStrategy
+  ],
   controllers: [AuthController],
   exports: [AuthService]
 })

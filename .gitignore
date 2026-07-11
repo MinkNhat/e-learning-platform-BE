@@ -3,6 +3,7 @@
 /node_modules
 /public/images
 /src/databases/sample
+/docs
 package-lock.json
 
 # Logs

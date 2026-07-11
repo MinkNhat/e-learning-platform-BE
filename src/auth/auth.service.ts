@@ -7,6 +7,7 @@ import { RolesService } from 'src/modules/roles/roles.service';
 import { RegisterUserDto } from 'src/modules/users/dto/create-user.dto';
 import { IUser } from 'src/modules/users/users.interface';
 import { UsersService } from 'src/modules/users/users.service';
+import { ISocialProfile } from './interfaces/social-profile.interface';
 
 @Injectable()
 export class AuthService {
@@ -73,6 +74,31 @@ export class AuthService {
             _id: newUser._id,
             email: newUser.email,
             createdAt: newUser.createdAt
+        }
+    }
+
+    socialLogin = async (profile: ISocialProfile, response: Response) => {
+        const user = await this.usersService.findOrCreateSocialUser(profile);
+        const userRole = user.role as unknown as { _id: string; name: string }
+        const temp = await this.rolesService.findOne(userRole._id);
+
+        return this.login({
+            ...user.toObject(),
+            permissions: temp?.permissions as any ?? []
+        }, response);
+    }
+
+    getSocialLoginRedirectUrl = (accessToken: string, socialRedirectUrl?: string) => {
+        const redirectUrl = socialRedirectUrl || this.configService.get<string>('GOOGLE_LOGIN_SUCCESS_REDIRECT_URL');
+
+        if (!redirectUrl) return null;
+
+        try {
+            const url = new URL(redirectUrl);
+            url.searchParams.set('access_token', accessToken);
+            return url.toString();
+        } catch {
+            return null;
         }
     }
 

@@ -10,6 +10,8 @@ import { IUser } from './users.interface';
 import aqp from 'api-query-params';
 import { Role, RoleDocument } from 'src/modules/roles/schemas/role.schema';
 import { RoleName } from 'src/core/enums/roles.enum';
+import { SocialProvider } from 'src/core/enums/social-provider.enum';
+import type { ISocialProfile } from 'src/auth/interfaces/social-profile.interface';
 
 @Injectable()
 export class UsersService {
@@ -25,6 +27,7 @@ export class UsersService {
   }
 
   isValidPassword = (password: string, hash: string) => {
+    if (!hash) return false;
     return compareSync(password, hash);
   }
 
@@ -72,6 +75,7 @@ export class UsersService {
     return await this.userModel.create({
       ...user,
       password: this.getHashPassword(user.password),
+      authProvider: SocialProvider.LOCAL,
       role: userRole?._id
     });
   }
@@ -124,6 +128,53 @@ export class UsersService {
     }).populate({
       path: 'role',
       select: {name: 1},
+    });
+  }
+
+  findOneBySocialProvider = async (provider: SocialProvider, providerId: string) => {
+    return await this.userModel.findOne({
+      authProvider: provider,
+      providerId,
+    }).populate({
+      path: 'role',
+      select: { name: 1 },
+    });
+  }
+
+  findOrCreateSocialUser = async (profile: ISocialProfile) => {
+    const socialUser = await this.findOneBySocialProvider(profile.provider, profile.providerId);
+    if (socialUser) return socialUser;
+
+    const existingUser = await this.findOneByEmail(profile.email);
+    if (existingUser) {
+      await this.userModel.updateOne(
+        { _id: existingUser._id },
+        {
+          authProvider: profile.provider,
+          providerId: profile.providerId,
+          avatar: existingUser.avatar || profile.avatar,
+          name: existingUser.name || profile.name,
+        },
+      );
+
+      return await this.findOneBySocialProvider(profile.provider, profile.providerId);
+    }
+
+    const userRole = await this.roleModel.findOne({ name: RoleName.USER });
+
+    const createdUser = await this.userModel.create({
+      name: profile.name,
+      email: profile.email,
+      avatar: profile.avatar,
+      authProvider: profile.provider,
+      providerId: profile.providerId,
+      role: userRole?._id,
+      isActive: true,
+    });
+
+    return await createdUser.populate({
+      path: 'role',
+      select: { name: 1 },
     });
   }
 
