@@ -8,12 +8,14 @@ import { RegisterUserDto } from "src/modules/users/dto/create-user.dto";
 import { RolesService } from "src/modules/roles/roles.service";
 import { GoogleAuthGuard } from "./guards/google-auth.guard";
 import type { ISocialProfile } from "./interfaces/social-profile.interface";
+import { UsersService } from "src/modules/users/users.service";
 
 @Controller("auth")
 export class AuthController {
     constructor(
         private authService: AuthService,
-        private rolesService: RolesService
+        private rolesService: RolesService,
+        private usersService: UsersService
     ) {}
 
     @Public()
@@ -59,7 +61,12 @@ export class AuthController {
     @Get('/account')
     async getProfile(@User() user: IUser) {
         const temp = await this.rolesService.findOne(user.role._id) as any;
+        const currentUser = await this.usersService.findOne(user._id) as any;
+
         user.permissions = temp.permissions;
+        user.authProvider = currentUser?.authProvider ?? user.authProvider;
+        user.avatar = currentUser?.avatar ?? user.avatar ?? null;
+
         return { user };
     }
 
