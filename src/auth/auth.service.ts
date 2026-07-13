@@ -92,28 +92,34 @@ export class AuthService {
         }, response);
     }
 
-    getSocialLoginRedirectUrl = (accessToken: string, socialRedirectUrl?: string) => {
-        const redirectUrl = socialRedirectUrl || this.configService.get<string>('SOCIAL_LOGIN_SUCCESS_REDIRECT_URL');
+    getSocialLoginRedirectUrl = (accessToken: string, provider?: string) => {
+        const redirectUrl = this.configService.get<string>('SOCIAL_LOGIN_SUCCESS_REDIRECT_URL');
 
         if (!redirectUrl) return null;
 
         try {
             const url = new URL(redirectUrl);
             url.searchParams.set('access_token', accessToken);
+            if (provider) {
+                url.searchParams.set('provider', provider);
+            }
             return url.toString();
         } catch {
             return null;
         }
     }
 
-    getSocialLoginErrorRedirectUrl = (message: string, socialRedirectUrl?: string) => {
-        const redirectUrl = socialRedirectUrl || this.configService.get<string>('SOCIAL_LOGIN_SUCCESS_REDIRECT_URL');
+    getSocialLoginErrorRedirectUrl = (message: string, provider?: string) => {
+        const redirectUrl = this.configService.get<string>('SOCIAL_LOGIN_SUCCESS_REDIRECT_URL');
 
         if (!redirectUrl) return null;
 
         try {
             const url = new URL(redirectUrl);
             url.searchParams.set('error', message);
+            if (provider) {
+                url.searchParams.set('provider', provider);
+            }
             return url.toString();
         } catch {
             return null;
@@ -121,8 +127,12 @@ export class AuthService {
     }
 
     createRefreshToken = (payload) => {
+        const refreshTokenSecret =
+            this.configService.get<string>('JWT_REFRESH_TOKEN_SECRET')
+            || this.configService.get<string>('JWT_REFRESH_SECRET');
+
         const refreshToken = this.jwtService.sign(payload, {
-            secret: this.configService.get<string>('JWT_REFRESH_SECRET'),
+            secret: refreshTokenSecret,
             expiresIn: ms(this.configService.get<number>('JWT_REFRESH_TOKEN_EXPIRES')) as any / 1000,
         });
         return refreshToken;
@@ -130,8 +140,12 @@ export class AuthService {
 
     refreshToken = async (refreshToken: string, response: Response) => {
         try {
+            const refreshTokenSecret =
+                this.configService.get<string>('JWT_REFRESH_TOKEN_SECRET')
+                || this.configService.get<string>('JWT_REFRESH_SECRET');
+
             this.jwtService.verify(refreshToken, {
-                secret: this.configService.get<string>('JWT_REFRESH_SECRET'),
+                secret: refreshTokenSecret,
             });
 
             const user = await this.usersService.findOneByRefreshToken(refreshToken);

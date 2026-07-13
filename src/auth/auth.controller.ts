@@ -47,11 +47,9 @@ export class AuthController {
         @Req() req: Request & { user: ISocialProfile },
         @Res() response: Response
     ) {
-        const state = typeof req.query?.state === 'string' ? req.query.state : undefined;
-
         try {
             const result = await this.authService.socialLogin(req.user, response);
-            const redirectUrl = this.authService.getSocialLoginRedirectUrl(result.access_token, state);
+            const redirectUrl = this.authService.getSocialLoginRedirectUrl(result.access_token, 'google');
 
             if (redirectUrl) {
                 return response.redirect(redirectUrl);
@@ -60,7 +58,7 @@ export class AuthController {
             return response.json(result);
         } catch (error) {
             const message = this.getSocialLoginErrorMessage(error);
-            const redirectUrl = this.authService.getSocialLoginErrorRedirectUrl(message, state);
+            const redirectUrl = this.authService.getSocialLoginErrorRedirectUrl(message, 'google');
 
             if (redirectUrl) {
                 return response.redirect(redirectUrl);
@@ -82,11 +80,9 @@ export class AuthController {
         @Req() req: Request & { user: ISocialProfile },
         @Res() response: Response
     ) {
-        const state = typeof req.query?.state === 'string' ? req.query.state : undefined;
-
         try {
             const result = await this.authService.socialLogin(req.user, response);
-            const redirectUrl = this.authService.getSocialLoginRedirectUrl(result.access_token, state);
+            const redirectUrl = this.authService.getSocialLoginRedirectUrl(result.access_token, 'facebook');
 
             if (redirectUrl) {
                 return response.redirect(redirectUrl);
@@ -95,7 +91,7 @@ export class AuthController {
             return response.json(result);
         } catch (error) {
             const message = this.getSocialLoginErrorMessage(error);
-            const redirectUrl = this.authService.getSocialLoginErrorRedirectUrl(message, state);
+            const redirectUrl = this.authService.getSocialLoginErrorRedirectUrl(message, 'facebook');
 
             if (redirectUrl) {
                 return response.redirect(redirectUrl);
