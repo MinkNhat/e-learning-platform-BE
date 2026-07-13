@@ -93,13 +93,27 @@ export class AuthService {
     }
 
     getSocialLoginRedirectUrl = (accessToken: string, socialRedirectUrl?: string) => {
-        const redirectUrl = socialRedirectUrl || this.configService.get<string>('GOOGLE_LOGIN_SUCCESS_REDIRECT_URL');
+        const redirectUrl = socialRedirectUrl || this.configService.get<string>('SOCIAL_LOGIN_SUCCESS_REDIRECT_URL');
 
         if (!redirectUrl) return null;
 
         try {
             const url = new URL(redirectUrl);
             url.searchParams.set('access_token', accessToken);
+            return url.toString();
+        } catch {
+            return null;
+        }
+    }
+
+    getSocialLoginErrorRedirectUrl = (message: string, socialRedirectUrl?: string) => {
+        const redirectUrl = socialRedirectUrl || this.configService.get<string>('SOCIAL_LOGIN_SUCCESS_REDIRECT_URL');
+
+        if (!redirectUrl) return null;
+
+        try {
+            const url = new URL(redirectUrl);
+            url.searchParams.set('error', message);
             return url.toString();
         } catch {
             return null;

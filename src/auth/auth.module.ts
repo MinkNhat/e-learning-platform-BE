@@ -10,6 +10,7 @@ import { AuthController } from './auth.controller';
 import { UsersModule } from 'src/modules/users/users.module';
 import { RolesModule } from 'src/modules/roles/roles.module';
 import { GoogleStrategy } from './passport/google.strategy';
+import { FacebookStrategy } from './passport/facebook.strategy';
 
 @Module({
   imports: [
@@ -29,7 +30,8 @@ import { GoogleStrategy } from './passport/google.strategy';
     AuthService, 
     LocalStrategy, 
     JwtStrategy, 
-    GoogleStrategy
+    GoogleStrategy,
+    FacebookStrategy
   ],
   controllers: [AuthController],
   exports: [AuthService]

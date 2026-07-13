@@ -147,10 +147,21 @@ export class UsersService {
 
     const existingUser = await this.findOneByEmail(profile.email);
     if (existingUser) {
+      if (existingUser.authProvider !== profile.provider) {
+        throw new BadRequestException(
+          `Email này đã được sử dụng để đăng nhập bằng ${existingUser.authProvider}`
+        );
+      }
+
+      if (existingUser.providerId && existingUser.providerId !== profile.providerId) {
+        throw new BadRequestException(
+          `Email này đã được liên kết với một tài khoản ${profile.provider} khác.`
+        );
+      }
+
       await this.userModel.updateOne(
         { _id: existingUser._id },
         {
-          authProvider: profile.provider,
           providerId: profile.providerId,
           avatar: existingUser.avatar || profile.avatar,
           name: existingUser.name || profile.name,
