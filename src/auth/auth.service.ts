@@ -92,14 +92,14 @@ export class AuthService {
         }, response);
     }
 
-    getSocialLoginRedirectUrl = (accessToken: string, provider?: string) => {
+    getSocialLoginRedirectUrl = (provider?: string) => {
         const redirectUrl = this.configService.get<string>('SOCIAL_LOGIN_SUCCESS_REDIRECT_URL');
 
         if (!redirectUrl) return null;
 
         try {
             const url = new URL(redirectUrl);
-            url.searchParams.set('access_token', accessToken);
+            url.searchParams.set('status', 'success');
             if (provider) {
                 url.searchParams.set('provider', provider);
             }

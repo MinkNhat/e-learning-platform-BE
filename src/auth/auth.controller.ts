@@ -49,7 +49,7 @@ export class AuthController {
     ) {
         try {
             const result = await this.authService.socialLogin(req.user, response);
-            const redirectUrl = this.authService.getSocialLoginRedirectUrl(result.access_token, 'google');
+            const redirectUrl = this.authService.getSocialLoginRedirectUrl('google');
 
             if (redirectUrl) {
                 return response.redirect(redirectUrl);
@@ -82,7 +82,7 @@ export class AuthController {
     ) {
         try {
             const result = await this.authService.socialLogin(req.user, response);
-            const redirectUrl = this.authService.getSocialLoginRedirectUrl(result.access_token, 'facebook');
+            const redirectUrl = this.authService.getSocialLoginRedirectUrl('facebook');
 
             if (redirectUrl) {
                 return response.redirect(redirectUrl);
