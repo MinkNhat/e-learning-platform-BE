@@ -10,6 +10,7 @@ import { GoogleAuthGuard } from "./guards/google-auth.guard";
 import { FacebookAuthGuard } from "./guards/facebook-auth.guard";
 import type { ISocialProfile } from "./interfaces/social-profile.interface";
 import { UsersService } from "src/modules/users/users.service";
+import { GoogleMobileLoginDto } from "./dto/google-mobile-login.dto";
 
 @Controller("auth")
 export class AuthController {
@@ -33,6 +34,15 @@ export class AuthController {
     @Post('/register')
     async register(@Body() user: RegisterUserDto) {
         return this.authService.register(user);
+    }
+
+    @Public()
+    @Post('/google/mobile')
+    async googleMobileLogin(
+        @Body() body: GoogleMobileLoginDto,
+        @Res({ passthrough: true }) response: Response
+    ) {
+        return this.authService.googleMobileLogin(body.idToken, response);
     }
 
     @Public()

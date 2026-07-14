@@ -1,6 +1,7 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
+import { OAuth2Client } from 'google-auth-library';
 import { Response } from 'express';
 import ms from 'ms';
 import { RolesService } from 'src/modules/roles/roles.service';
@@ -8,9 +9,12 @@ import { RegisterUserDto } from 'src/modules/users/dto/create-user.dto';
 import { IUser } from 'src/modules/users/users.interface';
 import { UsersService } from 'src/modules/users/users.service';
 import { ISocialProfile } from './interfaces/social-profile.interface';
+import { SocialProvider } from 'src/core/enums/social-provider.enum';
 
 @Injectable()
 export class AuthService {
+    private readonly googleOAuthClient = new OAuth2Client();
+
     constructor(
         private usersService: UsersService,
         private jwtService: JwtService,
@@ -37,7 +41,7 @@ export class AuthService {
         return null;
     }
 
-    login = async (user: IUser, response: Response) => {
+    login = async (user: IUser, response: Response, options?: { includeRefreshToken?: boolean }) => {
         const { _id, name, email, authProvider, role, avatar, permissions } = user;
         const payload = { 
             sub: "token login",
@@ -58,7 +62,7 @@ export class AuthService {
             maxAge: ms(this.configService.get<number>('JWT_REFRESH_TOKEN_EXPIRES')) as any,
         });
         
-        return {
+        const result: any = {
             access_token: this.jwtService.sign(payload),
             user: {
                 _id,
@@ -70,6 +74,12 @@ export class AuthService {
                 permissions
             }
         };
+
+        if (options?.includeRefreshToken) {
+            result.refresh_token = refreshToken;
+        }
+
+        return result;
     }
 
     register = async (user: RegisterUserDto) => {
@@ -90,6 +100,52 @@ export class AuthService {
             ...user.toObject(),
             permissions: temp?.permissions as any ?? []
         }, response);
+    }
+
+    googleMobileLogin = async (idToken: string, response: Response) => {
+        const audiences = [
+            this.configService.get<string>('GOOGLE_MOBILE_CLIENT_ID'),
+            this.configService.get<string>('GOOGLE_ANDROID_CLIENT_ID'),
+            this.configService.get<string>('GOOGLE_IOS_CLIENT_ID'),
+            this.configService.get<string>('GOOGLE_WEB_CLIENT_ID'),
+            this.configService.get<string>('GOOGLE_CLIENT_ID'),
+        ].filter(Boolean) as string[];
+
+        if (!audiences.length) {
+            throw new BadRequestException('Google client id is not configured');
+        }
+
+        let payload;
+        try {
+            const ticket = await this.googleOAuthClient.verifyIdToken({
+                idToken,
+                audience: audiences,
+            });
+            payload = ticket.getPayload();
+        } catch {
+            throw new UnauthorizedException('Google token is invalid');
+        }
+
+        if (!payload?.sub || !payload.email || payload.email_verified !== true) {
+            throw new UnauthorizedException('Google email is not verified');
+        }
+
+        const profile: ISocialProfile = {
+            provider: SocialProvider.GOOGLE,
+            providerId: payload.sub,
+            email: payload.email,
+            name: payload.name || payload.email,
+            avatar: payload.picture,
+        };
+
+        const user = await this.usersService.findOrCreateSocialUser(profile);
+        const userRole = user.role as unknown as { _id: string; name: string };
+        const temp = await this.rolesService.findOne(userRole._id);
+
+        return this.login({
+            ...user.toObject(),
+            permissions: temp?.permissions as any ?? []
+        }, response, { includeRefreshToken: true });
     }
 
     getSocialLoginRedirectUrl = (provider?: string) => {
