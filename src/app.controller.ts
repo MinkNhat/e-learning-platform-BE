@@ -1,5 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
+import { Public } from './core/decorators/customize';
 
 @Controller()
 export class AppController {
@@ -8,5 +9,14 @@ export class AppController {
   @Get('dashboard/stats')
   getDashboardStats() {
     return this.appService.getDashboardStats();
+  }
+
+  @Get('health')
+  @Public()
+  checkHealth() {
+    return {
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+    };
   }
 }
