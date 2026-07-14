@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { LoggerModule } from 'nestjs-pino';
 import { UsersModule } from './modules/users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { softDeletePlugin } from 'soft-delete-plugin-mongoose';
@@ -25,12 +26,34 @@ import { QuizzesModule } from './modules/quizzes/quizzes.module';
 import { User, UserSchema } from './modules/users/schemas/user.schema';
 import { Course, CourseSchema } from './modules/courses/schemas/course.schema';
 import { Blog, BlogSchema } from './modules/blogs/schemas/blog.schema';
-import { Enrolment, EnrolmentSchema } from './modules/enrollments/schemas/enrolment.schema';
+import {
+  Enrolment,
+  EnrolmentSchema,
+} from './modules/enrollments/schemas/enrolment.schema';
 import { Order, OrderSchema } from './modules/orders/schemas/order.schema';
-import { Payment, PaymentSchema } from './modules/payments/schemas/payment.schema';
+import {
+  Payment,
+  PaymentSchema,
+} from './modules/payments/schemas/payment.schema';
+import { createLoggerConfig } from './config/logger.config';
 
 @Module({
   imports: [
+    // config env
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+
+    LoggerModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) =>
+        createLoggerConfig(
+          configService.get<string>('LOG_LEVEL'),
+          configService.get<string>('NODE_ENV'),
+        ),
+    }),
+
     // config mongodb
     MongooseModule.forRootAsync({
       useFactory: async (configService: ConfigService) => ({
@@ -38,14 +61,9 @@ import { Payment, PaymentSchema } from './modules/payments/schemas/payment.schem
         connectionFactory: (connection) => {
           connection.plugin(softDeletePlugin);
           return connection;
-        }
+        },
       }),
       inject: [ConfigService],
-    }),
-
-    // config env
-    ConfigModule.forRoot({
-      isGlobal: true,
     }),
     MongooseModule.forFeature([
       { name: User.name, schema: UserSchema },
@@ -78,4 +96,4 @@ import { Payment, PaymentSchema } from './modules/payments/schemas/payment.schem
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {} 
+export class AppModule {}

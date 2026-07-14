@@ -8,9 +8,14 @@ import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
 import { TransformInterceptor } from './core/interceptors/transform.interceptor';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
+import { Logger } from 'nestjs-pino';
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule); 
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
+    bufferLogs: true,
+  });
+  app.useLogger(app.get(Logger));
+
   const configService = app.get(ConfigService);
 
   // apply JwtAuthGuard globally
@@ -54,6 +59,8 @@ async function bootstrap() {
   // config helmet
   app.use(helmet());
   
-  await app.listen(configService.get<string>('PORT'));
+  const port = configService.get<string>('PORT');
+  await app.listen(port);
+  app.get(Logger).log(`Application is running on port ${port}`);
 }
 bootstrap();
