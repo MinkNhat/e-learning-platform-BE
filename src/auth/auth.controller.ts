@@ -127,6 +127,7 @@ export class AuthController {
         user.permissions = temp.permissions;
         user.authProvider = currentUser?.authProvider ?? user.authProvider;
         user.avatar = currentUser?.avatar ?? user.avatar ?? null;
+        user.createdAt = currentUser?.createdAt ?? user.createdAt;
 
         return { user };
     }

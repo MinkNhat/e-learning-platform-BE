@@ -10,6 +10,7 @@ export interface IUser {
         name: string;
     };
     avatar?: string;
+    createdAt?: Date;
     permissions?: {
         _id: string;
         name: string;

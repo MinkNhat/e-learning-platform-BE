@@ -42,7 +42,7 @@ export class AuthService {
     }
 
     login = async (user: IUser, response: Response, options?: { includeRefreshToken?: boolean }) => {
-        const { _id, name, email, authProvider, role, avatar, permissions } = user;
+        const { _id, name, email, authProvider, role, avatar, permissions, createdAt } = user;
         const payload = { 
             sub: "token login",
             iss: "from server",
@@ -51,7 +51,8 @@ export class AuthService {
             email,
             authProvider,
             role,
-            avatar
+            avatar,
+            createdAt
         };
 
         const refreshToken = this.createRefreshToken(payload);
@@ -71,6 +72,7 @@ export class AuthService {
                 authProvider,
                 role,
                 avatar,
+                createdAt,
                 permissions
             }
         };
@@ -206,7 +208,7 @@ export class AuthService {
 
             const user = await this.usersService.findOneByRefreshToken(refreshToken);
             if(user) {
-                const { _id, name, email, authProvider, role, avatar } = user;
+                const { _id, name, email, authProvider, role, avatar, createdAt } = user;
                 const payload = { 
                     sub: "token refresh",
                     iss: "from server",
@@ -215,7 +217,8 @@ export class AuthService {
                     email,
                     authProvider,
                     role,
-                    avatar
+                    avatar,
+                    createdAt
                 };
 
                 const refreshToken = this.createRefreshToken(payload);
@@ -239,6 +242,7 @@ export class AuthService {
                         authProvider,
                         role,
                         avatar,
+                        createdAt,
                         permissions: temp?.permissions ?? []
                     }
                 };
