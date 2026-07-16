@@ -61,6 +61,8 @@ export const INIT_PERMISSIONS = [
   { "name": "Fetch my recent lesson", "apiPath": "/api/v1/me/courses/:courseSlug/continue", "method": "GET", "module": "ME" },
   { "name": "Fetch my lesson detail", "apiPath": "/api/v1/me/lessons/:lessonId", "method": "GET", "module": "ME" },
   { "name": "Complete my lesson", "apiPath": "/api/v1/me/lessons/:lessonId/complete", "method": "PATCH", "module": "ME" },
+  { "name": "Update my avatar", "apiPath": "/api/v1/me/avatar", "method": "PATCH", "module": "ME" },
+  { "name": "Change my password", "apiPath": "/api/v1/me/password", "method": "PATCH", "module": "ME" },
 
   // ENROLLMENTS
   { "name": "Fetch enrollments", "apiPath": "/api/v1/enrollments", "method": "GET", "module": "ENROLLMENTS" },

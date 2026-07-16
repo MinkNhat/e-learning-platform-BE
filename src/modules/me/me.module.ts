@@ -7,6 +7,7 @@ import { Course, CourseSchema } from '../courses/schemas/course.schema';
 import { Lesson, LessonSchema } from '../lessons/schemas/lesson.schema';
 import { LessonProgress, LessonProgressSchema } from './schemas/lesson-progress.schema';
 import { CoursesModule } from '../courses/courses.module';
+import { User, UserSchema } from '../users/schemas/user.schema';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { CoursesModule } from '../courses/courses.module';
       { name: Course.name, schema: CourseSchema },
       { name: Lesson.name, schema: LessonSchema },
       { name: LessonProgress.name, schema: LessonProgressSchema },
+      { name: User.name, schema: UserSchema },
     ]),
   ],
   controllers: [MeController],

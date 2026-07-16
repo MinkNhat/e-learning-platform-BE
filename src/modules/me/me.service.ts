@@ -8,6 +8,10 @@ import { Course, CourseDocument } from '../courses/schemas/course.schema';
 import { Lesson, LessonDocument } from '../lessons/schemas/lesson.schema';
 import { CourseContentService } from '../courses/course-content.service';
 import { LessonProgress, LessonProgressDocument } from './schemas/lesson-progress.schema';
+import { User, UserDocument } from '../users/schemas/user.schema';
+import { SocialProvider } from 'src/core/enums/social-provider.enum';
+import { compareSync, genSaltSync, hashSync } from 'bcryptjs';
+import { ChangePasswordDto } from './dto/change-password.dto';
 
 @Injectable()
 export class MeService {
@@ -16,6 +20,7 @@ export class MeService {
     @InjectModel(Course.name) private courseModel: Model<CourseDocument>,
     @InjectModel(Lesson.name) private lessonModel: Model<LessonDocument>,
     @InjectModel(LessonProgress.name) private lessonProgressModel: Model<LessonProgressDocument>,
+    @InjectModel(User.name) private userModel: Model<UserDocument>,
     private courseContentService: CourseContentService,
   ) {}
 
@@ -25,6 +30,79 @@ export class MeService {
     }
 
     return { slug: courseIdOrSlug };
+  }
+
+  private getHashPassword(password: string) {
+    const salt = genSaltSync(10);
+    return hashSync(password, salt);
+  }
+
+  private isValidPassword(password: string, hash: string) {
+    if (!hash) return false;
+    return compareSync(password, hash);
+  }
+
+  private async findMyAccount(userId: string) {
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      throw new BadRequestException(`User with id='${userId}' not found`);
+    }
+
+    return await this.userModel.findOne({ _id: userId })
+      .select(['-password', '-refreshToken', '-__v'])
+      .populate({ path: 'role', select: { _id: 1, name: 1 } });
+  }
+
+  async updateMyAvatar(user: IUser, avatar?: Express.Multer.File) {
+    if (!avatar?.filename) {
+      throw new BadRequestException('Avatar file is required');
+    }
+
+    await this.userModel.updateOne(
+      { _id: user._id },
+      {
+        avatar: avatar.filename,
+        updatedBy: {
+          _id: user._id,
+          email: user.email
+        }
+      }
+    );
+
+    return await this.findMyAccount(user._id);
+  }
+
+  async changeMyPassword(user: IUser, changePasswordDto: ChangePasswordDto) {
+    const foundUser = await this.userModel.findById(user._id);
+
+    if (!foundUser) {
+      throw new BadRequestException(`User with id='${user._id}' not found`);
+    }
+
+    if (!foundUser.password || (foundUser.authProvider && foundUser.authProvider !== SocialProvider.LOCAL)) {
+      throw new BadRequestException('Tài khoản đăng nhập mạng xã hội không thể đổi mật khẩu tại đây');
+    }
+
+    const isCurrentPasswordValid = this.isValidPassword(changePasswordDto.currentPassword, foundUser.password);
+    if (!isCurrentPasswordValid) {
+      throw new BadRequestException('Mật khẩu hiện tại không chính xác');
+    }
+
+    if (this.isValidPassword(changePasswordDto.newPassword, foundUser.password)) {
+      throw new BadRequestException('Mật khẩu mới không được trùng với mật khẩu hiện tại');
+    }
+
+    await this.userModel.updateOne(
+      { _id: user._id },
+      {
+        password: this.getHashPassword(changePasswordDto.newPassword),
+        updatedBy: {
+          _id: user._id,
+          email: user.email
+        }
+      }
+    );
+
+    return await this.findMyAccount(user._id);
   }
 
   async findMyCourses(currentPage: number, limit: number, qs: string, user: IUser) {
