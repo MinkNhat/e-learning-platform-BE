@@ -18,23 +18,13 @@ const getRootPath = () => {
     return process.cwd();
 };
 
-const ensureExists = (targetDirectory: string) => {
-    fs.mkdir(targetDirectory, { recursive: true }, (error) => {
-        if (!error) {
-            console.log(`Directory ${targetDirectory} created successfully. Or already exists.`);
-            return;
-        }
+const getUploadRootPath = () => {
+    const uploadPath = process.env.UPLOAD_PATH || 'upload';
+    return path.isAbsolute(uploadPath) ? uploadPath : join(getRootPath(), uploadPath);
+};
 
-        switch (error.code) {
-            case 'EEXIST':
-                break;
-            case 'ENOTDIR':
-                break;
-            default:
-                console.error(`Error:`, error);
-                break;
-        }
-    });
+const ensureExists = (targetDirectory: string) => {
+    fs.mkdirSync(targetDirectory, { recursive: true });
 };
 
 const fileFilterValidator = (
@@ -82,9 +72,14 @@ export function createUploadInterceptor(
         storage: diskStorage({
             destination: (req: Request, file: Express.Multer.File, cb) => {
                 const folderName = typeof folder === 'function' ? folder(req) : folder;
-                const targetDir = join(getRootPath(), '..', 'upload', folderName);
-                ensureExists(targetDir);
-                cb(null, targetDir);
+                const targetDir = join(getUploadRootPath(), folderName);
+
+                try {
+                    ensureExists(targetDir);
+                    cb(null, targetDir);
+                } catch (error) {
+                    cb(error, targetDir);
+                }
             },
             filename: (req: Request, file: Express.Multer.File, cb) => {
                 if (customFilename) {
@@ -109,4 +104,3 @@ export function createUploadInterceptor(
         },
     });
 }
-

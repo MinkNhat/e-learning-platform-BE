@@ -1,6 +1,6 @@
 import { NestFactory, Reflector } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { join } from 'path';
+import { isAbsolute, join } from 'path';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { ConfigService } from '@nestjs/config';
 import { ValidationPipe, VersioningType } from '@nestjs/common';
@@ -26,8 +26,9 @@ async function bootstrap() {
   app.useGlobalInterceptors(new TransformInterceptor(reflector));
 
   app.useStaticAssets(join(__dirname, '..', 'public'));
+  const uploadPath = process.env.UPLOAD_PATH || 'upload';
   app.useStaticAssets(
-    join(process.cwd(), process.env.UPLOAD_PATH || 'upload'),
+    isAbsolute(uploadPath) ? uploadPath : join(process.cwd(), uploadPath),
     {
       prefix: '/upload',
     },
