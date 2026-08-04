@@ -64,6 +64,11 @@ export const INIT_PERMISSIONS = [
   { "name": "Update my avatar", "apiPath": "/api/v1/me/avatar", "method": "PATCH", "module": "ME" },
   { "name": "Change my password", "apiPath": "/api/v1/me/password", "method": "PATCH", "module": "ME" },
 
+  // RAG
+  { "name": "Stream learning assistant", "apiPath": "/api/v1/rag/query/stream", "method": "POST", "module": "RAG" },
+  { "name": "Fetch my chat conversations", "apiPath": "/api/v1/rag/conversations", "method": "GET", "module": "RAG" },
+  { "name": "Fetch my chat messages", "apiPath": "/api/v1/rag/conversations/:conversationId/messages", "method": "GET", "module": "RAG" },
+
   // ENROLLMENTS
   { "name": "Fetch enrollments", "apiPath": "/api/v1/enrollments", "method": "GET", "module": "ENROLLMENTS" },
   { "name": "Create enrollment manually", "apiPath": "/api/v1/enrollments", "method": "POST", "module": "ENROLLMENTS" },

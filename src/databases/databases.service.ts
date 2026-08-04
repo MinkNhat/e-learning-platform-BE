@@ -42,27 +42,42 @@ export class DatabasesService implements OnModuleInit {
                 }))
             );
 
+            const userPermissions = await this.permissionModel
+                .find({
+                    $or: [
+                        { module: "ME" },
+                        { module: "RAG" },
+                        { apiPath: "/api/v1/enrollments", method: "GET" },
+                        { apiPath: "/api/v1/enrollments/free", method: "POST" },
+                    ],
+                })
+                .select("_id");
+
+            
+            const teacherPermissions = userPermissions;
+            const allPermissions = await this.permissionModel.find({}).select("_id");
+
             // create roles
             if (countRole === 0) {
-                const permissions = await this.permissionModel.find({}).select("_id");
+                
                 await this.roleModel.insertMany([
                     {
                         name: RoleName.ADMIN,
                         description: "Admin with full permissions",
                         isActive: true,
-                        permissions: permissions
+                        permissions: allPermissions
                     },
                     {
                         name: RoleName.USER,
                         description: "Normal user",
                         isActive: true,
-                        permissions: []
+                        permissions: userPermissions
                     },
                     {
                         name: RoleName.TEACHER,
                         description: "Teacher / Course author",
                         isActive: true,
-                        permissions: []
+                        permissions: teacherPermissions
                     },
                     {
                         name: RoleName.WRITER,
@@ -72,17 +87,25 @@ export class DatabasesService implements OnModuleInit {
                     }
                 ]);
             } else {
-                const permissions = await this.permissionModel.find({}).select("_id");
                 await this.roleModel.updateOne(
                     { name: RoleName.ADMIN },
-                    { $addToSet: { permissions: { $each: permissions.map(permission => permission._id) } } }
+                    { $addToSet: { permissions: { $each: allPermissions.map(permission => permission._id) } } }
+                );
+                await this.roleModel.updateOne(
+                    { name: RoleName.USER },
+                    { $addToSet: { permissions: { $each: userPermissions.map(permission => permission._id) } } }
+                );
+                await this.roleModel.updateOne(
+                    { name: RoleName.TEACHER },
+                    { $addToSet: { permissions: { $each: teacherPermissions.map(permission => permission._id) } } }
                 );
             }
 
             // create users
             if (countUser === 0) {
                 const adminRole = await this.roleModel.findOne({ name: RoleName.ADMIN });
-                const userRole = await this.roleModel.findOne({ name: RoleName.USER })
+                const userRole = await this.roleModel.findOne({ name: RoleName.USER });
+                const teacherRole = await this.roleModel.findOne({ name: RoleName.TEACHER });
                 await this.userModel.insertMany([
                     {
                         name: "Super Admin",
@@ -96,6 +119,12 @@ export class DatabasesService implements OnModuleInit {
                         password: this.usersService.getHashPassword(this.configService.get<string>("INIT_PASSWORD")),
                         role: userRole?._id
                     },
+                    {
+                        name: "Teacher",
+                        email: "teacher@gmail.com",
+                        password: this.usersService.getHashPassword(this.configService.get<string>("INIT_PASSWORD")),
+                        role: teacherRole?._id
+                    }
                 ])
             }
 
