@@ -10,7 +10,7 @@ A backend API for an e-learning platform built with NestJS.
 - Nodemailer / NestJS Mailer
 - VNPay payment integration
 
-## Folder Structure
+## Project Structure
 
 ```text
 src/
@@ -26,15 +26,36 @@ view/          Email or template views
 docs/          Extra documentation
 ```
 
-## Setup
+
+## Run Locally
+
+Install dependencies:
 
 ```bash
 npm install
-cp .env.example .env
-npm run seed:run
-npm run dev
 ```
 
-## Environment
+Create a local environment file:
 
-Configure `.env` before running the app. Important values include MongoDB, JWT secrets, mail credentials, VNPay, social login, YouTube API, and RAG service settings.
+```bash
+cp .env.example .env
+```
+
+Update `.env` before running the app. Important values include MongoDB, JWT secrets, mail credentials, VNPay, social login, YouTube API, and RAG service settings.
+
+```env
+PORT=
+...
+```
+
+Create seeds data:
+
+```bash
+npm run seed:run
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
