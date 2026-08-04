@@ -36,6 +36,7 @@ import {
   PaymentSchema,
 } from './modules/payments/schemas/payment.schema';
 import { createLoggerConfig } from './config/logger.config';
+import { RagModule } from './modules/rag/rag.module';
 
 @Module({
   imports: [
@@ -92,6 +93,7 @@ import { createLoggerConfig } from './config/logger.config';
     BlogsModule,
     CommentsModule,
     QuizzesModule,
+    RagModule,
   ],
   controllers: [AppController],
   providers: [AppService],
