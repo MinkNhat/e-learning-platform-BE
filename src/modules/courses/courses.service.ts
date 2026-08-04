@@ -120,7 +120,7 @@ export class CoursesService {
 
     const [courseTitleMatches, lessonTitleMatches] = await Promise.all([
       this.courseModel.find({ title: titlePattern, isPublished: true }).select('_id title').lean(),
-      scope === 'course' ? Promise.resolve([]) : this.lessonModel.find({ name: titlePattern }).select('_id name module').lean(),
+      scope === 'course' ? Promise.resolve([]) : this.lessonModel.find({ name: titlePattern }).select('_id name type module').lean(),
     ]);
 
     const lessonModuleIds = lessonTitleMatches.map((lesson) => lesson.module);
@@ -150,6 +150,7 @@ export class CoursesService {
 
       addMatch(module.course as any, {
         type: 'lesson',
+        lessonType: lesson.type,
         field: 'name',
         id: lesson._id,
         title: lesson.name,
